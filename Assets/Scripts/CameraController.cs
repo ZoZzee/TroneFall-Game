@@ -6,7 +6,6 @@ public class CameraController : MonoBehaviour
     public Vector3 offset;
     public float speed;
 
-
     private void LateUpdate()
     {
         Vector3 targetPosition = target.position + offset;
