@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    private Rigidbody rb;
+    private Rigidbody _rb;
 
     public Transform cameraTransform;
 
     public float moveSpeed;
     public float speedRotation;
-    public Vector3 forvard;
-    public Vector3 right;
+    private Vector3 _forvard;
+    private Vector3 _right;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
@@ -22,25 +22,25 @@ public class PlayerMove : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        forvard = cameraTransform.forward;
-        right = cameraTransform.right;
+        _forvard = cameraTransform.forward;
+        _right = cameraTransform.right;
 
-        forvard.y = 0;
-        right.y = 0;
+        _forvard.y = 0;
+        _right.y = 0;
 
 
-        forvard.Normalize();
-        right.Normalize();
+        _forvard.Normalize();
+        _right.Normalize();
 
-        Vector3 moveDirection = (forvard * vertical + right * horizontal).normalized;
+        Vector3 moveDirection = (_forvard * vertical + _right * horizontal).normalized;
 
 
         if(moveDirection.magnitude > 0.1f)
         {
-            rb.MovePosition(rb.position + moveDirection * moveSpeed);
+            _rb.MovePosition(_rb.position + moveDirection * moveSpeed);
 
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            rb.rotation = Quaternion.Slerp(rb.rotation,targetRotation,speedRotation);
+            _rb.rotation = Quaternion.Slerp(_rb.rotation,targetRotation,speedRotation);
         }
     }
 }
