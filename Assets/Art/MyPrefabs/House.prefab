@@ -127,9 +127,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldAmount: 2
+  _playerMoveDistanceOnBuild: 2.5
+  _playerMoveSpeed: 0.2
   _referens: {fileID: 4242600131688563166}
   _flag: {fileID: 422445531977133756}
   _isPlayerNearby: 0
+  _buildingTrigger: {fileID: 6231495664451341820}
 --- !u!114 &6231495664451341820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bildingPlan: {fileID: 4494591965250034952}
+  playerTransform: {fileID: 0}
 --- !u!1001 &421088787689789046
 PrefabInstance:
   m_ObjectHideFlags: 0

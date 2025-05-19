@@ -18,7 +18,6 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -28,12 +27,10 @@ public class PlayerMove : MonoBehaviour
         _forvard.y = 0;
         _right.y = 0;
 
-
         _forvard.Normalize();
         _right.Normalize();
 
         Vector3 moveDirection = (_forvard * vertical + _right * horizontal).normalized;
-
 
         if(moveDirection.magnitude > 0.1f)
         {

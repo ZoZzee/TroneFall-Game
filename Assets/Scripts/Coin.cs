@@ -3,10 +3,15 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    [SerializeField] public AnimationCurve speedCurve;
+
     [SerializeField] private Transform _target;
     [SerializeField] private float _speed;
     [SerializeField] private float _maxSpeed;
     private int oneGold = 1;
+
+    private float _flyTime;
+    [SerializeField] private float _flySpeed;
 
     private bool goo = false;
     private void LateUpdate()
@@ -16,10 +21,10 @@ public class Coin : MonoBehaviour
             Vector3 targetPosition = _target.position;
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, _speed);
             transform.position = smoothedPosition;
-            if (_speed <= _maxSpeed)
-            {
-                _speed += 0.001f;
-            }
+
+            _speed = speedCurve.Evaluate(_flyTime);
+            _flyTime += _flySpeed;
+            _flyTime = Mathf.Clamp(_flyTime, 0f, 1f);
         }
         if (Input.GetKeyDown(KeyCode.R))
         {

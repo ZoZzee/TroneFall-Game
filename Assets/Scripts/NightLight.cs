@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class NightLight : MonoBehaviour
 {
-    [SerializeField]private float _lightChangeSpeed;
+    [SerializeField] private float _lightIntensity;
+
+    [SerializeField] private float _lightChangeSpeed;
     private float _targetLightIntensity;
 
 
@@ -19,20 +21,20 @@ public class NightLight : MonoBehaviour
         _dayNightManager = DayNightManager.instance;
 
         _dayNightManager.onDayStart.AddListener(DisableLight);
-        _dayNightManager.onDayStart.AddListener(EnableLight);
+        _dayNightManager.onNightStart.AddListener(EnableLight);
         //_dayNightManager.onDayStart.AddListener(Coin coi);
     }
 
     private void EnableLight()
     {
         _nightLight.enabled = true;
-        _targetLightIntensity = 1f;
+        _targetLightIntensity = _lightIntensity;
         StartCoroutine(ChangeLightState());
     }
 
     private void DisableLight()
     {
-        _targetLightIntensity = 1f;
+        _targetLightIntensity = 0;
         StartCoroutine(ChangeLightState());
     }
 
