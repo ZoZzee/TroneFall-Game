@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class BildingPlan : MonoBehaviour
+public class BuildingPlan : MonoBehaviour
 {
     [Header("Values")]
     public int goldAmount;
@@ -13,10 +13,10 @@ public class BildingPlan : MonoBehaviour
 
     [Header("References")]
 
-    [SerializeField] private GameObject _referens;
+    public GameObject building;
     [SerializeField] private GameObject _flag;
 
-    private bool _isBuilt = false;
+    public bool isBuilt = false;
 
     public bool _isPlayerNearby;
 
@@ -32,21 +32,22 @@ public class BildingPlan : MonoBehaviour
 
     private void Update()
     {
-        if (!_isBuilt &&
+        if (!isBuilt &&
              _isPlayerNearby &&
              Input.GetKeyDown(KeyCode.E) &&
              goldManager.EnoughGold(goldAmount))
         {
-            Build();
+            Build(true);
         }
     }
 
-    private void Build()
+    public void Build(bool minusGold)
     {
-        _referens.SetActive(true);
-        _isBuilt = true;
+        building.SetActive(true);
+        isBuilt = true;
         _flag.SetActive(false);
-        goldManager.MinusGold(goldAmount);
+
+        if(minusGold) goldManager.MinusGold(goldAmount);
 
         if (_buildingTrigger.playerTransform)
         {

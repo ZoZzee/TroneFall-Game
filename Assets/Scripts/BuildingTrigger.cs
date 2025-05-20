@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BuildingTrigger : MonoBehaviour
 {
-    public BildingPlan bildingPlan;
+    public BuildingPlan bildingPlan;
 
     [HideInInspector] public Transform playerTransform;
 
@@ -14,6 +14,12 @@ public class BuildingTrigger : MonoBehaviour
             bildingPlan._isPlayerNearby = true;
 
             playerTransform = other.transform;
+        }
+
+        if (other.CompareTag("Enemy"))
+        {
+            if(bildingPlan.isBuilt == true)
+                bildingPlan.building.GetComponent<Building>().DestroyBuilding();
         }
     }
 

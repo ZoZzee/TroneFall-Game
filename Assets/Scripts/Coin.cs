@@ -3,39 +3,35 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    public float distanceOnStart;
-
-    [SerializeField] public AnimationCurve speedCurve;
-
-    [SerializeField] private Transform _target;
+    private Transform _target;
     [SerializeField] private float _speed;
+    [SerializeField] private float _baseSpeed;
+
+    private float _speedUp;
+    [SerializeField] private float _speedUpAmount;
+
     [SerializeField] private float _maxSpeed;
     private int oneGold = 1;
 
-    private float _flyTime;
-    [SerializeField] private float _flySpeed;
-
     private bool goo = false;
+
     private void LateUpdate()
     {
         if (goo)
         {
-            Vector3 targetPosition = _target.position;
+            Vector3 targetPosition = _target.position + Vector3.up;
 
-            float distanceNow = Vector3.Distance(transform.position, targetPosition);
-            float t = 1f - (distanceNow / distanceOnStart);
-            t = Mathf.Clamp01(t);
+            _speedUp += _speedUpAmount * Time.deltaTime;
+            _speed = _baseSpeed + _speedUp;
 
-            _speed = speedCurve.Evaluate(t);
-
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, targetPosition, _speed * Time.deltaTime);
+            Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, targetPosition, _speed * Time.deltaTime);
             transform.position = smoothedPosition;
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             goo = true;
-            distanceOnStart = Mathf.Max(Vector3.Distance(transform.position, _target.position), 0.001f);
+            _target = PlayerMove.instance.transform;
         }
     }
 

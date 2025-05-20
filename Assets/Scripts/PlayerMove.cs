@@ -11,8 +11,12 @@ public class PlayerMove : MonoBehaviour
     private Vector3 _forvard;
     private Vector3 _right;
 
+    public static PlayerMove instance;
+
     private void Awake()
     {
+        instance = this;
+
         _rb = GetComponent<Rigidbody>();
     }
 

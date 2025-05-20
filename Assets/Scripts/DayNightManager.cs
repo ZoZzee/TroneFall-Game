@@ -69,8 +69,6 @@ public class DayNightManager : MonoBehaviour
 
             yield return null;
         }
-        Debug.Log(" Finish");
-
     }
 
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7992161825559744858}
   - component: {fileID: 4089275019017137985}
+  - component: {fileID: 2482693136955428231}
   m_Layer: 0
   m_Name: House_01
   m_TagString: Untagged
@@ -55,6 +56,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2482693136955428231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242600131688563166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9867890fa4e79404081ec147e6d1fb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldAtDayStart: 1
+  health: 0
+  healthMax: 100
+  buildingPlan: {fileID: 4494591965250034952}
 --- !u!1 &8952301883364956825
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,8 +146,9 @@ MonoBehaviour:
   goldAmount: 2
   _playerMoveDistanceOnBuild: 2.5
   _playerMoveSpeed: 0.2
-  _referens: {fileID: 4242600131688563166}
+  building: {fileID: 4242600131688563166}
   _flag: {fileID: 422445531977133756}
+  isBuilt: 0
   _isPlayerNearby: 0
   _buildingTrigger: {fileID: 6231495664451341820}
 --- !u!114 &6231495664451341820
@@ -277,6 +295,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1648905886851508, guid: a4a521900c27d504aa19df480329f342, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8434749467392706816}
+    - targetCorrespondingSourceObject: {fileID: 1648905886851508, guid: a4a521900c27d504aa19df480329f342, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4963646286225973866}
   m_SourcePrefab: {fileID: 100100000, guid: a4a521900c27d504aa19df480329f342, type: 3}
 --- !u!1 &446342638413566393 stripped
 GameObject:
@@ -284,6 +305,28 @@ GameObject:
   m_PrefabInstance: {fileID: 447089912536576013}
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &8434749467392706816
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446342638413566393}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: d09cc3e5099ce004aad464eda0cdca36, type: 3}
+--- !u!64 &4963646286225973866
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
