@@ -25,7 +25,7 @@ public class BildingPlan : MonoBehaviour
     [Header("Components")]
     [SerializeField] private BuildingTrigger _buildingTrigger;
 
-    private void Awake()
+    private void Start()
     {
         goldManager = GoldManager.instance;
     }
