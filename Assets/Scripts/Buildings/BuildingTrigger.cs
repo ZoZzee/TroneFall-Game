@@ -15,12 +15,6 @@ public class BuildingTrigger : MonoBehaviour
 
             playerTransform = other.transform;
         }
-
-        if (other.CompareTag("Enemy"))
-        {
-            if(bildingPlan.isBuilt == true)
-                bildingPlan.building.GetComponent<Building>().DestroyBuilding();
-        }
     }
 
     private void OnTriggerExit(Collider other)
