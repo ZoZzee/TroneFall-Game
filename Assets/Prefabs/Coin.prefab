@@ -69,6 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0
   _baseSpeed: 0.2
+  _timerAfterStartDay: 2.5
   _speedUpAmount: 2
   _maxSpeed: 10
 --- !u!1 &7628888473343871631

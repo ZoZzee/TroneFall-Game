@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,7 +14,7 @@ public class DayNightManager : MonoBehaviour
     [SerializeField] private Transform _globalLight;
 
     private Vector3 _targetAngle;
-
+    public bool dayStart;
     [Header("Events")]
 
     public UnityEvent onDayStart;
@@ -26,6 +27,10 @@ public class DayNightManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+    private void Start()
+    {
+        dayStart = true;
     }
 
 
@@ -45,6 +50,7 @@ public class DayNightManager : MonoBehaviour
     {
         onDayStart.Invoke();
 
+        dayStart = true;
         _targetAngle = _dayAngle;
         StartCoroutine(ChangeAngle());
     }
@@ -53,6 +59,7 @@ public class DayNightManager : MonoBehaviour
     {
         onNightStart.Invoke();
 
+        dayStart = false;
         _targetAngle = _nightAngle;
         StartCoroutine(ChangeAngle());
     }

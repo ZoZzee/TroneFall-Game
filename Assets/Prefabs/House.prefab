@@ -72,6 +72,7 @@ MonoBehaviour:
   health: 0
   healthMax: 100
   buildingPlan: {fileID: 4494591965250034952}
+  _coin: {fileID: 4431722884024708409, guid: 9a07fd14604774047940f9f414aa0b4b, type: 3}
 --- !u!1 &8952301883364956825
 GameObject:
   m_ObjectHideFlags: 0

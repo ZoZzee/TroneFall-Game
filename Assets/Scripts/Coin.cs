@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
     private Transform _target;
     [SerializeField] private float _speed;
     [SerializeField] private float _baseSpeed;
+    [SerializeField] private float _timerAfterStartDay;
 
     private float _speedUp;
     [SerializeField] private float _speedUpAmount;
@@ -13,42 +14,36 @@ public class Coin : MonoBehaviour
     [SerializeField] private float _maxSpeed;
     private int oneGold = 1;
 
-    private bool goo = false;
-
+    private float _timer;
+    private bool _canMove;
+    private DayNightManager dayNightManager;
+    private void Start()
+    {
+        dayNightManager = DayNightManager.instance;
+    }
     private void LateUpdate()
     {
-        if (goo)
+        if (dayNightManager.dayStart && !_canMove)
         {
-            Vector3 targetPosition = _target.position + Vector3.up;
-
-            _speedUp += _speedUpAmount * Time.deltaTime;
-            _speed = _baseSpeed + _speedUp;
-
-            Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, targetPosition, _speed * Time.deltaTime);
-            transform.position = smoothedPosition;
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            goo = true;
+            _canMove = true;
+            _timer = Time.time;
             _target = PlayerMove.instance.transform;
         }
+        if (Time.time - _timer >= _timerAfterStartDay)
+        {
+                FollowingThePlayer();
+        }
+        
     }
 
-
-    //private void FoloveTarget()
-    //{
-    //    StartCoroutine(GoCoin());
-    //}
-
-    //private IEnumerator GoCoin()
-    //{
-    //    while(_speed <= _maxSpeed)
-    //    {
-    //        _speed += 0.1f;
-    //        yield return new WaitForSeconds(0.1f);
-    //    }
-    //}
+    private void FollowingThePlayer()
+    {
+        Vector3 targetPosition = _target.position + Vector3.up;
+        _speedUp += _speedUpAmount * Time.deltaTime;
+        _speed = _baseSpeed + _speedUp;
+        Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, targetPosition, _speed * Time.deltaTime);
+        transform.position = smoothedPosition;
+    }
 
     private void OnTriggerEnter(Collider other)
     {

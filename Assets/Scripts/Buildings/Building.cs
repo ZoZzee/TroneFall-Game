@@ -13,11 +13,18 @@ public class Building : MonoBehaviour
 
     private BuildingsManager _buildingsManager;
 
+
+    private DayNightManager _dayNightManager;
+    [SerializeField]private GameObject _coin;
+
     private void Start()
     {
         _buildingsManager = BuildingsManager.instance;
 
         _buildingsManager.finishedBuildings.Add(this);
+
+        _dayNightManager = DayNightManager.instance;
+        _dayNightManager.onDayStart.AddListener(OnDayStart);
     }
 
     private void OnEnable()
@@ -36,5 +43,14 @@ public class Building : MonoBehaviour
         buildingPlan.isBuilt = false;
 
         gameObject.SetActive(false);
+    }
+
+    public void OnDayStart()
+    {
+        if (buildingPlan.isBuilt == true)
+        {
+            Vector3 position = transform.position + new Vector3(Random.Range(1f, 2f), 0, Random.Range(1f, 2f));
+            Instantiate(_coin, position, _coin.transform.rotation);
+        }
     }
 }
