@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 300913252275955303}
   - component: {fileID: 7840104652123263340}
   - component: {fileID: 1947971246981199391}
+  - component: {fileID: 2107072917613446900}
+  - component: {fileID: 4656242685255332197}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -99,6 +101,31 @@ MonoBehaviour:
   cameraTransform: {fileID: 7017058576692832454}
   moveSpeed: 0.1
   speedRotation: 0.1
+--- !u!114 &2107072917613446900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104342847458436059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9438f80a2362546941b6cfbac74049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxPlayerHp: 100
+--- !u!114 &4656242685255332197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104342847458436059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1362975570417287255
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +339,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3539096de669b84e9eaf6e90a7b15e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainBuilding: {fileID: 0}
+  finishedBuildings: []
+  destroyedBuildings: []
 --- !u!114 &6493188800340371466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +358,7 @@ MonoBehaviour:
   _nightAngle: {x: -90, y: -30, z: 0}
   _lightRotationSpeed: 0.5
   _globalLight: {fileID: 7754383661891135882}
+  dayStart: 0
   onDayStart:
     m_PersistentCalls:
       m_Calls: []
