@@ -5,6 +5,9 @@ using UnityEngine.Events;
 
 public class DayNightManager : MonoBehaviour
 {
+    [SerializeField] private float spaceHoldTime;
+    [SerializeField] private float spaceHoldTimeMax;
+
     [SerializeField] private Vector3 _dayAngle;
     [SerializeField] private Vector3 _nightAngle;
     [SerializeField] private float _lightRotationSpeed;
@@ -40,9 +43,29 @@ public class DayNightManager : MonoBehaviour
         {
             StartDay();
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+    }
+
+    private void FixedUpdate()
+    {
+        if (dayStart == true)
         {
-            StartNight();
+            if (Input.GetKey(KeyCode.Space))
+            {
+                spaceHoldTime++;
+
+                if (spaceHoldTime >= spaceHoldTimeMax)
+                {
+                    StartNight();
+                    spaceHoldTime = 0;
+                }
+            }
+            else
+            {
+                if (spaceHoldTime > 0)
+                {
+                    spaceHoldTime--;
+                }   
+            }
         }
     }
 
@@ -62,6 +85,8 @@ public class DayNightManager : MonoBehaviour
         dayStart = false;
         _targetAngle = _nightAngle;
         StartCoroutine(ChangeAngle());
+
+        SpawnManager.instance.Spawn();
     }
 
 

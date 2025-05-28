@@ -9,7 +9,7 @@ public class TowerTrigger : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            
+
         }
     }
 
