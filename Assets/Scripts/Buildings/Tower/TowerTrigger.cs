@@ -1,7 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerPlan : MonoBehaviour
+public class TowerTrigger : MonoBehaviour
 {
+    public List<EnemyController> enemy;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
