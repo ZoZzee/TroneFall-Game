@@ -4,7 +4,6 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public List<EnemyController> acriveEnemy;
-    public List<EnemyController> DeadEnemy;
 
     public EnemyManager enemyManager;
 

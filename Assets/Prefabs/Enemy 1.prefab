@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 75711486085217170}
   - component: {fileID: 8739188578420535149}
   - component: {fileID: 6907261828389010507}
-  - component: {fileID: 2634720081241417548}
+  - component: {fileID: 2783177482018272255}
   - component: {fileID: 6886998975568701705}
   m_Layer: 0
   m_Name: Enemy 1
@@ -107,7 +107,7 @@ MonoBehaviour:
   mainBuilding: {fileID: 0}
   distanceToTarget: 0
   enemyAttack: {fileID: 6886998975568701705}
---- !u!114 &2634720081241417548
+--- !u!114 &2783177482018272255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,9 +116,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2045595260600765139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3698ffe92401b498fb1fd0dd3f881736, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _maxHealth: 100
 --- !u!114 &6886998975568701705
 MonoBehaviour:
   m_ObjectHideFlags: 0

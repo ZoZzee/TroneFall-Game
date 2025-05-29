@@ -2,15 +2,38 @@ using UnityEngine;
 
 public class TowerAttack : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField]private TowerTrigger _towerTrigger;
+    [SerializeField] private int _damage;
+    [SerializeField] private float spaceHoldTime;
+    [SerializeField] private float spaceHoldTimeMax;
+
+    private void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        if(_towerTrigger.enemy.Count > 0)
+        {
+            spaceHoldTime++;
+
+            if (spaceHoldTime >= spaceHoldTimeMax )
+            {
+                Attack();
+                spaceHoldTime = 0;
+            }
+        }
     }
+
+    private void Attack()
+    {
+        _towerTrigger.enemyHealth[0].MinusHp(_damage);
+        if(_towerTrigger.enemyHealth[0].EnoughHealth(_damage))
+        {
+            _towerTrigger.enemyHealth.RemoveAt(0);
+            _towerTrigger.enemy.RemoveAt(0);
+        }
+    }
+
 }
