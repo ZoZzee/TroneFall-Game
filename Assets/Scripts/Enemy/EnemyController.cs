@@ -17,11 +17,13 @@ public class EnemyController : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private EnemyAttack enemyAttack;
+    private EnemyManager _enemyManager;
 
     private void Start()
     {
         mainBuilding = BuildingsManager.instance.mainBuilding;
-
+        _enemyManager = EnemyManager.instance;
+        _enemyManager.acriveEnemy.Add(this);
         SetMainBuildingAsTarget();
     }
 

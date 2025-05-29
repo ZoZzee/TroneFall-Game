@@ -28,7 +28,7 @@ public class BuildingsManager : MonoBehaviour
 
     public void OnDayStart()
     {
-        AddGold();
+        //AddGold();
         BuildDestroyedBuildings();
     }
 
@@ -42,15 +42,15 @@ public class BuildingsManager : MonoBehaviour
         destroyedBuildings.Clear();
     }
 
-    private void AddGold()
-    {
-        int goldAmount = 0;
+    //private void AddGold()
+    //{
+    //    int goldAmount = 0;
 
-        for (int i = 0; i < finishedBuildings.Count; i++)
-        {
-            goldAmount += finishedBuildings[i].goldAtDayStart;
-        }
+    //    for (int i = 0; i < finishedBuildings.Count; i++)
+    //    {
+    //        goldAmount += finishedBuildings[i].goldAtDayStart;
+    //    }
 
-        _goldManager.PlusGold(goldAmount);
-    }
+    //    _goldManager.PlusGold(goldAmount);
+    //}
 }

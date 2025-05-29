@@ -4,13 +4,26 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public List<EnemyController> acriveEnemy;
+    public int numberOfEnemies;
 
-    public EnemyManager enemyManager;
+    public static EnemyManager instance;
 
     private void Awake()
     {
-        enemyManager = this;
+        instance = this;
     }
 
+
+    public bool DayStart()
+    {
+        if (numberOfEnemies > 0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 
 }

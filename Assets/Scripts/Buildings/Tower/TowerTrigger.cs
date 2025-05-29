@@ -5,7 +5,6 @@ using UnityEngine;
 public class TowerTrigger : MonoBehaviour
 {
     public List<Transform> enemy;
-    public bool enemyDetected;
     public List<HealthManager> enemyHealth;
 
     private void OnTriggerEnter(Collider other)
@@ -13,7 +12,6 @@ public class TowerTrigger : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             enemy.Add(other.transform);
-            enemyDetected = true;
             enemyHealth.Add(other.GetComponent<HealthManager>());
         }
     }

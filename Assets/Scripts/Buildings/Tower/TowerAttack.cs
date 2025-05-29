@@ -4,8 +4,8 @@ public class TowerAttack : MonoBehaviour
 {
     [SerializeField]private TowerTrigger _towerTrigger;
     [SerializeField] private int _damage;
-    [SerializeField] private float spaceHoldTime;
-    [SerializeField] private float spaceHoldTimeMax;
+    [SerializeField] private float cooldown;
+    [SerializeField] private float cooldownMax;
 
     private void Start()
     {
@@ -16,12 +16,12 @@ public class TowerAttack : MonoBehaviour
     {
         if(_towerTrigger.enemy.Count > 0)
         {
-            spaceHoldTime++;
+            cooldown++;
 
-            if (spaceHoldTime >= spaceHoldTimeMax )
+            if (cooldown >= cooldownMax)
             {
                 Attack();
-                spaceHoldTime = 0;
+                cooldown = 0;
             }
         }
     }
