@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public List<EnemyController> acriveEnemy;
+    public List<GameObject> acriveEnemy;
     public int numberOfEnemies;
 
     public static EnemyManager instance;
@@ -24,6 +24,7 @@ public class EnemyManager : MonoBehaviour
         {
             return true;
         }
+        
     }
 
 }

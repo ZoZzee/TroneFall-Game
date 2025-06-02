@@ -6,9 +6,15 @@ public class HealthManager : MonoBehaviour
     [SerializeField] private int _maxHealth;
     private int _health;
 
+    [SerializeField] private bool isEnemy;
+    private EnemyManager _enemyManager;
     private void Start()
     {
         _health = _maxHealth;
+        if (isEnemy)
+        {
+            _enemyManager = EnemyManager.instance;
+        }
     }
 
     public void MinusHp(int count)
@@ -17,7 +23,11 @@ public class HealthManager : MonoBehaviour
         Debug.Log(_health + " " + gameObject.name);
         if(EnoughHealth(count))
         {
-            Destroy(gameObject);
+            if (isEnemy)
+            {
+                _enemyManager.acriveEnemy.Remove(this.gameObject);
+                Destroy(gameObject);
+            }
         }
     }
 

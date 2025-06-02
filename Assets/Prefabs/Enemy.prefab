@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
+  isEnemy: 1
 --- !u!114 &6886998975568701705
 MonoBehaviour:
   m_ObjectHideFlags: 0

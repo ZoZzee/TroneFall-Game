@@ -23,7 +23,7 @@ public class EnemyController : MonoBehaviour
     {
         mainBuilding = BuildingsManager.instance.mainBuilding;
         _enemyManager = EnemyManager.instance;
-        _enemyManager.acriveEnemy.Add(this);
+        _enemyManager.acriveEnemy.Add(this.gameObject);
         SetMainBuildingAsTarget();
     }
 
