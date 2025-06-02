@@ -7,11 +7,11 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public HealthManager targetHealth;
 
     [SerializeField] private float _speed;
-    [SerializeField] private float _distance;
     [SerializeField] private float attackCooldown;
     [SerializeField] private int _damageToPlayer;
 
-    [HideInInspector] public Transform mainBuilding;
+    [HideInInspector] public MainBuilding mainBuilding;
+    [HideInInspector] public Transform mainBuildingTransform;
 
     [HideInInspector] public float distanceToTarget;
 
@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         mainBuilding = BuildingsManager.instance.mainBuilding;
+        mainBuildingTransform = mainBuilding.transform;
         _enemyManager = EnemyManager.instance;
         _enemyManager.acriveEnemy.Add(this.gameObject);
         SetMainBuildingAsTarget();
@@ -38,7 +39,7 @@ public class EnemyController : MonoBehaviour
 
     public void SetMainBuildingAsTarget()
     {
-        target = mainBuilding;
-        targetHealth = mainBuilding.GetComponent<HealthManager>();
+        target = mainBuildingTransform;
+        targetHealth = mainBuilding.healthManager;
     }
 }

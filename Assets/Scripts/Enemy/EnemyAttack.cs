@@ -30,6 +30,8 @@ public class EnemyAttack : MonoBehaviour
 
     private IEnumerator AttackTimer()
     {
+        yield return new WaitForSeconds(1f);
+
         while (true)
         {
             if (enemyController.targetHealth && distanceToTarget <= distanceToAttack)
