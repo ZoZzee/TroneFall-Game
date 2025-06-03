@@ -10,7 +10,6 @@ public class BuildingsManager : MonoBehaviour
 
 
     private DayNightManager _dayNightManager;
-    private GoldManager _goldManager;
 
     public static BuildingsManager instance;
 
@@ -21,14 +20,12 @@ public class BuildingsManager : MonoBehaviour
 
     private void Start()
     {
-        _goldManager = GoldManager.instance;
         _dayNightManager = DayNightManager.instance;
         _dayNightManager.onDayStart.AddListener(OnDayStart);
     }
 
     public void OnDayStart()
     {
-        //AddGold();
         BuildDestroyedBuildings();
     }
 
@@ -41,16 +38,4 @@ public class BuildingsManager : MonoBehaviour
 
         destroyedBuildings.Clear();
     }
-
-    //private void AddGold()
-    //{
-    //    int goldAmount = 0;
-
-    //    for (int i = 0; i < finishedBuildings.Count; i++)
-    //    {
-    //        goldAmount += finishedBuildings[i].goldAtDayStart;
-    //    }
-
-    //    _goldManager.PlusGold(goldAmount);
-    //}
 }

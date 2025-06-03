@@ -9,7 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4186375454923342739}
-  m_Layer: 0
+  - component: {fileID: 7928156384270175110}
+  - component: {fileID: 6366662474089584825}
+  - component: {fileID: 1869336539510356078}
+  - component: {fileID: 4330140016423933644}
+  m_Layer: 7
   m_Name: Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,13 +29,86 @@ Transform:
   m_GameObject: {fileID: 3867340094475203794}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.72694016, y: -0.00717, z: -9.11324}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5239167541971915713}
   m_Father: {fileID: 6187135031253854782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &7928156384270175110
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867340094475203794}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 22
+  m_Center: {x: 0.000531137, y: 2.716281, z: 0}
+--- !u!114 &6366662474089584825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867340094475203794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd77f4afe8904143a8dcd1bf0ad6f8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: []
+  enemyHealth: []
+--- !u!114 &1869336539510356078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867340094475203794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5385c36dd12b749b0b71d898de053b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _towerTrigger: {fileID: 6366662474089584825}
+  _damage: 10
+  cooldown: 0
+  cooldownMax: 50
+--- !u!64 &4330140016423933644
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867340094475203794}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: fc3750468f9018a449aba683ea32e37c, type: 3}
 --- !u!1 &5877089142563295101
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +120,7 @@ GameObject:
   - component: {fileID: 7155182269357974765}
   - component: {fileID: 1227480417204237844}
   - component: {fileID: 2160482588428003881}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Knights_Castle_Flag_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,9 +207,7 @@ GameObject:
   - component: {fileID: 5239167541971915713}
   - component: {fileID: 7435184016554379634}
   - component: {fileID: 2318746440961931333}
-  - component: {fileID: 5633979898509038384}
-  - component: {fileID: 6056504664714113715}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Viking_Tower_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 6248181765842798934}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.72694016, y: 0.00717, z: 9.11324}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -207,39 +282,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5633979898509038384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6248181765842798934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecf5063f8e8071446851f92e83eeabe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!135 &6056504664714113715
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6248181765842798934}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 15
-  m_Center: {x: 0.000531137, y: 2.716281, z: 0}
 --- !u!1 &8462550850818037590
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +310,7 @@ Transform:
   m_GameObject: {fileID: 8462550850818037590}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.1, y: 0, z: 10.5}
+  m_LocalPosition: {x: -3.1726608, y: 0.00717, z: 17.07221}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -288,10 +330,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldAmount: 0
-  _playerMoveDistanceOnBuild: 0
-  _playerMoveSpeed: 0
-  building: {fileID: 6248181765842798934}
+  goldAmount: 3
+  _playerMoveDistanceOnBuild: 1
+  _playerMoveSpeed: 0.2
+  building: {fileID: 3867340094475203794}
+  LevelEnhancement: []
   _flag: {fileID: 5877089142563295101}
   isBuilt: 0
   _isPlayerNearby: 0
@@ -345,7 +388,7 @@ GameObject:
   - component: {fileID: 2067050458612981053}
   - component: {fileID: 6294044862168462646}
   - component: {fileID: 1205254239425383879}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

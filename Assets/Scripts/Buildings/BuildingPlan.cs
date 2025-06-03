@@ -1,10 +1,14 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BuildingPlan : MonoBehaviour
 {
     [Header("Values")]
-    public int goldAmount;
+    public byte goldAmount;
+
+    private byte _levelEnhancement;
 
     [SerializeField]
     [Tooltip("На скільки рухаємо гравця коли побудували будівлю")]
@@ -12,8 +16,9 @@ public class BuildingPlan : MonoBehaviour
     [SerializeField] private float _playerMoveSpeed;
 
     [Header("References")]
-
     public GameObject building;
+    public List<GameObject> LevelEnhancement;
+    
     [SerializeField] private GameObject _flag;
 
     public bool isBuilt = false;
@@ -28,11 +33,12 @@ public class BuildingPlan : MonoBehaviour
     private void Start()
     {
         goldManager = GoldManager.instance;
+        _levelEnhancement = 0;
     }
 
     private void Update()
     {
-        if (!isBuilt &&
+        if (_levelEnhancement <= LevelEnhancement.Count &&
              _isPlayerNearby &&
              Input.GetKeyDown(KeyCode.E) &&
              goldManager.EnoughGold(goldAmount))
@@ -43,11 +49,19 @@ public class BuildingPlan : MonoBehaviour
 
     public void Build(bool minusGold)
     {
-        building.SetActive(true);
-        isBuilt = true;
-        _flag.SetActive(false);
+        if (!isBuilt)
+        {
+            building.SetActive(true);
+            isBuilt = true;
+            _flag.SetActive(false);
+        }
+        
 
-        if(minusGold) goldManager.MinusGold(goldAmount);
+
+        if (minusGold)
+        {
+            goldManager.MinusGold(goldAmount);
+        }
 
         if (_buildingTrigger.playerTransform)
         {
@@ -56,6 +70,19 @@ public class BuildingPlan : MonoBehaviour
             targetPosition += transform.position;
 
             StartCoroutine(PlayerMoveOnBuild(targetPosition));
+        }
+
+
+        NextlevlEnhancement();
+        _levelEnhancement++;
+    }
+
+    private void NextlevlEnhancement()
+    {
+        if (LevelEnhancement.Count > 0)
+        {
+            goldAmount = 10;
+            LevelEnhancement[_levelEnhancement].SetActive(true);
         }
     }
 

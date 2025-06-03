@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5272390013594083774}
   - component: {fileID: 2952864574901515997}
   - component: {fileID: 844585481443887261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SM_Bld_Pirate_Mansion_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 5736472403489329030}
   - component: {fileID: 3565903970684758577}
   - component: {fileID: 3630186071394265546}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MainBilding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,8 +244,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldAtDayStart: 0
-  health: 200
-  healthMax: 200
   buildingPlan: {fileID: 4080003197695579373}
   _coin: {fileID: 4431722884024708409, guid: 9a07fd14604774047940f9f414aa0b4b, type: 3}
 --- !u!114 &3565903970684758577
@@ -445,10 +443,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldAmount: 5
-  _playerMoveDistanceOnBuild: 4
-  _playerMoveSpeed: 0.3
+  goldAmount: 4
+  _playerMoveDistanceOnBuild: 3
+  _playerMoveSpeed: 0.2
   building: {fileID: 6839202998311661800}
+  LevelEnhancement:
+  - {fileID: 0}
+  - {fileID: 0}
   _flag: {fileID: 4474354375004217497}
   isBuilt: 0
   _isPlayerNearby: 0
@@ -472,7 +473,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 4
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

@@ -8,11 +8,13 @@ public class HealthManager : MonoBehaviour
 
     [SerializeField] private bool isEnemy;
     private EnemyManager _enemyManager;
+    private DayNightManager _dayNightManager;
     private void Start()
     {
         _health = _maxHealth;
         if (isEnemy)
         {
+            _dayNightManager = DayNightManager.instance;
             _enemyManager = EnemyManager.instance;
         }
     }
@@ -25,8 +27,10 @@ public class HealthManager : MonoBehaviour
         {
             if (isEnemy)
             {
+
                 _enemyManager.acriveEnemy.Remove(this.gameObject);
                 Destroy(gameObject);
+                _dayNightManager.StartDay();
             }
         }
     }

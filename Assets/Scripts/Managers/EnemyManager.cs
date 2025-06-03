@@ -16,7 +16,7 @@ public class EnemyManager : MonoBehaviour
 
     public bool DayStart()
     {
-        if (numberOfEnemies > 0)
+        if (acriveEnemy.Count > 0)
         {
             return false;
         }

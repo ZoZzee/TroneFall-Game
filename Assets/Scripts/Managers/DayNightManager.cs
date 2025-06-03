@@ -27,6 +27,7 @@ public class DayNightManager : MonoBehaviour
     public static DayNightManager instance;
 
 
+    private EnemyManager _enemyManager;
     private void Awake()
     {
         instance = this;
@@ -34,6 +35,7 @@ public class DayNightManager : MonoBehaviour
     private void Start()
     {
         dayStart = true;
+        _enemyManager = EnemyManager.instance;
     }
 
 
@@ -69,13 +71,16 @@ public class DayNightManager : MonoBehaviour
         }
     }
 
-    private void StartDay()
+    public void StartDay()
     {
-        onDayStart.Invoke();
+        if (_enemyManager.DayStart())
+        {
+            onDayStart.Invoke();
 
-        dayStart = true;
-        _targetAngle = _dayAngle;
-        StartCoroutine(ChangeAngle());
+            dayStart = true;
+            _targetAngle = _dayAngle;
+            StartCoroutine(ChangeAngle());
+        }
     }
 
     private void StartNight()

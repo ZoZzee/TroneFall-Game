@@ -1,8 +1,6 @@
 using UnityEngine;
 
-public class MainBuilding : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public HealthManager healthManager;
-
-
 }

@@ -14,7 +14,7 @@ public class TowerAttack : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(_towerTrigger.enemy.Count > 0)
+        if(_towerTrigger?.enemy.Count >= 1)
         {
             cooldown++;
 
