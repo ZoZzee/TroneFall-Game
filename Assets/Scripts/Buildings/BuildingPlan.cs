@@ -88,7 +88,7 @@ public class BuildingPlan : MonoBehaviour
 
     private IEnumerator PlayerMoveOnBuild(Vector3 targetPosition)
     {
-        while (_buildingTrigger.playerTransform.position != targetPosition)
+        while (_buildingTrigger.playerTransform != null && _buildingTrigger.playerTransform.position != targetPosition)
         {
             _buildingTrigger.playerTransform.position = Vector3.MoveTowards(_buildingTrigger.playerTransform.position, targetPosition, _playerMoveSpeed);
             yield return null;

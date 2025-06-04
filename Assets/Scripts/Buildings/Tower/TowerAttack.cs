@@ -14,7 +14,7 @@ public class TowerAttack : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(_towerTrigger?.enemy.Count >= 1)
+        if(_towerTrigger.enemyHealth.Count > 0)
         {
             cooldown++;
 
@@ -28,12 +28,18 @@ public class TowerAttack : MonoBehaviour
 
     private void Attack()
     {
-        _towerTrigger.enemyHealth[0].MinusHp(_damage);
-        if(_towerTrigger.enemyHealth[0].EnoughHealth(_damage))
+        if (_towerTrigger.enemyHealth[0] != null)
+        {
+            _towerTrigger.enemyHealth[0].MinusHp(_damage);
+
+            if (_towerTrigger.enemyHealth[0].alive == false)
+            {
+                _towerTrigger.enemyHealth.RemoveAt(0);
+            }
+        }
+        else
         {
             _towerTrigger.enemyHealth.RemoveAt(0);
-            _towerTrigger.enemy.RemoveAt(0);
         }
     }
-
 }
