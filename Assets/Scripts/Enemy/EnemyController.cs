@@ -55,18 +55,22 @@ public class EnemyController : MonoBehaviour
 
     public void SetMainBuildingAsTarget()
     {
-        Debug.Log(" Запис " + target[0]);
+        Debug.Log(" ?? " + target[0]);
             
-        if (target.Count <= 1 && target[0] == null)
+        if (target.Count == 2 && target[0] != null)
         {
-            
-            target[0] = mainBuildingTransform;
-            targetHealth[0] = mainBuilding.healthManager;
+            Debug.Log(" Видалення Обєкту " + target[0]);
+            target.RemoveAt(0);
+            targetHealth.RemoveAt(0);
+            SetMainBuildingAsTarget();
 
         }
         else
         {
-            target.RemoveAt(0);
+            Debug.Log(" Запис головної будівлі ");
+            target[0] = mainBuildingTransform;
+            targetHealth[0] = mainBuilding.healthManager;
+
         }
     }
 }

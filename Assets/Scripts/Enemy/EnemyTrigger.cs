@@ -23,11 +23,13 @@ public class EnemyTrigger : MonoBehaviour
         {
             switch (currentTriggerPriority)
             {
+                case TriggerPriority.priority0:
+                    enemyController.enemyAttack = true;
+                break;
                 case TriggerPriority.priority1:
 
                     if (enemyController.target[0] == enemyController.mainBuildingTransform)
                     {
-                        Debug.Log("Колізія з гравцем");
                         enemyController.target[0] = other.transform;
                         enemyController.targetHealth[0] = other.GetComponent<HealthManager>();
                     }
@@ -37,43 +39,30 @@ public class EnemyTrigger : MonoBehaviour
                         enemyController.targetHealth.Add(other.GetComponent<HealthManager>());
                     }
                     
-                    break;
+                break;
                 case TriggerPriority.priority2:
-                    break;
+                break;
             }
 
 
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        switch (currentTriggerPriority)
-        {
-            case TriggerPriority.priority0:
-
-                Debug.Log("Атакує " + enemyController.target[0] + " " + enemyController.enemyAttack);
-                enemyController.enemyAttack = true;
-                break;
-        }
-    }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player") /*||
-            other.CompareTag("PlayerAllies")*/)
+        if (other.CompareTag("Player") ||
+            other.CompareTag("PlayerAllies"))
         {
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
                     
                     enemyController.enemyAttack = false;
-                    Debug.Log("Не може атакувати" + enemyController.enemyAttack);
-                    
                     break;
                 case TriggerPriority.priority2:
 
-                    enemyController.target.Remove(other.transform);
-                    enemyController.targetHealth.Remove(other.GetComponent<HealthManager>());
+                    //enemyController.target.Remove(other.transform);
+                    //enemyController.targetHealth.Remove(other.GetComponent<HealthManager>());
 
                     Debug.Log("видалдив гравця з ворога");
 

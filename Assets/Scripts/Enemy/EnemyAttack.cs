@@ -43,8 +43,9 @@ private IEnumerator AttackTimer()
                 enemyController._animatorController.attack = true;
                 enemyController.targetHealth[0].MinusHp(damage);
             }
-            yield return new WaitForSeconds(attackCuldown);
+            yield return new WaitForSeconds(0.1f);
             enemyController._animatorController.attack = false;
+            yield return new WaitForSeconds(attackCuldown - 0.1f);
 
         }
     }
