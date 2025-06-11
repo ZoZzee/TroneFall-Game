@@ -24,22 +24,28 @@ public class EnemyAttack : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(_checkDistanceTime);
-            distanceToTarget = Vector3.Distance(enemyController.target.position, transform.position);
+            if (enemyController.target[0] != null)
+            {
+                distanceToTarget = Vector3.Distance(enemyController.target[0].position, transform.position);
+            }
         }
     }
 
-    private IEnumerator AttackTimer()
+private IEnumerator AttackTimer()
     {
         yield return new WaitForSeconds(1f);
 
         while (true)
         {
-            if (enemyController.targetHealth && distanceToTarget <= distanceToAttack)
+            if (enemyController.enemyAttack)
             {
-                enemyController.targetHealth.MinusHp(damage);
+                enemyController._animatorController.attack = true;
+                enemyController.targetHealth[0].MinusHp(damage);
             }
 
+            enemyController._animatorController.attack = false;
             yield return new WaitForSeconds(attackCuldown);
+
         }
     }
 }

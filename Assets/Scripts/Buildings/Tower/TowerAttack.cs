@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TowerAttack : MonoBehaviour
 {
-    [SerializeField]private TowerTrigger _towerTrigger;
+    [SerializeField] private TowerTrigger _towerTrigger;
     [SerializeField] private int _damage;
     [SerializeField] private float cooldown;
     [SerializeField] private float cooldownMax;

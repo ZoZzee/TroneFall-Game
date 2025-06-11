@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyTrigger : MonoBehaviour
 {
@@ -16,15 +17,29 @@ public class EnemyTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || 
+            other.CompareTag("Buldings") || 
+            other.CompareTag("PlayerAllies"))
         {
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
-                    enemyController.target = other.transform;
-                    enemyController.targetHealth = other.GetComponent<HealthManager>();
+                    enemyController.enemyAttack = true;
                     break;
                 case TriggerPriority.priority1:
+
+                    if (enemyController.target[0] == enemyController.mainBuildingTransform)
+                    {
+                        Debug.Log("Колізія з гравцем");
+                        enemyController.target[0] = other.transform;
+                        enemyController.targetHealth[0] = other.GetComponent<HealthManager>();
+                    }
+                    else
+                    {
+                        enemyController.target.Add(other.transform);
+                        enemyController.targetHealth.Add(other.GetComponent<HealthManager>());
+                    }
+                    
                     Debug.Log("Зупинився і повернувся на ворога");
                     break;
                 case TriggerPriority.priority2:
@@ -42,7 +57,16 @@ public class EnemyTrigger : MonoBehaviour
         {
             switch (currentTriggerPriority)
             {
+                case TriggerPriority.priority0:
+                    enemyController.enemyAttack = false;
+                    break;
                 case TriggerPriority.priority2:
+
+                    enemyController.target.Remove(other.transform);
+                    enemyController.targetHealth.Remove(other.GetComponent<HealthManager>());
+
+                    Debug.Log("видалдив гравця з ворога");
+
                     enemyController.SetMainBuildingAsTarget();
                     break;
             }   
