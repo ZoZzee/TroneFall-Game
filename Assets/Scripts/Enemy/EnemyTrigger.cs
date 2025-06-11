@@ -23,9 +23,6 @@ public class EnemyTrigger : MonoBehaviour
         {
             switch (currentTriggerPriority)
             {
-                case TriggerPriority.priority0:
-                    enemyController.enemyAttack = true;
-                    break;
                 case TriggerPriority.priority1:
 
                     if (enemyController.target[0] == enemyController.mainBuildingTransform)
@@ -40,25 +37,38 @@ public class EnemyTrigger : MonoBehaviour
                         enemyController.targetHealth.Add(other.GetComponent<HealthManager>());
                     }
                     
-                    Debug.Log("Зупинився і повернувся на ворога");
                     break;
                 case TriggerPriority.priority2:
-                    Debug.Log("Побачив ворога");
                     break;
             }
 
 
         }
     }
+    private void OnTriggerStay(Collider other)
+    {
+        switch (currentTriggerPriority)
+        {
+            case TriggerPriority.priority0:
+
+                Debug.Log("Атакує " + enemyController.target[0] + " " + enemyController.enemyAttack);
+                enemyController.enemyAttack = true;
+                break;
+        }
+    }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") /*||
+            other.CompareTag("PlayerAllies")*/)
         {
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
+                    
                     enemyController.enemyAttack = false;
+                    Debug.Log("Не може атакувати" + enemyController.enemyAttack);
+                    
                     break;
                 case TriggerPriority.priority2:
 
@@ -70,6 +80,15 @@ public class EnemyTrigger : MonoBehaviour
                     enemyController.SetMainBuildingAsTarget();
                     break;
             }   
+        }
+        if(other.CompareTag("Buldings"))
+        {
+            switch (currentTriggerPriority)
+            {
+                case TriggerPriority.priority0:
+                    enemyController.enemyAttack = false;
+                    break;
+            }
         }
     }
 }

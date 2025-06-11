@@ -39,12 +39,12 @@ private IEnumerator AttackTimer()
         {
             if (enemyController.enemyAttack)
             {
+                Debug.Log(enemyController.enemyAttack + " enemy Attack" );
                 enemyController._animatorController.attack = true;
                 enemyController.targetHealth[0].MinusHp(damage);
             }
-
-            enemyController._animatorController.attack = false;
             yield return new WaitForSeconds(attackCuldown);
+            enemyController._animatorController.attack = false;
 
         }
     }

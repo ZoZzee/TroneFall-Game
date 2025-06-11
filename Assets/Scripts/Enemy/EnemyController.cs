@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public List<Transform> target;
-    [HideInInspector] public List<HealthManager> targetHealth;
+     public List<HealthManager> targetHealth;
 
     [SerializeField] private float _speed;
     [SerializeField] private float attackCooldown;
@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        if (_enemyAttack.distanceToTarget > _enemyAttack.distanceToAttack - 0.3f && target[0] != null)
+        if (!enemyAttack && target[0] != null)
         {
 
             Debug.Log(" Дивиться " + target[0]);
@@ -45,6 +45,10 @@ public class EnemyController : MonoBehaviour
             Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, target[0].position, _speed * Time.deltaTime);
             transform.position = smoothedPosition;
             _animatorController.velocity = smoothedPosition.normalized.magnitude;
+        }
+        else
+        {
+            _animatorController.velocity = 0;
         }
 
     }
