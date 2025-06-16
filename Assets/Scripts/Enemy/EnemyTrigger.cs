@@ -27,7 +27,6 @@ public class EnemyTrigger : MonoBehaviour
                     enemyController.enemyAttack = true;
                 break;
                 case TriggerPriority.priority1:
-
                     if (enemyController.target[0] == enemyController.mainBuildingTransform)
                     {
                         enemyController.target[0] = other.transform;
@@ -51,7 +50,8 @@ public class EnemyTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player") ||
-            other.CompareTag("PlayerAllies"))
+            other.CompareTag("PlayerAllies") ||
+            other.CompareTag("Buldings"))
         {
             switch (currentTriggerPriority)
             {
@@ -63,21 +63,16 @@ public class EnemyTrigger : MonoBehaviour
 
                     enemyController.target.Remove(other.transform);
                     enemyController.targetHealth.Remove(other.GetComponent<HealthManager>());
-
-                    Debug.Log("видалдив гравця з ворога");
+                    if(enemyController.target == null)
+                    {
+                        enemyController.SetMainBuildingAsTarget();
+                    }
+                    Debug.Log("видалдив Target з Enemy");
 
                     enemyController.SetMainBuildingAsTarget();
                     break;
             }   
         }
-        if(other.CompareTag("Buldings"))
-        {
-            switch (currentTriggerPriority)
-            {
-                case TriggerPriority.priority0:
-                    enemyController.enemyAttack = false;
-                    break;
-            }
-        }
+        
     }
 }

@@ -2238,8 +2238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb9ace3d2fb043df8d4831eefb82117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  targetHealth: {fileID: 0}
+  target:
+  - {fileID: 0}
+  targetHealth:
+  - {fileID: 0}
   _speed: 3
   attackCooldown: 2
   _damageToPlayer: 10
@@ -2278,7 +2280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  attackCuldown: 0.5
+  attackCuldown: 1.5
   distanceToAttack: 3
   distanceToTarget: 0
   _checkDistanceTime: 1
@@ -2789,10 +2791,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4.5
-  m_Height: 15.83
+  m_Radius: 10
+  m_Height: 40
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 3.02}
+  m_Center: {x: 0, y: 0, z: 5}
 --- !u!1 &2567521528663234332
 GameObject:
   m_ObjectHideFlags: 0
@@ -2927,7 +2929,7 @@ Animator:
   m_GameObject: {fileID: 2574512755829062646}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 02ded044b8e0963439276550f50be6f9, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7b5a307590de0d47a6376c0b64d49bb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2953,6 +2955,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocityName: Velocity
   velocity: 0
+  attackName: Attack
+  attack: 0
+  deadName: Dead
+  dead: 0
 --- !u!1 &2640238214397338860
 GameObject:
   m_ObjectHideFlags: 0
@@ -6473,7 +6479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2077153462525513548
 Transform:
   m_ObjectHideFlags: 0
@@ -7581,7 +7587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4138603486408982008
 Transform:
   m_ObjectHideFlags: 0
@@ -8209,10 +8215,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5.87897
-  m_Height: 18.24
+  m_Radius: 15
+  m_Height: 50
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 5.68}
+  m_Center: {x: 0, y: 0, z: 5}
 --- !u!1 &6059370104064420280
 GameObject:
   m_ObjectHideFlags: 0
@@ -10371,7 +10377,7 @@ Transform:
   m_Children:
   - {fileID: 6269332822557595231}
   m_Father: {fileID: 4420241408642453239}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.00235384, y: 2.3974674, z: 172.64972}
 --- !u!1 &7176448945183001253
 GameObject:
   m_ObjectHideFlags: 0

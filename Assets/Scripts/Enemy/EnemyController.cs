@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public List<Transform> target;
-     public List<HealthManager> targetHealth;
+    public List<HealthManager> targetHealth;
 
     [SerializeField] private float _speed;
     [SerializeField] private float attackCooldown;
@@ -53,31 +53,12 @@ public class EnemyController : MonoBehaviour
 
     public void SetMainBuildingAsTarget()
     {
-        Debug.Log(" Управління списком");
-        if (target[0] == null )
-        {
-            Debug.Log(" Запис головної будівлі ");
-
-            TargetToMainBuilding();
-
-        }
-        else
-        {
-            Debug.Log(" Видалення Обєкту (1)" + target[0]);
-            target.RemoveAt(0);
-            targetHealth.RemoveAt(0);
-            Debug.Log(" Видалення Обєкту (2)" + target[0]);
-            if (target[0] == null)
-            {
-                TargetToMainBuilding();
-            }
-
-        }
-    }
-
-    private void TargetToMainBuilding()
-    {
+        Debug.Log(" Перед додаванням " + target[0]);
         target[0] = mainBuildingTransform;
         targetHealth[0] = mainBuilding.healthManager;
+
+        Debug.Log(" Add main " + target[0]);
     }
+
+    
 }
