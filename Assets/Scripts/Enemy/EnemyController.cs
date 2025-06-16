@@ -39,8 +39,6 @@ public class EnemyController : MonoBehaviour
     {
         if (!enemyAttack && target[0] != null)
         {
-
-            Debug.Log(" Дивиться " + target[0]);
             transform.LookAt(target[0]);
             Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, target[0].position, _speed * Time.deltaTime);
             transform.position = smoothedPosition;
@@ -55,22 +53,31 @@ public class EnemyController : MonoBehaviour
 
     public void SetMainBuildingAsTarget()
     {
-        Debug.Log(" ?? " + target[0]);
-            
-        if (target.Count == 2 && target[0] != null)
+        Debug.Log(" Управління списком");
+        if (target[0] == null )
         {
-            Debug.Log(" Видалення Обєкту " + target[0]);
-            target.RemoveAt(0);
-            targetHealth.RemoveAt(0);
-            SetMainBuildingAsTarget();
+            Debug.Log(" Запис головної будівлі ");
+
+            TargetToMainBuilding();
 
         }
         else
         {
-            Debug.Log(" Запис головної будівлі ");
-            target[0] = mainBuildingTransform;
-            targetHealth[0] = mainBuilding.healthManager;
+            Debug.Log(" Видалення Обєкту (1)" + target[0]);
+            target.RemoveAt(0);
+            targetHealth.RemoveAt(0);
+            Debug.Log(" Видалення Обєкту (2)" + target[0]);
+            if (target[0] == null)
+            {
+                TargetToMainBuilding();
+            }
 
         }
+    }
+
+    private void TargetToMainBuilding()
+    {
+        target[0] = mainBuildingTransform;
+        targetHealth[0] = mainBuilding.healthManager;
     }
 }

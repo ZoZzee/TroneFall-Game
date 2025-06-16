@@ -61,8 +61,8 @@ public class EnemyTrigger : MonoBehaviour
                     break;
                 case TriggerPriority.priority2:
 
-                    //enemyController.target.Remove(other.transform);
-                    //enemyController.targetHealth.Remove(other.GetComponent<HealthManager>());
+                    enemyController.target.Remove(other.transform);
+                    enemyController.targetHealth.Remove(other.GetComponent<HealthManager>());
 
                     Debug.Log("видалдив гравця з ворога");
 
