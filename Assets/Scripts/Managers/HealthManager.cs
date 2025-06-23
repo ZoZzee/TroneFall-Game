@@ -11,13 +11,14 @@ public class HealthManager : MonoBehaviour
 
     [SerializeField] private Image _healthBar;
 
-    [SerializeField] private bool isEnemy;
+    [SerializeField] private bool _isEnemy;
+    [SerializeField] private bool _isBuildings;
     private EnemyManager _enemyManager;
     private DayNightManager _dayNightManager;
     private void Start()
     {
         _health = _maxHealth;
-        if (isEnemy)
+        if (_isEnemy)
         {
             _dayNightManager = DayNightManager.instance;
             _enemyManager = EnemyManager.instance;
@@ -31,13 +32,17 @@ public class HealthManager : MonoBehaviour
 
         if (_health == 0)
         {
-            if (isEnemy)
+            if (_isEnemy)
             {
                 _enemyManager.acriveEnemy.Remove(this.gameObject);
                 Destroy(gameObject);
                 _dayNightManager.StartDay();
 
                 alive = false;
+            }
+            else if(_isBuildings)
+            {
+                Destroy(gameObject);
             }
         }
 

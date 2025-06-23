@@ -12,10 +12,10 @@ public class TowerTrigger : MonoBehaviour
         {
             enemyHealth.Add(other.GetComponent<HealthManager>());
         }
-        if (other.CompareTag("Player"))
-        {
-            
-        }
+        //if (other.CompareTag("Player"))
+        //{
+
+        //}
     }
 
     private void OnTriggerExit(Collider other)
@@ -24,9 +24,9 @@ public class TowerTrigger : MonoBehaviour
         {
             enemyHealth.Remove(other.GetComponent<HealthManager>());
         }
-        if (other.CompareTag("Player"))
-        {
+        //if (other.CompareTag("Player"))
+        //{
 
-        }
+        //}
     }
 }

@@ -39,9 +39,21 @@ private IEnumerator AttackTimer()
         {
             if (enemyController.enemyAttack)
             {
-                Debug.Log(enemyController.enemyAttack + " enemy Attack" );
                 enemyController._animatorController.attack = true;
                 enemyController.targetHealth[0].MinusHp(damage);
+                if (enemyController.targetHealth[0] )
+                {
+                    if (enemyController.target.Count > 1)
+                    {
+                        Debug.Log("Знищення тавера");
+                        enemyController.targetHealth.RemoveAt(0);
+                        enemyController.target.RemoveAt(0);
+                    }
+                    else
+                    {
+                        enemyController.SetMainBuildingAsTarget();
+                    }
+                }
             }
             yield return new WaitForSeconds(0.1f);
             enemyController._animatorController.attack = false;

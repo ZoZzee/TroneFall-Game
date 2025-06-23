@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - PlayerAllies
   - Buldings
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -7,10 +7,7 @@ public class TowerAttack : MonoBehaviour
     [SerializeField] private float cooldown;
     [SerializeField] private float cooldownMax;
 
-    private void Start()
-    {
-
-    }
+    
 
     private void FixedUpdate()
     {

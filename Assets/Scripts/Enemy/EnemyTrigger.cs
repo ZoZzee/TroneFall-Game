@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
@@ -5,6 +7,8 @@ public class EnemyTrigger : MonoBehaviour
 {
 
     [SerializeField] private EnemyController enemyController;
+    private byte _priority = 0;
+    private byte _notPriority = 0;
 
     public TriggerPriority currentTriggerPriority;
 
@@ -17,41 +21,79 @@ public class EnemyTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") || 
-            other.CompareTag("Buldings") || 
-            other.CompareTag("PlayerAllies"))
+        if (other.CompareTag("Player") ||
+           other.CompareTag("PlayerAllies"))
         {
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
                     enemyController.enemyAttack = true;
-                break;
+                    break;
                 case TriggerPriority.priority1:
-                    if (enemyController.target[0] == enemyController.mainBuildingTransform)
-                    {
-                        enemyController.target[0] = other.transform;
-                        enemyController.targetHealth[0] = other.GetComponent<HealthManager>();
-                    }
-                    else
-                    {
-                        enemyController.target.Add(other.transform);
-                        enemyController.targetHealth.Add(other.GetComponent<HealthManager>());
-                    }
-                    
-                break;
+                    enemyController.target.Insert(_priority, other.transform);
+                    enemyController.targetHealth.Insert(_priority, other.GetComponent<HealthManager>());
+                    _priority++;
+                    _notPriority++;
+                    break;
                 case TriggerPriority.priority2:
-                break;
+
+                    break;
             }
-
-
         }
-    }
+        if (other.CompareTag("Buldings") ||
+            other.CompareTag("Wall"))
+        {
+            switch (currentTriggerPriority)
+            {
+                case TriggerPriority.priority0:
+                    enemyController.enemyAttack = true;
+                    //if(enemyController.target[0] != )
+                    //{
+
+                    //}
+                    break;
+                case TriggerPriority.priority1:
+                    
+                    enemyController.target.Insert(_notPriority, other.transform);
+                    enemyController.targetHealth.Insert(_notPriority, other.GetComponent<HealthManager>());
+                    _notPriority++;
+                    break;
+                case TriggerPriority.priority2:
+
+                    break;
+            }
+        }
+
+            //switch (other.tag)
+            //{
+            //    case ("Player"):
+            //        AddTargetPriority(other);
+            //        Debug.Log(" Добавив " + other);
+            //        break;
+            //    case ("PlayerAllies"):
+            //        AddTargetPriority(other);
+
+            //        Debug.Log(" Добавив " + other);
+            //        break;
+            //    case ("Buldings"):
+            //        AddTarget(other);
+
+            //        Debug.Log(" Добавив " + other);
+            //        break;
+            //    case ("Wall"):
+            //        AddTarget(other);
+
+            //        Debug.Log(" Добавив " + other);
+            //        break;
+            //}
+        }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player") ||
             other.CompareTag("PlayerAllies") ||
-            other.CompareTag("Buldings"))
+            other.CompareTag("Buldings") ||
+            other.CompareTag("Wall"))
         {
             switch (currentTriggerPriority)
             {
@@ -60,19 +102,54 @@ public class EnemyTrigger : MonoBehaviour
                     enemyController.enemyAttack = false;
                     break;
                 case TriggerPriority.priority2:
-
                     enemyController.target.Remove(other.transform);
                     enemyController.targetHealth.Remove(other.GetComponent<HealthManager>());
-                    if(enemyController.target == null)
-                    {
-                        enemyController.SetMainBuildingAsTarget();
-                    }
+                    _notPriority--;
                     Debug.Log("видалдив Target з Enemy");
-
-                    enemyController.SetMainBuildingAsTarget();
                     break;
             }   
         }
-        
+        if (other.CompareTag("Player") ||
+            other.CompareTag("PlayerAllies"))
+        {
+            _priority--;
+        }
+
+
     }
+
+    //private void AddTargetPriority(Collider other)
+    //{
+    //    switch (currentTriggerPriority)
+    //    {
+    //        case TriggerPriority.priority0:
+    //            enemyController.enemyAttack = true;
+    //            break;
+    //        case TriggerPriority.priority1:
+    //            _priority.Add(other.transform);
+    //            enemyController.target.Insert(_priority.Count, other.transform);
+    //            enemyController.targetHealth.Insert(_priority.Count, other.GetComponent<HealthManager>());
+    //            break;
+    //        case TriggerPriority.priority2:
+
+    //            break;
+    //    }
+    //}
+
+    //private void AddTarget(Collider other)
+    //{
+    //    switch (currentTriggerPriority)
+    //    {
+    //        case TriggerPriority.priority0:
+    //            enemyController.enemyAttack = true;
+    //            break;
+    //        case TriggerPriority.priority1:
+    //            enemyController.target.Add(other.transform);
+    //            enemyController.targetHealth.Add(other.GetComponent<HealthManager>());
+    //            break;
+    //        case TriggerPriority.priority2:
+
+    //            break;
+    //    }
+    //}
 }

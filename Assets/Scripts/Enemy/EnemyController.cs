@@ -37,7 +37,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        if (!enemyAttack && target[0] != null)
+        if (!enemyAttack && target.Count > 0)
         {
             transform.LookAt(target[0]);
             Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, target[0].position, _speed * Time.deltaTime);
