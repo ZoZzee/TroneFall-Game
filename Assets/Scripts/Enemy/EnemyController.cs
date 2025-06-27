@@ -30,14 +30,15 @@ public class EnemyController : MonoBehaviour
         mainBuilding = BuildingsManager.instance.mainBuilding;
         mainBuildingTransform = mainBuilding.transform;
         _enemyManager = EnemyManager.instance;
-        _enemyManager.acriveEnemy.Add(this.gameObject);
+        _enemyManager.activeEnemy.Add(this.gameObject);
         SetMainBuildingAsTarget();
 
     }
+    
 
     private void Update()
     {
-        if (!enemyAttack && target.Count > 0)
+        if (!enemyAttack && target.Count > 0 && !_animatorController.dead)
         {
             transform.LookAt(target[0]);
             Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, target[0].position, _speed * Time.deltaTime);
@@ -60,5 +61,5 @@ public class EnemyController : MonoBehaviour
         Debug.Log(" Add main " + target[0]);
     }
 
-    
+
 }

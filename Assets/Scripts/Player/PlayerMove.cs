@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    private Rigidbody _rb;
+    [SerializeField]private CharacterController _characterController;
 
     public Transform cameraTransform;
 
@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
     {
         instance = this;
 
-        _rb = GetComponent<Rigidbody>();
+        
     }
 
     private void FixedUpdate()
@@ -57,10 +57,10 @@ public class PlayerMove : MonoBehaviour
 
         if (moveDirectionNormalized.magnitude > 0.1f)
         {
-            _rb.MovePosition(_rb.position + moveDirectionNormalized * moveSpeed);
-
+            //_rb.MovePosition(_rb.position + moveDirectionNormalized * moveSpeed);
+            _characterController.Move(moveDirectionNormalized * moveSpeed);
             Quaternion targetRotation = Quaternion.LookRotation(moveDirectionNormalized);
-            _rb.rotation = Quaternion.Slerp(_rb.rotation, targetRotation, speedRotation);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speedRotation);
         }
 
         _animatorController.velocity = velocity;

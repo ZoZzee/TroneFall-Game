@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    public List<GameObject> acriveEnemy;
+    public List<GameObject> activeEnemy;
     public int numberOfEnemies;
 
     public static EnemyManager instance;
@@ -16,13 +16,13 @@ public class EnemyManager : MonoBehaviour
 
     public bool DayStart()
     {
-        if (acriveEnemy.Count > 0)
+        if (activeEnemy.Count == 0)
         {
-            return false;
+            return true;
         }
         else
         {
-            return true;
+            return false;
         }
         
     }

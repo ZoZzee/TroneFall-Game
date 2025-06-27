@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,21 +8,36 @@ public class HealthManager : MonoBehaviour
     public bool alive = true;
 
     [SerializeField] private int _maxHealth;
-    private int _health;
-
-    [SerializeField] private Image _healthBar;
+    [HideInInspector]public int _health;
+    
+    [SerializeField] private Slider _healthBar;
+    [SerializeField] private Canvas _canvas;
 
     [SerializeField] private bool _isEnemy;
     [SerializeField] private bool _isBuildings;
+    [SerializeField] private bool _itsPlayer;
+
     private EnemyManager _enemyManager;
+    [SerializeField]private EnemyController _enemyController;
     private DayNightManager _dayNightManager;
     private void Start()
     {
         _health = _maxHealth;
+        _healthBar.value = _health;
+        _canvas.enabled = !_canvas.enabled;
+
         if (_isEnemy)
         {
             _dayNightManager = DayNightManager.instance;
             _enemyManager = EnemyManager.instance;
+        }
+        if(_isBuildings)
+        {
+            _dayNightManager.onDayStart.AddListener(DayStart);
+        }
+        if(_itsPlayer)
+        {
+            StartCoroutine(Regeneration());
         }
     }
 
@@ -34,8 +50,9 @@ public class HealthManager : MonoBehaviour
         {
             if (_isEnemy)
             {
-                _enemyManager.acriveEnemy.Remove(this.gameObject);
-                Destroy(gameObject);
+                _enemyController._animatorController.dead = true;
+                _enemyManager.activeEnemy.Remove(this.gameObject);
+                Destroy(gameObject,2f);
                 _dayNightManager.StartDay();
 
                 alive = false;
@@ -45,15 +62,36 @@ public class HealthManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-        if (_healthBar)
-        {
-            _healthBar.fillAmount = (float)_health / (float)_maxHealth;
-        }
+        RefreshUI();
     }
 
     public void PlusHp(int count)
     {
         _health = Mathf.Clamp(_health + count, 0, _maxHealth);
+        RefreshUI();
+    }
+
+    private IEnumerator Regeneration()
+    {
+        while(_itsPlayer || _health < _maxHealth)
+        {
+            PlusHp(_maxHealth / 100);  //добавляємо 1%
+            yield return new WaitForSeconds(1f);
+        }
+        
+    }
+
+    public void RefreshUI()
+    {
+        _healthBar.value = (float)_health / (float)_maxHealth;
+        if (_canvas.enabled == false)
+            _canvas.enabled = true;
+    }
+
+
+    private void DayStart()
+    {
+        _canvas.enabled = false;
+        _health = _maxHealth;
     }
 }

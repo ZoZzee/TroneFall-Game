@@ -21,7 +21,7 @@ public class EnemyAttack : MonoBehaviour
 
     private IEnumerator CheckDistance()
     {
-        while (true)
+        while (true && !enemyController._animatorController.dead)
         {
             yield return new WaitForSeconds(_checkDistanceTime);
             if (enemyController.target[0] != null)
@@ -35,24 +35,17 @@ private IEnumerator AttackTimer()
     {
         yield return new WaitForSeconds(1f);
 
-        while (true)
+        while (true && !enemyController._animatorController.dead)
         {
             if (enemyController.enemyAttack)
             {
                 enemyController._animatorController.attack = true;
                 enemyController.targetHealth[0].MinusHp(damage);
-                if (enemyController.targetHealth[0] )
+                if (enemyController.targetHealth[0]._health == 0f)
                 {
-                    if (enemyController.target.Count > 1)
-                    {
                         Debug.Log("Знищення тавера");
                         enemyController.targetHealth.RemoveAt(0);
                         enemyController.target.RemoveAt(0);
-                    }
-                    else
-                    {
-                        enemyController.SetMainBuildingAsTarget();
-                    }
                 }
             }
             yield return new WaitForSeconds(0.1f);

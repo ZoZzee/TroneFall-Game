@@ -18,8 +18,8 @@ TagManager:
   - PlayerUnits
   - Buildings
   - EnemyViewTrigger
-  - 
-  - 
+  - Enemy
+  - Gate
   - 
   - 
   - 
