@@ -29,9 +29,13 @@ public class EnemyController : MonoBehaviour
     {
         mainBuilding = BuildingsManager.instance.mainBuilding;
         mainBuildingTransform = mainBuilding.transform;
+
+        SetMainBuildingAsTarget();
+
         _enemyManager = EnemyManager.instance;
         _enemyManager.activeEnemy.Add(this.gameObject);
-        SetMainBuildingAsTarget();
+
+        
 
     }
     

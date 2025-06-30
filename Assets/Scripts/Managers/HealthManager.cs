@@ -26,9 +26,9 @@ public class HealthManager : MonoBehaviour
         _healthBar.value = _health;
         _canvas.enabled = !_canvas.enabled;
 
+        _dayNightManager = DayNightManager.instance;
         if (_isEnemy)
         {
-            _dayNightManager = DayNightManager.instance;
             _enemyManager = EnemyManager.instance;
         }
         if(_isBuildings)

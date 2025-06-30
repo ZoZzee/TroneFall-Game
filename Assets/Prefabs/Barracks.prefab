@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 3794745438373821810}
   - component: {fileID: 208075326042422532}
   - component: {fileID: 7944037925707182463}
+  - component: {fileID: 2021698341377434591}
   m_Layer: 0
   m_Name: Barracks
   m_TagString: Untagged
@@ -345,6 +346,27 @@ MonoBehaviour:
   isBuilt: 0
   _isPlayerNearby: 0
   _buildingTrigger: {fileID: 208075326042422532}
+--- !u!135 &2021698341377434591
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2610328206145677336}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3619135368864044856
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,13 +743,14 @@ GameObject:
   - component: {fileID: 2328583730859433452}
   - component: {fileID: 2386590766151728030}
   - component: {fileID: 2202597024003408465}
+  - component: {fileID: 7297363160405378475}
   m_Layer: 0
   m_Name: Barracks
-  m_TagString: Untagged
+  m_TagString: Buldings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2328583730859433452
 Transform:
   m_ObjectHideFlags: 0
@@ -796,6 +819,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7297363160405378475
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044199609344728065}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.61629, y: 6.6356893, z: 5.4101963}
+  m_Center: {x: 0.012111428, y: 0.011778599, z: 1.9719679}
 --- !u!1 &8457408727265222658
 GameObject:
   m_ObjectHideFlags: 0
