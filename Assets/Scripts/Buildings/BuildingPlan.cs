@@ -6,28 +6,31 @@ using UnityEngine;
 public class BuildingPlan : MonoBehaviour
 {
     [Header("Values")]
-    public byte goldAmount;
 
-    private byte _levelEnhancement;
-
-    [SerializeField]
-    [Tooltip("На скільки рухаємо гравця коли побудували будівлю")]
+    [Tooltip("Скільки коштує побудувати")] public byte goldAmount;
+    [Tooltip("Рівень будівлі")] private byte _levelEnhancement;
+    [SerializeField][Tooltip("На скільки рухаємо гравця коли побудували будівлю")]
     private float _playerMoveDistanceOnBuild;
-    [SerializeField] private float _playerMoveSpeed;
+    [SerializeField][Tooltip("На скільки швидко рухаєм гравця від будівлі")]
+    private float _playerMoveSpeed;
 
     [Header("References")]
+
     public GameObject building;
     public List<GameObject> LevelEnhancement;
-    
+    public List<byte> costEnhancement;
     [SerializeField] private GameObject _flag;
-
     public bool isBuilt = false;
-
     public bool _isPlayerNearby;
-
     private GoldManager goldManager;
 
+    [Header("Allies")]
+    [SerializeField] private bool _isAllies;
+    [SerializeField] private byte _amountAllies;
+    [SerializeField] private byte _maxAmountAllies;
+
     [Header("Components")]
+
     [SerializeField] private BuildingTrigger _buildingTrigger;
 
     private void Start()
@@ -39,9 +42,9 @@ public class BuildingPlan : MonoBehaviour
     private void Update()
     {
         if (_levelEnhancement <= LevelEnhancement.Count &&
-             _isPlayerNearby &&
-             Input.GetKeyDown(KeyCode.E) &&
-             goldManager.EnoughGold(goldAmount))
+            _isPlayerNearby &&
+            Input.GetKeyDown(KeyCode.E) &&
+            goldManager.EnoughGold(goldAmount))
         {
             Build(true);
         }
@@ -55,34 +58,32 @@ public class BuildingPlan : MonoBehaviour
             isBuilt = true;
             _flag.SetActive(false);
         }
-        
-
-
+        else 
+        { 
+            NextlevlEnhancement();
+            
+        }
         if (minusGold)
         {
             goldManager.MinusGold(goldAmount);
         }
-
         if (_buildingTrigger.playerTransform)
         {
             Vector3 targetPosition = (_buildingTrigger.playerTransform.position - transform.position).normalized;
             targetPosition *= _playerMoveDistanceOnBuild;
             targetPosition += transform.position;
-
             StartCoroutine(PlayerMoveOnBuild(targetPosition));
         }
-
-
-        NextlevlEnhancement();
         _levelEnhancement++;
+        goldAmount = costEnhancement[_levelEnhancement];
     }
 
     private void NextlevlEnhancement()
     {
-        if (LevelEnhancement.Count > 0)
+        LevelEnhancement[_levelEnhancement].SetActive(true);
+        if(_isAllies)
         {
-            goldAmount = 10;
-            LevelEnhancement[_levelEnhancement].SetActive(true);
+            _maxAmountAllies += _amountAllies;
         }
     }
 

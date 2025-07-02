@@ -16,7 +16,8 @@ public class HealthManager : MonoBehaviour
     [SerializeField] private bool _isEnemy;
     [SerializeField] private bool _isBuildings;
     [SerializeField] private bool _itsPlayer;
-
+    [SerializeField] private bool _itsAllies;
+    [SerializeField] private AlliesController _alliesController;
     private EnemyManager _enemyManager;
     [SerializeField]private EnemyController _enemyController;
     private DayNightManager _dayNightManager;
@@ -60,6 +61,11 @@ public class HealthManager : MonoBehaviour
             else if(_isBuildings)
             {
                 Destroy(gameObject);
+            }
+            else if(_itsAllies)
+            {
+                _alliesController._animatorController.dead = true;
+                Destroy(gameObject, 2f);
             }
         }
         RefreshUI();

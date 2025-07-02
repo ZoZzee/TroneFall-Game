@@ -63,30 +63,7 @@ public class EnemyTrigger : MonoBehaviour
                     break;
             }
         }
-
-            //switch (other.tag)
-            //{
-            //    case ("Player"):
-            //        AddTargetPriority(other);
-            //        Debug.Log(" Добавив " + other);
-            //        break;
-            //    case ("PlayerAllies"):
-            //        AddTargetPriority(other);
-
-            //        Debug.Log(" Добавив " + other);
-            //        break;
-            //    case ("Buldings"):
-            //        AddTarget(other);
-
-            //        Debug.Log(" Добавив " + other);
-            //        break;
-            //    case ("Wall"):
-            //        AddTarget(other);
-
-            //        Debug.Log(" Добавив " + other);
-            //        break;
-            //}
-        }
+    }
 
     private void OnTriggerExit(Collider other)
     {
@@ -117,39 +94,4 @@ public class EnemyTrigger : MonoBehaviour
 
 
     }
-
-    //private void AddTargetPriority(Collider other)
-    //{
-    //    switch (currentTriggerPriority)
-    //    {
-    //        case TriggerPriority.priority0:
-    //            enemyController.enemyAttack = true;
-    //            break;
-    //        case TriggerPriority.priority1:
-    //            _priority.Add(other.transform);
-    //            enemyController.target.Insert(_priority.Count, other.transform);
-    //            enemyController.targetHealth.Insert(_priority.Count, other.GetComponent<HealthManager>());
-    //            break;
-    //        case TriggerPriority.priority2:
-
-    //            break;
-    //    }
-    //}
-
-    //private void AddTarget(Collider other)
-    //{
-    //    switch (currentTriggerPriority)
-    //    {
-    //        case TriggerPriority.priority0:
-    //            enemyController.enemyAttack = true;
-    //            break;
-    //        case TriggerPriority.priority1:
-    //            enemyController.target.Add(other.transform);
-    //            enemyController.targetHealth.Add(other.GetComponent<HealthManager>());
-    //            break;
-    //        case TriggerPriority.priority2:
-
-    //            break;
-    //    }
-    //}
 }
