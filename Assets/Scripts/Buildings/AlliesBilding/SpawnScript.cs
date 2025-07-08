@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnScript : MonoBehaviour
 {
     public GameObject allies;
+    private List<GameObject> activeAllies;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField]private float _spawnTimerMax;
 
@@ -14,9 +15,10 @@ public class SpawnScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(_spawnTimer >= _spawnTimerMax)
+        if(_spawnTimer >= _spawnTimerMax /*&& activeAllies.Count <= _quantityAllies*/)
         {
             Instantiate(allies, _spawnPoint);
+            activeAllies.Add(allies);
             _spawnTimer = 0;
         }
         else

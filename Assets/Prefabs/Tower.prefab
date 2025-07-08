@@ -824,7 +824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4186375454923342739
 Transform:
   m_ObjectHideFlags: 0
@@ -881,6 +881,8 @@ MonoBehaviour:
   _isEnemy: 0
   _isBuildings: 1
   _itsPlayer: 0
+  _itsAllies: 0
+  _alliesController: {fileID: 0}
   _enemyController: {fileID: 0}
 --- !u!65 &1303967276830469822
 BoxCollider:
@@ -936,7 +938,7 @@ RectTransform:
   m_Father: {fileID: 2834401927171201095}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.554, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
@@ -1384,8 +1386,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4073381418875690805}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.554, y: 0}
-  m_AnchorMax: {x: 0.554, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1831,9 +1833,13 @@ MonoBehaviour:
   LevelEnhancement:
   - {fileID: 1096725259674669952}
   - {fileID: 1424273309439624583}
+  costEnhancement: 
   _flag: {fileID: 2586419005281550910}
   isBuilt: 0
   _isPlayerNearby: 0
+  _isAllies: 0
+  _amountAllies: 0
+  _maxAmountAllies: 0
   _buildingTrigger: {fileID: 9040706744254209128}
 --- !u!114 &9040706744254209128
 MonoBehaviour:
