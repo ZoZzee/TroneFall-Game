@@ -44,8 +44,11 @@ public class Building : MonoBehaviour
 
     public void OnDayStart()
     {
+        for (int i = 0; i < goldAtDayStart; i++)
+        {
             Vector3 position = transform.position + new Vector3(Random.Range(1f, 2f), 0, Random.Range(1f, 2f));
             Instantiate(_coin, position, _coin.transform.rotation);
+        }
         
     }
 }
