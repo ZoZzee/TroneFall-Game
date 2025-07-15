@@ -1572,6 +1572,10 @@ PrefabInstance:
       value: Property (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4035055040808904756, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
+      propertyPath: m_Value
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035055040808904756, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2193,6 +2197,10 @@ PrefabInstance:
       value: Property (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4035055040808904756, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
+      propertyPath: m_Value
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035055040808904756, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2593,6 +2601,10 @@ PrefabInstance:
     - target: {fileID: 2975032412763462655, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
       propertyPath: m_Name
       value: Property
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035055040808904756, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
+      propertyPath: m_Value
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4035055040808904756, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size

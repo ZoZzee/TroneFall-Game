@@ -10,6 +10,13 @@ public class Settings : MonoBehaviour
     [SerializeField]private Slider masterSlider;
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider soundSlider;
+
+    private void Start()
+    {
+        SetMasterVolume();
+        SetMusicVolume();
+        SetSoundsVolume();
+    }
     public void SetMasterVolume()
     {
         audioMixer.SetFloat("Master",DB(masterSlider));

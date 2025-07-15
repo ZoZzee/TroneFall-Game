@@ -65,6 +65,7 @@ public class HealthManager : MonoBehaviour
             else if(_itsAllies)
             {
                 _alliesController._animatorController.dead = true;
+                _alliesController.spawnScript.activeAllies.Remove(gameObject);
                 Destroy(gameObject, 2f);
             }
         }

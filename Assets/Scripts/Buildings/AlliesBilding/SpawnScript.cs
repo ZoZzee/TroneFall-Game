@@ -5,20 +5,21 @@ using UnityEngine;
 public class SpawnScript : MonoBehaviour
 {
     public GameObject allies;
-    private List<GameObject> activeAllies;
+    public List<GameObject> activeAllies;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField]private float _spawnTimerMax;
 
     [SerializeField]private BuildingPlan _buildingPlan;
-    private float _quantityAllies;
+    [SerializeField] private float _quantityAllies;
     private float _spawnTimer;
 
     private void FixedUpdate()
     {
-        if(_spawnTimer >= _spawnTimerMax /*&& activeAllies.Count <= _quantityAllies*/)
+        if(_spawnTimer >= _spawnTimerMax && activeAllies.Count < _quantityAllies)
         {
-            Instantiate(allies, _spawnPoint);
-            activeAllies.Add(allies);
+            GameObject newAllies = Instantiate(allies, _spawnPoint);
+            newAllies.GetComponent<AlliesController>().spawnScript = this;
+            activeAllies.Add(newAllies);
             _spawnTimer = 0;
         }
         else

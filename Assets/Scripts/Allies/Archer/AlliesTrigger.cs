@@ -21,6 +21,10 @@ public class AlliesTrigger : MonoBehaviour
                     //_alliesController.attack = true;
                     break;
                 case TriggerPriority.priority1:
+                    if (_alliesController.target[0] == _alliesController._targetPoint)
+                    {
+                        _alliesController.target.Remove(_alliesController._targetPoint);
+                    }
                     _alliesController.healthManagers.Add(other.GetComponent<HealthManager>());
                     _alliesController.target.Add(other.transform);
                     break;
@@ -38,7 +42,7 @@ public class AlliesTrigger : MonoBehaviour
                     break;
                 case TriggerPriority.priority1:
 
-                    _alliesController.healthManagers.Add(other.GetComponent<HealthManager>());
+                    _alliesController.healthManagers.Remove(other.GetComponent<HealthManager>());
                     _alliesController.target.Remove(other.transform);
                     break;
             }
