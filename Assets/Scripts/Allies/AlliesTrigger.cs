@@ -5,6 +5,8 @@ public class AlliesTrigger : MonoBehaviour
     [SerializeField] private AlliesController _alliesController;
 
     public TriggerPriority currentTriggerPriority;
+
+    private byte _positionOnList = 0;
     public enum TriggerPriority
     {
         priority0,
@@ -18,15 +20,12 @@ public class AlliesTrigger : MonoBehaviour
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
-                    //_alliesController.attack = true;
                     break;
                 case TriggerPriority.priority1:
-                    if (_alliesController.target[0] == _alliesController._targetPoint)
-                    {
-                        _alliesController.target.Remove(_alliesController._targetPoint);
-                    }
+                    
                     _alliesController.healthManagers.Add(other.GetComponent<HealthManager>());
-                    _alliesController.target.Add(other.transform);
+                    _alliesController.target.Insert(_positionOnList,other.transform);
+                    _positionOnList++;
                     break;
             }
         }
@@ -44,6 +43,7 @@ public class AlliesTrigger : MonoBehaviour
 
                     _alliesController.healthManagers.Remove(other.GetComponent<HealthManager>());
                     _alliesController.target.Remove(other.transform);
+                    _positionOnList--;
                     break;
             }
             

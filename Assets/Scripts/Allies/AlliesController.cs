@@ -12,6 +12,8 @@ public class AlliesController : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private int _damage;
     [SerializeField] private float _maxDistanceToAttack;
+    private float _distanceToAttack;
+    private float _targetEmptyDistance = 3f;
     [HideInInspector] public float distanceToTarget;
     [HideInInspector] public bool attack = false;
     public List<Transform> target;
@@ -19,31 +21,44 @@ public class AlliesController : MonoBehaviour
 
 
     [Header("Components")]
+    [SerializeField] private GameObject _targetEmpty;
     public Transform _targetPoint;
     public AnimatorController _animatorController;
     private void Start()
     {
+        _distanceToAttack = _maxDistanceToAttack;
+        GameObject newtargetDot = Instantiate(_targetEmpty,transform.position, Quaternion.identity,null);
+        _targetPoint = newtargetDot.transform;
         target.Add(_targetPoint);
         StartCoroutine(CheckDistance());
         StartCoroutine(AttackTimer());
+        
     }
 
     private void FixedUpdate()
     {
-        if (target.Count > 0  && target[0] != null)
+        if (target[0] != _targetPoint)
         {
+            if (_distanceToAttack != _maxDistanceToAttack)
+            {
+                _maxDistanceToAttack = _distanceToAttack;
+            }
             Target();
         }
-        else if(target.Count < 1 && target[0] == null)
+        else
         {
-            target.Add(_targetPoint);
-            Debug.Log(target[0]);
+            if (_distanceToAttack == _maxDistanceToAttack)
+            {
+                _maxDistanceToAttack = _targetEmptyDistance;
+            }
+            Target();
+
         }
     }
 
     private void Target()
     {
-        Debug.Log(distanceToTarget);
+        //Debug.Log(distanceToTarget + "  _maxDistanceToAttack   " + _maxDistanceToAttack);
         transform.LookAt(target[0]);
         if (!_animatorController.dead && distanceToTarget > _maxDistanceToAttack)
         {
@@ -66,7 +81,7 @@ public class AlliesController : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         while (true && !_animatorController.dead)
         {
-            if (target.Count > 0)
+            if(target.Count > 0)
             {
                 distanceToTarget = Vector3.Distance(target[0].position, transform.position);
 

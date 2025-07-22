@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,10 +9,13 @@ public class ChooseLevel : MonoBehaviour
     [SerializeField] private float _maxTimer;
     [SerializeField] private float timer = 0f;
     private bool inTrigger;
+    [SerializeField] private GameObject _levlPoint;
 
+    [SerializeField] private Level _levl;
     private void Start()
     {
         inTrigger = false;
+        _levl.numberOfLevl = indexLevel;
     }
 
     private void FixedUpdate()
@@ -38,6 +42,7 @@ public class ChooseLevel : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inTrigger = true;
+            //_levlPoint.
         }
     }
     private void OnTriggerExit(Collider other)

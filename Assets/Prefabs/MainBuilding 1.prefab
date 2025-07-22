@@ -1343,6 +1343,8 @@ MonoBehaviour:
   _isEnemy: 0
   _isBuildings: 1
   _itsPlayer: 0
+  _itsAllies: 0
+  _alliesController: {fileID: 0}
   _enemyController: {fileID: 0}
 --- !u!114 &3630186071394265546
 MonoBehaviour:
@@ -1917,16 +1919,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldAmount: 4
+  _levelEnhancement: 0
   _playerMoveDistanceOnBuild: 5
   _playerMoveSpeed: 0.2
-  building: {fileID: 6839202998311661800}
-  LevelEnhancement:
-  - {fileID: 0}
-  - {fileID: 0}
-  _flag: {fileID: 1155338174068641394}
+  _setillActive: 1
   isBuilt: 0
+  spaceHoldTime: 0
+  spaceHoldTimeMax: 200
+  _flag: {fileID: 1155338174068641394}
+  LevelEnhancement:
+  - {fileID: 6839202998311661800}
+  - {fileID: 0}
+  costEnhancement: 060a
   _isPlayerNearby: 0
+  _isAllies: 0
+  _maxAmountAllies: 0
   _buildingTrigger: {fileID: 8492859833938529660}
 --- !u!136 &3588981119520655672
 CapsuleCollider:

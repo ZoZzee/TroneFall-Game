@@ -2270,6 +2270,9 @@ MonoBehaviour:
   _canvas: {fileID: 9105962653281251116}
   _isEnemy: 1
   _isBuildings: 0
+  _itsPlayer: 0
+  _itsAllies: 0
+  _alliesController: {fileID: 0}
   _enemyController: {fileID: 6907261828389010507}
 --- !u!114 &6886998975568701705
 MonoBehaviour:
@@ -14419,6 +14422,14 @@ PrefabInstance:
     - target: {fileID: 4174420125057497499, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357605896161561913, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 4357605896161561913, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 7498359628538883105, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
       propertyPath: m_Pivot.x

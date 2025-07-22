@@ -1826,19 +1826,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldAmount: 3
+  _levelEnhancement: 0
   _playerMoveDistanceOnBuild: 1
   _playerMoveSpeed: 0.2
-  building: {fileID: 3867340094475203794}
+  _setillActive: 0
+  isBuilt: 0
+  spaceHoldTime: 0
+  spaceHoldTimeMax: 150
+  _flag: {fileID: 2586419005281550910}
   LevelEnhancement:
+  - {fileID: 3243330781299955164}
   - {fileID: 1096725259674669952}
   - {fileID: 1424273309439624583}
-  costEnhancement: 
-  _flag: {fileID: 2586419005281550910}
-  isBuilt: 0
+  costEnhancement: 030507
   _isPlayerNearby: 0
   _isAllies: 0
-  _amountAllies: 0
   _maxAmountAllies: 0
   _buildingTrigger: {fileID: 9040706744254209128}
 --- !u!114 &9040706744254209128
@@ -2170,7 +2172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5921e45280d702e44ad0fb582ac16d26, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5921e45280d702e44ad0fb582ac16d26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2217,6 +2219,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5921e45280d702e44ad0fb582ac16d26, type: 3}
+--- !u!1 &3243330781299955164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 5921e45280d702e44ad0fb582ac16d26, type: 3}
+  m_PrefabInstance: {fileID: 3243330781299921788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3243330781300312572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5921e45280d702e44ad0fb582ac16d26, type: 3}

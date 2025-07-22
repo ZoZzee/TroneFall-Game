@@ -7,26 +7,25 @@ public class BuildingPlan : MonoBehaviour
 {
     [Header("Values")]
 
-    [Tooltip("Скільки коштує побудувати")] public byte goldAmount;
-    [Tooltip("Рівень будівлі")] private byte _levelEnhancement;
+    [SerializeField][Tooltip("Рівень будівлі")] private byte _levelEnhancement;
     [SerializeField][Tooltip("На скільки рухаємо гравця коли побудували будівлю")]
     private float _playerMoveDistanceOnBuild;
     [SerializeField][Tooltip("На скільки швидко рухаєм гравця від будівлі")]
     private float _playerMoveSpeed;
+    [Tooltip("Чи видно попередні рівні будівлі")] public bool _setillActive;
+    public bool isBuilt = false;
+    [SerializeField] private float spaceHoldTime;
+    [SerializeField] private float spaceHoldTimeMax;
 
     [Header("References")]
-
-    public GameObject building;
+    [SerializeField] private GameObject _flag;
     public List<GameObject> LevelEnhancement;
     public List<byte> costEnhancement;
-    [SerializeField] private GameObject _flag;
-    public bool isBuilt = false;
     public bool _isPlayerNearby;
     private GoldManager goldManager;
 
     [Header("Allies")]
     [SerializeField] private bool _isAllies;
-    [SerializeField] private byte _amountAllies;
     [SerializeField] private byte _maxAmountAllies;
 
     [Header("Components")]
@@ -41,32 +40,55 @@ public class BuildingPlan : MonoBehaviour
 
     private void Update()
     {
-        if (_levelEnhancement <= LevelEnhancement.Count &&
+        var condition = _levelEnhancement < LevelEnhancement.Count &&
             _isPlayerNearby &&
-            Input.GetKeyDown(KeyCode.E) &&
-            goldManager.EnoughGold(goldAmount))
+            goldManager.EnoughGold(costEnhancement[_levelEnhancement]);
+        if (condition)
         {
-            Build(true);
+            if (Input.GetKey(KeyCode.E))
+            {
+                spaceHoldTime++;
+
+                if (spaceHoldTime >= spaceHoldTimeMax)
+                {
+                    spaceHoldTime = 0;
+                    Build(true);
+
+                }
+            }
+            else
+            {
+                if (spaceHoldTime > 0)
+                {
+                    spaceHoldTime--;
+                }
+            }
         }
     }
 
     public void Build(bool minusGold)
     {
-        if (!isBuilt)
+        LevelEnhancement[_levelEnhancement].SetActive(true);
+        isBuilt = true;
+        _flag.SetActive(false);
+        goldManager.MinusGold(costEnhancement[_levelEnhancement]);
+        _levelEnhancement++;
+        Debug.Log(_levelEnhancement);
+        if (_setillActive == false && _levelEnhancement > 1)
         {
-            building.SetActive(true);
-            isBuilt = true;
-            _flag.SetActive(false);
+                //Перевіряю чи рівень більше першого і деактивую всі попередні рівні
+            for(int i = 0; i < _levelEnhancement - 1; i ++)
+            {
+                Debug.Log("Hyi + " + i);
+                    LevelEnhancement[i].SetActive(false);
+            }
         }
-        else 
-        { 
-            NextlevlEnhancement();
-            
-        }
-        if (minusGold)
+
+        if (_isAllies)
         {
-            goldManager.MinusGold(goldAmount);
+             _maxAmountAllies += _maxAmountAllies;
         }
+        
         if (_buildingTrigger.playerTransform)
         {
             Vector3 targetPosition = (_buildingTrigger.playerTransform.position - transform.position).normalized;
@@ -74,17 +96,7 @@ public class BuildingPlan : MonoBehaviour
             targetPosition += transform.position;
             StartCoroutine(PlayerMoveOnBuild(targetPosition));
         }
-        _levelEnhancement++;
-        goldAmount = costEnhancement[_levelEnhancement];
-    }
-
-    private void NextlevlEnhancement()
-    {
-        LevelEnhancement[_levelEnhancement].SetActive(true);
-        if(_isAllies)
-        {
-            _maxAmountAllies += _amountAllies;
-        }
+        
     }
 
     private IEnumerator PlayerMoveOnBuild(Vector3 targetPosition)
