@@ -2,12 +2,13 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildingPlan : MonoBehaviour
 {
     [Header("Values")]
 
-    [SerializeField][Tooltip("Рівень будівлі")] private byte _levelEnhancement;
+    [HideInInspector]public byte _levelEnhancement;
     [SerializeField][Tooltip("На скільки рухаємо гравця коли побудували будівлю")]
     private float _playerMoveDistanceOnBuild;
     [SerializeField][Tooltip("На скільки швидко рухаєм гравця від будівлі")]
@@ -23,6 +24,7 @@ public class BuildingPlan : MonoBehaviour
     public List<byte> costEnhancement;
     public bool _isPlayerNearby;
     private GoldManager goldManager;
+    [SerializeField] private Image _buildRol;
 
     [Header("Allies")]
     [SerializeField] private bool _isAllies;
@@ -36,34 +38,38 @@ public class BuildingPlan : MonoBehaviour
     {
         goldManager = GoldManager.instance;
         _levelEnhancement = 0;
+        spaceHoldTime = 0;
+        _buildRol.fillAmount = 0;
     }
 
     private void Update()
     {
         var condition = _levelEnhancement < LevelEnhancement.Count &&
-            _isPlayerNearby &&
-            goldManager.EnoughGold(costEnhancement[_levelEnhancement]);
-        if (condition)
+            _isPlayerNearby && goldManager.EnoughGold(costEnhancement[_levelEnhancement]);
+        if (!condition)
         {
-            if (Input.GetKey(KeyCode.E))
-            {
-                spaceHoldTime++;
+            return;
+        }
 
-                if (spaceHoldTime >= spaceHoldTimeMax)
-                {
-                    spaceHoldTime = 0;
-                    Build(true);
+        if (Input.GetKey(KeyCode.E))
+        {
+            spaceHoldTime++;
 
-                }
-            }
-            else
+            if (spaceHoldTime >= spaceHoldTimeMax)
             {
-                if (spaceHoldTime > 0)
-                {
-                    spaceHoldTime--;
-                }
+                spaceHoldTime = 0;
+                Build(true);
             }
         }
+        else
+        {
+            if (spaceHoldTime > 0)
+            {
+                spaceHoldTime--;
+            }
+        }
+        _buildRol.fillAmount = (spaceHoldTime / (spaceHoldTimeMax / 100)) / 100;
+
     }
 
     public void Build(bool minusGold)

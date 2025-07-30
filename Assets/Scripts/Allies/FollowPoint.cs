@@ -15,6 +15,10 @@ public class FollowPoint : MonoBehaviour
         {
             transform.position = _targetToPlayer.position + new Vector3(0, 1, 0);
         }
+        if(_playerNearby == false)
+        {
+            return;
+        }
         if (Input.GetKey(KeyCode.Q))
         {
             if (_maxTimer <= _timer)

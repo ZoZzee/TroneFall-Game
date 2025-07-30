@@ -25,6 +25,7 @@ public class AlliesTrigger : MonoBehaviour
                     
                     _alliesController.healthManagers.Add(other.GetComponent<HealthManager>());
                     _alliesController.target.Insert(_positionOnList,other.transform);
+                    _alliesController._duplicateTarget.Insert(_positionOnList, other.transform);
                     _positionOnList++;
                     break;
             }

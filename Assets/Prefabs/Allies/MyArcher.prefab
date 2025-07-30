@@ -7050,7 +7050,7 @@ MonoBehaviour:
   _maxHealth: 115
   _health: 0
   _healthBar: {fileID: 415998554338656590}
-  _canvas: {fileID: 7730446328638565739}
+  _canvas: {fileID: 6795905623390717659}
   _isEnemy: 0
   _isBuildings: 1
   _itsPlayer: 0
@@ -7077,9 +7077,11 @@ MonoBehaviour:
   distanceToTarget: 0
   attack: 0
   target: []
+  _duplicateTarget: []
   healthManagers: []
   _targetEmpty: {fileID: 6627109387340740367, guid: ada6d3f755ceee44fbda143f49134400, type: 3}
   _targetPoint: {fileID: 0}
+  _lastTargetPoint: {fileID: 0}
   _animatorController: {fileID: 425851600864226561}
 --- !u!1 &3120496111531626041
 GameObject:
@@ -20337,8 +20339,8 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7498359628538883105, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
   m_PrefabInstance: {fileID: 7278235447191912599}
   m_PrefabAsset: {fileID: 0}
---- !u!223 &7730446328638565739 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 1029480887730744828, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
+--- !u!1 &6795905623390717659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4273516628723844684, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
   m_PrefabInstance: {fileID: 7278235447191912599}
   m_PrefabAsset: {fileID: 0}

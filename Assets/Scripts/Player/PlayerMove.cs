@@ -23,8 +23,6 @@ public class PlayerMove : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
-        
     }
 
     private void FixedUpdate()

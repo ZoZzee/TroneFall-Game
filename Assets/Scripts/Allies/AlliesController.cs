@@ -17,19 +17,31 @@ public class AlliesController : MonoBehaviour
     [HideInInspector] public float distanceToTarget;
     [HideInInspector] public bool attack = false;
     public List<Transform> target;
+    public List<Transform> _duplicateTarget;
     public List<HealthManager> healthManagers;
 
 
     [Header("Components")]
     [SerializeField] private GameObject _targetEmpty;
     public Transform _targetPoint;
+    public Transform _lastTargetPoint;
     public AnimatorController _animatorController;
     private void Start()
     {
         _distanceToAttack = _maxDistanceToAttack;
-        GameObject newtargetDot = Instantiate(_targetEmpty,transform.position, Quaternion.identity,null);
+        Vector3 position = spawnScript._pointsPosition[spawnScript.num].position;
+        if(spawnScript.deadPosition != null)
+        {
+            Debug.Log("Помер");
+            position = spawnScript.deadPosition.position;
+            spawnScript.deadPosition = null;
+        }
+        GameObject newtargetDot = Instantiate(_targetEmpty, position, Quaternion.identity,null);
+        spawnScript.num++;
         _targetPoint = newtargetDot.transform;
         target.Add(_targetPoint);
+        _duplicateTarget.Add(_targetPoint);
+        
         StartCoroutine(CheckDistance());
         StartCoroutine(AttackTimer());
         
@@ -58,8 +70,11 @@ public class AlliesController : MonoBehaviour
 
     private void Target()
     {
-        //Debug.Log(distanceToTarget + "  _maxDistanceToAttack   " + _maxDistanceToAttack);
         transform.LookAt(target[0]);
+        if (!target.Contains(_duplicateTarget[0]))
+        {
+            RefreshTarget();
+        }
         if (!_animatorController.dead && distanceToTarget > _maxDistanceToAttack)
         {
             attack = false;
@@ -71,6 +86,10 @@ public class AlliesController : MonoBehaviour
         {
             _animatorController.velocity = 0;
             attack = true;
+        }
+        else
+        {
+            _animatorController.velocity = 0;
         }
     }
     
@@ -101,9 +120,7 @@ public class AlliesController : MonoBehaviour
                 healthManagers[0].MinusHp(_damage);
                 if (healthManagers[0]._health <= 0f)
                 {
-                    Debug.Log("Знищення тавера");
-                    healthManagers.RemoveAt(0);
-                    target.RemoveAt(0);
+                    RefreshTarget();
                 }
             }
             yield return new WaitForSeconds(0.1f);
@@ -111,5 +128,12 @@ public class AlliesController : MonoBehaviour
             yield return new WaitForSeconds(attackCooldown - 0.1f);
 
         }
+    }
+
+    private void RefreshTarget()
+    {
+        healthManagers.RemoveAt(0);
+        target.RemoveAt(0);
+        _duplicateTarget.RemoveAt(0);
     }
 }

@@ -11,7 +11,7 @@ public class HealthManager : MonoBehaviour
     [HideInInspector]public int _health;
     
     [SerializeField] private Slider _healthBar;
-    [SerializeField] private Canvas _canvas;
+    [SerializeField] private GameObject _canvas;
 
     [SerializeField] private bool _isEnemy;
     [SerializeField] private bool _isBuildings;
@@ -25,7 +25,8 @@ public class HealthManager : MonoBehaviour
     {
         _health = _maxHealth;
         _healthBar.value = _health;
-        _canvas.enabled = !_canvas.enabled;
+         _canvas.SetActive(true);
+         
 
         _dayNightManager = DayNightManager.instance;
         if (_isEnemy)
@@ -65,6 +66,7 @@ public class HealthManager : MonoBehaviour
             else if(_itsAllies)
             {
                 _alliesController._animatorController.dead = true;
+                _alliesController.spawnScript.deadPosition = transform;
                 _alliesController.spawnScript.activeAllies.Remove(gameObject);
                 Destroy(gameObject, 2f);
             }
@@ -91,14 +93,14 @@ public class HealthManager : MonoBehaviour
     public void RefreshUI()
     {
         _healthBar.value = (float)_health / (float)_maxHealth;
-        if (_canvas.enabled == false)
-            _canvas.enabled = true;
+
+        _canvas.SetActive(true);
     }
 
 
     private void DayStart()
     {
-        _canvas.enabled = false;
+        _canvas.SetActive(false);
         _health = _maxHealth;
     }
 }
