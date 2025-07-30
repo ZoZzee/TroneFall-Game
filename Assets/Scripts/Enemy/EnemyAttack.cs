@@ -43,9 +43,8 @@ private IEnumerator AttackTimer()
                 enemyController.targetHealth[0].MinusHp(damage);
                 if (enemyController.targetHealth[0]._health == 0f)
                 {
-                        Debug.Log("Знищення тавера");
-                        enemyController.targetHealth.RemoveAt(0);
-                        enemyController.target.RemoveAt(0);
+                    Debug.Log("Знищення тавера");
+                    enemyController.RefreshTarget();
                 }
             }
             yield return new WaitForSeconds(0.1f);

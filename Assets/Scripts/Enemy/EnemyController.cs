@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public List<Transform> target;
+    public List<Transform> _duplicateTarget;
     public List<HealthManager> targetHealth;
 
     [SerializeField] private float _speed;
@@ -34,14 +35,15 @@ public class EnemyController : MonoBehaviour
 
         _enemyManager = EnemyManager.instance;
         _enemyManager.activeEnemy.Add(this.gameObject);
-
-        
-
     }
     
 
     private void Update()
     {
+        if (target.Contains(_duplicateTarget[0]))
+        {
+            RefreshTarget();
+        }
         if (!enemyAttack && target.Count > 0 && !_animatorController.dead)
         {
             transform.LookAt(target[0]);
@@ -56,13 +58,18 @@ public class EnemyController : MonoBehaviour
 
     }
 
+    public void RefreshTarget()
+    {
+        target.RemoveAt(0);
+        targetHealth.RemoveAt(0);
+        _duplicateTarget.RemoveAt(0);
+    }
+
     public void SetMainBuildingAsTarget()
     {
-        Debug.Log(" Перед додаванням " + target[0]);
         target[0] = mainBuildingTransform;
+        _duplicateTarget[0] = mainBuildingTransform;
         targetHealth[0] = mainBuilding.healthManager;
-
-        Debug.Log(" Add main " + target[0]);
     }
 
 

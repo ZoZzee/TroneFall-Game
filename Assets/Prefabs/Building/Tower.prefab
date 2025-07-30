@@ -869,7 +869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4186375454923342739
 Transform:
   m_ObjectHideFlags: 0
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   spaceHoldTimeMax: 150
   _flag: {fileID: 2586419005281550910}
   LevelEnhancement:
-  - {fileID: 3243330781299955164}
+  - {fileID: 3867340094475203794}
   - {fileID: 1096725259674669952}
   - {fileID: 1424273309439624583}
   costEnhancement: 030507
@@ -2249,7 +2249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 5921e45280d702e44ad0fb582ac16d26, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5921e45280d702e44ad0fb582ac16d26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2296,11 +2296,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5921e45280d702e44ad0fb582ac16d26, type: 3}
---- !u!1 &3243330781299955164 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 5921e45280d702e44ad0fb582ac16d26, type: 3}
-  m_PrefabInstance: {fileID: 3243330781299921788}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3243330781300312572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5921e45280d702e44ad0fb582ac16d26, type: 3}
