@@ -1,19 +1,19 @@
 using System.Collections.Generic;
+using System.Reflection;
 using TMPro;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public List<Transform> target;
-    public List<Transform> _duplicateTarget;
+    public List<GameObject> target;
     public List<HealthManager> targetHealth;
 
     [SerializeField] private float _speed;
     [SerializeField] private float attackCooldown;
     [SerializeField] private int _damageToPlayer;
 
-    [HideInInspector] public MainBuilding mainBuilding;
-    [HideInInspector] public Transform mainBuildingTransform;
+     public MainBuilding mainBuilding;
+    [HideInInspector] public GameObject mainBuildingTransform;
 
     [HideInInspector] public float distanceToTarget;
     [HideInInspector] public bool enemyAttack;
@@ -29,25 +29,31 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         mainBuilding = BuildingsManager.instance.mainBuilding;
-        mainBuildingTransform = mainBuilding.transform;
+        mainBuildingTransform = mainBuilding.gameObject;
 
         SetMainBuildingAsTarget();
 
         _enemyManager = EnemyManager.instance;
+    }
+
+    private void OnEnable()
+    {
+
         _enemyManager.activeEnemy.Add(this.gameObject);
     }
     
 
     private void Update()
     {
-        if (target.Contains(_duplicateTarget[0]))
+        if (!target[0].activeInHierarchy)
         {
+            Debug.Log("Очистка");
             RefreshTarget();
         }
         if (!enemyAttack && target.Count > 0 && !_animatorController.dead)
         {
-            transform.LookAt(target[0]);
-            Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, target[0].position, _speed * Time.deltaTime);
+            transform.LookAt(target[0].transform);
+            Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, target[0].transform.position, _speed * Time.deltaTime);
             transform.position = smoothedPosition;
             _animatorController.velocity = smoothedPosition.normalized.magnitude;
         }
@@ -62,14 +68,14 @@ public class EnemyController : MonoBehaviour
     {
         target.RemoveAt(0);
         targetHealth.RemoveAt(0);
-        _duplicateTarget.RemoveAt(0);
+
+        Debug.Log("RefreshTarget");
     }
 
     public void SetMainBuildingAsTarget()
     {
-        target[0] = mainBuildingTransform;
-        _duplicateTarget[0] = mainBuildingTransform;
-        targetHealth[0] = mainBuilding.healthManager;
+        target.Add(mainBuildingTransform);
+        targetHealth.Add(mainBuilding.healthManager);
     }
 
 

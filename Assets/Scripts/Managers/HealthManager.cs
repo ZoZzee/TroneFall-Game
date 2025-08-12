@@ -53,8 +53,9 @@ public class HealthManager : MonoBehaviour
             if (_isEnemy)
             {
                 _enemyController._animatorController.dead = true;
+                _enemyController.enemyAttack = false;
                 _enemyManager.activeEnemy.Remove(this.gameObject);
-                Destroy(gameObject,2f);
+                _enemyManager.Disable();
                 _dayNightManager.StartDay();
 
                 alive = false;
@@ -68,7 +69,7 @@ public class HealthManager : MonoBehaviour
                 _alliesController._animatorController.dead = true;
                 _alliesController.spawnScript.deadPosition = transform;
                 _alliesController.spawnScript.activeAllies.Remove(gameObject);
-                Destroy(gameObject, 2f);
+                gameObject.SetActive(false);
             }
         }
         RefreshUI();

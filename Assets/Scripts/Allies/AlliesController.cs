@@ -16,8 +16,7 @@ public class AlliesController : MonoBehaviour
     private float _targetEmptyDistance = 3f;
     [HideInInspector] public float distanceToTarget;
     [HideInInspector] public bool attack = false;
-    public List<Transform> target;
-    public List<Transform> _duplicateTarget;
+    public List<GameObject> target;
     public List<HealthManager> healthManagers;
 
 
@@ -39,8 +38,7 @@ public class AlliesController : MonoBehaviour
         GameObject newtargetDot = Instantiate(_targetEmpty, position, Quaternion.identity,null);
         spawnScript.num++;
         _targetPoint = newtargetDot.transform;
-        target.Add(_targetPoint);
-        _duplicateTarget.Add(_targetPoint);
+        target.Add(_targetPoint.gameObject);
         
         StartCoroutine(CheckDistance());
         StartCoroutine(AttackTimer());
@@ -70,15 +68,16 @@ public class AlliesController : MonoBehaviour
 
     private void Target()
     {
-        transform.LookAt(target[0]);
-        if (!target.Contains(_duplicateTarget[0]))
+        transform.LookAt(target[0].transform);
+        if (!target[0].activeInHierarchy)
         {
+            Debug.Log("Очистка");
             RefreshTarget();
         }
         if (!_animatorController.dead && distanceToTarget > _maxDistanceToAttack)
         {
             attack = false;
-            Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, target[0].position, _walkingSpeed * Time.deltaTime);
+            Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, target[0].transform.position, _walkingSpeed * Time.deltaTime);
             transform.position = smoothedPosition;
             _animatorController.velocity = smoothedPosition.normalized.magnitude;
         }
@@ -102,7 +101,7 @@ public class AlliesController : MonoBehaviour
         {
             if(target.Count > 0)
             {
-                distanceToTarget = Vector3.Distance(target[0].position, transform.position);
+                distanceToTarget = Vector3.Distance(target[0].transform.position, transform.position);
 
             }
             yield return new WaitForSeconds(0.5f);
@@ -134,6 +133,5 @@ public class AlliesController : MonoBehaviour
     {
         healthManagers.RemoveAt(0);
         target.RemoveAt(0);
-        _duplicateTarget.RemoveAt(0);
     }
 }

@@ -30,8 +30,7 @@ public class EnemyTrigger : MonoBehaviour
                     enemyController.enemyAttack = true;
                     break;
                 case TriggerPriority.priority1:
-                    enemyController.target.Insert(_priority, other.transform);
-                    enemyController._duplicateTarget.Insert(_priority, other.transform);
+                    enemyController.target.Insert(_priority, other.gameObject);
                     enemyController.targetHealth.Insert(_priority, other.GetComponent<HealthManager>());
                     _priority++;
                     _notPriority++;
@@ -55,8 +54,7 @@ public class EnemyTrigger : MonoBehaviour
                     break;
                 case TriggerPriority.priority1:
                     
-                    enemyController.target.Insert(_notPriority, other.transform);
-                    enemyController._duplicateTarget.Insert(_notPriority, other.transform);
+                    enemyController.target.Insert(_notPriority, other.gameObject);
                     enemyController.targetHealth.Insert(_notPriority, other.GetComponent<HealthManager>());
                     _notPriority++;
                     break;
@@ -81,8 +79,7 @@ public class EnemyTrigger : MonoBehaviour
                     enemyController.enemyAttack = false;
                     break;
                 case TriggerPriority.priority2:
-                    enemyController.target.Remove(other.transform);
-                    enemyController._duplicateTarget.Remove(other.transform);
+                    enemyController.target.Remove(other.gameObject);
                     enemyController.targetHealth.Remove(other.GetComponent<HealthManager>());
                     _notPriority--;
                     Debug.Log("видалдив Target з Enemy");

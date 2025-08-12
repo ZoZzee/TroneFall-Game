@@ -5,11 +5,18 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private int _currentWave;
     [SerializeField] private SpawnPoint[] spawnPoints;
 
+    public EnemyFactory factory;
+
     public static SpawnManager instance;
 
     void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        //Enemy Archer = factory.CreateEnemy(EnemyType.EnemyTypes.Archer, new Vector3(10,0,3));
     }
 
     private void Update()

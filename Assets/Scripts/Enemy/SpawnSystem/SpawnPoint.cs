@@ -1,11 +1,20 @@
 using System;
 using System.Collections;
+using UnityEditor.Searcher;
 using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
     public SpawnPointData spawnPointData;
 
+    private EnemyManager enemyManager;
+    [SerializeField] private GameObject _archer;
+    [SerializeField] private GameObject _barbarian;
+
+    private void Start()
+    {
+        enemyManager = EnemyManager.instance;
+    }
     public void SpawnEnemys(int currentWave)
     {
         StartCoroutine(SpawnTimer(currentWave));
@@ -15,7 +24,26 @@ public class SpawnPoint : MonoBehaviour
     {
         for (int i = 0; i < spawnPointData.waves[currentWave].enemys.Length; i++)
         {
-            Instantiate(spawnPointData.waves[currentWave].enemys[i], transform.position, Quaternion.identity, null);
+
+            if(spawnPointData.waves[currentWave].enemys[i] == _archer)
+            {
+                enemyManager.GetArchers(transform.position, Quaternion.identity);
+            }
+            else if(spawnPointData.waves[currentWave].enemys[i] == _barbarian)
+            {
+                enemyManager.GetBarbarian(transform.position, Quaternion.identity);
+            }
+                //switch (spawnPointData.waves[currentWave].enemys[i])
+                //{
+                //    case GameObject _archer:
+
+                //        break;
+                //    case GameObject _barbarian:
+
+                //        break;
+                //}
+
+                //Instantiate(spawnPointData.waves[currentWave].enemys[i], transform.position, Quaternion.identity, null);
             yield return new WaitForSeconds(spawnPointData.waves[currentWave].cooldown);
         }
     }

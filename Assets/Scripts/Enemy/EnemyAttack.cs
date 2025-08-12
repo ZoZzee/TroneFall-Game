@@ -13,20 +13,25 @@ public class EnemyAttack : MonoBehaviour
     [Header("References")]
     [SerializeField] private EnemyController enemyController;
 
-    private void Start()
+    private void OnEnable()
     {
         StartCoroutine(CheckDistance());
         StartCoroutine(AttackTimer());
     }
+    private void OnDisable()
+    {
+        CancelInvoke();
+    }
 
     private IEnumerator CheckDistance()
     {
+        yield return new WaitForSeconds(0.2f);
         while (true && !enemyController._animatorController.dead)
         {
             yield return new WaitForSeconds(_checkDistanceTime);
             if (enemyController.target[0] != null)
             {
-                distanceToTarget = Vector3.Distance(enemyController.target[0].position, transform.position);
+                distanceToTarget = Vector3.Distance(enemyController.target[0].transform.position, transform.position);
             }
         }
     }

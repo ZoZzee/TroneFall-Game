@@ -43,6 +43,8 @@ public class PlayerMove : MonoBehaviour
         Vector3 moveDirectionNormalized = moveDirection.normalized;
         float velocity = moveDirection.magnitude;
 
+        
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             moveSpeed = speedRunning;

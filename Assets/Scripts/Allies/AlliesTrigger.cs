@@ -24,8 +24,7 @@ public class AlliesTrigger : MonoBehaviour
                 case TriggerPriority.priority1:
                     
                     _alliesController.healthManagers.Add(other.GetComponent<HealthManager>());
-                    _alliesController.target.Insert(_positionOnList,other.transform);
-                    _alliesController._duplicateTarget.Insert(_positionOnList, other.transform);
+                    _alliesController.target.Insert(_positionOnList,other.gameObject);
                     _positionOnList++;
                     break;
             }
@@ -43,7 +42,7 @@ public class AlliesTrigger : MonoBehaviour
                 case TriggerPriority.priority1:
 
                     _alliesController.healthManagers.Remove(other.GetComponent<HealthManager>());
-                    _alliesController.target.Remove(other.transform);
+                    _alliesController.target.Remove(other.gameObject);
                     _positionOnList--;
                     break;
             }
