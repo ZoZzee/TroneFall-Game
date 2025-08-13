@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GoStartPositionState : MonoBehaviour
+public class GoStartPositionState : IEnemyState
 {
 
     private Bot _bot;

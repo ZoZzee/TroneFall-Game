@@ -13,7 +13,7 @@ public class PatrolState : IEnemyState
         _bot.transform.position = Vector3.MoveTowards(_bot.transform.position, _bot.target.position, _bot.speed);
         if(Vector3.Distance(_bot.transform.position, _bot.target.position) < _bot.distanseToAttack)
         {
-            //Idle
+            _bot.SwitchState(new IdleState());
         }
     }
     public void Exit()

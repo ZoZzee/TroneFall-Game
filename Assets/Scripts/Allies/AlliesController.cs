@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -31,7 +31,7 @@ public class AlliesController : MonoBehaviour
         Vector3 position = spawnScript._pointsPosition[spawnScript.num].position;
         if(spawnScript.deadPosition != null)
         {
-            Debug.Log("Ïîìåð");
+            Debug.Log("ÃÃ®Ã¬Ã¥Ã°");
             position = spawnScript.deadPosition.position;
             spawnScript.deadPosition = null;
         }
@@ -69,11 +69,12 @@ public class AlliesController : MonoBehaviour
     private void Target()
     {
         transform.LookAt(target[0].transform);
-        if (!target[0].activeInHierarchy)
-        {
-            Debug.Log("Î÷èñòêà");
-            RefreshTarget();
-        }
+        Debug.Log(ReferenceEquals(!target[0], null) + " ÐÐ°Ñˆ Ñ‚Ð°Ñ€Ð³ÐµÑ‚ " );
+        //if ()
+        //{
+        //    Debug.Log("ÃŽÃ·Ã¨Ã±Ã²ÃªÃ ");
+        //    RefreshTarget();
+        //}
         if (!_animatorController.dead && distanceToTarget > _maxDistanceToAttack)
         {
             attack = false;
