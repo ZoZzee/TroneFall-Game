@@ -7,8 +7,8 @@ public class HealthManager : MonoBehaviour
 {
     public bool alive = true;
 
-    [SerializeField] private int _maxHealth;
-    [HideInInspector]public int _health;
+    [SerializeField] private float _maxHealth;
+    [HideInInspector]public float _health;
     
     [SerializeField] private Slider _healthBar;
     [SerializeField] private GameObject _canvas;
@@ -17,17 +17,16 @@ public class HealthManager : MonoBehaviour
     [SerializeField] private bool _isBuildings;
     [SerializeField] private bool _itsPlayer;
     [SerializeField] private bool _itsAllies;
-    [SerializeField] private AlliesController _alliesController;
+    private AlliesManager _alliesManager;
     private EnemyManager _enemyManager;
-    [SerializeField]private EnemyController _enemyController;
+    [SerializeField]private Bot _bot;
     private DayNightManager _dayNightManager;
     private void Start()
     {
         _health = _maxHealth;
         _healthBar.value = _health;
-         _canvas.SetActive(true);
+        _canvas.SetActive(true);
          
-
         _dayNightManager = DayNightManager.instance;
         if (_isEnemy)
         {
@@ -41,6 +40,10 @@ public class HealthManager : MonoBehaviour
         {
             StartCoroutine(Regeneration());
         }
+        if (_itsAllies)
+        {
+            _alliesManager = AlliesManager.instance;
+        }
     }
 
     public void MinusHp(int count)
@@ -52,8 +55,8 @@ public class HealthManager : MonoBehaviour
         {
             if (_isEnemy)
             {
-                _enemyController._animatorController.dead = true;
-                _enemyController.enemyAttack = false;
+                _bot._animatorController.dead = true;
+                _bot.canAttack = false;
                 _enemyManager.activeEnemy.Remove(this.gameObject);
                 _enemyManager.Disable();
                 _dayNightManager.StartDay();
@@ -66,26 +69,31 @@ public class HealthManager : MonoBehaviour
             }
             else if(_itsAllies)
             {
-                _alliesController._animatorController.dead = true;
-                _alliesController.spawnScript.deadPosition = transform;
-                _alliesController.spawnScript.activeAllies.Remove(gameObject);
-                gameObject.SetActive(false);
+                _bot._animatorController.dead = true;
+                _alliesManager.Disable();
             }
         }
         RefreshUI();
     }
 
-    public void PlusHp(int count)
+    public void PlusHp(float count)
     {
         _health = Mathf.Clamp(_health + count, 0, _maxHealth);
         RefreshUI();
+    }
+
+    public float CheckHP(float count)
+    {
+        _health = Mathf.Clamp(_health - count, 0, _maxHealth);
+        return _health;
     }
 
     private IEnumerator Regeneration()
     {
         while(_itsPlayer || _health < _maxHealth)
         {
-            PlusHp(_maxHealth / 100);  //добавляємо 1%
+            float plusHp = (_maxHealth / 100) * 4;
+            PlusHp(plusHp);  //добавляємо 1%
             yield return new WaitForSeconds(1f);
         }
         
@@ -97,7 +105,6 @@ public class HealthManager : MonoBehaviour
 
         _canvas.SetActive(true);
     }
-
 
     private void DayStart()
     {

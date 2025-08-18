@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyAttack : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class EnemyAttack : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private EnemyController enemyController;
+    private EnemyManager enemyManager;
+
+    private void Awake()
+    {
+        enemyManager = EnemyManager.instance;
+    }
 
     private void OnEnable()
     {
@@ -20,7 +27,7 @@ public class EnemyAttack : MonoBehaviour
     }
     private void OnDisable()
     {
-        CancelInvoke();
+        StopAllCoroutines();
     }
 
     private IEnumerator CheckDistance()
@@ -48,8 +55,15 @@ private IEnumerator AttackTimer()
                 enemyController.targetHealth[0].MinusHp(damage);
                 if (enemyController.targetHealth[0]._health == 0f)
                 {
-                    Debug.Log("Знищення тавера");
-                    enemyController.RefreshTarget();
+                    for (int i = 0; i < enemyManager.activeEnemy.Count; i++)
+                    {
+                        Debug.Log("Зашло в перевірку");
+                        EnemyController enemy = enemyManager.activeEnemy[i].GetComponent<EnemyController>();
+                        enemy.target.Remove(enemyController.target[0]);
+                        enemy.targetHealth.Remove(enemyController.targetHealth[0]);
+                    }
+
+                    Debug.Log("Або не зайшло");
                 }
             }
             yield return new WaitForSeconds(0.1f);

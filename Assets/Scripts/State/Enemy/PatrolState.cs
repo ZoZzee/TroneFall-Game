@@ -1,4 +1,6 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PatrolState : IEnemyState
 {
@@ -10,11 +12,52 @@ public class PatrolState : IEnemyState
 
     public void FixedUpdate()
     {
-        _bot.transform.position = Vector3.MoveTowards(_bot.transform.position, _bot.target.position, _bot.speed);
-        if(Vector3.Distance(_bot.transform.position, _bot.target.position) < _bot.distanseToAttack)
+        if (_bot._itsAllies)
         {
-            _bot.SwitchState(new IdleState());
+
+            if (!_bot._animatorController.dead && 
+                Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) > _bot.distanseToAttack)
+            {
+                Debug.Log(" Дистанція між союзником і ворогом " + (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot.distanseToAttack));
+                _bot.transform.LookAt(_bot.target[0].transform);
+                if (_bot.canAttack && _bot.target[0] != _bot._targetPoint ||
+                    Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot.distanseToAttack &&
+                    _bot.target[0] != _bot._targetPoint)
+                {
+                    _bot.SwitchState(new AttackState());
+                }
+                Vector3 smoothedPosition = Vector3.MoveTowards(_bot.transform.position, _bot.target[0].transform.position, _bot._speed);
+                _bot.transform.position = smoothedPosition;
+
+                _bot._animatorController.velocity = smoothedPosition.normalized.magnitude;      //Аніматор
+            }
+            else if (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot._distanceToTarget)
+            {
+               _bot._animatorController.velocity = 0;                                          // Аніматор
+                _bot.SwitchState(new GoStartPositionState());
+
+            }
+
         }
+        else if (_bot._itsEnemy)
+        {
+            if (_bot.target.Count > 0 && !_bot._animatorController.dead)
+            {
+                if (_bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot.distanseToAttack)
+                { 
+                    _bot.SwitchState(new AttackState());
+                }
+                _bot.transform.LookAt(_bot.target[0].transform);
+                Vector3 smoothedPosition = Vector3.MoveTowards(_bot.transform.position, _bot.target[0].transform.position, _bot._speed);
+                _bot.transform.position = smoothedPosition;
+                _bot._animatorController.velocity = smoothedPosition.normalized.magnitude;
+            }
+            else if (_bot.target.Count < 1 && !_bot._animatorController.dead)
+            {
+                _bot.SwitchState(new GoStartPositionState());
+            }
+        }
+        
     }
     public void Exit()
     {

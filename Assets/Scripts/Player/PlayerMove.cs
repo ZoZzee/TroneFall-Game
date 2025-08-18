@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] private AnimatorController _animatorController;
+    [SerializeField] private Transform _rayDot;
 
     public static PlayerMove instance;
 
@@ -27,6 +28,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -38,6 +40,11 @@ public class PlayerMove : MonoBehaviour
 
         _forvard.Normalize();
         _right.Normalize();
+        if (!Physics.Raycast(_rayDot.position,Vector3.down, 0.3f))
+        {
+            Debug.DrawRay(_rayDot.position, transform.TransformDirection(Vector3.down) * 0.3f, Color.yellow);
+            transform.position = new Vector3(transform.position.x,transform.position.y - Mathf.Lerp(0,1.5f,0.097f),transform.position.z);
+        }
 
         Vector3 moveDirection = (_forvard * vertical + _right * horizontal);
         Vector3 moveDirectionNormalized = moveDirection.normalized;
@@ -57,7 +64,6 @@ public class PlayerMove : MonoBehaviour
 
         if (moveDirectionNormalized.magnitude > 0.1f)
         {
-            //_rb.MovePosition(_rb.position + moveDirectionNormalized * moveSpeed);
             _characterController.Move(moveDirectionNormalized * moveSpeed);
             Quaternion targetRotation = Quaternion.LookRotation(moveDirectionNormalized);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speedRotation);

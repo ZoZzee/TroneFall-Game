@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private int _damageToPlayer;
 
-     public MainBuilding mainBuilding;
+    public MainBuilding mainBuilding;
     [HideInInspector] public GameObject mainBuildingTransform;
 
     [HideInInspector] public float distanceToTarget;
@@ -31,25 +31,25 @@ public class EnemyController : MonoBehaviour
         mainBuilding = BuildingsManager.instance.mainBuilding;
         mainBuildingTransform = mainBuilding.gameObject;
 
-        SetMainBuildingAsTarget();
-
         _enemyManager = EnemyManager.instance;
+    }
+    private void OnDisable()
+    {
+        _enemyManager.activeEnemy.Remove(this.gameObject);
+        Debug.Log("Видалили активних у список");
+        StopAllCoroutines();
     }
 
     private void OnEnable()
     {
-
+        SetMainBuildingAsTarget();
         _enemyManager.activeEnemy.Add(this.gameObject);
+        Debug.Log("Додали активних у список");
     }
     
 
     private void Update()
     {
-        if (!target[0].activeInHierarchy)
-        {
-            Debug.Log("Очистка");
-            RefreshTarget();
-        }
         if (!enemyAttack && target.Count > 0 && !_animatorController.dead)
         {
             transform.LookAt(target[0].transform);
@@ -64,13 +64,6 @@ public class EnemyController : MonoBehaviour
 
     }
 
-    public void RefreshTarget()
-    {
-        target.RemoveAt(0);
-        targetHealth.RemoveAt(0);
-
-        Debug.Log("RefreshTarget");
-    }
 
     public void SetMainBuildingAsTarget()
     {

@@ -8,6 +8,7 @@ TagManager:
   - PlayerAllies
   - Buldings
   - Wall
+  - MainBild
   layers:
   - Default
   - TransparentFX

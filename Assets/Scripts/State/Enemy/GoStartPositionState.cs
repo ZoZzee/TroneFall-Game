@@ -11,10 +11,23 @@ public class GoStartPositionState : IEnemyState
 
     public void FixedUpdate()
     {
-        _bot.transform.position = Vector3.MoveTowards(_bot.transform.position, _bot.spawnPoint, _bot.speed);
-        if (Vector3.Distance(_bot.transform.position, _bot.spawnPoint) < 1f)
+        if (_bot._itsEnemy)
         {
-            //Idle
+            _bot.transform.position = Vector3.MoveTowards(_bot.transform.position, _bot.spawnPoint, _bot._speed);
+            if (Vector3.Distance(_bot.transform.position, _bot.spawnPoint) < 1f 
+                && _bot.target.Count > 0 || _bot.target.Count > 0)
+            {
+                _bot.SwitchState(new PatrolState());
+            }
+        }
+        else if (_bot._itsAllies)
+        {
+            _bot.transform.position = Vector3.MoveTowards(_bot.transform.position, _bot.spawnPoint, _bot._speed);
+            if (Vector3.Distance(_bot.transform.position, _bot.spawnPoint) < 1f
+                && _bot.target.Count > 0 || _bot.target.Count > 0)
+            {
+                _bot.SwitchState(new PatrolState());
+            }
         }
     }
     public void Exit(){}

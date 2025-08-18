@@ -1,25 +1,26 @@
 using System.Collections.Generic;
-using UnityEditor.Searcher;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour
+public class AlliesManager : MonoBehaviour
 {
-    public List<GameObject> activeEnemy;
-    public int numberOfEnemies;
+    public List<GameObject> activeAllies;
 
     [SerializeField] private GameObject _archers;
+    [SerializeField] private GameObject _targetPoint;
     [SerializeField] private GameObject _barbarians;
     [SerializeField] private byte _initialCount = 10;
 
     private List<GameObject> _poolArchers;
+    [SerializeField]private List<GameObject> _poolTargetP;
     private List<GameObject> _poolBarbarians;
 
-
-    public static EnemyManager instance;
+    public static AlliesManager instance;
 
     private void Awake()
     {
         instance = this;
+
+
         _poolArchers = new List<GameObject>();
         _poolBarbarians = new List<GameObject>();
 
@@ -27,8 +28,11 @@ public class EnemyManager : MonoBehaviour
         {
             CreateBarbarians();
             CreateArchers();
+            CreateTargetPoints();
         }
     }
+
+
 
     private GameObject CreateBarbarians()
     {
@@ -45,11 +49,20 @@ public class EnemyManager : MonoBehaviour
         return archer;
     }
 
+    private GameObject CreateTargetPoints()
+    {
+        GameObject point = Instantiate(_targetPoint, transform);
+        point.SetActive(false);
+
+        _poolTargetP.Add(point);
+        return point;
+    }
+
     public GameObject GetBarbarian(Vector3 position, Quaternion rotation)
     {
         foreach (GameObject barbarian in _poolBarbarians)
         {
-            if (barbarian.activeInHierarchy)
+            if (!barbarian.activeInHierarchy)
             {
                 barbarian.transform.SetPositionAndRotation(position, rotation);
                 barbarian.SetActive(true);
@@ -67,8 +80,8 @@ public class EnemyManager : MonoBehaviour
     {
         foreach (GameObject archer in _poolArchers)
         {
-            if (archer.activeInHierarchy)
-            { 
+            if (!archer.activeInHierarchy)
+            {
                 archer.transform.SetPositionAndRotation(position, rotation);
                 archer.SetActive(true);
 
@@ -81,21 +94,28 @@ public class EnemyManager : MonoBehaviour
         newArcher.SetActive(true);
         return newArcher;
     }
+    public GameObject GetPoint(Vector3 position, Quaternion rotation)
+    {
+        foreach (GameObject point in _poolTargetP)
+        {
+            if (!point.activeInHierarchy)
+            {
+                point.transform.SetPositionAndRotation(position, rotation);
+                point.SetActive(true);
+
+                return point;
+            }
+        }
+
+        GameObject newPoint = CreateTargetPoints();
+        newPoint.transform.SetPositionAndRotation(position, rotation);
+        Debug.Log("Добалено активну точку");
+        newPoint.SetActive(true);
+        return newPoint;
+    }
     public void Disable()
     {
         gameObject.SetActive(false);
-    }
-
-    public bool DayStart()
-    {
-        if (activeEnemy.Count == 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
     }
 
 }

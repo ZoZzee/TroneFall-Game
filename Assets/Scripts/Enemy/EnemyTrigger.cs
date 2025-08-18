@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
 
 public class EnemyTrigger : MonoBehaviour
 {
 
-    [SerializeField] private EnemyController enemyController;
+    [SerializeField] private Bot _bot;
     private byte _priority = 0;
     private byte _notPriority = 0;
 
@@ -22,51 +23,52 @@ public class EnemyTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") ||
-           other.CompareTag("PlayerAllies"))
+            other.CompareTag("PlayerAllies") ||
+            other.CompareTag("Buldings") ||
+            other.CompareTag("Wall") ||
+            other.CompareTag("MainBild"))
         {
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
-                    enemyController.enemyAttack = true;
+                        _bot.canAttack = true;
                     break;
                 case TriggerPriority.priority1:
-                    enemyController.target.Insert(_priority, other.gameObject);
-                    enemyController.targetHealth.Insert(_priority, other.GetComponent<HealthManager>());
-                    _priority++;
-                    _notPriority++;
+                    if (other.CompareTag("Player") ||
+                        other.CompareTag("PlayerAllies"))
+                    {
+                        _bot.target.Insert(_priority, other.gameObject);
+                        _bot.targetHealth.Insert(_priority, other.GetComponent<HealthManager>());
+                        _priority++;
+                        _notPriority++;
+                    }
+                    if (other.CompareTag("Buldings") ||
+                        other.CompareTag("Wall"))
+                    {
+                        _bot.target.Insert(_notPriority, other.gameObject);
+                        _bot.targetHealth.Insert(_notPriority, other.GetComponent<HealthManager>());
+                        _notPriority++;
+                    }
                     break;
                 case TriggerPriority.priority2:
 
                     break;
             }
-        }
-        if (other.CompareTag("Buldings") ||
-            other.CompareTag("Wall"))
-        {
-            switch (currentTriggerPriority)
-            {
-                case TriggerPriority.priority0:
-                    enemyController.enemyAttack = true;
-                    //if(enemyController.target[0] != )
-                    //{
 
-                    //}
-                    break;
-                case TriggerPriority.priority1:
-                    
-                    enemyController.target.Insert(_notPriority, other.gameObject);
-                    enemyController.targetHealth.Insert(_notPriority, other.GetComponent<HealthManager>());
-                    _notPriority++;
-                    break;
-                case TriggerPriority.priority2:
-
-                    break;
-            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        if(other.CompareTag("MainBild"))
+        {
+            switch (currentTriggerPriority)
+            {
+                case TriggerPriority.priority0:
+                    _bot.canAttack = false;
+                    break;
+            }
+        }
         if (other.CompareTag("Player") ||
             other.CompareTag("PlayerAllies") ||
             other.CompareTag("Buldings") ||
@@ -75,12 +77,12 @@ public class EnemyTrigger : MonoBehaviour
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
-                    
-                    enemyController.enemyAttack = false;
+
+                    _bot.canAttack = false;
                     break;
                 case TriggerPriority.priority2:
-                    enemyController.target.Remove(other.gameObject);
-                    enemyController.targetHealth.Remove(other.GetComponent<HealthManager>());
+                    _bot.target.Remove(other.gameObject);
+                    _bot.targetHealth.Remove(other.GetComponent<HealthManager>());
                     _notPriority--;
                     Debug.Log("видалдив Target з Enemy");
                     break;

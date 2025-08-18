@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AlliesTrigger : MonoBehaviour
 {
-    [SerializeField] private AlliesController _alliesController;
+    [SerializeField] private Bot _bot;
 
     public TriggerPriority currentTriggerPriority;
 
@@ -20,11 +20,12 @@ public class AlliesTrigger : MonoBehaviour
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
+                    _bot.canAttack = true;
                     break;
                 case TriggerPriority.priority1:
-                    
-                    _alliesController.healthManagers.Add(other.GetComponent<HealthManager>());
-                    _alliesController.target.Insert(_positionOnList,other.gameObject);
+
+                    _bot.targetHealth.Add(other.GetComponent<HealthManager>());
+                    _bot.target.Insert(_positionOnList,other.gameObject);
                     _positionOnList++;
                     break;
             }
@@ -37,12 +38,12 @@ public class AlliesTrigger : MonoBehaviour
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
-                   // _alliesController.attack = false;
+                   _bot.canAttack = false;
                     break;
                 case TriggerPriority.priority1:
 
-                    _alliesController.healthManagers.Remove(other.GetComponent<HealthManager>());
-                    _alliesController.target.Remove(other.gameObject);
+                    _bot.targetHealth.Remove(other.GetComponent<HealthManager>());
+                    _bot.target.Remove(other.gameObject);
                     _positionOnList--;
                     break;
             }

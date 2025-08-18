@@ -11,38 +11,47 @@ public class AlliesController : MonoBehaviour
     [SerializeField] private float _walkingSpeed;
     [SerializeField] private float attackCooldown;
     [SerializeField] private int _damage;
-    [SerializeField] private float _maxDistanceToAttack;
+    [HideInInspector] public bool attack = false;
+
+    [SerializeField] private float _maxDistanceToAttack = 15f;
     private float _distanceToAttack;
     private float _targetEmptyDistance = 3f;
     [HideInInspector] public float distanceToTarget;
-    [HideInInspector] public bool attack = false;
+
     public List<GameObject> target;
     public List<HealthManager> healthManagers;
-
 
     [Header("Components")]
     [SerializeField] private GameObject _targetEmpty;
     public Transform _targetPoint;
-    public Transform _lastTargetPoint;
     public AnimatorController _animatorController;
+
+    private AlliesManager _alliesManager;
     private void Start()
     {
+        _alliesManager = AlliesManager.instance;
         _distanceToAttack = _maxDistanceToAttack;
-        Vector3 position = spawnScript._pointsPosition[spawnScript.num].position;
-        if(spawnScript.deadPosition != null)
-        {
-            Debug.Log("Ïîìåð");
-            position = spawnScript.deadPosition.position;
-            spawnScript.deadPosition = null;
-        }
-        GameObject newtargetDot = Instantiate(_targetEmpty, position, Quaternion.identity,null);
-        spawnScript.num++;
-        _targetPoint = newtargetDot.transform;
-        target.Add(_targetPoint.gameObject);
         
+    }
+
+    private void OnDisable()
+    {
+        _alliesManager.activeAllies.Remove(this.gameObject);
+        StopAllCoroutines();
+    }
+    private void OnEnable()
+    {
+        _alliesManager.activeAllies.Add(this.gameObject);
+        Debug.Log("Додано точку");
+        //Vector3 position = spawnScript._pointsPosition[spawnScript.num].position;
+        //GameObject newtargetDot = _alliesManager.GetPoint(position, Quaternion.identity);
+        //spawnScript.num++;
+        //_targetPoint = newtargetDot.transform;
+        target.Add(_targetPoint.gameObject);
+        Debug.Log("Додано точку");
+
         StartCoroutine(CheckDistance());
         StartCoroutine(AttackTimer());
-        
     }
 
     private void FixedUpdate()
@@ -51,7 +60,7 @@ public class AlliesController : MonoBehaviour
         {
             if (_distanceToAttack != _maxDistanceToAttack)
             {
-                _maxDistanceToAttack = _distanceToAttack;
+                _distanceToAttack = _maxDistanceToAttack;
             }
             Target();
         }
@@ -59,7 +68,7 @@ public class AlliesController : MonoBehaviour
         {
             if (_distanceToAttack == _maxDistanceToAttack)
             {
-                _maxDistanceToAttack = _targetEmptyDistance;
+                _distanceToAttack = _targetEmptyDistance;
             }
             Target();
 
@@ -69,22 +78,19 @@ public class AlliesController : MonoBehaviour
     private void Target()
     {
         transform.LookAt(target[0].transform);
-        Debug.Log(ReferenceEquals(!target[0], null) + " Наш таргет " );
-        //if ()
-        //{
-        //    Debug.Log("Î÷èñòêà");
-        //    RefreshTarget();
-        //}
-        if (!_animatorController.dead && distanceToTarget > _maxDistanceToAttack)
+        
+        if (!_animatorController.dead && distanceToTarget > _distanceToAttack)
         {
             attack = false;
             Vector3 smoothedPosition = Vector3.MoveTowards(transform.position, target[0].transform.position, _walkingSpeed * Time.deltaTime);
             transform.position = smoothedPosition;
-            _animatorController.velocity = smoothedPosition.normalized.magnitude;
+
+            _animatorController.velocity = smoothedPosition.normalized.magnitude; //Аніматор
         }
-        else if (distanceToTarget <= _maxDistanceToAttack && target[0] != _targetPoint)
+        else if (distanceToTarget <= _distanceToAttack && target[0] != _targetPoint)
         {
-            _animatorController.velocity = 0;
+            _animatorController.velocity = 0;                                    // Аніматор
+
             attack = true;
         }
         else
@@ -120,7 +126,15 @@ public class AlliesController : MonoBehaviour
                 healthManagers[0].MinusHp(_damage);
                 if (healthManagers[0]._health <= 0f)
                 {
-                    RefreshTarget();
+                    for (int i = 0; i < _alliesManager.activeAllies.Count; i++)
+                    {
+                        Debug.Log("Зашло в перевірку союзника");
+                        EnemyController enemy = _alliesManager.activeAllies[i].GetComponent<EnemyController>();
+                        enemy.target.Remove(target[0]);
+                        enemy.targetHealth.Remove(healthManagers[0]);
+                    }
+
+                    Debug.Log("Або не зайшло союзника");
                 }
             }
             yield return new WaitForSeconds(0.1f);
@@ -128,11 +142,5 @@ public class AlliesController : MonoBehaviour
             yield return new WaitForSeconds(attackCooldown - 0.1f);
 
         }
-    }
-
-    private void RefreshTarget()
-    {
-        healthManagers.RemoveAt(0);
-        target.RemoveAt(0);
     }
 }

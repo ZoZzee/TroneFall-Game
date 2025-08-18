@@ -2148,9 +2148,8 @@ GameObject:
   - component: {fileID: 7530887506933897978}
   - component: {fileID: 75711486085217170}
   - component: {fileID: 8739188578420535149}
-  - component: {fileID: 6907261828389010507}
+  - component: {fileID: 8470939841704655815}
   - component: {fileID: 8025323295759168333}
-  - component: {fileID: 6886998975568701705}
   m_Layer: 9
   m_Name: Barbarian
   m_TagString: Enemy
@@ -2226,7 +2225,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &6907261828389010507
+--- !u!114 &8470939841704655815
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2235,20 +2234,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 2045595260600765139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecb9ace3d2fb043df8d4831eefb82117, type: 3}
+  m_Script: {fileID: 11500000, guid: 576258f0caf35e74bb0b7c9b9d665a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _itsEnemy: 1
+  _itsAllies: 0
   target: []
   targetHealth: []
-  _speed: 3
-  attackCooldown: 2
-  _damageToPlayer: 10
+  _speed: 0.1
+  attackCooldown: 150
+  _damage: 10
+  distanceToTarget: 0
+  canAttack: 0
+  spawnPoint: {x: 0, y: 0, z: 0}
+  rotationSpeed: 0.03
+  distanseToAttack: 5
+  _enemyManager: {fileID: 0}
+  _animatorController: {fileID: 7044406890654323094}
   mainBuilding: {fileID: 0}
   mainBuildingTransform: {fileID: 0}
-  distanceToTarget: 0
-  enemyAttack: 0
-  _enemyAttack: {fileID: 6886998975568701705}
-  _animatorController: {fileID: 7044406890654323094}
 --- !u!114 &8025323295759168333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2271,25 +2275,7 @@ MonoBehaviour:
   _itsPlayer: 0
   _itsAllies: 0
   _alliesController: {fileID: 0}
-  _enemyController: {fileID: 6907261828389010507}
---- !u!114 &6886998975568701705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045595260600765139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f1b314630c364f9e823ffffb80edb15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
-  attackCuldown: 1.5
-  distanceToAttack: 3
-  distanceToTarget: 0
-  _checkDistanceTime: 1
-  enemyController: {fileID: 6907261828389010507}
+  _enemyController: {fileID: 0}
 --- !u!1 &2052238206642089530
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,7 +2761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f7b6ebad4a14dcd95a3f3fec38b6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyController: {fileID: 6907261828389010507}
+  _bot: {fileID: 8470939841704655815}
   currentTriggerPriority: 1
 --- !u!136 &8676767837491679943
 CapsuleCollider:
@@ -2797,7 +2783,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 10
-  m_Height: 40
+  m_Height: 30
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 5}
 --- !u!1 &2567521528663234332
@@ -8066,7 +8052,7 @@ Transform:
   m_GameObject: {fileID: 5952822587033227391}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8084,7 +8070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f7b6ebad4a14dcd95a3f3fec38b6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyController: {fileID: 6907261828389010507}
+  _bot: {fileID: 8470939841704655815}
   currentTriggerPriority: 2
 --- !u!136 &840914879229699334
 CapsuleCollider:
@@ -8105,8 +8091,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
-  m_Height: 50
+  m_Radius: 12.5
+  m_Height: 35
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 5}
 --- !u!1 &6059370104064420280
@@ -9609,7 +9595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f7b6ebad4a14dcd95a3f3fec38b6ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyController: {fileID: 6907261828389010507}
+  _bot: {fileID: 8470939841704655815}
   currentTriggerPriority: 0
 --- !u!136 &5849952172379276319
 CapsuleCollider:
