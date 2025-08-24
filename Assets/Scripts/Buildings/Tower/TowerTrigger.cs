@@ -4,29 +4,26 @@ using UnityEngine;
 
 public class TowerTrigger : MonoBehaviour
 {
-    public List<HealthManager> enemyHealth;
+    [SerializeField] private TowerAttack _towerAttack;
+    
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
-            enemyHealth.Add(other.GetComponent<HealthManager>());
+            _towerAttack.targetHealth.Add(other.GetComponent<HealthManager>());
+            _towerAttack.target.Add(other.gameObject);
         }
-        //if (other.CompareTag("Player"))
-        //{
-
-        //}
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
-            enemyHealth.Remove(other.GetComponent<HealthManager>());
-        }
-        //if (other.CompareTag("Player"))
-        //{
+            _towerAttack.targetHealth.Remove(other.GetComponent<HealthManager>());
+            _towerAttack.target.Remove(other.gameObject);
 
-        //}
+        }
     }
 }
+
+

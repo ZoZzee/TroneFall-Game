@@ -36,13 +36,23 @@ public class AttackState : IEnemyState
                             enemy.target.Remove(_bot.target[0]);
                             enemy.targetHealth.Remove(_bot.targetHealth[0]);
                             target.MinusHp(_bot._damage);
-                            //_bot._alliesManager.Disable(target);
+                            //_bot._alliesManager.Disable();
 
                         }
                     }
                     else if (_bot._itsAllies)
                     {
+                        for (int i = 0; i < _bot._alliesManager.activeAllies.Count; i++)
+                        {
+                            Debug.Log("Refresh");
+                            EnemyController allies = _bot._alliesManager.activeAllies[i].GetComponent<EnemyController>();
+                            HealthManager target = allies.targetHealth[0];
+                            allies.target.Remove(_bot.target[0]);
+                            allies.targetHealth.Remove(_bot.targetHealth[0]);
+                            target.MinusHp(_bot._damage);
+                            //_bot._enemyManager.Disable();
 
+                        }
                     }
                 }
 
@@ -66,4 +76,7 @@ public class AttackState : IEnemyState
 
     }
     public void Exit(){}
+
+
+    
 }

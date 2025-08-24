@@ -22,9 +22,14 @@ public class GoStartPositionState : IEnemyState
         }
         else if (_bot._itsAllies)
         {
-            _bot.transform.position = Vector3.MoveTowards(_bot.transform.position, _bot.spawnPoint, _bot._speed);
-            if (Vector3.Distance(_bot.transform.position, _bot.spawnPoint) < 1f
-                && _bot.target.Count > 0 || _bot.target.Count > 0)
+            if (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) >= _bot.distanceToTarget)
+            {
+
+                _bot._agent.SetDestination(_bot.target[0].transform.position);
+                //_bot.transform.position = Vector3.MoveTowards(_bot.transform.position, _bot.target[0].transform.position, _bot._speed);
+            }
+            if (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) <= _bot.distanceToTarget
+                && _bot.target.Count > 1 || _bot.target.Count > 1)
             {
                 _bot.SwitchState(new PatrolState());
             }

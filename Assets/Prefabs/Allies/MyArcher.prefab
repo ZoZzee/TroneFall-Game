@@ -6960,6 +6960,7 @@ GameObject:
   - component: {fileID: 8589573627244863832}
   - component: {fileID: 2369046391608563927}
   - component: {fileID: 7050228988410282125}
+  - component: {fileID: -3620059840831419299}
   m_Layer: 9
   m_Name: MyArcher
   m_TagString: PlayerAllies
@@ -7056,6 +7057,7 @@ MonoBehaviour:
   distanceToTarget: 0
   _distanceToTarget: 3
   canAttack: 0
+  _agent: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   rotationSpeed: 0.1
   distanseToAttack: 20
@@ -7088,6 +7090,28 @@ MonoBehaviour:
   _itsPlayer: 0
   _itsAllies: 1
   _bot: {fileID: 2369046391608563927}
+--- !u!195 &-3620059840831419299
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3071412984468933341}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &3120496111531626041
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Bot : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Bot : MonoBehaviour
     public float _distanceToTarget = 3f;
 
     public bool canAttack;                              //+
-
+    public NavMeshAgent _agent;
 
     [HideInInspector] public Vector3 spawnPoint;        //+-
     public float rotationSpeed;                         //+
@@ -50,28 +51,14 @@ public class Bot : MonoBehaviour
         else if(_itsAllies)
         {
             _alliesManager = AlliesManager.instance;
-            AddTarget(_targetPoint);
+            AddTarget();
         }
+        _agent = GetComponent<NavMeshAgent>();
     }
     private void OnEnable()
     {
-        if (_itsEnemy)
-        {
-            mainBuildingTransform = mainBuilding.gameObject;
-            if (!target.Contains(mainBuildingTransform))
-            {
-                target.Add(mainBuildingTransform);
-                targetHealth.Add(mainBuilding.healthManager);
-            }
-            _enemyManager.activeEnemy.Add(this.gameObject);
-        }
-        else if(_itsAllies)
-        {
-            Debug.Log(" Target point " + _targetPoint);
-            //_targetPoint = target[0];
-            AddTarget(_targetPoint);
-            _alliesManager.activeAllies.Add(this.gameObject);
-        }
+        Debug.Log(" Start Patrol");
+        
         SwitchState(new PatrolState());
         spawnPoint = transform.position;
 
@@ -103,13 +90,28 @@ public class Bot : MonoBehaviour
     }
 
 
-    public void AddTarget( GameObject _object)
+    public void AddTarget()
     {
-
-        Debug.Log(" Target point " + _targetPoint);
-        if (_object != null)
+        if (target.Count == 0)
         {
-            target.Add(_object);
+            if (_itsEnemy)
+            {
+                mainBuildingTransform = mainBuilding.gameObject;
+                if (!target.Contains(mainBuildingTransform))
+                {
+                    target.Add(mainBuildingTransform);
+                    targetHealth.Add(mainBuilding.healthManager);
+                }
+                _enemyManager.activeEnemy.Add(this.gameObject);
+            }
+            else if (_itsAllies)
+            {
+                target.Add(_targetPoint);
+                _alliesManager.activeAllies.Add(this.gameObject);
+            }
+            Debug.Log(" Start Patrol ");
+            SwitchState(new PatrolState());
+            spawnPoint = transform.position;
         }
     }
 }

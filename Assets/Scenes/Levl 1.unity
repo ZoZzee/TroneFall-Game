@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat_Water_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1845410051490476, guid: 6b0531e22ab497d498c2ac86214e6e03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4642350981808070, guid: 6b0531e22ab497d498c2ac86214e6e03, type: 3}
       propertyPath: m_LocalPosition.x
       value: -135
@@ -228,6 +232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -285,6 +293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -341,6 +353,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -414,6 +430,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -470,6 +490,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -532,6 +556,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (127)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -677,6 +705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -733,6 +765,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (105)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -956,6 +992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.59
@@ -1063,6 +1103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1162,6 +1206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -65.73
@@ -1224,6 +1272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -107.31
@@ -1280,6 +1332,10 @@ PrefabInstance:
     - target: {fileID: 1601898882004978, guid: 20988007df24b1b4c88900cb4d73e405, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Hill_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601898882004978, guid: 20988007df24b1b4c88900cb4d73e405, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4458165570905314, guid: 20988007df24b1b4c88900cb4d73e405, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1560,6 +1616,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1581,6 +1641,10 @@ PrefabInstance:
     - target: {fileID: 1915194413970718, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_River_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915194413970718, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4099456314430908, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1720,6 +1784,10 @@ PrefabInstance:
     - target: {fileID: 1616269520506798, guid: fdf7bc0d0a60983439f8e5fe720f3fd5, type: 3}
       propertyPath: m_Name
       value: SM_Env_Generic_Cliffs_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616269520506798, guid: fdf7bc0d0a60983439f8e5fe720f3fd5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4512853748154376, guid: fdf7bc0d0a60983439f8e5fe720f3fd5, type: 3}
       propertyPath: m_LocalScale.x
@@ -1925,6 +1993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1679
@@ -2033,6 +2105,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2178,6 +2254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1061
@@ -2292,6 +2372,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2354,6 +2438,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (132)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2370,6 +2458,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2583,15 +2675,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1674484892102129449, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 1674484892102129449, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1674484892102129449, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 3344343010246784624, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2727,6 +2819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2831,6 +2927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -147.7
@@ -2884,6 +2984,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 49959019929210115, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: _towerAttack
+      value: 
+      objectReference: {fileID: 1409688058}
     - target: {fileID: 333624993296938472, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: _archers
       value: 
@@ -2915,6 +3019,10 @@ PrefabInstance:
     - target: {fileID: 362522737891643091, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: _initialCount
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947971246981199391, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2331064553847371769, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: gold
@@ -2984,6 +3092,10 @@ PrefabInstance:
       propertyPath: _canvas
       value: 
       objectReference: {fileID: 1091739531}
+    - target: {fileID: 4656242685255332197, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: _itsPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5310437817205225183, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.7
@@ -3012,6 +3124,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8253045518614897907, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: _damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253045518614897907, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: cooldownMax
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253045518614897907, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: _alliesManager
+      value: 
+      objectReference: {fileID: 876273126}
     - target: {fileID: 8557226361065259237, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.4
@@ -3026,9 +3150,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 29086547102817546, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+    - {fileID: 300913252275955303, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 104342847458436059, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1409688064}
+    - targetCorrespondingSourceObject: {fileID: 104342847458436059, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1409688059}
     - targetCorrespondingSourceObject: {fileID: 2859106902003050777, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1237162117}
@@ -3212,6 +3343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_River_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1966281492481586, guid: fb1b4c0f2b9e7fe45bc44b8233a09f1f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4374691695724742, guid: fb1b4c0f2b9e7fe45bc44b8233a09f1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30
@@ -3276,6 +3411,10 @@ PrefabInstance:
     - target: {fileID: 1371417484069930, guid: a71ca96be1fea454cbec695bb2ee1a34, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Hill_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371417484069930, guid: a71ca96be1fea454cbec695bb2ee1a34, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4576255045600990, guid: a71ca96be1fea454cbec695bb2ee1a34, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3404,6 +3543,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (124)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3460,6 +3603,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (47)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3574,6 +3721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_River_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1966281492481586, guid: fb1b4c0f2b9e7fe45bc44b8233a09f1f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4374691695724742, guid: fb1b4c0f2b9e7fe45bc44b8233a09f1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -135
@@ -3641,6 +3792,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21
@@ -3702,6 +3857,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3766,15 +3925,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044137754803814402, guid: d0db25e9155052d41bb65a9faa8c425e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 6044137754803814402, guid: d0db25e9155052d41bb65a9faa8c425e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6044137754803814402, guid: d0db25e9155052d41bb65a9faa8c425e, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 8492642323581111029, guid: d0db25e9155052d41bb65a9faa8c425e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3846,6 +4005,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -4006,6 +4169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -151.1
@@ -4060,6 +4227,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4099456314430908, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
   m_PrefabInstance: {fileID: 1820221959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &358551542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3243330781299955164, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
+  m_PrefabInstance: {fileID: 535212138}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &359923485 stripped
 Transform:
@@ -4123,6 +4295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4148,7 +4324,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &371915491
 Transform:
@@ -4202,6 +4378,10 @@ PrefabInstance:
     - target: {fileID: 1304492617092640, guid: c96dc1ff49fd2ef44b9729230b08fa52, type: 3}
       propertyPath: m_Name
       value: SM_Env_Generic_Tree_Birch_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1304492617092640, guid: c96dc1ff49fd2ef44b9729230b08fa52, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4233572381184708, guid: c96dc1ff49fd2ef44b9729230b08fa52, type: 3}
       propertyPath: m_LocalScale.x
@@ -4317,6 +4497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4373,6 +4557,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (117)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4518,6 +4706,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4544,6 +4736,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4601,6 +4797,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -4671,6 +4871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_River_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1966281492481586, guid: fb1b4c0f2b9e7fe45bc44b8233a09f1f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4374691695724742, guid: fb1b4c0f2b9e7fe45bc44b8233a09f1f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45
@@ -4730,6 +4934,10 @@ PrefabInstance:
     - target: {fileID: 1347649080250482, guid: d2173579f77d045409b1db6572c574bb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Reed_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347649080250482, guid: d2173579f77d045409b1db6572c574bb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4827250442899704, guid: d2173579f77d045409b1db6572c574bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4833,6 +5041,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (82)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4895,6 +5107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4952,6 +5168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5008,6 +5228,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5107,6 +5331,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5329,6 +5557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5542,6 +5774,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5765,6 +6001,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8869264180924710042, guid: 85aa165d96c19594090f82603a9cac78, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.554
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869264180924710042, guid: 85aa165d96c19594090f82603a9cac78, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869264180924710042, guid: 85aa165d96c19594090f82603a9cac78, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.554
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5786,6 +6034,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -5906,6 +6158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (115)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5927,6 +6183,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -6001,6 +6261,10 @@ PrefabInstance:
     - target: {fileID: 1999079901452570, guid: 7fca4e101c458ba4bad25ad137c8dea0, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Island_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1999079901452570, guid: 7fca4e101c458ba4bad25ad137c8dea0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4461368240424298, guid: 7fca4e101c458ba4bad25ad137c8dea0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6149,16 +6413,32 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1674484892102129449, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 1674484892102129449, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1674484892102129449, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0.554
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830463502109706299, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243330781299955164, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3867340094475203794, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5685769456624799071, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
+      propertyPath: 'LevelEnhancement.Array.data[0]'
+      value: 
+      objectReference: {fileID: 358551542}
     - target: {fileID: 6187135031253854782, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_LocalPosition.x
       value: -40.33034
@@ -6385,6 +6665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Dirt_Pile_03
       objectReference: {fileID: 0}
+    - target: {fileID: 1178472770204448, guid: 1bb809b34ad015b40a62e99ca6cdee05, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4486330413052432, guid: 1bb809b34ad015b40a62e99ca6cdee05, type: 3}
       propertyPath: m_LocalScale.x
       value: 6.6657
@@ -6499,6 +6783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (84)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6560,6 +6848,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (107)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6627,6 +6919,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6700,6 +6996,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (101)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6756,6 +7056,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (118)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6839,6 +7143,111 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92cf76b98aeb0347b14a5d90ed756df, type: 3}
+--- !u!1001 &577116761
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 26449541470596541, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 26449541470596541, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 26449541470596541, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 469879927350392881, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469879927350392881, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: distanseToAttack
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045595260600765139, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_Name
+      value: Allies (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384745255154908362, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384745255154908362, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_Height
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384745255154908362, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_Radius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384745255154908362, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_BaseOffset
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384745255154908362, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330317320151169867, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330317320151169867, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -85.66804
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.449009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
 --- !u!1 &577632147
 GameObject:
   m_ObjectHideFlags: 0
@@ -6923,6 +7332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (137)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6939,6 +7352,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -7013,6 +7430,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -7163,6 +7584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat_Water_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1845410051490476, guid: 6b0531e22ab497d498c2ac86214e6e03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4642350981808070, guid: 6b0531e22ab497d498c2ac86214e6e03, type: 3}
       propertyPath: m_LocalPosition.x
       value: -120
@@ -7260,6 +7685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (116)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7316,6 +7745,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7439,7 +7872,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &614129871
 Transform:
@@ -7697,6 +8130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7871,6 +8308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0972
@@ -7980,6 +8421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8037,6 +8482,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8093,6 +8542,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8233,6 +8686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8248,6 +8705,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3126284232635443640, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
   m_PrefabInstance: {fileID: 1035470411}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &657119844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657119845}
+  - component: {fileID: 657119847}
+  - component: {fileID: 657119848}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &657119845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657119844}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.037, y: 0, z: -1.0641}
+  m_LocalScale: {x: 1.7483, y: 1, z: 1.1578}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 823904000}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &657119847
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657119844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.703163, y: 3.265018, z: 11.859507}
+  m_Center: {x: 0.29800797, y: 1.1325092, z: 0.6594534}
+--- !u!114 &657119848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657119844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: 00000000
 --- !u!1001 &682654773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8397,6 +8928,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8428,6 +8963,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -8722,6 +9261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -125.2
@@ -8783,6 +9326,10 @@ PrefabInstance:
     - target: {fileID: 1469276174265420, guid: b31f9f17c856f1444800e6ab11bb4c7f, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Hill_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469276174265420, guid: b31f9f17c856f1444800e6ab11bb4c7f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4542699977497656, guid: b31f9f17c856f1444800e6ab11bb4c7f, type: 3}
       propertyPath: m_LocalScale.x
@@ -8859,12 +9406,13 @@ GameObject:
   m_Component:
   - component: {fileID: 728540246}
   - component: {fileID: 728540247}
+  - component: {fileID: 728540248}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &728540246
 Transform:
@@ -9135,6 +9683,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 4.82, y: 15, z: 200}
   m_Center: {x: -2.37, y: 0.48, z: 17.04}
+--- !u!114 &728540248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728540245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &728908179 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1843403297676192, guid: 250230bb9fe497d4e810d618d69db5b2, type: 3}
@@ -9269,6 +9837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9383,6 +9955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.221
@@ -9451,6 +10027,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -9566,6 +10146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9676,6 +10260,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -9796,6 +10384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9857,6 +10449,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9971,6 +10567,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10156,6 +10756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (125)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10181,7 +10785,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &793108132
 Transform:
@@ -10538,6 +11142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10673,6 +11281,10 @@ PrefabInstance:
     - target: {fileID: 1209994871161950, guid: 31c211549b6855044a0b12803a11bca5, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_River_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209994871161950, guid: 31c211549b6855044a0b12803a11bca5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4471962734960900, guid: 31c211549b6855044a0b12803a11bca5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10863,6 +11475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (120)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10919,6 +11535,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10982,6 +11602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (140)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10998,6 +11622,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11215,6 +11843,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c324cc9731b3eb64d9b26b1e56acefee, type: 3}
+--- !u!114 &876273126 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 362522737891643091, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+  m_PrefabInstance: {fileID: 242390525}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd6b1c3be3eb0442a50660949cd88a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &879295965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11266,6 +11905,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11323,6 +11966,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (99)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11385,6 +12032,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (106)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11544,6 +12195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4465609
@@ -11653,6 +12308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (85)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11669,6 +12328,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -11921,6 +12584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat_Water_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1845410051490476, guid: 6b0531e22ab497d498c2ac86214e6e03, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4642350981808070, guid: 6b0531e22ab497d498c2ac86214e6e03, type: 3}
       propertyPath: m_LocalPosition.x
       value: -150
@@ -12028,6 +12695,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -12411,6 +13082,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -77.9
@@ -12467,6 +13142,10 @@ PrefabInstance:
     - target: {fileID: 1915194413970718, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_River_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915194413970718, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4099456314430908, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12564,6 +13243,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12818,6 +13501,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Dungeon_Rocks_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1726162708087972, guid: 57620523e48d78b40afe0c71cfbda800, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4109553265984856, guid: 57620523e48d78b40afe0c71cfbda800, type: 3}
       propertyPath: m_LocalScale.x
       value: 9.134214
@@ -12937,6 +13624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (113)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13003,6 +13694,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (98)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13071,6 +13766,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13230,6 +13929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.2
@@ -13286,6 +13989,10 @@ PrefabInstance:
     - target: {fileID: 1229453767803230, guid: d711abe5b31cb4740adb0edc1a0b1561, type: 3}
       propertyPath: m_Name
       value: SM_Env_Dungeon_Rocks_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1229453767803230, guid: d711abe5b31cb4740adb0edc1a0b1561, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4842418248785352, guid: d711abe5b31cb4740adb0edc1a0b1561, type: 3}
       propertyPath: m_LocalScale.x
@@ -13360,6 +14067,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -13649,6 +14360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (88)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13665,6 +14380,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13732,6 +14451,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -13842,6 +14565,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13863,6 +14590,10 @@ PrefabInstance:
     - target: {fileID: 1347649080250482, guid: d2173579f77d045409b1db6572c574bb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Reed_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347649080250482, guid: d2173579f77d045409b1db6572c574bb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4827250442899704, guid: d2173579f77d045409b1db6572c574bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13932,15 +14663,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6044137754803814402, guid: d0db25e9155052d41bb65a9faa8c425e, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 6044137754803814402, guid: d0db25e9155052d41bb65a9faa8c425e, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6044137754803814402, guid: d0db25e9155052d41bb65a9faa8c425e, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 8492642323581111029, guid: d0db25e9155052d41bb65a9faa8c425e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14090,6 +14821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -103.13
@@ -14228,6 +14963,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14285,6 +15024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14306,6 +15049,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14404,6 +15151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (45)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14420,6 +15171,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -14489,6 +15244,10 @@ PrefabInstance:
     - target: {fileID: 1304492617092640, guid: c96dc1ff49fd2ef44b9729230b08fa52, type: 3}
       propertyPath: m_Name
       value: SM_Env_Generic_Tree_Birch_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1304492617092640, guid: c96dc1ff49fd2ef44b9729230b08fa52, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4233572381184708, guid: c96dc1ff49fd2ef44b9729230b08fa52, type: 3}
       propertyPath: m_LocalScale.x
@@ -14648,15 +15407,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5002039452791130996, guid: aec6fffce1b2dce428ba6a7294522476, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 5002039452791130996, guid: aec6fffce1b2dce428ba6a7294522476, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5002039452791130996, guid: aec6fffce1b2dce428ba6a7294522476, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 6076945035546690293, guid: aec6fffce1b2dce428ba6a7294522476, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14731,6 +15490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14788,6 +15551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (89)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14844,6 +15611,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (143)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14912,6 +15683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (136)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14928,6 +15703,10 @@ PrefabInstance:
     - target: {fileID: 1438846569682568, guid: 9fc9d0953f7c6364abcd3ebfcd7869ff, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Hill_07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1438846569682568, guid: 9fc9d0953f7c6364abcd3ebfcd7869ff, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4079813579154422, guid: 9fc9d0953f7c6364abcd3ebfcd7869ff, type: 3}
       propertyPath: m_LocalScale.x
@@ -15043,6 +15822,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15059,6 +15842,10 @@ PrefabInstance:
     - target: {fileID: 1240748685220562, guid: f58bd660b65311542860f44eaa73e1d2, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Island_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240748685220562, guid: f58bd660b65311542860f44eaa73e1d2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4639186695524636, guid: f58bd660b65311542860f44eaa73e1d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15162,6 +15949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (128)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15224,6 +16015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15280,6 +16075,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (123)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15406,7 +16205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237162113}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72f8d0da56c774849850440faf63b6c1, type: 3}
   m_Name: 
@@ -15434,6 +16233,11 @@ MonoBehaviour:
   startFromZeroDeley: 0
   oneTime: 1
   objectName: 
+--- !u!95 &1237162119 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5864679820910048941, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+  m_PrefabInstance: {fileID: 242390525}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1243740295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3901158869617364419, guid: 203c8f3180bc1de4aad79579a1820391, type: 3}
@@ -15532,6 +16336,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15553,6 +16361,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -15663,6 +16475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15725,6 +16541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15739,6 +16559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1286268955}
+  - component: {fileID: 1286268956}
   m_Layer: 0
   m_Name: WallAndGate
   m_TagString: Untagged
@@ -15796,6 +16617,22 @@ Transform:
   - {fileID: 810771178}
   m_Father: {fileID: 701943734}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &1286268956
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286268954}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1286764281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15807,6 +16644,10 @@ PrefabInstance:
     - target: {fileID: 1679036027631568, guid: f65aca722d376524dbffaaa0c52c6c6d, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat_Water_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679036027631568, guid: f65aca722d376524dbffaaa0c52c6c6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4203866961909890, guid: f65aca722d376524dbffaaa0c52c6c6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15905,6 +16746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15967,6 +16812,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15983,6 +16832,10 @@ PrefabInstance:
     - target: {fileID: 1975000972948878, guid: a18753f689394fe4ea507250f41be664, type: 3}
       propertyPath: m_Name
       value: SM_Env_Dirt_Pile_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1975000972948878, guid: a18753f689394fe4ea507250f41be664, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4873359666083086, guid: a18753f689394fe4ea507250f41be664, type: 3}
       propertyPath: m_LocalScale.x
@@ -16067,6 +16920,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -16326,6 +17183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -134.8556
@@ -16392,6 +17253,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -16467,6 +17332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -122.19
@@ -16523,6 +17392,10 @@ PrefabInstance:
     - target: {fileID: 1728118127836530, guid: e717a02293d5de44fa1bf957718b0944, type: 3}
       propertyPath: m_Name
       value: SM_Env_Dirt_Pile_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1728118127836530, guid: e717a02293d5de44fa1bf957718b0944, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4281728091273950, guid: e717a02293d5de44fa1bf957718b0944, type: 3}
       propertyPath: m_LocalScale.x
@@ -16597,6 +17470,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -16707,6 +17584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16763,6 +17644,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16935,6 +17820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -90.73
@@ -17032,6 +17921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17088,6 +17981,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (135)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17218,6 +18115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17234,6 +18135,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -17308,6 +18213,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17488,6 +18397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17599,6 +18512,57 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3126284232635443640, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
   m_PrefabInstance: {fileID: 640964205}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1409688056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 104342847458436059, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+  m_PrefabInstance: {fileID: 242390525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1409688058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8253045518614897907, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+  m_PrefabInstance: {fileID: 242390525}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409688056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5385c36dd12b749b0b71d898de053b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!195 &1409688059
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409688056}
+  m_Enabled: 0
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 15
+  m_Acceleration: 40
+  avoidancePriority: 50
+  m_AngularSpeed: 600
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1409688064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409688056}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8560f02daa7ee4ba8d7801ba4b3861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p_Animator: {fileID: 1237162119}
 --- !u!1001 &1410200022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17733,6 +18697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (129)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17759,6 +18727,10 @@ PrefabInstance:
     - target: {fileID: 1616269520506798, guid: fdf7bc0d0a60983439f8e5fe720f3fd5, type: 3}
       propertyPath: m_Name
       value: SM_Env_Generic_Cliffs_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616269520506798, guid: fdf7bc0d0a60983439f8e5fe720f3fd5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4512853748154376, guid: fdf7bc0d0a60983439f8e5fe720f3fd5, type: 3}
       propertyPath: m_LocalScale.x
@@ -17878,6 +18850,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18071,6 +19047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18146,6 +19126,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18167,6 +19151,10 @@ PrefabInstance:
     - target: {fileID: 1526752815462950, guid: b05819227e223ab4383d4bac7e0d70c4, type: 3}
       propertyPath: m_Name
       value: SM_Env_Lilly_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526752815462950, guid: b05819227e223ab4383d4bac7e0d70c4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4228279627805754, guid: b05819227e223ab4383d4bac7e0d70c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18270,6 +19258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (71)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18341,6 +19333,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (111)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18422,6 +19418,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Hill_06
       objectReference: {fileID: 0}
+    - target: {fileID: 1705413173103984, guid: 09d43b9ec1f563845b5a8a9a3301b501, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4661307322715966, guid: 09d43b9ec1f563845b5a8a9a3301b501, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.2993
@@ -18491,6 +19491,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Hill_04
       objectReference: {fileID: 0}
+    - target: {fileID: 1843403297676192, guid: 250230bb9fe497d4e810d618d69db5b2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4620217301146544, guid: 250230bb9fe497d4e810d618d69db5b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -132.67458
@@ -18533,7 +19537,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4620217301146544, guid: 250230bb9fe497d4e810d618d69db5b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 657119845}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1843403297676192, guid: 250230bb9fe497d4e810d618d69db5b2, type: 3}
       insertIndex: -1
@@ -18560,6 +19567,10 @@ PrefabInstance:
     - target: {fileID: 1347649080250482, guid: d2173579f77d045409b1db6572c574bb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Reed_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347649080250482, guid: d2173579f77d045409b1db6572c574bb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4827250442899704, guid: d2173579f77d045409b1db6572c574bb, type: 3}
       propertyPath: m_LocalScale.x
@@ -18843,6 +19854,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18859,6 +19874,10 @@ PrefabInstance:
     - target: {fileID: 1593622924028346, guid: 6af528d1fecfd2345b4383c3492da1d5, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593622924028346, guid: 6af528d1fecfd2345b4383c3492da1d5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4505409757605374, guid: 6af528d1fecfd2345b4383c3492da1d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18945,6 +19964,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19058,6 +20081,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19167,6 +20194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_River_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1915194413970718, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4099456314430908, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
       propertyPath: m_LocalPosition.x
       value: -150
@@ -19212,11 +20243,133 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
+--- !u!1001 &1551918771
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 26449541470596541, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 26449541470596541, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 26449541470596541, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 469879927350392881, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: target.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469879927350392881, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: 'target.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1409688056}
+    - target: {fileID: 2045595260600765139, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_Name
+      value: Allies
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045595260600765139, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384745255154908362, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384745255154908362, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3384745255154908362, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330317320151169867, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330317320151169867, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -68.5491
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 32.680904
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7530887506933897978, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a74dca5415c8a5e41b3ff4ff05cdc12f, type: 3}
 --- !u!4 &1553039291 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2817967760118540610, guid: c324cc9731b3eb64d9b26b1e56acefee, type: 3}
   m_PrefabInstance: {fileID: 1501152657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1554907639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6289104004971128081, guid: a382e10e12c18d247b2d5fcf63dfbf94, type: 3}
+  m_PrefabInstance: {fileID: 691785875801802226}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &1554907643
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554907639}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 4.03, y: 4.0280004, z: 5.4670005}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.059000004, y: 0.004, z: 4.9410005}
+  m_TimeToStationary: 0.5
 --- !u!1 &1555245377
 GameObject:
   m_ObjectHideFlags: 0
@@ -19358,6 +20511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (104)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19424,6 +20581,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19530,6 +20691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (133)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19546,6 +20711,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19597,6 +20766,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3126284232635443640, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
   m_PrefabInstance: {fileID: 1288876660}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1615408971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1615408973}
+  - component: {fileID: 1615408972}
+  m_Layer: 0
+  m_Name: NavMesh Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1615408972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615408971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.13333334
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 36c0d59f0348fe04fb91034a8c820bb0, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!4 &1615408973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615408971}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -39.4367, y: -0.00717, z: 5.18206}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1623834147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19649,6 +20882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19670,6 +20907,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -19740,6 +20981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -46.4
@@ -19801,6 +21046,10 @@ PrefabInstance:
     - target: {fileID: 1631121183968878, guid: 7cfe43cd9c9bf6842859e16b6f35c255, type: 3}
       propertyPath: m_Name
       value: SM_Env_Generic_Tree_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631121183968878, guid: 7cfe43cd9c9bf6842859e16b6f35c255, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4978733129855490, guid: 7cfe43cd9c9bf6842859e16b6f35c255, type: 3}
       propertyPath: m_LocalScale.x
@@ -19918,6 +21167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.11
@@ -20015,6 +21268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (141)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20031,6 +21288,10 @@ PrefabInstance:
     - target: {fileID: 1966281492481586, guid: fb1b4c0f2b9e7fe45bc44b8233a09f1f, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_River_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966281492481586, guid: fb1b4c0f2b9e7fe45bc44b8233a09f1f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4374691695724742, guid: fb1b4c0f2b9e7fe45bc44b8233a09f1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20145,6 +21406,10 @@ PrefabInstance:
     - target: {fileID: 1209994871161950, guid: 31c211549b6855044a0b12803a11bca5, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_River_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1209994871161950, guid: 31c211549b6855044a0b12803a11bca5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4471962734960900, guid: 31c211549b6855044a0b12803a11bca5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20528,6 +21793,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20544,6 +21813,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -20664,6 +21937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (93)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20721,6 +21998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20742,6 +22023,10 @@ PrefabInstance:
     - target: {fileID: 1650792322093002, guid: 033b023fb3cf36a448abde60ec0f9dc1, type: 3}
       propertyPath: m_Name
       value: SM_Env_Generic_Cliffs_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650792322093002, guid: 033b023fb3cf36a448abde60ec0f9dc1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4225150301262754, guid: 033b023fb3cf36a448abde60ec0f9dc1, type: 3}
       propertyPath: m_LocalScale.x
@@ -20853,6 +22138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -150.8
@@ -20950,6 +22239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20966,6 +22259,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -21091,6 +22388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21148,6 +22449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (139)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21169,6 +22474,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -21440,6 +22749,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21456,6 +22769,10 @@ PrefabInstance:
     - target: {fileID: 1915194413970718, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_River_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915194413970718, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4099456314430908, guid: fcf90202882f24647a3db7ef96e86666, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21554,6 +22871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (119)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21570,6 +22891,10 @@ PrefabInstance:
     - target: {fileID: 1627104706937964, guid: 54885cd292041ce4f98acffbf494d9b3, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Hill_08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1627104706937964, guid: 54885cd292041ce4f98acffbf494d9b3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4167987543792350, guid: 54885cd292041ce4f98acffbf494d9b3, type: 3}
       propertyPath: m_LocalScale.x
@@ -21680,6 +23005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (112)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21747,6 +23076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21809,6 +23142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21865,6 +23202,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22026,15 +23367,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1674484892102129449, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 1674484892102129449, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1674484892102129449, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.554
       objectReference: {fileID: 0}
     - target: {fileID: 3344343010246784624, guid: f4c88d0845464f946a3312ca959f5336, type: 3}
       propertyPath: m_AnchorMax.x
@@ -22170,6 +23511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (96)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22186,6 +23531,10 @@ PrefabInstance:
     - target: {fileID: 1059105689812590, guid: 7697f9b061d93cc4f96f585eecdf996e, type: 3}
       propertyPath: m_Name
       value: SM_Env_Lilly_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059105689812590, guid: 7697f9b061d93cc4f96f585eecdf996e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4539859637284328, guid: 7697f9b061d93cc4f96f585eecdf996e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22304,6 +23653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (138)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22320,6 +23673,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -22546,6 +23903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22764,6 +24125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22817,6 +24182,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23084,6 +24453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (109)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23145,6 +24518,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (131)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23481,6 +24858,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (114)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23523,6 +24904,10 @@ PrefabInstance:
     - target: {fileID: 1679036027631568, guid: f65aca722d376524dbffaaa0c52c6c6d, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat_Water_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679036027631568, guid: f65aca722d376524dbffaaa0c52c6c6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4203866961909890, guid: f65aca722d376524dbffaaa0c52c6c6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23714,6 +25099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (110)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23770,6 +25159,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23828,6 +25221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (103)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23849,6 +25246,10 @@ PrefabInstance:
     - target: {fileID: 1733875523410964, guid: e36cc1fcd494a3f449216cd0e7a45493, type: 3}
       propertyPath: m_Name
       value: SM_Env_Pirate_Palm_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733875523410964, guid: e36cc1fcd494a3f449216cd0e7a45493, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4136196489107400, guid: e36cc1fcd494a3f449216cd0e7a45493, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24153,6 +25554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (97)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24214,6 +25619,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (108)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24353,6 +25762,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24748,6 +26161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24850,6 +26267,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -25124,6 +26545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Generic_Cliffs_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1616269520506798, guid: fdf7bc0d0a60983439f8e5fe720f3fd5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4512853748154376, guid: fdf7bc0d0a60983439f8e5fe720f3fd5, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.7600996
@@ -25202,6 +26627,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -25358,6 +26787,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25379,6 +26812,10 @@ PrefabInstance:
     - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -25514,6 +26951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25540,6 +26981,10 @@ PrefabInstance:
     - target: {fileID: 1129210077782746, guid: 80670641efe87664798ea8a30d4533b8, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Waterfall_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1129210077782746, guid: 80670641efe87664798ea8a30d4533b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4562511550445560, guid: 80670641efe87664798ea8a30d4533b8, type: 3}
       propertyPath: m_LocalScale.z
@@ -25684,6 +27129,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Forest_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1635524137293272, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4491438804239794, guid: c72730fd44cee3440b89fa39c0f48e50, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3624
@@ -25792,6 +27241,10 @@ PrefabInstance:
     - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat (100)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25944,7 +27397,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7518229628599390008, guid: a382e10e12c18d247b2d5fcf63dfbf94, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2001174171}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6289104004971128081, guid: a382e10e12c18d247b2d5fcf63dfbf94, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1554907643}
   m_SourcePrefab: {fileID: 100100000, guid: a382e10e12c18d247b2d5fcf63dfbf94, type: 3}
 --- !u!4 &1396854985104845907 stripped
 Transform:
@@ -26087,6 +27543,18 @@ PrefabInstance:
     - target: {fileID: 8848054111884864670, guid: 85aa165d96c19594090f82603a9cac78, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869264180924710042, guid: 85aa165d96c19594090f82603a9cac78, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.554
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869264180924710042, guid: 85aa165d96c19594090f82603a9cac78, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869264180924710042, guid: 85aa165d96c19594090f82603a9cac78, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.554
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26302,6 +27770,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tile_Cube_Flat
       objectReference: {fileID: 0}
+    - target: {fileID: 5237263178234861116, guid: f64ac4ce85138bc46b927ac9a1352f93, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26317,3 +27789,6 @@ SceneRoots:
   - {fileID: 1906558308}
   - {fileID: 3318873410469119758}
   - {fileID: 507628013}
+  - {fileID: 1551918771}
+  - {fileID: 1615408973}
+  - {fileID: 577116761}

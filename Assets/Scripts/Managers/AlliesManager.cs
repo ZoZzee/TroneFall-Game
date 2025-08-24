@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.Searcher;
 using UnityEngine;
 
 public class AlliesManager : MonoBehaviour
@@ -11,7 +12,7 @@ public class AlliesManager : MonoBehaviour
     [SerializeField] private byte _initialCount = 10;
 
     private List<GameObject> _poolArchers;
-    [SerializeField]private List<GameObject> _poolTargetP;
+    private List<GameObject> _poolTargetP;
     private List<GameObject> _poolBarbarians;
 
     public static AlliesManager instance;
@@ -23,6 +24,7 @@ public class AlliesManager : MonoBehaviour
 
         _poolArchers = new List<GameObject>();
         _poolBarbarians = new List<GameObject>();
+        _poolTargetP = new List<GameObject>();
 
         for (int i = 0; i < _initialCount; i++)
         {
@@ -84,6 +86,7 @@ public class AlliesManager : MonoBehaviour
             {
                 archer.transform.SetPositionAndRotation(position, rotation);
                 archer.SetActive(true);
+                //archer.GetComponent<Bot>().AddTarget();
 
                 return archer;
             }
@@ -92,6 +95,8 @@ public class AlliesManager : MonoBehaviour
         GameObject newArcher = CreateArchers();
         newArcher.transform.SetPositionAndRotation(position, rotation);
         newArcher.SetActive(true);
+
+        //newArcher.GetComponent<Bot>().AddTarget();
         return newArcher;
     }
     public GameObject GetPoint(Vector3 position, Quaternion rotation)
