@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
-    public bool alive = true;
-
     [SerializeField] private float _maxHealth;
     [HideInInspector]public float _health;
     
@@ -60,8 +58,6 @@ public class HealthManager : MonoBehaviour
                 _enemyManager.activeEnemy.Remove(this.gameObject);
                 _enemyManager.Disable();
                 _dayNightManager.StartDay();
-
-                alive = false;
             }
             else if(_isBuildings)
             {
@@ -70,6 +66,8 @@ public class HealthManager : MonoBehaviour
             else if(_itsAllies)
             {
                 _bot._animatorController.dead = true;
+                _bot.canAttack = false;
+                _alliesManager.activeAllies.Remove(this.gameObject);
                 _alliesManager.Disable();
             }
         }

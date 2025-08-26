@@ -49,16 +49,17 @@ public class EnemyManager : MonoBehaviour
     {
         foreach (GameObject barbarian in _poolBarbarians)
         {
-            if (barbarian.activeInHierarchy)
+            if (!barbarian.activeInHierarchy)
             {
                 barbarian.transform.SetPositionAndRotation(position, rotation);
                 barbarian.SetActive(true);
+                barbarian.GetComponent<Bot>().AddTarget();
 
                 return barbarian;
             }
         }
 
-        GameObject newBarbarian = CreateArchers();
+        GameObject newBarbarian = CreateBarbarians();
         newBarbarian.transform.SetPositionAndRotation(position, rotation);
         newBarbarian.SetActive(true);
         return newBarbarian;
@@ -67,10 +68,11 @@ public class EnemyManager : MonoBehaviour
     {
         foreach (GameObject archer in _poolArchers)
         {
-            if (archer.activeInHierarchy)
+            if (!archer.activeInHierarchy)
             { 
                 archer.transform.SetPositionAndRotation(position, rotation);
                 archer.SetActive(true);
+                archer.GetComponent<Bot>().AddTarget();
 
                 return archer;
             }
@@ -95,6 +97,15 @@ public class EnemyManager : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+    public void ClineDeadTarget(GameObject _target, HealthManager _hpTarget)
+    {
+        for (int i = 0; i <= activeEnemy.Count; i++)
+        {
+            EnemyController allies = activeEnemy[i].GetComponent<EnemyController>();
+            allies.target.Remove(_target);
+            allies.targetHealth.Remove(_hpTarget);
         }
     }
 

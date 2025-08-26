@@ -43,7 +43,8 @@ public class PlayerMove : MonoBehaviour
         if (!Physics.Raycast(_rayDot.position,Vector3.down, 0.3f))
         {
             Debug.DrawRay(_rayDot.position, transform.TransformDirection(Vector3.down) * 0.3f, Color.yellow);
-            transform.position = new Vector3(transform.position.x,transform.position.y - Mathf.Lerp(0,1.5f,0.097f),transform.position.z);
+            _forvard.y = transform.position.y - Mathf.Lerp(0, 1.5f, 0.097f);
+            //transform.position = new Vector3(transform.position.x,transform.position.y - Mathf.Lerp(0,1.5f,0.097f),transform.position.z);
         }
 
         Vector3 moveDirection = (_forvard * vertical + _right * horizontal);

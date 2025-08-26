@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -47,18 +47,20 @@ public class Bot : MonoBehaviour
             mainBuilding = BuildingsManager.instance.mainBuilding;
 
             _enemyManager = EnemyManager.instance;
+            AddTarget();
+
         }
         else if(_itsAllies)
         {
             _alliesManager = AlliesManager.instance;
-            AddTarget();
+            
         }
         _agent = GetComponent<NavMeshAgent>();
     }
     private void OnEnable()
     {
-        Debug.Log(" Start Patrol");
-        
+        //AddTarget();
+
         SwitchState(new PatrolState());
         spawnPoint = transform.position;
 
@@ -92,7 +94,7 @@ public class Bot : MonoBehaviour
 
     public void AddTarget()
     {
-        if (target.Count == 0)
+        if (target.Count == 0 && !target.Contains(_targetPoint))
         {
             if (_itsEnemy)
             {
@@ -107,9 +109,9 @@ public class Bot : MonoBehaviour
             else if (_itsAllies)
             {
                 target.Add(_targetPoint);
+                Debug.Log("додав таргет");
                 _alliesManager.activeAllies.Add(this.gameObject);
             }
-            Debug.Log(" Start Patrol ");
             SwitchState(new PatrolState());
             spawnPoint = transform.position;
         }

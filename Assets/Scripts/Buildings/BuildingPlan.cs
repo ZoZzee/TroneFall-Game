@@ -9,17 +9,23 @@ public class BuildingPlan : MonoBehaviour
     [Header("Values")]
 
     [HideInInspector]public byte _levelEnhancement;
+
     [SerializeField][Tooltip("На скільки рухаємо гравця коли побудували будівлю")]
     private float _playerMoveDistanceOnBuild;
+
     [SerializeField][Tooltip("На скільки швидко рухаєм гравця від будівлі")]
     private float _playerMoveSpeed;
-    [Tooltip("Чи видно попередні рівні будівлі")] public bool _setillActive;
+
+    [Tooltip("Чи видно попередні рівні будівлі")] 
+    public bool _setillActive;
+
     public bool isBuilt = false;
     [SerializeField] private float spaceHoldTime;
     [SerializeField] private float spaceHoldTimeMax;
 
     [Header("References")]
     [SerializeField] private GameObject _flag;
+    [SerializeField] private GameObject _isParent = null;
     public List<GameObject> LevelEnhancement;
     public List<byte> costEnhancement;
     public bool _isPlayerNearby;
@@ -79,10 +85,12 @@ public class BuildingPlan : MonoBehaviour
         _flag.SetActive(false);
         goldManager.MinusGold(costEnhancement[_levelEnhancement]);
         _levelEnhancement++;
-        Debug.Log(_levelEnhancement);
+        if (_isParent != null)
+        {
+            _isParent.SetActive(true);                 //Чи перший об'єкт батьківський
+        }
         if (_setillActive == false && _levelEnhancement > 1)
         {
-                //Перевіряю чи рівень більше першого і деактивую всі попередні рівні
             for(int i = 0; i < _levelEnhancement - 1; i ++)
             {
                 Debug.Log("Hyi + " + i);
