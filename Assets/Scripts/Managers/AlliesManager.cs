@@ -123,4 +123,14 @@ public class AlliesManager : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void ClineDeadTarget(GameObject _target , HealthManager _hpTarget)
+    {
+        for(int i = 0;i <= activeAllies.Count; i ++)
+        {
+            EnemyController allies = activeAllies[i].GetComponent<EnemyController>();
+            allies.target.Remove(_target);
+            allies.targetHealth.Remove(_hpTarget);
+        }
+    }
+
 }

@@ -2250,7 +2250,7 @@ MonoBehaviour:
   canAttack: 0
   _agent: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
-  rotationSpeed: 0.03
+  rotationSpeed: 0.1
   distanseToAttack: 5
   _enemyManager: {fileID: 0}
   _alliesManager: {fileID: 0}
@@ -2280,7 +2280,7 @@ MonoBehaviour:
   _isBuildings: 0
   _itsPlayer: 0
   _itsAllies: 0
-  _bot: {fileID: 0}
+  _bot: {fileID: 8470939841704655815}
 --- !u!195 &5508662856887493634
 NavMeshAgent:
   m_ObjectHideFlags: 0

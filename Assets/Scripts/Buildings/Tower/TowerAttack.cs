@@ -4,7 +4,7 @@ using UnityEngine;
 public class TowerAttack : MonoBehaviour
 {
     [SerializeField] private TowerTrigger _towerTrigger;
-    [SerializeField] private int _damage;
+    [SerializeField] private int _damage = 10;
     [SerializeField] private float cooldown;
     [SerializeField] private float cooldownMax;
 
@@ -16,6 +16,7 @@ public class TowerAttack : MonoBehaviour
     private void Start()
     {
         _alliesManager = AlliesManager.instance;
+        _alliesManager.activeAllies.Add(this.gameObject);
     }
     private void FixedUpdate()
     {
@@ -35,20 +36,7 @@ public class TowerAttack : MonoBehaviour
     {
         if (targetHealth[0].CheckHP(_damage) <= 0)
         {
-            for (int i = 0; i < _alliesManager.activeAllies.Count; i++)
-            {
-                Debug.Log("Refresh");
-                EnemyController allies = _alliesManager.activeAllies[i].GetComponent<EnemyController>();
-                GameObject perevirka = target[0];
-                HealthManager _perevirkaHp = targetHealth[0];
-                target.Remove(perevirka);
-                targetHealth.Remove(_perevirkaHp);
-                allies.target.Remove(perevirka);
-                allies.targetHealth.Remove(_perevirkaHp);
-                
-                    
-                //_bot._enemyManager.Disable();
-            }
+            _alliesManager.ClineDeadTarget(target[0], targetHealth[0]);
         }
         targetHealth[0].MinusHp(_damage);
     }

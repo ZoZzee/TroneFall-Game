@@ -14,8 +14,8 @@ public class AttackState : IEnemyState
     public void FixedUpdate()
     {
         
-        if (_bot.target.Count > 0 && 
-            (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot.distanseToAttack
+        if (_bot.target.Count > 0 
+            && (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot.distanseToAttack
             || _bot.canAttack))
         {
             _bot.transform.LookAt(_bot.target[0].transform);
@@ -24,19 +24,14 @@ public class AttackState : IEnemyState
             {
                 _bot._animatorController.attack = true;
                 timer = 0f;
-                if (_bot.targetHealth[0].CheckHP( _bot._damage) <= 0)
+                if (_bot.targetHealth[0].CheckHP( _bot._damage) == 0)
                 {
                     if (_bot._itsEnemy)
                     {
                         for (int i = 0; i < _bot._enemyManager.activeEnemy.Count; i++)
                         {
+                            _bot._enemyManager.ClineDeadTarget(_bot.target[0], _bot.targetHealth[0]);
                             Debug.Log("Refresh");
-                            EnemyController enemy = _bot._enemyManager.activeEnemy[i].GetComponent<EnemyController>();
-                            HealthManager target = enemy.targetHealth[0];
-                            enemy.target.Remove(_bot.target[0]);
-                            enemy.targetHealth.Remove(_bot.targetHealth[0]);
-                            target.MinusHp(_bot._damage);
-                            //_bot._alliesManager.Disable();
 
                         }
                     }
@@ -44,13 +39,9 @@ public class AttackState : IEnemyState
                     {
                         for (int i = 0; i < _bot._alliesManager.activeAllies.Count; i++)
                         {
+
+                            _bot._alliesManager.ClineDeadTarget(_bot.target[0], _bot.targetHealth[0]);
                             Debug.Log("Refresh");
-                            EnemyController allies = _bot._alliesManager.activeAllies[i].GetComponent<EnemyController>();
-                            HealthManager target = allies.targetHealth[0];
-                            allies.target.Remove(_bot.target[0]);
-                            allies.targetHealth.Remove(_bot.targetHealth[0]);
-                            target.MinusHp(_bot._damage);
-                            //_bot._enemyManager.Disable();
 
                         }
                     }

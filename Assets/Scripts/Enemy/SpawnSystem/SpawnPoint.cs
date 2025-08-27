@@ -28,20 +28,13 @@ public class SpawnPoint : MonoBehaviour
             if(spawnPointData.waves[currentWave].enemys[i] == _archer)
             {
                 enemyManager.GetArchers(transform.position, Quaternion.identity);
+
+
             }
             else if(spawnPointData.waves[currentWave].enemys[i] == _barbarian)
             {
                 enemyManager.GetBarbarian(transform.position, Quaternion.identity);
             }
-                //switch (spawnPointData.waves[currentWave].enemys[i])
-                //{
-                //    case GameObject _archer:
-
-                //        break;
-                //    case GameObject _barbarian:
-
-                //        break;
-                //}
 
                 //Instantiate(spawnPointData.waves[currentWave].enemys[i], transform.position, Quaternion.identity, null);
             yield return new WaitForSeconds(spawnPointData.waves[currentWave].cooldown);
