@@ -5,16 +5,18 @@ using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
+    [Header("Parameters")]
     [SerializeField] private float _maxHealth;
     [HideInInspector]public float _health;
-    
+    [Header("UI")]
     [SerializeField] private Slider _healthBar;
-    [SerializeField] private GameObject _canvas;
-
+    [SerializeField] private GameObject _healthBarUI;
+    [Header("Its Bool")]
     [SerializeField] private bool _isEnemy;
     [SerializeField] private bool _isBuildings;
     [SerializeField] private bool _itsPlayer;
     [SerializeField] private bool _itsAllies;
+    [Header("Referenses")]
     private AlliesManager _alliesManager;
     private EnemyManager _enemyManager;
     [SerializeField]private Bot _bot;
@@ -23,7 +25,7 @@ public class HealthManager : MonoBehaviour
     {
         _health = _maxHealth;
         _healthBar.value = _health;
-        _canvas.SetActive(true);
+        _healthBarUI.SetActive(false);
          
         _dayNightManager = DayNightManager.instance;
         if (_isEnemy)
@@ -48,7 +50,10 @@ public class HealthManager : MonoBehaviour
     {
         Debug.Log(_health + " " + gameObject.name);
         _health = Mathf.Clamp(_health - count, 0, _maxHealth);
-        
+        if(_itsPlayer)
+        {
+            StartCoroutine(Regeneration());
+        }
 
         if (_health == 0)
         {
@@ -69,9 +74,8 @@ public class HealthManager : MonoBehaviour
             }
             else if(_isBuildings)
             {
-                Destroy(gameObject);
+                this.gameObject.SetActive(false);
             }
-            
         }
         RefreshUI();
     }
@@ -92,23 +96,26 @@ public class HealthManager : MonoBehaviour
     {
         while(_itsPlayer || _health < _maxHealth)
         {
-            float plusHp = (_maxHealth / 100) * 4;
-            PlusHp(plusHp);  //добавляємо 4%
+            float plusHp = Mathf.Clamp((_maxHealth / 100) * 2, 0f, _maxHealth);
+            PlusHp(plusHp);  // +2% 
             yield return new WaitForSeconds(1f);
+            if(_health == _maxHealth)
+            {
+                _healthBarUI.SetActive(false);
+                StopCoroutine(Regeneration());
+            }
         }
-        
     }
 
     public void RefreshUI()
     {
+        _healthBarUI.SetActive(true);
         _healthBar.value = (float)_health / (float)_maxHealth;
-
-        _canvas.SetActive(true);
     }
 
     private void DayStart()
     {
-        _canvas.SetActive(false);
+        _healthBarUI.SetActive(false);
         _health = _maxHealth;
     }
 }
