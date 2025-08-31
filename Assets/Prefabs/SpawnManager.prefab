@@ -1,0 +1,367 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1716113320180428447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8552760567978903479}
+  - component: {fileID: 2181944265086490814}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8552760567978903479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716113320180428447}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3684496846925898542}
+  - {fileID: 3724574263959303976}
+  - {fileID: 8625774508110347294}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2181944265086490814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716113320180428447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9beddc92f96e4aa987e70e55e481740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentWave: 0
+  spawnPoints:
+  - {fileID: 859365766306248662}
+  - {fileID: 8355805032458218530}
+  - {fileID: 7834952038976598472}
+  factory: {fileID: 0}
+--- !u!1 &4395269723749285860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3724574263959303976}
+  - component: {fileID: 8355805032458218530}
+  m_Layer: 0
+  m_Name: SpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3724574263959303976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4395269723749285860}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -80.03, y: 3.3, z: 73.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8552760567978903479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8355805032458218530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4395269723749285860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7308badf51944baa385a599a96fd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointData:
+    waves:
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      cooldown: 2
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 2
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      cooldown: 2
+    - enemys:
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 5
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 1
+    - enemys: []
+      cooldown: 2
+    - enemys: []
+      cooldown: 2
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      cooldown: 1
+    - enemys: []
+      cooldown: 2
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 2
+  _archer: {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+  _barbarian: {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+--- !u!1 &5031266319939386346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8625774508110347294}
+  - component: {fileID: 7834952038976598472}
+  m_Layer: 0
+  m_Name: SpawnPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8625774508110347294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5031266319939386346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -136.9, y: 3.3, z: 56.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8552760567978903479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7834952038976598472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5031266319939386346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7308badf51944baa385a599a96fd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointData:
+    waves:
+    - enemys: []
+      cooldown: 1
+    - enemys: []
+      cooldown: 2
+    - enemys:
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 3
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 2
+    - enemys:
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 1
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 1
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 1
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 1
+    - enemys:
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 1
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      cooldown: 2
+  _archer: {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+  _barbarian: {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+--- !u!1 &5941951282126462131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3684496846925898542}
+  - component: {fileID: 859365766306248662}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3684496846925898542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941951282126462131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.9, y: 3.3, z: 45.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8552760567978903479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &859365766306248662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5941951282126462131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7308badf51944baa385a599a96fd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointData:
+    waves:
+    - enemys: []
+      cooldown: 1
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 2
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 2
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 1
+    - enemys: []
+      cooldown: 3
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 2
+    - enemys: []
+      cooldown: 1
+    - enemys:
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      cooldown: 1
+    - enemys: []
+      cooldown: 3
+    - enemys:
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      - {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}
+      cooldown: 2
+  _archer: {fileID: 3071412984468933341, guid: a9ac13745ba29a84b9476dc8271e97a6, type: 3}
+  _barbarian: {fileID: 2045595260600765139, guid: 730726ccbd01c43d1afc4e35feaf842c, type: 3}

@@ -118,18 +118,23 @@ public class AlliesManager : MonoBehaviour
         newPoint.SetActive(true);
         return newPoint;
     }
-    public void Disable()
+    public void Disable(GameObject something)
     {
-        gameObject.SetActive(false);
+        something.SetActive(false);
     }
 
     public void ClineDeadTarget(GameObject _target , HealthManager _hpTarget)
     {
         for(int i = 0;i <= activeAllies.Count; i ++)
         {
-            EnemyController allies = activeAllies[i].GetComponent<EnemyController>();
-            allies.target.Remove(_target);
-            allies.targetHealth.Remove(_hpTarget);
+            if (!_target.activeInHierarchy)
+            {
+                Bot allies = activeAllies[i].GetComponent<Bot>();
+                allies.target.Remove(_target);
+                allies.targetHealth.Remove(_hpTarget);
+                Debug.Log(_target);
+            }
+            Disable(_target);
         }
     }
 

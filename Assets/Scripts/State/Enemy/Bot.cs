@@ -6,7 +6,7 @@ public class Bot : MonoBehaviour
 {
     private IEnemyState _currentState;
 
-    [Header("Status")]
+    [Header("Switch")]
     public bool _itsEnemy;
     public bool _itsAllies;
 
@@ -18,7 +18,6 @@ public class Bot : MonoBehaviour
     public float attackCooldown;                        //+
     public int _damage;                                 //+
 
-    [HideInInspector] public float distanceToTarget;    //+
     public float _distanceToTarget = 3f;
 
     public bool canAttack;                              //+
@@ -42,39 +41,46 @@ public class Bot : MonoBehaviour
 
     private void Start()
     {
+
+        _agent = GetComponent<NavMeshAgent>();
         if (_itsEnemy)
         {
             mainBuilding = BuildingsManager.instance.mainBuilding;
 
             _enemyManager = EnemyManager.instance;
+
+            targetHealth.Add(mainBuilding.healthManager);
             AddTarget();
 
         }
         else if(_itsAllies)
         {
             _alliesManager = AlliesManager.instance;
-            
+            _alliesManager.activeAllies.Add(this.gameObject);
         }
-        _agent = GetComponent<NavMeshAgent>();
+        //_distanceToTarget = _agent.stoppingDistance;
     }
     private void OnEnable()
     {
-        //AddTarget();
-
         SwitchState(new PatrolState());
         spawnPoint = transform.position;
 
-        
     }
     private void OnDisable()
     {
         if (_itsEnemy)
         {
-            _enemyManager.activeEnemy.Remove(this.gameObject);
+            if (_enemyManager.activeEnemy.Contains(this.gameObject))
+            {
+                _enemyManager.activeEnemy.Remove(this.gameObject);
+            }
         }
         else
         {
-            _alliesManager.activeAllies.Remove(this.gameObject);
+            if (_alliesManager.activeAllies.Contains(this.gameObject))
+            {
+                _alliesManager.activeAllies.Remove(this.gameObject);
+            }
         }
         target.Clear();
         targetHealth.Clear();
@@ -102,15 +108,13 @@ public class Bot : MonoBehaviour
                 if (!target.Contains(mainBuildingTransform))
                 {
                     target.Add(mainBuildingTransform);
-                    targetHealth.Add(mainBuilding.healthManager);
                 }
                 _enemyManager.activeEnemy.Add(this.gameObject);
             }
             else if (_itsAllies)
             {
                 target.Add(_targetPoint);
-                Debug.Log("додав таргет");
-                _alliesManager.activeAllies.Add(this.gameObject);
+                
             }
             SwitchState(new PatrolState());
             spawnPoint = transform.position;

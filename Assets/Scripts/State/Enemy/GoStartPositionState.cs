@@ -11,28 +11,22 @@ public class GoStartPositionState : IEnemyState
 
     public void FixedUpdate()
     {
-        if (_bot._itsEnemy)
-        {
-            _bot.transform.position = Vector3.MoveTowards(_bot.transform.position, _bot.spawnPoint, _bot._speed);
-            if (Vector3.Distance(_bot.transform.position, _bot.spawnPoint) < 1f 
-                && _bot.target.Count > 0 || _bot.target.Count > 0)
-            {
-                _bot.SwitchState(new PatrolState());
-            }
-        }
-        else if (_bot._itsAllies)
-        {
-            if (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) >= _bot.distanceToTarget)
-            {
 
-                _bot._agent.SetDestination(_bot.target[0].transform.position);
-                //_bot.transform.position = Vector3.MoveTowards(_bot.transform.position, _bot.target[0].transform.position, _bot._speed);
-            }
-            if (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) <= _bot.distanceToTarget
-                && _bot.target.Count > 1 || _bot.target.Count > 1)
-            {
-                _bot.SwitchState(new PatrolState());
-            }
+        if (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) >= _bot._distanceToTarget)
+        {
+            _bot._animatorController.run = true;//Animator
+            _bot._agent.destination = _bot.target[0].transform.position;
+            _bot._agent.isStopped = false;
+        }
+        else
+        {
+            _bot._agent.isStopped = true;
+            _bot._animatorController.run = false;//Animator
+        }
+        if (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) <= _bot._distanceToTarget
+            && _bot.target.Count > 1 || _bot.target.Count > 1)
+        {
+            _bot.SwitchState(new PatrolState());
         }
     }
     public void Exit(){}

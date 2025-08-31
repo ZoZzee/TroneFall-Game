@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,10 @@ public class EnemyTrigger : MonoBehaviour
 {
 
     [SerializeField] private Bot _bot;
+    //float distanseBifor = 0;
+    //float distanse = 0;
+
+    private GameObject target;
     private byte _priority = 0;
     private byte _notPriority = 0;
 
@@ -16,8 +21,7 @@ public class EnemyTrigger : MonoBehaviour
     public enum TriggerPriority
     {
         priority0,
-        priority1,
-        priority2
+        priority1
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,7 +35,7 @@ public class EnemyTrigger : MonoBehaviour
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
-                        _bot.canAttack = true;
+                    _bot.canAttack = true;
                     break;
                 case TriggerPriority.priority1:
                     if (other.CompareTag("Player") ||
@@ -50,9 +54,6 @@ public class EnemyTrigger : MonoBehaviour
                         _notPriority++;
                     }
                     break;
-                case TriggerPriority.priority2:
-
-                    break;
             }
 
         }
@@ -60,7 +61,7 @@ public class EnemyTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("MainBild"))
+        if (other.CompareTag("MainBild"))
         {
             switch (currentTriggerPriority)
             {
@@ -77,16 +78,15 @@ public class EnemyTrigger : MonoBehaviour
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
-
                     _bot.canAttack = false;
                     break;
-                case TriggerPriority.priority2:
+                case TriggerPriority.priority1:
                     _bot.target.Remove(other.gameObject);
                     _bot.targetHealth.Remove(other.GetComponent<HealthManager>());
                     _notPriority--;
                     Debug.Log("видалдив Target з Enemy");
                     break;
-            }   
+            }
         }
         if (other.CompareTag("Player") ||
             other.CompareTag("PlayerAllies"))
@@ -96,4 +96,23 @@ public class EnemyTrigger : MonoBehaviour
 
 
     }
+
+
+    //private void FixedUpdate()
+    //{
+    //    for(int i = 0; i < _bot._alliesManager.activeAllies.Count; i ++)
+    //    {
+    //        Vector3 enemy = _bot._alliesManager.activeAllies[i].transform.position;
+    //        Vector3 myPosition = this.transform.position;
+    //        distanse = Vector3.Distance(myPosition, enemy);
+    //        if(i > 0 && distanseBifor > distanse)
+    //        {
+    //            target = _bot._alliesManager.activeAllies[i];
+    //        }
+    //        distanseBifor = distanse;
+    //    }
+    //    _bot.target = target;
+    //    _bot.targetHealth = target.GetComponent<HealthManager>();
+    
+
 }

@@ -2243,15 +2243,14 @@ MonoBehaviour:
   target: []
   targetHealth: []
   _speed: 0.1
-  attackCooldown: 150
+  attackCooldown: 75
   _damage: 10
-  distanceToTarget: 0
-  _distanceToTarget: 3
+  _distanceToTarget: 1
   canAttack: 0
   _agent: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   rotationSpeed: 0.1
-  distanseToAttack: 5
+  distanseToAttack: 2
   _enemyManager: {fileID: 0}
   _alliesManager: {fileID: 0}
   spawnScript: {fileID: 0}
@@ -2271,7 +2270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alive: 1
   _maxHealth: 100
   _health: 0
   _healthBar: {fileID: 1212316336241935113}
@@ -2295,7 +2293,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -2977,6 +2975,8 @@ MonoBehaviour:
   attack: 0
   deadName: Dead
   dead: 0
+  runingName: Run
+  run: 0
 --- !u!1 &2640238214397338860
 GameObject:
   m_ObjectHideFlags: 0
@@ -9643,10 +9643,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.4
-  m_Height: 4.8
+  m_Radius: 1.51
+  m_Height: 3.24
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.9100003}
+  m_Center: {x: 0, y: 0, z: 0.54}
 --- !u!1 &6685765560802777653
 GameObject:
   m_ObjectHideFlags: 0

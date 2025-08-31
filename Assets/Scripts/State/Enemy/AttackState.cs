@@ -13,44 +13,51 @@ public class AttackState : IEnemyState
 
     public void FixedUpdate()
     {
-        
-        if (_bot.target.Count > 0 
-            && (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot.distanseToAttack
-            || _bot.canAttack))
+        if(Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot.distanseToAttack)
         {
-            _bot.transform.LookAt(_bot.target[0].transform);
-            _bot._animatorController.velocity = 0;
-            if (timer >= _bot.attackCooldown)
+            if (_bot.target.Count > 0
+                && (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot.distanseToAttack
+                || _bot.canAttack))
             {
-                _bot._animatorController.attack = true;
-                timer = 0f;
-                if (_bot.targetHealth[0].CheckHP( _bot._damage) == 0)
+                _bot.transform.LookAt(_bot.target[0].transform);
+                _bot._animatorController.run = false;
+                _bot._agent.isStopped = true;
+                _bot._agent.destination = _bot.target[0].transform.position;
+
+
+                if (timer >= _bot.attackCooldown)
                 {
-                    if (_bot._itsEnemy)
+                    _bot._animatorController.attack = true;
+                    timer = 0f;
+                    if (_bot.targetHealth[0].CheckHP(_bot._damage) == 0)
                     {
-                        for (int i = 0; i < _bot._enemyManager.activeEnemy.Count; i++)
+                        if (_bot._itsEnemy)
                         {
+                            //for (int i = 0; i < _bot._enemyManager.activeEnemy.Count; i++)
+                            //{
                             _bot._enemyManager.ClineDeadTarget(_bot.target[0], _bot.targetHealth[0]);
                             Debug.Log("Refresh");
 
+                            //}
                         }
-                    }
-                    else if (_bot._itsAllies)
-                    {
-                        for (int i = 0; i < _bot._alliesManager.activeAllies.Count; i++)
+                        else if (_bot._itsAllies)
                         {
+                            //for (int i = 0; i < _bot._alliesManager.activeAllies.Count; i++)
+                            //{
 
                             _bot._alliesManager.ClineDeadTarget(_bot.target[0], _bot.targetHealth[0]);
                             Debug.Log("Refresh");
 
+                            //}
                         }
                     }
+                    Debug.Log("Дамаг = " + _bot._damage);
+                    _bot.targetHealth[0].MinusHp(_bot._damage);
                 }
-
-                _bot.targetHealth[0].MinusHp(_bot._damage);
             }
             else
             {
+                _bot._agent.isStopped = false;
                 _bot._animatorController.attack = false;
                 timer++;
             }
@@ -59,7 +66,6 @@ public class AttackState : IEnemyState
         }
         else
         {
-            Debug.Log("Атакує з  +  " + Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) + " " + _bot.canAttack);
             _bot.canAttack = false;
             _bot.SwitchState(new PatrolState());
         }

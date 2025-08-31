@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
@@ -11,6 +12,9 @@ public class PlayerMove : MonoBehaviour
 
     public float speedWalking;
     public float speedRunning;
+
+    private float p_verticalVelocity;
+    [SerializeField] private float p_gravity;
 
     private Vector3 _forvard;
     private Vector3 _right;
@@ -40,36 +44,51 @@ public class PlayerMove : MonoBehaviour
 
         _forvard.Normalize();
         _right.Normalize();
-        if (!Physics.Raycast(_rayDot.position,Vector3.down, 0.3f))
+
+
+
+        Vector3 direction = (_forvard * vertical + _right * horizontal);
+        direction.y = 0f;
+        direction.Normalize();
+
+        if (_characterController.isGrounded)
         {
-            Debug.DrawRay(_rayDot.position, transform.TransformDirection(Vector3.down) * 0.3f, Color.yellow);
-            _forvard.y = transform.position.y - Mathf.Lerp(0, 1.5f, 0.097f);
-            //transform.position = new Vector3(transform.position.x,transform.position.y - Mathf.Lerp(0,1.5f,0.097f),transform.position.z);
+            p_verticalVelocity = -1f;
+        }
+        else
+        {
+            p_verticalVelocity += p_gravity * Time.deltaTime;
         }
 
-        Vector3 moveDirection = (_forvard * vertical + _right * horizontal);
-        Vector3 moveDirectionNormalized = moveDirection.normalized;
-        float velocity = moveDirection.magnitude;
+        Vector3 velocity = direction * moveSpeed;
+        velocity.y = p_verticalVelocity;
 
-        
+        _characterController.Move(velocity * Time.deltaTime);
+
+
+
+
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
             moveSpeed = speedRunning;
-            velocity += 1f;
+            
         }
         else
         {
             moveSpeed = speedWalking;
         }
 
-        if (moveDirectionNormalized.magnitude > 0.1f)
+        if (direction.magnitude > 0.2f)
         {
-            _characterController.Move(moveDirectionNormalized * moveSpeed);
-            Quaternion targetRotation = Quaternion.LookRotation(moveDirectionNormalized);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speedRotation);
+           Quaternion targetRotation = Quaternion.LookRotation(direction);
+           transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speedRotation);
+               _animatorController.run = true;//Animator
+        }
+        else
+        {
+            _animatorController.run = false;//Animator
         }
 
-        _animatorController.velocity = velocity;
     }
 }

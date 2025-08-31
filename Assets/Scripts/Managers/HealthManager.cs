@@ -46,8 +46,9 @@ public class HealthManager : MonoBehaviour
 
     public void MinusHp(int count)
     {
-        _health = Mathf.Clamp(_health - count, 0, _maxHealth);
         Debug.Log(_health + " " + gameObject.name);
+        _health = Mathf.Clamp(_health - count, 0, _maxHealth);
+        
 
         if (_health == 0)
         {
@@ -56,20 +57,21 @@ public class HealthManager : MonoBehaviour
                 _bot._animatorController.dead = true;
                 _bot.canAttack = false;
                 _enemyManager.activeEnemy.Remove(this.gameObject);
-                _enemyManager.Disable();
+                _enemyManager.Disable(this.gameObject);
                 _dayNightManager.StartDay();
+            }
+            else if (_itsAllies)
+            {
+                _bot._animatorController.dead = true;
+                _bot.canAttack = false;
+                _alliesManager.activeAllies.Remove(this.gameObject);
+                _alliesManager.Disable(this.gameObject);
             }
             else if(_isBuildings)
             {
                 Destroy(gameObject);
             }
-            else if(_itsAllies)
-            {
-                _bot._animatorController.dead = true;
-                _bot.canAttack = false;
-                _alliesManager.activeAllies.Remove(this.gameObject);
-                _alliesManager.Disable();
-            }
+            
         }
         RefreshUI();
     }
@@ -91,7 +93,7 @@ public class HealthManager : MonoBehaviour
         while(_itsPlayer || _health < _maxHealth)
         {
             float plusHp = (_maxHealth / 100) * 4;
-            PlusHp(plusHp);  //добавляємо 1%
+            PlusHp(plusHp);  //добавляємо 4%
             yield return new WaitForSeconds(1f);
         }
         

@@ -83,9 +83,9 @@ public class EnemyManager : MonoBehaviour
         newArcher.SetActive(true);
         return newArcher;
     }
-    public void Disable()
+    public void Disable(GameObject something)
     {
-        gameObject.SetActive(false);
+        something.SetActive(false);
     }
 
     public bool DayStart()
@@ -103,9 +103,10 @@ public class EnemyManager : MonoBehaviour
     {
         for (int i = 0; i <= activeEnemy.Count; i++)
         {
-            EnemyController allies = activeEnemy[i].GetComponent<EnemyController>();
-            allies.target.Remove(_target);
-            allies.targetHealth.Remove(_hpTarget);
+            Bot enemy = activeEnemy[i].GetComponent<Bot>();
+            enemy.target.Remove(_target);
+            enemy.targetHealth.Remove(_hpTarget);
+            Debug.Log(_target);
         }
     }
 

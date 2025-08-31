@@ -8,6 +8,8 @@ public class AnimatorController : MonoBehaviour
     public bool attack;
     public string deadName = "Dead";
     public bool dead;
+    public string runingName = "Run";
+    public bool run; 
 
     private Animator _animator;
 
@@ -18,9 +20,11 @@ public class AnimatorController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _animator.SetFloat(velocityName, velocity);
+        //_animator.SetFloat(velocityName, velocity);
 
         _animator.SetBool(attackName, attack);
+
+        _animator.SetBool(runingName, run);
 
         _animator.SetBool(deadName, dead);
     }

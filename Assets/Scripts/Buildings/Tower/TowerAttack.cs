@@ -34,7 +34,7 @@ public class TowerAttack : MonoBehaviour
 
     private void Attack()
     {
-        if (targetHealth[0].CheckHP(_damage) <= 0)
+        if (targetHealth[0].CheckHP(_damage) == 0)
         {
             _alliesManager.ClineDeadTarget(target[0], targetHealth[0]);
         }

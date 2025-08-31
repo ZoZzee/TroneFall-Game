@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -110,7 +111,9 @@ public class BuildingPlan : MonoBehaviour
             targetPosition += transform.position;
             StartCoroutine(PlayerMoveOnBuild(targetPosition));
         }
-        
+
+
+
     }
 
     private IEnumerator PlayerMoveOnBuild(Vector3 targetPosition)
