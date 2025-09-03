@@ -2272,7 +2272,7 @@ MonoBehaviour:
   _maxHealth: 100
   _health: 0
   _healthBar: {fileID: 1212316336241935113}
-  _canvas: {fileID: 9105962653281251116}
+  _healthBarUI: {fileID: 586957524741427002}
   _isEnemy: 0
   _isBuildings: 0
   _itsPlayer: 0
@@ -14377,7 +14377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4082441786182807973, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
       propertyPath: m_Name
-      value: EnemyCanvas
+      value: UI
       objectReference: {fileID: 0}
     - target: {fileID: 4082441786182807973, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
       propertyPath: m_Layer
@@ -14568,6 +14568,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
+--- !u!1 &586957524741427002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8661224049768615402, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
+  m_PrefabInstance: {fileID: 8077086772635615952}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1212316336241935113 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6972857453476659673, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
@@ -14582,10 +14587,5 @@ MonoBehaviour:
 --- !u!224 &1736161822920371953 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7498359628538883105, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
-  m_PrefabInstance: {fileID: 8077086772635615952}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &9105962653281251116 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 1029480887730744828, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
   m_PrefabInstance: {fileID: 8077086772635615952}
   m_PrefabAsset: {fileID: 0}
