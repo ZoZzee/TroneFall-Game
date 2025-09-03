@@ -7082,7 +7082,7 @@ MonoBehaviour:
   _maxHealth: 115
   _health: 0
   _healthBar: {fileID: 415998554338656590}
-  _canvas: {fileID: 6795905623390717659}
+  _healthBarUI: {fileID: 2104207907615706493}
   _isEnemy: 0
   _isBuildings: 0
   _itsPlayer: 0
@@ -20470,8 +20470,8 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7498359628538883105, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
   m_PrefabInstance: {fileID: 7278235447191912599}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6795905623390717659 stripped
+--- !u!1 &2104207907615706493 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4273516628723844684, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8661224049768615402, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
   m_PrefabInstance: {fileID: 7278235447191912599}
   m_PrefabAsset: {fileID: 0}
