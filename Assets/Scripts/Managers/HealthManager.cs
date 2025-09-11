@@ -88,8 +88,8 @@ public class HealthManager : MonoBehaviour
 
     public float CheckHP(float count)
     {
-        _health = Mathf.Clamp(_health - count, 0, _maxHealth);
-        return _health;
+        float _health_check = Mathf.Clamp(_health - count, 0, _maxHealth);
+        return _health_check;
     }
 
     private IEnumerator Regeneration()

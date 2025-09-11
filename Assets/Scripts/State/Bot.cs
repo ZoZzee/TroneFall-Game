@@ -41,8 +41,10 @@ public class Bot : MonoBehaviour
 
     private void Start()
     {
-
         _agent = GetComponent<NavMeshAgent>();
+    }
+    private void OnEnable()
+    {
         if (_itsEnemy)
         {
             mainBuilding = BuildingsManager.instance.mainBuilding;
@@ -53,21 +55,18 @@ public class Bot : MonoBehaviour
             AddTarget();
 
         }
-        else if(_itsAllies)
+        else if (_itsAllies)
         {
             _alliesManager = AlliesManager.instance;
             _alliesManager.activeAllies.Add(this.gameObject);
         }
-        //_distanceToTarget = _agent.stoppingDistance;
-    }
-    private void OnEnable()
-    {
         SwitchState(new PatrolState());
         spawnPoint = transform.position;
 
     }
     private void OnDisable()
     {
+
         if (_itsEnemy)
         {
             if (_enemyManager.activeEnemy.Contains(this.gameObject))

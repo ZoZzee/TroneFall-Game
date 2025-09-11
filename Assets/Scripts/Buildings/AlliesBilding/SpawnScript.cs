@@ -29,7 +29,6 @@ public class SpawnScript : MonoBehaviour
     {
         if (_spawnTimer >= _spawnTimerMax && myAllies.Count < _quantityAllies)
         {
-            Debug.Log("Dodano new target");
             _spawnTimer = 0;
             GameObject newPoint = _alliesManager.GetPoint(_pointsPosition[num].position, Quaternion.identity);
             num++;
@@ -38,10 +37,6 @@ public class SpawnScript : MonoBehaviour
             newAllies.GetComponent<Bot>().spawnScript = this;
             newAllies.GetComponent<Bot>()._targetPoint = newPoint;
             newAllies.GetComponent<Bot>().AddTarget();
-
-            
-            
-            
         }
         else
         {
