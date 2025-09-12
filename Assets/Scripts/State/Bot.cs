@@ -51,7 +51,6 @@ public class Bot : MonoBehaviour
 
             _enemyManager = EnemyManager.instance;
 
-            targetHealth.Add(mainBuilding.healthManager);
             AddTarget();
 
         }
@@ -107,13 +106,13 @@ public class Bot : MonoBehaviour
                 if (!target.Contains(mainBuildingTransform))
                 {
                     target.Add(mainBuildingTransform);
+                    targetHealth.Add(mainBuilding.healthManager);
                 }
                 _enemyManager.activeEnemy.Add(this.gameObject);
             }
             else if (_itsAllies)
             {
                 target.Add(_targetPoint);
-                
             }
             SwitchState(new PatrolState());
             spawnPoint = transform.position;

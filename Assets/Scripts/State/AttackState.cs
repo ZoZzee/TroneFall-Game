@@ -20,7 +20,7 @@ public class AttackState : IEnemyState
             if ( _bot.canAttack && Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) <= _bot.distanseToAttack)
             {
                 _bot._animatorController.run = false;
-                _bot._agent.isStopped = true;
+                _bot._agent.isStopped = false;
 
 
                 if (timer >= _bot.attackCooldown)

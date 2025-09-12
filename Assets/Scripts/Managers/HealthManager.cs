@@ -48,7 +48,6 @@ public class HealthManager : MonoBehaviour
 
     public void MinusHp(int count)
     {
-        Debug.Log(_health + " " + gameObject.name);
         _health = Mathf.Clamp(_health - count, 0, _maxHealth);
         if(_itsPlayer)
         {
@@ -64,11 +63,13 @@ public class HealthManager : MonoBehaviour
                 _enemyManager.activeEnemy.Remove(this.gameObject);
                 _enemyManager.Disable(this.gameObject);
                 _dayNightManager.StartDay();
+                Debug.Log(" -1 ,Enemy dead");
             }
             else if (_itsAllies)
             {
                 _bot._animatorController.dead = true;
                 _bot.canAttack = false;
+                _bot.spawnPoint = this.transform.position;
                 _alliesManager.activeAllies.Remove(this.gameObject);
                 _alliesManager.Disable(this.gameObject);
             }

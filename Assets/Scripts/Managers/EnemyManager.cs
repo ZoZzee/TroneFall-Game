@@ -92,10 +92,13 @@ public class EnemyManager : MonoBehaviour
     {
         if (activeEnemy.Count == 0)
         {
+            Debug.Log("Day start");
+
             return true;
         }
         else
         {
+            Debug.Log("Cant Day start");
             return false;
         }
     }
