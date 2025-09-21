@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Linq.Expressions;
 using UnityEngine;
@@ -73,8 +74,9 @@ public class DayNightManager : MonoBehaviour
 
     public void StartDay()
     {
-        if (_enemyManager.DayStart())
+        if (_enemyManager.activeEnemy.Count == 0)
         {
+            Debug.Log("Day start");
             onDayStart.Invoke();
 
             dayStart = true;

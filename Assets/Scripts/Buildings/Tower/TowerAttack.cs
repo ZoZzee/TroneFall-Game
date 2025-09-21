@@ -16,7 +16,7 @@ public class TowerAttack : MonoBehaviour
     private void Start()
     {
         _alliesManager = AlliesManager.instance;
-        _alliesManager.activeAllies.Add(this.gameObject);
+        _alliesManager.bildingAllies.Add(this.gameObject);
     }
     private void FixedUpdate()
     {
@@ -34,10 +34,11 @@ public class TowerAttack : MonoBehaviour
 
     private void Attack()
     {
-        if (targetHealth[0].CheckHP(_damage) == 0)
+        targetHealth[0].MinusHp(_damage);
+        if (targetHealth[0]._health <= 0)
         {
             _alliesManager.ClineDeadTarget(target[0], targetHealth[0]);
         }
-        targetHealth[0].MinusHp(_damage);
+        
     }
 }

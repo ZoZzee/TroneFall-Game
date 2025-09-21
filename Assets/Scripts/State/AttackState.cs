@@ -13,53 +13,46 @@ public class AttackState : IEnemyState
 
     public void FixedUpdate()
     {
-        if (_bot.target.Count > 0)
+        if(_bot._animatorController.dead == true)
+        {
+            _bot.SwitchState(new DeadState());
+        }
+        if (_bot.target.Count >= 1 && _bot.target[0] != _bot._targetPoint)
         {
             _bot.transform.LookAt(_bot.target[0].transform);
 
             if ( _bot.canAttack && Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) <= _bot.distanseToAttack)
             {
+                _bot._agent.isStopped = true;
                 _bot._animatorController.run = false;
-                _bot._agent.isStopped = false;
-
-
+                
                 if (timer >= _bot.attackCooldown)
                 {
-                    if(_bot.target[0] == _bot._targetPoint)
-                    {
-                        Exit();
-                    }
-
                     _bot._animatorController.attack = true;
+                    _bot.targetHealth[0].MinusHp(_bot._damage);
                     timer = 0f;
-                    if (_bot.targetHealth[0].CheckHP(_bot._damage) <= 0)
+                    if (_bot.targetHealth[0]._health <= 0)
                     {
                         if (_bot._itsEnemy)
                         {
                             _bot._enemyManager.ClineDeadTarget(_bot.target[0], _bot.targetHealth[0]);
-                            Debug.Log("Refresh");
+                            
                         }
                         else if (_bot._itsAllies)
                         {
                             _bot._alliesManager.ClineDeadTarget(_bot.target[0], _bot.targetHealth[0]);
-                            Debug.Log("Refresh");
                         }
                     }
-                    Debug.Log("Дамаг = " + _bot._damage);
-                    _bot.targetHealth[0].MinusHp(_bot._damage);
                 }
                 else
                 {
                     _bot._agent.isStopped = false;
-                    _bot._animatorController.attack = false;
-                    
                     _bot._animatorController.attack = false;
                     timer++;
                 }
             }
             else
             {
-
                 _bot._animatorController.run = true;
                 _bot._agent.isStopped = false;
                 _bot._agent.destination = _bot.target[0].transform.position;
@@ -67,16 +60,15 @@ public class AttackState : IEnemyState
         }
         else
         {
-            Exit();
+            _bot.SwitchState(new PatrolState());
         }
 
 
     }
     public void Exit()
     {
-
         _bot.canAttack = false;
-        _bot.SwitchState(new PatrolState());
+        _bot._agent.isStopped = false;
     }
 
 

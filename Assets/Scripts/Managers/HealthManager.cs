@@ -7,7 +7,8 @@ public class HealthManager : MonoBehaviour
 {
     [Header("Parameters")]
     [SerializeField] private float _maxHealth;
-    [HideInInspector]public float _health;
+    //[HideInInspector]
+    public float _health;
     [Header("UI")]
     [SerializeField] private Slider _healthBar;
     [SerializeField] private GameObject _healthBarUI;
@@ -48,30 +49,26 @@ public class HealthManager : MonoBehaviour
 
     public void MinusHp(int count)
     {
-        _health = Mathf.Clamp(_health - count, 0, _maxHealth);
+        _health = _health - count;
         if(_itsPlayer)
         {
             StartCoroutine(Regeneration());
         }
-
-        if (_health == 0)
+        if (_health < 1)
         {
+                Debug.Log("Спроба запустити день");
             if (_isEnemy)
             {
-                _bot._animatorController.dead = true;
-                _bot.canAttack = false;
+                _bot.SwitchState(new DeadState());
                 _enemyManager.activeEnemy.Remove(this.gameObject);
-                _enemyManager.Disable(this.gameObject);
                 _dayNightManager.StartDay();
-                Debug.Log(" -1 ,Enemy dead");
+                _enemyManager.Disable(gameObject);
             }
             else if (_itsAllies)
             {
-                _bot._animatorController.dead = true;
-                _bot.canAttack = false;
-                _bot.spawnPoint = this.transform.position;
+                _bot.SwitchState(new DeadState());
                 _alliesManager.activeAllies.Remove(this.gameObject);
-                _alliesManager.Disable(this.gameObject);
+                _alliesManager.Disable(gameObject);
             }
             else if(_isBuildings)
             {
