@@ -41,10 +41,10 @@ public class AlliesTrigger : MonoBehaviour
                    _bot.canAttack = false;
                     break;
                 case TriggerPriority.priority1:
-
+                    _positionOnList--;
                     _bot.targetHealth.Remove(other.GetComponent<HealthManager>());
                     _bot.target.Remove(other.gameObject);
-                    _positionOnList--;
+                    
                     break;
             }
             

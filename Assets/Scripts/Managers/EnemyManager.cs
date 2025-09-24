@@ -88,17 +88,17 @@ public class EnemyManager : MonoBehaviour
         something.SetActive(false);
     }
 
-    public bool DayStart()
-    {
-        if (activeEnemy.Count == 0)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+    //public bool DayStart()
+    //{
+    //    if (activeEnemy.Count == 0)
+    //    {
+    //        return true;
+    //    }
+    //    else
+    //    {
+    //        return false;
+    //    }
+    //}
     public void ClineDeadTarget(GameObject _target, HealthManager _hpTarget)
     {
         for (int i = 0; i <= activeEnemy.Count; i++)
@@ -106,7 +106,6 @@ public class EnemyManager : MonoBehaviour
             Bot enemy = activeEnemy[i].GetComponent<Bot>();
             enemy.target.Remove(_target);
             enemy.targetHealth.Remove(_hpTarget);
-            Debug.Log(_target);
         }
     }
 

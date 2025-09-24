@@ -9,14 +9,12 @@ public class EnemyTrigger : MonoBehaviour
 {
 
     [SerializeField] private Bot _bot;
-    //float distanseBifor = 0;
-    //float distanse = 0;
 
-    private GameObject target;
     private byte _priority = 0;
     private byte _notPriority = 0;
 
     public TriggerPriority currentTriggerPriority;
+
 
     public enum TriggerPriority
     {
@@ -96,23 +94,5 @@ public class EnemyTrigger : MonoBehaviour
 
 
     }
-
-
-    //private void FixedUpdate()
-    //{
-    //    for(int i = 0; i < _bot._alliesManager.activeAllies.Count; i ++)
-    //    {
-    //        Vector3 enemy = _bot._alliesManager.activeAllies[i].transform.position;
-    //        Vector3 myPosition = this.transform.position;
-    //        distanse = Vector3.Distance(myPosition, enemy);
-    //        if(i > 0 && distanseBifor > distanse)
-    //        {
-    //            target = _bot._alliesManager.activeAllies[i];
-    //        }
-    //        distanseBifor = distanse;
-    //    }
-    //    _bot.target = target;
-    //    _bot.targetHealth = target.GetComponent<HealthManager>();
-    
 
 }

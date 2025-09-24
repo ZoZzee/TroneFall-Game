@@ -3142,11 +3142,11 @@ PrefabInstance:
       objectReference: {fileID: 1091739531}
     - target: {fileID: 5310437817205225183, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -41.7
+      value: -3.58
       objectReference: {fileID: 0}
     - target: {fileID: 5310437817205225183, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.3
+      value: -43.51
       objectReference: {fileID: 0}
     - target: {fileID: 6493188800340371466, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: dayStart
@@ -18777,7 +18777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1433970829
 Transform:
   m_ObjectHideFlags: 0
@@ -27103,6 +27103,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4080003197695579373, guid: a382e10e12c18d247b2d5fcf63dfbf94, type: 3}
+      propertyPath: 'LevelEnhancement.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1433970828}
+    - target: {fileID: 4080003197695579373, guid: a382e10e12c18d247b2d5fcf63dfbf94, type: 3}
       propertyPath: 'LevelEnhancement.Array.data[1]'
       value: 
       objectReference: {fileID: 2001174170}
@@ -27158,6 +27162,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6289104004971128081, guid: a382e10e12c18d247b2d5fcf63dfbf94, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6839202998311661800, guid: a382e10e12c18d247b2d5fcf63dfbf94, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -27211,6 +27219,10 @@ PrefabInstance:
       value: MainBuilding
       objectReference: {fileID: 0}
     - target: {fileID: 8781328167963129492, guid: a382e10e12c18d247b2d5fcf63dfbf94, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853202721186170039, guid: a382e10e12c18d247b2d5fcf63dfbf94, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class AlliesManager : MonoBehaviour
 {
     public List<GameObject> activeAllies;
+    public List<GameObject> bildingAllies;
 
     [SerializeField] private GameObject _archers;
     [SerializeField] private GameObject _targetPoint;
@@ -35,7 +36,7 @@ public class AlliesManager : MonoBehaviour
     }
 
 
-
+    //Створення воїна
     private GameObject CreateBarbarians()
     {
         GameObject barbarian = Instantiate(_barbarians, transform);
@@ -43,6 +44,8 @@ public class AlliesManager : MonoBehaviour
         _poolBarbarians.Add(barbarian);
         return barbarian;
     }
+
+    // Створення лучника
     private GameObject CreateArchers()
     {
         GameObject archer = Instantiate(_archers, transform);
@@ -50,7 +53,7 @@ public class AlliesManager : MonoBehaviour
         _poolArchers.Add(archer);
         return archer;
     }
-
+    //Створення точки
     private GameObject CreateTargetPoints()
     {
         GameObject point = Instantiate(_targetPoint, transform);
@@ -60,6 +63,7 @@ public class AlliesManager : MonoBehaviour
         return point;
     }
 
+    // Активація Воїна
     public GameObject GetBarbarian(Vector3 position, Quaternion rotation)
     {
         foreach (GameObject barbarian in _poolBarbarians)
@@ -78,6 +82,8 @@ public class AlliesManager : MonoBehaviour
         newBarbarian.SetActive(true);
         return newBarbarian;
     }
+
+    // Активація Лучника
     public GameObject GetArchers(Vector3 position, Quaternion rotation)
     {
         foreach (GameObject archer in _poolArchers)
@@ -86,8 +92,6 @@ public class AlliesManager : MonoBehaviour
             {
                 archer.transform.SetPositionAndRotation(position, rotation);
                 archer.SetActive(true);
-                //archer.GetComponent<Bot>().AddTarget();
-
                 return archer;
             }
         }
@@ -95,10 +99,9 @@ public class AlliesManager : MonoBehaviour
         GameObject newArcher = CreateArchers();
         newArcher.transform.SetPositionAndRotation(position, rotation);
         newArcher.SetActive(true);
-
-        //newArcher.GetComponent<Bot>().AddTarget();
         return newArcher;
     }
+    // Активація точки для контролю персонажа
     public GameObject GetPoint(Vector3 position, Quaternion rotation)
     {
         foreach (GameObject point in _poolTargetP)
@@ -111,10 +114,8 @@ public class AlliesManager : MonoBehaviour
                 return point;
             }
         }
-
         GameObject newPoint = CreateTargetPoints();
         newPoint.transform.SetPositionAndRotation(position, rotation);
-        Debug.Log("Добалено активну точку");
         newPoint.SetActive(true);
         return newPoint;
     }
@@ -125,16 +126,22 @@ public class AlliesManager : MonoBehaviour
 
     public void ClineDeadTarget(GameObject _target , HealthManager _hpTarget)
     {
-        for(int i = 0;i <= activeAllies.Count; i ++)
+        Debug.Log("Зайшов в видалення");
+        // Очищаємо таргета з списку цілей союзників
+        for (int i = 0;i < activeAllies.Count; i ++)
         {
-            if (!_target.activeInHierarchy)
-            {
-                Bot allies = activeAllies[i].GetComponent<Bot>();
+            Debug.Log(activeAllies.Count + " - Кількість,Видаляю з " + activeAllies[i]);
+            Bot allies = activeAllies[i].GetComponent<Bot>();
                 allies.target.Remove(_target);
                 allies.targetHealth.Remove(_hpTarget);
-                Debug.Log(_target);
-            }
-            Disable(_target);
+        }
+        // Очищаємо таргета з списку ціль башень
+        for (int i = 0; i < bildingAllies.Count; i++)
+        {
+            Debug.Log(bildingAllies.Count + " - Кількість,Видаляю з " + bildingAllies[i]);
+            TowerAttack allies = bildingAllies[i].GetComponent<TowerAttack>();
+            allies.target.Remove(_target);
+            allies.targetHealth.Remove(_hpTarget);
         }
     }
 
