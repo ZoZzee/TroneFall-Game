@@ -10,13 +10,14 @@ public class HealthManager : MonoBehaviour
     //[HideInInspector]
     public float _health;
     [Header("UI")]
-    [SerializeField] private Slider _healthBar;
+    [SerializeField] private Slider _healthBarSlider;
     [SerializeField] private GameObject _healthBarUI;
     [Header("Its Bool")]
     [SerializeField] private bool _isEnemy;
     [SerializeField] private bool _isBuildings;
     [SerializeField] private bool _itsPlayer;
     [SerializeField] private bool _itsAllies;
+    private bool _isRegeneration = false;
     [Header("Referenses")]
     private AlliesManager _alliesManager;
     private EnemyManager _enemyManager;
@@ -25,7 +26,7 @@ public class HealthManager : MonoBehaviour
     private void Start()
     {
         _health = _maxHealth;
-        _healthBar.value = _health;
+        _healthBarSlider.value = _health;
         _healthBarUI.SetActive(false);
          
         _dayNightManager = DayNightManager.instance;
@@ -46,17 +47,22 @@ public class HealthManager : MonoBehaviour
             _alliesManager = AlliesManager.instance;
         }
     }
+    private void OnEnable()
+    {
+        _health = _maxHealth;
+        RefreshUI();
+    }
 
     public void MinusHp(int count)
     {
         _health = _health - count;
-        if(_itsPlayer)
+        if(_itsPlayer && !_isRegeneration)
         {
             StartCoroutine(Regeneration());
+            _isRegeneration = true;
         }
         if (_health < 1)
         {
-                Debug.Log("Спроба запустити день");
             if (_isEnemy)
             {
                 _bot.SwitchState(new DeadState());
@@ -92,14 +98,15 @@ public class HealthManager : MonoBehaviour
 
     private IEnumerator Regeneration()
     {
-        while(_itsPlayer || _health < _maxHealth)
+        while(_itsPlayer || _health <= _maxHealth)
         {
-            float plusHp = Mathf.Clamp((_maxHealth / 100) * 2, 0f, _maxHealth);
+            float plusHp = Mathf.Clamp((_maxHealth / 100) * 1, 0f, _maxHealth);
             PlusHp(plusHp);  // +2% 
             yield return new WaitForSeconds(1f);
             if(_health == _maxHealth)
             {
                 _healthBarUI.SetActive(false);
+                _isRegeneration = false;
                 StopCoroutine(Regeneration());
             }
         }
@@ -108,7 +115,7 @@ public class HealthManager : MonoBehaviour
     public void RefreshUI()
     {
         _healthBarUI.SetActive(true);
-        _healthBar.value = (float)_health / (float)_maxHealth;
+        _healthBarSlider.value = (float)_health / (float)_maxHealth;
     }
 
     private void DayStart()

@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 2482693136955428231}
   - component: {fileID: 4460442794012890169}
   - component: {fileID: 1777652677805928414}
+  - component: {fileID: 6539171486533252203}
   m_Layer: 7
   m_Name: House_01
   m_TagString: Buldings
@@ -399,6 +400,27 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 1, z: 0}
   m_TimeToStationary: 0.5
+--- !u!65 &6539171486533252203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242600131688563166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.6, y: 4.1253505, z: 5.2}
+  m_Center: {x: 0, y: 1.1373246, z: 0}
 --- !u!1 &5288396909065173847
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +605,6 @@ GameObject:
   - component: {fileID: 1863905169220275147}
   - component: {fileID: 3692236761233667921}
   - component: {fileID: 6128495455546326684}
-  - component: {fileID: 1860981216635437507}
   m_Layer: 0
   m_Name: House Level 2
   m_TagString: Untagged
@@ -659,27 +680,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1860981216635437507
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5595583018289500658}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 5.592826, y: 6.378339, z: 5.227243}
-  m_Center: {x: -0.19248007, y: 0.1608234, z: 1.8348404}
 --- !u!1 &6502358436513145399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,7 +1164,7 @@ MonoBehaviour:
   isBuilt: 0
   spaceHoldTime: 0
   spaceHoldTimeMax: 150
-  _flag: {fileID: 0}
+  _flag: {fileID: 3616807247737172080}
   _isParent: {fileID: 0}
   LevelEnhancement:
   - {fileID: 4859391734799419784}
@@ -1270,6 +1270,11 @@ PrefabInstance:
 --- !u!4 &3616807247736810576 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c4bb27f050a2ef4439fb736e16b2bded, type: 3}
+  m_PrefabInstance: {fileID: 3616807247737206480}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3616807247737172080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: c4bb27f050a2ef4439fb736e16b2bded, type: 3}
   m_PrefabInstance: {fileID: 3616807247737206480}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4859391734799519528

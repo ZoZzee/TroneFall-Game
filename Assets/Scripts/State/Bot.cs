@@ -29,17 +29,23 @@ public class Bot : MonoBehaviour
     public float rotationSpeed;                         //+
     public float distanseToAttack;                      //+
 
-    [Header("References")]
+
+    [Header("Enemy components")]
+    [HideInInspector] public MainBuilding mainBuilding;
+    [HideInInspector] public GameObject mainBuildingTransform;
     public EnemyManager _enemyManager;
-    public AlliesManager _alliesManager;
+    public EnemyTrigger p_enemyTrigger;
+
+    [Header("Allies components")]
     [HideInInspector] public SpawnScript spawnScript;
+    public AlliesManager _alliesManager;
+    public AlliesTrigger p_alliesTrigger;
 
     [Header("Components")]
     public AnimatorController _animatorController;
-
     public GameObject _targetPoint;
-    [HideInInspector] public MainBuilding mainBuilding;
-    [HideInInspector] public GameObject mainBuildingTransform;
+    public Rigidbody p_rigidbody;
+
 
     private void Start()
     {
@@ -66,6 +72,7 @@ public class Bot : MonoBehaviour
     }
     private void OnDisable()
     {
+        _animatorController.dead = false;
 
         if (_itsEnemy)
         {
@@ -87,7 +94,7 @@ public class Bot : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        p_rigidbody.linearVelocity = Vector3.zero;
         _currentState?.FixedUpdate();
     }
     public void SwitchState(IEnemyState newState)

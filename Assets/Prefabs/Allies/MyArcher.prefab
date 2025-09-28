@@ -7060,13 +7060,16 @@ MonoBehaviour:
   spawnPoint: {x: 0, y: 0, z: 0}
   rotationSpeed: 0.1
   distanseToAttack: 20
-  _enemyManager: {fileID: 0}
-  _alliesManager: {fileID: 0}
-  spawnScript: {fileID: 0}
-  _animatorController: {fileID: 425851600864226561}
-  _targetPoint: {fileID: 0}
   mainBuilding: {fileID: 0}
   mainBuildingTransform: {fileID: 0}
+  _enemyManager: {fileID: 0}
+  p_enemyTrigger: {fileID: 0}
+  spawnScript: {fileID: 0}
+  _alliesManager: {fileID: 0}
+  p_alliesTrigger: {fileID: 2841923717741595030}
+  _animatorController: {fileID: 425851600864226561}
+  _targetPoint: {fileID: 0}
+  p_rigidbody: {fileID: 8589573627244863832}
 --- !u!114 &7050228988410282125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11999,6 +12002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bot: {fileID: 2369046391608563927}
   currentTriggerPriority: 0
+  _positionOnList: 0
 --- !u!136 &3146886967907381269
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15461,6 +15465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bot: {fileID: 2369046391608563927}
   currentTriggerPriority: 1
+  _positionOnList: 0
 --- !u!136 &2173765084298377866
 CapsuleCollider:
   m_ObjectHideFlags: 0

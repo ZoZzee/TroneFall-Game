@@ -553,6 +553,7 @@ GameObject:
   - component: {fileID: 4186375454923342739}
   - component: {fileID: 1869336539510356078}
   - component: {fileID: 1303967276830469822}
+  - component: {fileID: 7808194888781402287}
   m_Layer: 7
   m_Name: Tower
   m_TagString: PlayerAllies
@@ -591,9 +592,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _towerTrigger: {fileID: 6632839062406136041}
-  _damage: 10
+  _damage: 000000000a0000000f00000019000000
   cooldown: 0
   cooldownMax: 50
+  _buildingPlan: {fileID: 5685769456624799071}
   target: []
   targetHealth: []
   _alliesManager: {fileID: 0}
@@ -618,6 +620,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.4301805, y: 8.1862545, z: 3.0619736}
   m_Center: {x: 0.18544632, y: 2.9253993, z: 0.25626373}
+--- !u!114 &7808194888781402287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3867340094475203794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 100
+  _health: 0
+  _healthBar: {fileID: 5665911560878237090}
+  _healthBarUI: {fileID: 5966909160270549520}
+  _isEnemy: 0
+  _isBuildings: 1
+  _itsPlayer: 0
+  _itsAllies: 0
+  _bot: {fileID: 0}
 --- !u!1 &4711024387148851734
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,9 +793,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2139016561665951458}
-  - component: {fileID: 2710684233556906352}
   m_Layer: 0
-  m_Name: HealthComponent
+  m_Name: TowerComponent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -794,27 +816,6 @@ Transform:
   - {fileID: 4186375454923342739}
   m_Father: {fileID: 6187135031253854782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2710684233556906352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6013634483398200840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 100
-  _health: 0
-  _healthBar: {fileID: 5665911560878237090}
-  _healthBarUI: {fileID: 5966909160270549520}
-  _isEnemy: 0
-  _isBuildings: 1
-  _itsPlayer: 0
-  _itsAllies: 0
-  _bot: {fileID: 0}
 --- !u!1 &6045773867704208144
 GameObject:
   m_ObjectHideFlags: 0

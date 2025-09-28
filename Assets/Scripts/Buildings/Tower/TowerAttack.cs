@@ -4,9 +4,10 @@ using UnityEngine;
 public class TowerAttack : MonoBehaviour
 {
     [SerializeField] private TowerTrigger _towerTrigger;
-    [SerializeField] private int _damage = 10;
+    [SerializeField] private List<int> _damage;
     [SerializeField] private float cooldown;
     [SerializeField] private float cooldownMax;
+    [SerializeField] private BuildingPlan _buildingPlan = null;
 
     public List<GameObject> target;
     public List<HealthManager> targetHealth;
@@ -34,7 +35,12 @@ public class TowerAttack : MonoBehaviour
 
     private void Attack()
     {
-        targetHealth[0].MinusHp(_damage);
+        if (_buildingPlan != null)
+            targetHealth[0].MinusHp(_damage[_buildingPlan._levelEnhancement]);
+        else
+        {
+            targetHealth[0].MinusHp(_damage[0]);
+        }
         if (targetHealth[0]._health <= 0)
         {
             _alliesManager.ClineDeadTarget(target[0], targetHealth[0]);

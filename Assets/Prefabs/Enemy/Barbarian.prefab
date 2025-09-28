@@ -2244,19 +2244,22 @@ MonoBehaviour:
   _speed: 0.1
   attackCooldown: 75
   _damage: 10
-  _distanceToTarget: 1
+  _distanceToTarget: 2
   canAttack: 0
   _agent: {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: 0}
   rotationSpeed: 0.1
   distanseToAttack: 2
-  _enemyManager: {fileID: 0}
-  _alliesManager: {fileID: 0}
-  spawnScript: {fileID: 0}
-  _animatorController: {fileID: 7044406890654323094}
-  _targetPoint: {fileID: 0}
   mainBuilding: {fileID: 0}
   mainBuildingTransform: {fileID: 0}
+  _enemyManager: {fileID: 0}
+  p_enemyTrigger: {fileID: 6473012829297898838}
+  spawnScript: {fileID: 0}
+  _alliesManager: {fileID: 0}
+  p_alliesTrigger: {fileID: 0}
+  _animatorController: {fileID: 7044406890654323094}
+  _targetPoint: {fileID: 0}
+  p_rigidbody: {fileID: 8739188578420535149}
 --- !u!114 &8025323295759168333
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ public class EnemyTrigger : MonoBehaviour
 
     [SerializeField] private Bot _bot;
 
-    private byte _priority = 0;
-    private byte _notPriority = 0;
+    public byte _priority = 0;
+    public byte _notPriority = 0;
 
     public TriggerPriority currentTriggerPriority;
 

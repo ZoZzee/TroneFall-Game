@@ -19,7 +19,7 @@ public class FollowPoint : MonoBehaviour
         {
             return;
         }
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.R))
         {
             if (_maxTimer <= _timer)
             {
@@ -34,7 +34,7 @@ public class FollowPoint : MonoBehaviour
         {
             _timer = 0;
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             _pressFolov = false;
         }

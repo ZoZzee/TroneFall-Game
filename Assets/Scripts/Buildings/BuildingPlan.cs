@@ -94,7 +94,6 @@ public class BuildingPlan : MonoBehaviour
         {
             for(int i = 0; i < _levelEnhancement - 1; i ++)
             {
-                Debug.Log("Hyi + " + i);
                     LevelEnhancement[i].SetActive(false);
             }
         }
@@ -111,9 +110,6 @@ public class BuildingPlan : MonoBehaviour
             targetPosition += transform.position;
             StartCoroutine(PlayerMoveOnBuild(targetPosition));
         }
-
-
-
     }
 
     private IEnumerator PlayerMoveOnBuild(Vector3 targetPosition)

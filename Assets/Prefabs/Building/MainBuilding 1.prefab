@@ -613,7 +613,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7518229628599390008}
-  - component: {fileID: 5736472403489329030}
   - component: {fileID: 3565903970684758577}
   - component: {fileID: 3630186071394265546}
   - component: {fileID: 1446191967982064150}
@@ -640,21 +639,6 @@ Transform:
   - {fileID: 6289104004971362609}
   m_Father: {fileID: 4572239352474581630}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5736472403489329030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6839202998311661800}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9867890fa4e79404081ec147e6d1fb03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goldAtDayStart: 
-  buildingPlan: {fileID: 4080003197695579373}
-  _coin: {fileID: 4431722884024708409, guid: 9a07fd14604774047940f9f414aa0b4b, type: 3}
 --- !u!114 &3565903970684758577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1114,8 +1098,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 250
   _health: 0
-  _healthBar: {fileID: 0}
-  _healthBarUI: {fileID: 0}
+  _healthBar: {fileID: 2665569542685086945}
+  _healthBarUI: {fileID: 7217541604535471347}
   _isEnemy: 0
   _isBuildings: 1
   _itsPlayer: 0

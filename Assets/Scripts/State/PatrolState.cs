@@ -8,6 +8,7 @@ public class PatrolState : IEnemyState
     public void Enter(Bot bot)
     {
         _bot = bot;
+        Debug.Log("Стан патруля");
     }
 
     public void FixedUpdate()
@@ -23,21 +24,17 @@ public class PatrolState : IEnemyState
             {
                 
                 _bot.transform.LookAt(_bot.target[0].transform);
+                _bot.SetDestination(_bot.target[0].transform);
+                _bot._animatorController.run = true;//Animator
                 if (_bot.canAttack && _bot.target[0] != _bot._targetPoint ||
                     Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot.distanseToAttack &&
                     _bot.target[0] != _bot._targetPoint)
                 {
-                    _bot._agent.Stop();
                     _bot.SwitchState(new AttackState());
-                }
-                else if (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) > _bot._distanceToTarget)
-                {
-                    _bot.SetDestination(_bot.target[0].transform);
-                    _bot._animatorController.run = true;//Animator
                 }
                 else if (Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot._distanceToTarget)
                 {
-                    _bot._animatorController.run = false;              // ÀAnimator
+                    _bot._animatorController.run = false;        // ÀAnimator
                     return;
                 }
             }
@@ -53,17 +50,14 @@ public class PatrolState : IEnemyState
         {
             if (_bot.target.Count > 0)
             {
-                if (_bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) < _bot._distanceToTarget)
-                {
-                    _bot._animatorController.run = false;
-                    _bot.SwitchState(new AttackState());
-                }
                 _bot.transform.LookAt(_bot.target[0].transform);
-                //Vector3 smoothedPosition = Vector3.MoveTowards(_bot.transform.position, _bot.target[0].transform.position, _bot._speed);
-                //_bot.transform.position = smoothedPosition;
-                //_bot._animatorController.velocity = smoothedPosition.normalized.magnitude;
                 _bot.SetDestination(_bot.target[0].transform);
                 _bot._animatorController.run = true;
+                if (_bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) <= _bot.distanseToAttack)
+                {
+                    _bot.SwitchState(new AttackState());
+                    Debug.Log("зміна стану" + _bot.canAttack + Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position));
+                }
             }
             else
             {
