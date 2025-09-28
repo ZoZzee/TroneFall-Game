@@ -849,7 +849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _health: 0
-  _healthBar: {fileID: 5596288777055044247}
+  _healthBarSlider: {fileID: 5596288777055044247}
   _healthBarUI: {fileID: 3553445099072826816}
   _isEnemy: 0
   _isBuildings: 1
@@ -1308,9 +1308,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _towerTrigger: {fileID: 6665502693344103057}
-  _damage: 10
+  _damage: 
   cooldown: 0
   cooldownMax: 50
+  _buildingPlan: {fileID: 0}
   target: []
   targetHealth: []
   _alliesManager: {fileID: 0}

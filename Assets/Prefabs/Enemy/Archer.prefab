@@ -7084,7 +7084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _health: 0
-  _healthBar: {fileID: 415998554338656590}
+  _healthBarSlider: {fileID: 415998554338656590}
   _healthBarUI: {fileID: 2104207907615706493}
   _isEnemy: 1
   _isBuildings: 0
@@ -12001,6 +12001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bot: {fileID: 4665678759694274979}
+  _priority: 0
+  _notPriority: 0
   currentTriggerPriority: 0
 --- !u!136 &3146886967907381269
 CapsuleCollider:
@@ -15463,6 +15465,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bot: {fileID: 4665678759694274979}
+  _priority: 0
+  _notPriority: 0
   currentTriggerPriority: 1
 --- !u!136 &946428717059782027
 CapsuleCollider:
@@ -20240,6 +20244,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3334201590572187220}
     m_Modifications:
+    - target: {fileID: 1023894271642142409, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4082441786182807973, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
       propertyPath: m_Name
       value: EnemyCanvas

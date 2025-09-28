@@ -2274,7 +2274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _health: 0
-  _healthBar: {fileID: 1212316336241935113}
+  _healthBarSlider: {fileID: 1212316336241935113}
   _healthBarUI: {fileID: 586957524741427002}
   _isEnemy: 0
   _isBuildings: 0
@@ -14359,6 +14359,10 @@ PrefabInstance:
     - target: {fileID: 210463994748278611, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1023894271642142409, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2194600969118273283, guid: 7d9274a85ebe1ae48ab92f09eb4dac4d, type: 3}
       propertyPath: m_Layer

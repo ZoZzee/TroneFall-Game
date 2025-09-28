@@ -377,7 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _health: 0
-  _healthBar: {fileID: 2256162446082318498}
+  _healthBarSlider: {fileID: 2256162446082318498}
   _healthBarUI: {fileID: 7440636226494712953}
   _isEnemy: 0
   _isBuildings: 1
@@ -419,8 +419,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5.6, y: 4.1253505, z: 5.2}
-  m_Center: {x: 0, y: 1.1373246, z: 0}
+  m_Size: {x: 4, y: 4, z: 4}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &5288396909065173847
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,8 +621,8 @@ Transform:
   m_GameObject: {fileID: 5595583018289500658}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0.000000029802326, z: -0.000000029802326, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.013197, y: 0.3, z: 0}
+  m_LocalScale: {x: 0.76135, y: 0.76135, z: 0.76135}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7992161825559744858}

@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 150
   _health: 0
-  _healthBar: {fileID: 5212268757218608161}
+  _healthBarSlider: {fileID: 5212268757218608161}
   _healthBarUI: {fileID: 1626954804454899925}
   _isEnemy: 0
   _isBuildings: 1
