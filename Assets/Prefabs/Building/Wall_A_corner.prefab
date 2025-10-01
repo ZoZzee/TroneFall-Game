@@ -149,6 +149,7 @@ GameObject:
   - component: {fileID: 6146083975846989807}
   - component: {fileID: 7677311851230234187}
   - component: {fileID: 6164062377987322043}
+  - component: {fileID: 2784430472459483939}
   m_Layer: 0
   m_Name: Wall_A_corner
   m_TagString: Wall
@@ -267,6 +268,22 @@ MonoBehaviour:
   _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}
+--- !u!208 &2784430472459483939
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024525823235012333}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.6320001, y: 1.55, z: 2.9}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.011000001, y: 0, z: 2.7370002}
+  m_TimeToStationary: 0.5
 --- !u!1 &2253213884387866045
 GameObject:
   m_ObjectHideFlags: 0

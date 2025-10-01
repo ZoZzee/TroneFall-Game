@@ -14,7 +14,8 @@ public class GateManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         nearMe = true;
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") ||
+            other.CompareTag("PlayerAllies"))
         {
             _animator.SetBool(playerNearMe, nearMe);
         }
@@ -23,7 +24,8 @@ public class GateManager : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         nearMe = false;
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") ||
+            other.CompareTag("PlayerAllies"))
         {
             _animator.SetBool(playerNearMe, nearMe);
         }
