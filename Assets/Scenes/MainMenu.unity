@@ -1556,11 +1556,23 @@ PrefabInstance:
     m_TransformParent: {fileID: 906789821}
     m_Modifications:
     - target: {fileID: 381456862936554116, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 381456862936554116, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 618265049215240190, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 618265049215240190, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 618265049215240190, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1044036901617994984, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
@@ -2192,11 +2204,23 @@ PrefabInstance:
     m_TransformParent: {fileID: 906789821}
     m_Modifications:
     - target: {fileID: 381456862936554116, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 381456862936554116, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 618265049215240190, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 618265049215240190, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 618265049215240190, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1044036901617994984, guid: c28f81b6dd40f1440bff856281eb7178, type: 3}

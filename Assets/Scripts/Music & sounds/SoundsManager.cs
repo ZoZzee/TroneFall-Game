@@ -4,7 +4,7 @@ public class SoundsManager : MonoBehaviour
 {
     public float defaultDistance;
     [SerializeField] private GameObject soundPrefab;
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private GameObject musicPrefab;
 
     private Vector3 nextSoundPosition;
 
@@ -35,6 +35,17 @@ public class SoundsManager : MonoBehaviour
 
         Destroy(audioSource.gameObject, clip.length);
     }
+    public void PlayMusic(AudioClip clip, Vector3 position)
+    {
+        AudioSource audioSource = Instantiate(soundPrefab, position, Quaternion.identity, null).GetComponent<AudioSource>();
+
+        audioSource.maxDistance = defaultDistance;
+
+        audioSource.clip = clip;
+        audioSource.Play();
+
+        Destroy(audioSource.gameObject, clip.length);
+    }
 
     public void SetNextPosition(Transform newTransform)
     {
@@ -42,6 +53,11 @@ public class SoundsManager : MonoBehaviour
     }
 
     public void PlayClipOnPosition(AudioClip clip)
+    {
+        PlaySound(clip, nextSoundPosition);
+        nextSoundPosition = Vector3.zero;
+    }
+    public void PlayMusicClip(AudioClip clip)
     {
         PlaySound(clip, nextSoundPosition);
         nextSoundPosition = Vector3.zero;

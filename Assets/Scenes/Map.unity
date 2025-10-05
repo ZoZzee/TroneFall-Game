@@ -3089,7 +3089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultDistance: 0
   soundPrefab: {fileID: 0}
-  audioSource: {fileID: 0}
+  musicPrefab: {fileID: 0}
 --- !u!4 &785761136
 Transform:
   m_ObjectHideFlags: 0
@@ -6899,7 +6899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5310437817205225183, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.55
       objectReference: {fileID: 0}
     - target: {fileID: 5310437817205225183, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: m_LocalPosition.z

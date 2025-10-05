@@ -19,14 +19,15 @@ public class DayNightManager : MonoBehaviour
 
     private Vector3 _targetAngle;
     public bool dayStart;
+
+    public AudioClip omDayStartSound;
+
     [Header("Events")]
 
     public UnityEvent onDayStart;
     public UnityEvent onNightStart;
 
-
     public static DayNightManager instance;
-
 
     private EnemyManager _enemyManager;
     private void Awake()
@@ -38,7 +39,6 @@ public class DayNightManager : MonoBehaviour
         dayStart = true;
         _enemyManager = EnemyManager.instance;
     }
-
 
     private void Update()
     {
@@ -89,13 +89,13 @@ public class DayNightManager : MonoBehaviour
     {
         onNightStart.Invoke();
 
+        SoundsManager.instance.PlaySound(omDayStartSound, transform.position);
         dayStart = false;
         _targetAngle = _nightAngle;
         StartCoroutine(ChangeAngle());
 
         SpawnManager.instance.Spawn();
     }
-
 
     private IEnumerator ChangeAngle()
     {
