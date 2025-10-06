@@ -20,8 +20,9 @@ public class DayNightManager : MonoBehaviour
     private Vector3 _targetAngle;
     public bool dayStart;
 
-    public AudioClip omDayStartSound;
-
+    [Header("Aydio")]
+    public AudioClip onDayStartSound;
+    public AudioClip onNightStartSound;
     [Header("Events")]
 
     public UnityEvent onDayStart;
@@ -79,6 +80,7 @@ public class DayNightManager : MonoBehaviour
             Debug.Log("Day start");
             onDayStart.Invoke();
 
+            SoundsManager.instance.PlaySound(onDayStartSound, transform.position);
             dayStart = true;
             _targetAngle = _dayAngle;
             StartCoroutine(ChangeAngle());
@@ -89,7 +91,7 @@ public class DayNightManager : MonoBehaviour
     {
         onNightStart.Invoke();
 
-        SoundsManager.instance.PlaySound(omDayStartSound, transform.position);
+        SoundsManager.instance.PlaySound(onNightStartSound, transform.position);
         dayStart = false;
         _targetAngle = _nightAngle;
         StartCoroutine(ChangeAngle());

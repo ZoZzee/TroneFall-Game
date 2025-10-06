@@ -1361,6 +1361,7 @@ MonoBehaviour:
   costEnhancement: 030507
   _isPlayerNearby: 0
   _buildRol: {fileID: 3764886347560422795}
+  itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
   _isAllies: 0
   _maxAmountAllies: 0
   _buildingTrigger: {fileID: 9040706744254209128}

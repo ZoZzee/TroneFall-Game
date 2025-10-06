@@ -96,12 +96,11 @@ public class EnemyManager : MonoBehaviour
             enemy.target.Remove(_target);
             enemy.targetHealth.Remove(_hpTarget);
             enemy.canAttack = false;
-            enemy.p_enemyTrigger._notPriority--;
             if (enemy.CompareTag("Player") ||
                 enemy.CompareTag("PlayerAllies"))
             {
 
-                enemy.p_enemyTrigger._notPriority--;
+                enemy.p_enemyTrigger._priority--;
             }
             enemy.p_enemyTrigger._notPriority--;
             

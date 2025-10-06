@@ -51,6 +51,7 @@ public class HealthManager : MonoBehaviour
     {
         _health = _maxHealth;
         RefreshUI();
+        _healthBarUI.SetActive(false);
     }
 
     public void MinusHp(int count)
@@ -120,7 +121,8 @@ public class HealthManager : MonoBehaviour
 
     private void DayStart()
     {
-        _healthBarUI.SetActive(false);
         _health = _maxHealth;
+        RefreshUI();
+        _healthBarUI.SetActive(false);
     }
 }

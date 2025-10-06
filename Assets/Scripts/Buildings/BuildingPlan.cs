@@ -33,6 +33,9 @@ public class BuildingPlan : MonoBehaviour
     private GoldManager goldManager;
     [SerializeField] private Image _buildRol;
 
+    [Header("Aydio")]
+    public AudioClip itsBuild;
+
     [Header("Allies")]
     [SerializeField] private bool _isAllies;
     [SerializeField] private byte _maxAmountAllies;
@@ -66,6 +69,7 @@ public class BuildingPlan : MonoBehaviour
             {
                 spaceHoldTime = 0;
                 Build(true);
+                SoundsManager.instance.PlaySound(itsBuild, transform.position);
             }
         }
         else

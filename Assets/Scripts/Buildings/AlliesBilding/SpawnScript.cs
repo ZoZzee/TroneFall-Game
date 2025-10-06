@@ -10,6 +10,7 @@ public class SpawnScript : MonoBehaviour
 
 
     [SerializeField] private Transform _spawnPoint;     //Точка спавна лучників
+     public GameObject _dedAlliesSpawnPoint = null;
     [SerializeField] private float _spawnTimerMax;
     private float _spawnTimer;
 
@@ -27,20 +28,37 @@ public class SpawnScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_spawnTimer >= _spawnTimerMax && myAllies.Count < _quantityAllies)
+        if (myAllies.Count < _quantityAllies)
         {
-            _spawnTimer = 0;
-            GameObject newPoint = _alliesManager.GetPoint(_pointsPosition[num].position, Quaternion.identity);
+            if (_spawnTimer >= _spawnTimerMax && myAllies.Count < _quantityAllies)
+            {
+                SpawnAllies();
+                _spawnTimer = 0;
+            }
+            else
+            {
+                _spawnTimer++;
+            }
+        }
+    }
+
+    private void SpawnAllies()
+    {
+        GameObject newPoint = null;
+        if (num < _quantityAllies)
+        {
+            newPoint = _alliesManager.GetPoint(_pointsPosition[num].position, Quaternion.identity);
             num++;
-            GameObject newAllies = _alliesManager.GetArchers(_spawnPoint.position,Quaternion.identity);
-            myAllies.Add(newAllies);
-            newAllies.GetComponent<Bot>().spawnScript = this;
-            newAllies.GetComponent<Bot>()._targetPoint = newPoint;
-            newAllies.GetComponent<Bot>().AddTarget();
         }
-        else
+        else if (_dedAlliesSpawnPoint != null)
         {
-            _spawnTimer++;
+            newPoint = _dedAlliesSpawnPoint;
+            _dedAlliesSpawnPoint = null;
         }
+        GameObject newAllies = _alliesManager.GetArchers(_spawnPoint.position, Quaternion.identity);
+        myAllies.Add(newAllies);
+        newAllies.GetComponent<Bot>().spawnScript = this;
+        newAllies.GetComponent<Bot>()._targetPoint = newPoint;
+        newAllies.GetComponent<Bot>().AddTarget();
     }
 }
