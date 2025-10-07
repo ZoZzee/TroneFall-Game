@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class AttackState : IEnemyState
 {
@@ -34,6 +35,8 @@ public class AttackState : IEnemyState
             {
                 if (timer >= _bot.attackCooldown)
                 {
+
+                    SoundsManager.instance.PlaySound(_bot.attack, _bot.transform.position);
                     _bot._animatorController.attack = true;
                     _bot.targetHealth[0].MinusHp(_bot._damage);
                     timer = 0f;

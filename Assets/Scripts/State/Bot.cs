@@ -47,6 +47,8 @@ public class Bot : MonoBehaviour
     public Rigidbody p_rigidbody;
 
 
+    [Header("Aydio")]
+    public AudioClip attack;
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();

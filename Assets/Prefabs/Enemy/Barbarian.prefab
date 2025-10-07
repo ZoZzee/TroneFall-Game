@@ -2323,6 +2323,7 @@ MonoBehaviour:
   _animatorController: {fileID: 7044406890654323094}
   _targetPoint: {fileID: 0}
   p_rigidbody: {fileID: 8739188578420535149}
+  attack: {fileID: 8300000, guid: 112c9629eddd2fc48abf1220e5f77d78, type: 3}
 --- !u!114 &8025323295759168333
 MonoBehaviour:
   m_ObjectHideFlags: 0
