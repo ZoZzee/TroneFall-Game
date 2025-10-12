@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelEnhancement: 0
   _playerMoveDistanceOnBuild: 4
-  _playerMoveSpeed: 0.1
+  _playerMoveSpeed: 1
   _setillActive: 0
   isBuilt: 0
   spaceHoldTime: 0
