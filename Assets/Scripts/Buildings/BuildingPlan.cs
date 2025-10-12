@@ -120,7 +120,7 @@ public class BuildingPlan : MonoBehaviour
     {
         while (_buildingTrigger.playerTransform != null && _buildingTrigger.playerTransform.position != targetPosition)
         {
-            _buildingTrigger.playerTransform.position = Vector3.MoveTowards(_buildingTrigger.playerTransform.position, targetPosition, _playerMoveSpeed);
+            _buildingTrigger.playerTransform.position = Vector3.MoveTowards(_buildingTrigger.playerTransform.position,new Vector3(targetPosition.x, _buildingTrigger.playerTransform.position.y + 0.5f, targetPosition.z), _playerMoveSpeed);
             yield return null;
         }
     }
