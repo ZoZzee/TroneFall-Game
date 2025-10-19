@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1155141346447088060}
   - component: {fileID: 1000973962191064726}
   - component: {fileID: 5399772356020071681}
-  - component: {fileID: 4999748574961236147}
   m_Layer: 0
   m_Name: Tower_B
   m_TagString: Untagged
@@ -91,28 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &4999748574961236147
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484108659474042646}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 85e61fa81a9ffdc44a9947bdbc34635d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &618528409147336706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,7 +1187,6 @@ GameObject:
   - component: {fileID: 5052791965952970276}
   - component: {fileID: 6067483158008047529}
   - component: {fileID: 4026765814806161626}
-  - component: {fileID: 3285475726250148414}
   m_Layer: 0
   m_Name: Tower_A
   m_TagString: Untagged
@@ -1290,28 +1266,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &3285475726250148414
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5752980729615955737}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 574c5ee4cff1ea54db217cb330246822, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7750871652787652052
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,7 +1421,6 @@ GameObject:
   - component: {fileID: 5915560195248910705}
   - component: {fileID: 2425862032854640187}
   - component: {fileID: 1600265658349152621}
-  - component: {fileID: 6430031702812873614}
   m_Layer: 0
   m_Name: Tower_C
   m_TagString: Untagged
@@ -1547,28 +1500,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &6430031702812873614
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8687867967557290839}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c03faa34332625145a9b96669d8e7ae1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8823737110022879860
 GameObject:
   m_ObjectHideFlags: 0
