@@ -69,7 +69,7 @@ public class BuildingPlan : MonoBehaviour
             {
                 spaceHoldTime = 0;
                 Build(true);
-                SoundsManager.instance.PlaySound(itsBuild, transform.position);
+                SoundsManager.instance.PlayMusic(itsBuild, this.transform.position);
             }
         }
         else

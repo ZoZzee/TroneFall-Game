@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/UI/Minimap.prefab.meta
+guid: 638c0125734853d4cbd71a206ef89815
+========
 guid: 3c04471bf05e9c54c846e3c39d6457a4
+>>>>>>>> 754e76a09540c70221d8d7f58f3ece3237653c23:Assets/Art/Texturs/PolygonDungeon/Cage.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
