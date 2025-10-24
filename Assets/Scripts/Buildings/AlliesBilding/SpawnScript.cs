@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnScript : MonoBehaviour
 {
-    public GameObject allies;
+    [SerializeField] private bool isBarbarian = false;
     public List<GameObject> myAllies;                   //Лучники цієї будівлі
     public List<Transform> _pointsPosition;             //Точки позицій для цих лучників
 
@@ -55,7 +55,16 @@ public class SpawnScript : MonoBehaviour
             newPoint = _dedAlliesSpawnPoint;
             _dedAlliesSpawnPoint = null;
         }
-        GameObject newAllies = _alliesManager.GetArchers(_spawnPoint.position, Quaternion.identity);
+        GameObject newAllies;
+        if (isBarbarian == true)
+        {
+             newAllies = _alliesManager.GetBarbarian(_spawnPoint.position, Quaternion.identity);
+        }
+        else
+        {
+             newAllies = _alliesManager.GetArchers(_spawnPoint.position, Quaternion.identity);
+        }
+        Debug.Log(isBarbarian);
         myAllies.Add(newAllies);
         newAllies.GetComponent<Bot>().spawnScript = this;
         newAllies.GetComponent<Bot>()._targetPoint = newPoint;

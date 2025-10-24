@@ -77,7 +77,7 @@ public class AlliesManager : MonoBehaviour
             }
         }
 
-        GameObject newBarbarian = CreateArchers();
+        GameObject newBarbarian = CreateBarbarians();
         newBarbarian.transform.SetPositionAndRotation(position, rotation);
         newBarbarian.SetActive(true);
         return newBarbarian;
