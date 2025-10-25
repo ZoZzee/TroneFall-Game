@@ -63,7 +63,7 @@ public class BuildingPlan : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E))
         {
-            spaceHoldTime+= Time.deltaTime;
+            spaceHoldTime+= Time.deltaTime * 20;
 
             if (spaceHoldTime >= spaceHoldTimeMax)
             {
@@ -114,6 +114,8 @@ public class BuildingPlan : MonoBehaviour
             targetPosition += transform.position;
             StartCoroutine(PlayerMoveOnBuild(targetPosition));
         }
+
+        _buildingTrigger.playerTransform.GetComponent<PlayerMove>().StartCuldown();
     }
 
     private IEnumerator PlayerMoveOnBuild(Vector3 targetPosition)
