@@ -63,7 +63,7 @@ public class BuildingPlan : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E))
         {
-            spaceHoldTime+= Time.deltaTime * 20;
+            spaceHoldTime+= Time.deltaTime * 100;
 
             if (spaceHoldTime >= spaceHoldTimeMax)
             {

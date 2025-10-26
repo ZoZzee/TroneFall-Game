@@ -8,7 +8,6 @@ public class PatrolState : IEnemyState
     public void Enter(Bot bot)
     {
         _bot = bot;
-        Debug.Log("Стан патруля");
     }
 
     public void FixedUpdate()
