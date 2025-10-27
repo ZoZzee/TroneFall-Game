@@ -49,6 +49,7 @@ public class Bot : MonoBehaviour
 
     [Header("Aydio")]
     public AudioClip attack;
+    public float audioDistance;
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();

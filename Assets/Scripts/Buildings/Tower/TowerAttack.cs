@@ -14,6 +14,11 @@ public class TowerAttack : MonoBehaviour
 
     public AlliesManager _alliesManager;
 
+
+    [Header("Aydio")]
+    public AudioClip attack;
+    public float audioDistance;
+
     private void Start()
     {
         _alliesManager = AlliesManager.instance;
@@ -29,6 +34,8 @@ public class TowerAttack : MonoBehaviour
             {
                 cooldown = 0;
                 Attack();
+                SoundsManager.instance.audioDistance = audioDistance;
+                SoundsManager.instance.PlaySound(attack, transform.position);
             }
         }
     }

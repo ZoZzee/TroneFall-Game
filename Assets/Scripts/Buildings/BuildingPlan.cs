@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.UI;
@@ -120,9 +121,10 @@ public class BuildingPlan : MonoBehaviour
 
     private IEnumerator PlayerMoveOnBuild(Vector3 targetPosition)
     {
+        Vector3 startPosition = _buildingTrigger.playerTransform.position;
         while (_buildingTrigger.playerTransform != null && _buildingTrigger.playerTransform.position != targetPosition)
         {
-            _buildingTrigger.playerTransform.position = Vector3.MoveTowards(_buildingTrigger.playerTransform.position, targetPosition, _playerMoveSpeed);
+            _buildingTrigger.playerTransform.position = Vector3.MoveTowards(_buildingTrigger.playerTransform.position,new Vector3( targetPosition.x, startPosition.y + 0.5f, targetPosition.z), _playerMoveSpeed);
             yield return null;
         }
     }

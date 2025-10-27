@@ -25,14 +25,14 @@ public class CharcterAudio : MonoBehaviour
         return null;
     }
 
-    //public void PlayHitSounds()
-    //{
-    //    for (int i = 0; i < AudioCollections.Length; i++)
-    //    {
-    //        AudioClip clip = AudioCollections[i].clips[UnityEngine.Random.Range(0, AudioCollections[i].clips.Length)];
-    //        CharactersAudioManager.Instance.PlayHitSound(clip, audioSource);
-    //    }
-    //}
+    public void PlayHitSounds()
+    {
+        for (int i = 0; i < AudioCollections.Length; i++)
+        {
+            AudioClip clip = AudioCollections[i].clips[UnityEngine.Random.Range(0, AudioCollections[i].clips.Length)];
+            SoundsManager.instance.PlaySoundEnemy(clip, this.transform.position);
+        }
+    }
 
     [SerializeField]
     public class AudioCollection

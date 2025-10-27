@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BuildingTrigger : MonoBehaviour
 {
@@ -27,5 +27,4 @@ public class BuildingTrigger : MonoBehaviour
             playerTransform = null;
         }
     }
-
 }

@@ -34,10 +34,8 @@ public class HealthManager : MonoBehaviour
         {
             _enemyManager = EnemyManager.instance;
         }
-        if(_isBuildings)
-        {
             _dayNightManager.onDayStart.AddListener(DayStart);
-        }
+        
         if(_itsPlayer)
         {
             StartCoroutine(Regeneration());
