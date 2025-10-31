@@ -128,4 +128,10 @@ public class BuildingPlan : MonoBehaviour
             yield return null;
         }
     }
+    private void OnCollisionExit(Collision collision)
+    {
+        
+            Debug.Log("Collider");
+        
+    }
 }
