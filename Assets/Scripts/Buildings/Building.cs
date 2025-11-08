@@ -4,7 +4,7 @@ using UnityEngine;
 public class Building : MonoBehaviour
 {
     [Header("Values")]
-    public List<byte> goldAtDayStart;
+    public int goldAtDayStart;
 
     [Header("Referense")]
 
@@ -45,8 +45,7 @@ public class Building : MonoBehaviour
 
     public void OnDayStart()
     {
-        byte golds = goldAtDayStart[buildingPlan._levelEnhancement];
-        for (int i = 0; i < golds; i++)
+        for (int i = 0; i < goldAtDayStart; i++)
         {
             Vector3 position = transform.position + new Vector3(Random.Range(1f, 2f), 0, Random.Range(1f, 2f));
             Instantiate(_coin, position, _coin.transform.rotation);

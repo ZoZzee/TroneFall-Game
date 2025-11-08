@@ -51,26 +51,26 @@ public class DayNightManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (dayStart == true)
-        {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                spaceHoldTime++;
+        //if (dayStart == true)
+        //{
+        //    if (Input.GetKey(KeyCode.Space))
+        //    {
+        //        spaceHoldTime++;
 
-                if (spaceHoldTime >= spaceHoldTimeMax)
-                {
-                    StartNight();
-                    spaceHoldTime = 0;
-                }
-            }
-            else
-            {
-                if (spaceHoldTime > 0)
-                {
-                    spaceHoldTime--;
-                }   
-            }
-        }
+        //        if (spaceHoldTime >= spaceHoldTimeMax)
+        //        {
+        //            StartNight();
+        //            spaceHoldTime = 0;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        if (spaceHoldTime > 0)
+        //        {
+        //            spaceHoldTime--;
+        //        }   
+        //    }
+        //}
     }
 
     public void StartDay()
@@ -87,7 +87,7 @@ public class DayNightManager : MonoBehaviour
         }
     }
 
-    private void StartNight()
+    public void StartNight()
     {
         onNightStart.Invoke();
 

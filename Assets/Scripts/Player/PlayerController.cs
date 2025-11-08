@@ -1,0 +1,124 @@
+using TMPro;
+using Unity.AI.Navigation.Samples;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class PlayerController : MonoBehaviour
+{
+    [Header("HZ")]
+    private bool _startBuildsng;
+
+    [Header("Referenses")]
+    private DayNightManager _dNManager;
+    private GameObject _closestBuild;
+    private BuildingPlan _buildingPlan;
+    [SerializeField] private InteractionTrigger _interactionTriger;
+
+    [Header("Roll_UI")]
+    [SerializeField] private GameObject _obgectUI;
+    [SerializeField] private Image _roll;
+
+
+    [Header("Timer")]
+    private float spaceHoldTime;
+    [SerializeField] private float _timeToWaitForTheNight = 250;
+    [SerializeField] private float _constructionWaitingTime = 150;
+
+    private void Start()
+    {
+        _dNManager = DayNightManager.instance;
+
+        _obgectUI.SetActive(false);
+
+    }
+    private void Update()
+    {
+        CheckSpaseButton();
+    }
+    private void CheckSpaseButton()
+    {
+        if (_dNManager.dayStart == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Debug.Log("Натиснув спейс");
+                CheckDistanseToBilding();
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                Debug.Log("Відпустив спейс");
+                _buildingPlan._buildRol.fillAmount = 0;
+                _obgectUI.SetActive(false);
+            }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                if (_startBuildsng)
+                {
+                    _buildingPlan._buildRol.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
+                    if (spaceHoldTime >= _constructionWaitingTime)
+                    {
+                        Build();
+                        spaceHoldTime = 0;
+                        return;
+                    }
+                }
+                else
+                {
+                    // Добавити крутілку для відслідковування початку ночі
+
+                    _roll.fillAmount = (spaceHoldTime / (_timeToWaitForTheNight / 100)) / 100;
+                    if (!_startBuildsng && spaceHoldTime >= _timeToWaitForTheNight)
+                    {
+                        _dNManager.StartNight();
+                        spaceHoldTime = 0;
+                    }
+                }
+                spaceHoldTime += Time.deltaTime* 60;
+            }
+            else
+            {
+                if (spaceHoldTime > 0)
+                {
+                    spaceHoldTime = 0;
+                }
+            }
+
+        }
+    }
+    private void CheckDistanseToBilding()
+    {
+        if (_interactionTriger.buildings.Count < 1)
+        {
+            _startBuildsng = false;
+            _obgectUI.SetActive(true);
+        }
+        else
+        {
+            _closestBuild = null;
+
+            for (int i = 0; i < _interactionTriger.buildings.Count; i++)
+            {
+                GameObject build = _interactionTriger.buildings[i];
+                if (_closestBuild == null ||
+                    Vector3.Distance(build.transform.position, transform.position) < Vector3.Distance(_closestBuild.transform.position, transform.position))
+                {
+                    _closestBuild = build;
+                }
+            }
+            _buildingPlan = _closestBuild.GetComponent<BuildingPlan>();
+            _startBuildsng = true;
+        }
+    }
+    private void Build()
+    {
+        if (_interactionTriger.buildings.Count <= 0)
+        {
+            return;
+        }
+        _buildingPlan.Build(_buildingPlan.goldManager.EnoughGold(_buildingPlan.costBuildings));
+
+        _interactionTriger.buildings.Remove(_closestBuild);
+        _closestBuild = null;
+    }
+}

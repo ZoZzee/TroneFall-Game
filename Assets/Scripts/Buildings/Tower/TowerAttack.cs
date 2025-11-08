@@ -43,7 +43,8 @@ public class TowerAttack : MonoBehaviour
     private void Attack()
     {
         if (_buildingPlan != null)
-            targetHealth[0].MinusHp(_damage[_buildingPlan._levelEnhancement]);
+        { }
+        //targetHealth[0].MinusHp(_damage[_buildingPlan._levelEnhancement]);
         else
         {
             targetHealth[0].MinusHp(_damage[0]);

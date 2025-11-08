@@ -31,10 +31,10 @@ public class PlayerMove : MonoBehaviour
     {
         instance = this;
     }
+    
 
     private void FixedUpdate()
     {
-
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -94,8 +94,6 @@ public class PlayerMove : MonoBehaviour
         }
 
     }
-
-
     public void StartCuldown()
     {
         _culdown = true;

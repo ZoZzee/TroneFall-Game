@@ -6,9 +6,10 @@ TagManager:
   tags:
   - Enemy
   - PlayerAllies
-  - Buldings
   - Wall
   - MainBild
+  - BuildObg
+  - Building
   layers:
   - Default
   - TransparentFX

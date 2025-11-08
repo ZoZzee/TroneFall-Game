@@ -10,29 +10,21 @@ public class BuildingPlan : MonoBehaviour
 {
     [Header("Values")]
 
-    [HideInInspector]public byte _levelEnhancement;
-
     [SerializeField][Tooltip("На скільки рухаємо гравця коли побудували будівлю")]
     private float _playerMoveDistanceOnBuild;
-
     [SerializeField][Tooltip("На скільки швидко рухаєм гравця від будівлі")]
     private float _playerMoveSpeed;
 
-    [Tooltip("Чи видно попередні рівні будівлі")] 
-    public bool _setillActive;
-
     public bool isBuilt = false;
-    [SerializeField] private float spaceHoldTime;
-    [SerializeField] private float spaceHoldTimeMax;
 
     [Header("References")]
-    [SerializeField] private GameObject _flag;
-    [SerializeField] private GameObject _isParent = null;
-    public List<GameObject> LevelEnhancement;
-    public List<byte> costEnhancement;
-    public bool _isPlayerNearby;
-    private GoldManager goldManager;
-    [SerializeField] private Image _buildRol;
+    //Питання чи так можна робити
+    public GameObject _nextLevel = null;
+    
+    public int costBuildings;
+    [HideInInspector]public GoldManager goldManager;
+
+    public Image _buildRol;
 
     [Header("Aydio")]
     public AudioClip itsBuild;
@@ -42,96 +34,56 @@ public class BuildingPlan : MonoBehaviour
     [SerializeField] private byte _maxAmountAllies;
 
     [Header("Components")]
-
-    [SerializeField] private BuildingTrigger _buildingTrigger;
+    [SerializeField] private PlayerMove _playerMove;
 
     private void Start()
     {
         goldManager = GoldManager.instance;
-        _levelEnhancement = 0;
-        spaceHoldTime = 0;
+        _playerMove = PlayerMove.instance;
         _buildRol.fillAmount = 0;
-    }
-
-    private void Update()
-    {
-        var condition = _levelEnhancement < LevelEnhancement.Count &&
-            _isPlayerNearby && goldManager.EnoughGold(costEnhancement[_levelEnhancement]);
-        if (!condition)
-        {
-            return;
-        }
-
-        if (Input.GetKey(KeyCode.E))
-        {
-            spaceHoldTime+= Time.deltaTime * 100;
-
-            if (spaceHoldTime >= spaceHoldTimeMax)
-            {
-                spaceHoldTime = 0;
-                Build(true);
-                SoundsManager.instance.PlayMusic(itsBuild, this.transform.position);
-            }
-        }
-        else
-        {
-            if (spaceHoldTime > 0)
-            {
-                spaceHoldTime--;
-            }
-        }
-        _buildRol.fillAmount = (spaceHoldTime / (spaceHoldTimeMax / 100)) / 100;
-
     }
 
     public void Build(bool minusGold)
     {
-        LevelEnhancement[_levelEnhancement].SetActive(true);
-        isBuilt = true;
-        _flag.SetActive(false);
-        goldManager.MinusGold(costEnhancement[_levelEnhancement]);
-        _levelEnhancement++;
-        if (_isParent != null)
+        if (minusGold && _nextLevel != null)
         {
-            _isParent.SetActive(true);                 //Чи перший об'єкт батьківський
-        }
-        if (_setillActive == false && _levelEnhancement > 1)
-        {
-            for(int i = 0; i < _levelEnhancement - 1; i ++)
+            isBuilt = true;
+            goldManager.MinusGold(costBuildings);
+            _nextLevel.SetActive(true);
+            SoundsManager.instance.PlayMusic(itsBuild, this.transform.position);
+            if (_playerMove.transform)
             {
-                    LevelEnhancement[i].SetActive(false);
+                Vector3 targetPosition = (_playerMove.transform.position - transform.position).normalized;
+                targetPosition *= _playerMoveDistanceOnBuild;
+                targetPosition += transform.position;
+                StartCoroutine(PlayerMoveOnBuild(targetPosition));
             }
+            _playerMove.StartCuldown();
+            this.gameObject.SetActive(false);
         }
-
-        if (_isAllies)
-        {
-             _maxAmountAllies += _maxAmountAllies;
-        }
-        
-        if (_buildingTrigger.playerTransform)
-        {
-            Vector3 targetPosition = (_buildingTrigger.playerTransform.position - transform.position).normalized;
-            targetPosition *= _playerMoveDistanceOnBuild;
-            targetPosition += transform.position;
-            StartCoroutine(PlayerMoveOnBuild(targetPosition));
-        }
-
-        _buildingTrigger.playerTransform.GetComponent<PlayerMove>().StartCuldown();
     }
 
     private IEnumerator PlayerMoveOnBuild(Vector3 targetPosition)
     {
-        Vector3 startPosition = _buildingTrigger.playerTransform.position;
-        while (_buildingTrigger.playerTransform != null && _buildingTrigger.playerTransform.position != targetPosition)
+        Vector3 startPosition = _playerMove.transform.position;
+        while (_playerMove.transform != null && _playerMove.transform.position != targetPosition)
         {
-            _buildingTrigger.playerTransform.position = Vector3.MoveTowards(_buildingTrigger.playerTransform.position,new Vector3( targetPosition.x, startPosition.y + 0.5f, targetPosition.z), _playerMoveSpeed);
+            _playerMove.transform.position = Vector3.MoveTowards(_playerMove.transform.position,new Vector3( targetPosition.x, startPosition.y + 0.5f, targetPosition.z), _playerMoveSpeed);
             yield return null;
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.CompareTag("Player"))
+        {
+            Debug.Log("Гравець всередині");
         }
     }
     private void OnCollisionExit(Collision collision)
     {
-        
-            Debug.Log("Collider");
-        
+        if (collision.collider.CompareTag("Player"))
+        {
+            Debug.Log("Гравець за межами");
+        }
     }
 }
