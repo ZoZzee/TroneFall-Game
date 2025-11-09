@@ -29,12 +29,9 @@ public class BuildingPlan : MonoBehaviour
     [Header("Aydio")]
     public AudioClip itsBuild;
 
-    [Header("Allies")]
-    [SerializeField] private bool _isAllies;
-    [SerializeField] private byte _maxAmountAllies;
 
     [Header("Components")]
-    [SerializeField] private PlayerMove _playerMove;
+     private PlayerMove _playerMove;
 
     private void Start()
     {

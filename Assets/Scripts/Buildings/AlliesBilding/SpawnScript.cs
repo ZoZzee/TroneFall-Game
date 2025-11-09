@@ -6,17 +6,19 @@ public class SpawnScript : MonoBehaviour
 {
     [SerializeField] private bool isBarbarian = false;
     public List<GameObject> myAllies;                   //Лучники цієї будівлі
+    public float _quantityAllies;
+
     public List<Transform> _pointsPosition;             //Точки позицій для цих лучників
-
-
     [SerializeField] private Transform _spawnPoint;     //Точка спавна лучників
-     public GameObject _dedAlliesSpawnPoint = null;
+    public List <GameObject> _dedAlliesSpawnPoint = null;
+
+    [Header("Timer")]
     [SerializeField] private float _spawnTimerMax;
     private float _spawnTimer;
 
-    [SerializeField]private BuildingPlan _buildingPlan;
-    public float _quantityAllies;
     
+    [Header("References")]
+    [SerializeField] private AlliesInBuilding _alliesInBuilding;
     private AlliesManager _alliesManager;
 
     [HideInInspector]public byte num = 0;
@@ -24,6 +26,7 @@ public class SpawnScript : MonoBehaviour
     private void Start()
     {
         _alliesManager = AlliesManager.instance;
+        _alliesInBuilding.NextLevel();
     }
 
     private void FixedUpdate()
@@ -47,13 +50,13 @@ public class SpawnScript : MonoBehaviour
         GameObject newPoint = null;
         if (num < _quantityAllies)
         {
-            newPoint = _alliesManager.GetPoint(_pointsPosition[num].position, Quaternion.identity);
+            newPoint = _alliesManager.GetPoint(_alliesInBuilding._pointsActive[num].transform.position, Quaternion.identity);
             num++;
         }
-        else if (_dedAlliesSpawnPoint != null)
+        else if (_dedAlliesSpawnPoint.Count > 0)
         {
-            newPoint = _dedAlliesSpawnPoint;
-            _dedAlliesSpawnPoint = null;
+            newPoint = _dedAlliesSpawnPoint[0];
+            _dedAlliesSpawnPoint.Remove(newPoint);
         }
         GameObject newAllies;
         if (isBarbarian == true)
@@ -64,7 +67,6 @@ public class SpawnScript : MonoBehaviour
         {
              newAllies = _alliesManager.GetArchers(_spawnPoint.position, Quaternion.identity);
         }
-        Debug.Log(isBarbarian);
         myAllies.Add(newAllies);
         newAllies.GetComponent<Bot>().spawnScript = this;
         newAllies.GetComponent<Bot>()._targetPoint = newPoint;

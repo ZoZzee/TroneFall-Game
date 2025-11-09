@@ -10,6 +10,8 @@ TagManager:
   - MainBild
   - BuildObg
   - Building
+  - Buldings
+  - Construction
   layers:
   - Default
   - TransparentFX

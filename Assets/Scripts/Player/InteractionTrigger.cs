@@ -9,7 +9,8 @@ public class InteractionTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Building"))
+        if (other.CompareTag("Building")||
+            other.CompareTag("Construction"))
         {
             if (other.GetComponent<BuildingPlan>()._nextLevel != null)
             {
@@ -20,7 +21,8 @@ public class InteractionTrigger : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Building"))
+        if (other.CompareTag("Building")||
+            other.CompareTag("Construction"))
         {
             buildings.Remove(other.gameObject);
         }
