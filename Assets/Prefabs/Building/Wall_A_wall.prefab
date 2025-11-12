@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 3742152428742783674}
   - component: {fileID: 5154341344085692164}
   - component: {fileID: 6012823834263651127}
+  - component: {fileID: 4261012893013348901}
   m_Layer: 0
   m_Name: Wall_A_wall
   m_TagString: Wall
@@ -498,6 +499,28 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.036000002, y: 0.021000002, z: 2.331}
   m_TimeToStationary: 0.5
+--- !u!95 &4261012893013348901
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981626981757904985}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 482cafa0635823b47b226cf1c2178a9c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3891161149097801980
 GameObject:
   m_ObjectHideFlags: 0
