@@ -16,7 +16,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - PlayerUnits
@@ -28,7 +28,7 @@ TagManager:
   - 
   - Interaction Trigger
   - 
-  - 
+  - BordersToPlayer
   - 
   - 
   - 

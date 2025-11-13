@@ -31,7 +31,7 @@ public class Bot : MonoBehaviour
 
 
     [Header("Enemy components")]
-    [HideInInspector] public MainBuilding mainBuilding;
+    [HideInInspector] public BuildingsManager mainBuilding;
     [HideInInspector] public GameObject mainBuildingTransform;
     public EnemyManager _enemyManager;
     public EnemyTrigger p_enemyTrigger;
@@ -58,7 +58,7 @@ public class Bot : MonoBehaviour
     {
         if (_itsEnemy)
         {
-            mainBuilding = BuildingsManager.instance.mainBuilding;
+            mainBuilding = BuildingsManager.instance;
             _enemyManager = EnemyManager.instance;
             _enemyManager.activeEnemy.Add(this.gameObject);
             AddTarget();
@@ -114,8 +114,8 @@ public class Bot : MonoBehaviour
         {
             if (_itsEnemy)
             {
-                mainBuildingTransform = mainBuilding.gameObject;
-                    targetHealth.Add(mainBuilding.healthManager);
+                mainBuildingTransform = mainBuilding.mainBuilding.gameObject;
+                    targetHealth.Add(mainBuilding.mainBuilding.GetComponent<HealthManager>());
                     target.Add(mainBuildingTransform);
             }
             else if (_itsAllies)

@@ -126,17 +126,13 @@ public class AlliesManager : MonoBehaviour
 
     public void ClineDeadTarget(GameObject _target , HealthManager _hpTarget)
     {
-        Debug.Log("Çàéøîâ â âèäàëåííÿ");
-        // Î÷èùàºìî òàðãåòà ç ñïèñêó ö³ëåé ñîþçíèê³â
         for (int i = 0;i < activeAllies.Count; i ++)
         {
             Bot allies = activeAllies[i].GetComponent<Bot>();
                 allies.target.Remove(_target);
                 allies.targetHealth.Remove(_hpTarget);
             allies.p_alliesTrigger._positionOnList--;
-            allies.canAttack = false;                   // не правильно, але це потрібно буде потім доробити !!!
         }
-        // Î÷èùàºìî òàðãåòà ç ñïèñêó ö³ëü áàøåíü
         for (int i = 0; i < bildingAllies.Count; i++)
         {
             TowerAttack allies = bildingAllies[i].GetComponent<TowerAttack>();

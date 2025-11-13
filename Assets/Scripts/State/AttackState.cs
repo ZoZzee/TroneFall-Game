@@ -22,7 +22,7 @@ public class AttackState : IEnemyState
 
     public void FixedUpdate()
     {
-        if(_bot._animatorController.dead == true)
+        if (_bot._animatorController.dead == true)
         {
             _bot.SwitchState(new DeadState());
         }
@@ -31,7 +31,7 @@ public class AttackState : IEnemyState
         {
             _bot.transform.LookAt(_bot.target[0].transform);
 
-            if ( _bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) <= _bot.distanseToAttack)
+            if (_bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) <= _bot.distanseToAttack)
             {
                 if (timer >= _bot.attackCooldown)
                 {
@@ -40,15 +40,17 @@ public class AttackState : IEnemyState
                     _bot._animatorController.attack = true;
                     _bot.targetHealth[0].MinusHp(_bot._damage);
                     timer = 0f;
-                    if (_bot.targetHealth[0]._health<= 0)
+                    if (_bot.targetHealth[0]._health <= 0)
                     {
                         if (_bot._itsEnemy)
                         {
                             _bot._enemyManager.ClineDeadTarget(_bot.target[0], _bot.targetHealth[0]);
+                            chekDist();
                         }
                         else if (_bot._itsAllies)
                         {
                             _bot._alliesManager.ClineDeadTarget(_bot.target[0], _bot.targetHealth[0]);
+                            chekDist();
                         }
                     }
                 }
@@ -73,5 +75,13 @@ public class AttackState : IEnemyState
         Debug.Log("Exid()");
         _bot.canAttack = false;
         _bot._agent.isStopped = false;
+    }
+
+    private void chekDist()
+    {
+        if(Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) > _bot.distanseToAttack)
+        {
+            _bot.canAttack = false;
+        }
     }
 }

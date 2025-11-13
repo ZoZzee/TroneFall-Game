@@ -228,7 +228,6 @@ MonoBehaviour:
   _interactionTriger: {fileID: 6917440948420490514}
   _obgectUI: {fileID: 727027839288590987}
   _roll: {fileID: 4158146927190360200}
-  _timerForUI: {fileID: 0}
   _timeToWaitForTheNight: 250
   _constructionWaitingTime: 150
 --- !u!114 &4656242685255332197
@@ -285,7 +284,7 @@ MonoBehaviour:
   target: []
   targetHealth: []
   _alliesManager: {fileID: 362522737891643091}
-  attack: {fileID: 0}
+  attack: {fileID: 8300000, guid: 5959c1975f4c95945a0a94642229f636, type: 3}
   audioDistance: 0
 --- !u!81 &7566085166362769625
 AudioListener:

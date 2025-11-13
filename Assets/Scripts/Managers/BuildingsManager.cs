@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BuildingsManager : MonoBehaviour
 {
-    public MainBuilding mainBuilding;
+    public GameObject mainBuilding;
 
     public List<Building> finishedBuildings;
     public List<Building> destroyedBuildings;

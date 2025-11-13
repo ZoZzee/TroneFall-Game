@@ -9,13 +9,13 @@ using UnityEngine.UI;
 public class BuildingPlan : MonoBehaviour
 {
     [Header("Values")]
-
     [SerializeField][Tooltip("На скільки рухаємо гравця коли побудували будівлю")]
     private float _playerMoveDistanceOnBuild;
     [SerializeField][Tooltip("На скільки швидко рухаєм гравця від будівлі")]
     private float _playerMoveSpeed;
 
     public bool isBuilt = false;
+    [SerializeField] private bool _isMainBuilding;
 
     [Header("References")]
     //Питання чи так можна робити
@@ -23,7 +23,7 @@ public class BuildingPlan : MonoBehaviour
     
     public int costBuildings;
     [HideInInspector]public GoldManager goldManager;
-
+    [SerializeField] private GameObject _mainBuilding;
     public Image _buildRol;
 
     [Header("Aydio")]
@@ -32,12 +32,19 @@ public class BuildingPlan : MonoBehaviour
 
     [Header("Components")]
      private PlayerMove _playerMove;
+    private BuildingsManager _buildingsManager;
 
     private void Start()
     {
+        
+        _buildingsManager = BuildingsManager.instance;
         goldManager = GoldManager.instance;
         _playerMove = PlayerMove.instance;
         _buildRol.fillAmount = 0;
+        if(_isMainBuilding)
+        {
+            _buildingsManager.mainBuilding = this.gameObject;
+        }
     }
 
     public void Build(bool minusGold)
@@ -48,14 +55,7 @@ public class BuildingPlan : MonoBehaviour
             goldManager.MinusGold(costBuildings);
             _nextLevel.SetActive(true);
             SoundsManager.instance.PlayMusic(itsBuild, this.transform.position);
-            if (_playerMove.transform)
-            {
-                Vector3 targetPosition = (_playerMove.transform.position - transform.position).normalized;
-                targetPosition *= _playerMoveDistanceOnBuild;
-                targetPosition += transform.position;
-                StartCoroutine(PlayerMoveOnBuild(targetPosition));
-            }
-            _playerMove.StartCuldown();
+            
             this.gameObject.SetActive(false);
         }
     }
@@ -74,6 +74,14 @@ public class BuildingPlan : MonoBehaviour
         if(collision.collider.CompareTag("Player"))
         {
             Debug.Log("Гравець всередині");
+            if (_playerMove.transform)
+            {
+                Vector3 targetPosition = (_playerMove.transform.position - transform.position).normalized;
+                targetPosition *= _playerMoveDistanceOnBuild;
+                targetPosition += transform.position;
+                StartCoroutine(PlayerMoveOnBuild(targetPosition));
+            }
+            _playerMove.StartCuldown();
         }
     }
     private void OnCollisionExit(Collision collision)
