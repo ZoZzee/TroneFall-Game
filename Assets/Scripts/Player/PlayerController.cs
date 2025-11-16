@@ -48,30 +48,32 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 Debug.Log("Відпустив спейс");
-                _buildingPlan._buildRol.fillAmount = 0;
+                if(_closestBuild != null)
+                {
+                    _buildingPlan._buildRol.fillAmount = 0.001f;
+                }
                 _obgectUI.SetActive(false);
             }
             if (Input.GetKey(KeyCode.Space))
             {
-                if (_startBuildsng)
-                {
-                    _buildingPlan._buildRol.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
-                    if (spaceHoldTime >= _constructionWaitingTime)
+                    if (_startBuildsng)
                     {
-                        Build();
-                        spaceHoldTime = 0;
-                        return;
+                        _buildingPlan._buildRol.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
+                        if (spaceHoldTime >= _constructionWaitingTime)
+                        {
+                            Build();
+                            spaceHoldTime = 0;
+                            return;
+                        }
                     }
-                }
                 else
                 {
-                    // Добавити крутілку для відслідковування початку ночі
-
                     _roll.fillAmount = (spaceHoldTime / (_timeToWaitForTheNight / 100)) / 100;
                     if (!_startBuildsng && spaceHoldTime >= _timeToWaitForTheNight)
                     {
                         _dNManager.StartNight();
                         spaceHoldTime = 0;
+                        _obgectUI.SetActive(false);
                     }
                 }
                 spaceHoldTime += Time.deltaTime* 60;
@@ -100,8 +102,10 @@ public class PlayerController : MonoBehaviour
             for (int i = 0; i < _interactionTriger.buildings.Count; i++)
             {
                 GameObject build = _interactionTriger.buildings[i];
+                _buildingPlan = build.GetComponent<BuildingPlan>();
                 if (_closestBuild == null ||
-                    Vector3.Distance(build.transform.position, transform.position) < Vector3.Distance(_closestBuild.transform.position, transform.position))
+                    Vector3.Distance(build.transform.position, transform.position) < Vector3.Distance(_closestBuild.transform.position, transform.position)
+                     || _buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
                 {
                     _closestBuild = build;
                 }
@@ -116,9 +120,15 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        _buildingPlan.Build(_buildingPlan.goldManager.EnoughGold(_buildingPlan.costBuildings));
+        if (_buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
+        {
+            _buildingPlan._buildRol.fillAmount = 0.001f;
+            _buildingPlan.Build(true);   ////////
 
-        _interactionTriger.buildings.Remove(_closestBuild);
-        _closestBuild = null;
+            _interactionTriger.buildings.Remove(_closestBuild);
+
+            _closestBuild = null;
+        }
+
     }
 }

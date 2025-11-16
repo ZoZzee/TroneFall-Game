@@ -23,7 +23,6 @@ public class BuildingPlan : MonoBehaviour
     
     public int costBuildings;
     [HideInInspector]public GoldManager goldManager;
-    [SerializeField] private GameObject _mainBuilding;
     public Image _buildRol;
 
     [Header("Aydio")]
@@ -60,12 +59,16 @@ public class BuildingPlan : MonoBehaviour
         }
     }
 
-    private IEnumerator PlayerMoveOnBuild(Vector3 targetPosition)
+    private IEnumerator PlayerMoveOnBuild()
     {
+        Vector3 targetPosition = (_playerMove.transform.position - transform.position).normalized;
+        targetPosition *= _playerMoveDistanceOnBuild;
+        targetPosition += transform.position;
         Vector3 startPosition = _playerMove.transform.position;
         while (_playerMove.transform != null && _playerMove.transform.position != targetPosition)
         {
             _playerMove.transform.position = Vector3.MoveTowards(_playerMove.transform.position,new Vector3( targetPosition.x, startPosition.y + 0.5f, targetPosition.z), _playerMoveSpeed);
+            Debug.Log("STOP" + gameObject.name);
             yield return null;
         }
     }
@@ -73,22 +76,17 @@ public class BuildingPlan : MonoBehaviour
     {
         if(collision.collider.CompareTag("Player"))
         {
-            Debug.Log("Гравець всередині");
-            if (_playerMove.transform)
-            {
-                Vector3 targetPosition = (_playerMove.transform.position - transform.position).normalized;
-                targetPosition *= _playerMoveDistanceOnBuild;
-                targetPosition += transform.position;
-                StartCoroutine(PlayerMoveOnBuild(targetPosition));
-            }
             _playerMove.StartCuldown();
+            StartCoroutine(PlayerMoveOnBuild());
         }
     }
     private void OnCollisionExit(Collision collision)
     {
         if (collision.collider.CompareTag("Player"))
         {
-            Debug.Log("Гравець за межами");
+            Debug.Log("Вийшов з колізії");
+            StopCoroutine(PlayerMoveOnBuild());
+            _playerMove.StopCuldown();
         }
     }
 }

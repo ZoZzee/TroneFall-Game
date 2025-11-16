@@ -97,7 +97,6 @@ public class PlayerMove : MonoBehaviour
     public void StartCuldown()
     {
         _culdown = true;
-        Invoke(nameof(StopCuldown), 0.5f);
     }
     public void StopCuldown()
     {

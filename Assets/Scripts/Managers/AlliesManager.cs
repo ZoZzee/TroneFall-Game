@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using UnityEditor.Searcher;
 using UnityEngine;
 
 public class AlliesManager : MonoBehaviour
@@ -126,6 +125,7 @@ public class AlliesManager : MonoBehaviour
 
     public void ClineDeadTarget(GameObject _target , HealthManager _hpTarget)
     {
+        Debug.Log("Зайшло в скрипт очищення");
         for (int i = 0;i < activeAllies.Count; i ++)
         {
             Bot allies = activeAllies[i].GetComponent<Bot>();
@@ -135,6 +135,7 @@ public class AlliesManager : MonoBehaviour
         }
         for (int i = 0; i < bildingAllies.Count; i++)
         {
+            Debug.Log("Зайшло в цикл очищення");
             TowerAttack allies = bildingAllies[i].GetComponent<TowerAttack>();
             allies.target.Remove(_target);
             allies.targetHealth.Remove(_hpTarget);

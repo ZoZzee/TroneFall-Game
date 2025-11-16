@@ -55,7 +55,7 @@ public class PatrolState : IEnemyState
                 if (_bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) <= _bot.distanseToAttack)
                 {
                     _bot.SwitchState(new AttackState());
-                    Debug.Log("зміна стану" + _bot.canAttack + Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position));
+                    
                 }
             }
             else

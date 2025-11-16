@@ -8,7 +8,6 @@ public class DeadState : IEnemyState
         _bot = bot;
 
         _bot._agent.isStopped = true;
-        _bot._animatorController.run = false;
         _bot._animatorController.dead = true;
         if (_bot._itsAllies)
         {

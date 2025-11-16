@@ -54,10 +54,11 @@ MonoBehaviour:
   _playerMoveDistanceOnBuild: 2
   _playerMoveSpeed: 1
   isBuilt: 0
-  _isNainBuilding: 0
+  _isMainBuilding: 0
   _nextLevel: {fileID: 3982020932274719565}
   costBuildings: 5
   goldManager: {fileID: 0}
+  _mainBuilding: {fileID: 0}
   _buildRol: {fileID: 3707075230347937975}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!33 &6808722647998613151
@@ -512,10 +513,11 @@ MonoBehaviour:
   _playerMoveDistanceOnBuild: 2
   _playerMoveSpeed: 1
   isBuilt: 0
-  _isNainBuilding: 0
+  _isMainBuilding: 0
   _nextLevel: {fileID: 6057870097216335870}
   costBuildings: 9
   goldManager: {fileID: 0}
+  _mainBuilding: {fileID: 0}
   _buildRol: {fileID: 3707075230347937975}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!114 &2051487440239777824
@@ -538,7 +540,7 @@ MonoBehaviour:
   target: []
   targetHealth: []
   _alliesManager: {fileID: 0}
-  attack: {fileID: 0}
+  attack: {fileID: 8300000, guid: 5959c1975f4c95945a0a94642229f636, type: 3}
   audioDistance: 0
 --- !u!114 &1165268335109556463
 MonoBehaviour:
@@ -1190,10 +1192,11 @@ MonoBehaviour:
   _playerMoveDistanceOnBuild: 2
   _playerMoveSpeed: 1
   isBuilt: 0
-  _isNainBuilding: 0
+  _isMainBuilding: 0
   _nextLevel: {fileID: 1733694543698939483}
   costBuildings: 7
   goldManager: {fileID: 0}
+  _mainBuilding: {fileID: 0}
   _buildRol: {fileID: 3707075230347937975}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!114 &2282939174526549058
@@ -1216,7 +1219,7 @@ MonoBehaviour:
   target: []
   targetHealth: []
   _alliesManager: {fileID: 0}
-  attack: {fileID: 0}
+  attack: {fileID: 8300000, guid: 5959c1975f4c95945a0a94642229f636, type: 3}
   audioDistance: 0
 --- !u!114 &1170905650640397390
 MonoBehaviour:
@@ -1907,10 +1910,11 @@ MonoBehaviour:
   _playerMoveDistanceOnBuild: 2
   _playerMoveSpeed: 1
   isBuilt: 0
-  _isNainBuilding: 0
+  _isMainBuilding: 0
   _nextLevel: {fileID: 0}
   costBuildings: 0
   goldManager: {fileID: 0}
+  _mainBuilding: {fileID: 0}
   _buildRol: {fileID: 3707075230347937975}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!114 &368816912082481727
@@ -1933,7 +1937,7 @@ MonoBehaviour:
   target: []
   targetHealth: []
   _alliesManager: {fileID: 0}
-  attack: {fileID: 0}
+  attack: {fileID: 8300000, guid: 5959c1975f4c95945a0a94642229f636, type: 3}
   audioDistance: 0
 --- !u!114 &4130693008026482273
 MonoBehaviour:

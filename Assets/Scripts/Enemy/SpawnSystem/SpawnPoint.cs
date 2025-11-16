@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using UnityEditor.Searcher;
 using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour

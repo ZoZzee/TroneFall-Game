@@ -66,8 +66,7 @@ public class HealthManager : MonoBehaviour
             {
                 _bot.SwitchState(new DeadState());
                 _enemyManager.activeEnemy.Remove(this.gameObject);
-                _dayNightManager.StartDay();
-                _enemyManager.Disable(gameObject);
+                StartCoroutine(Dead());
             }
             else if (_itsAllies)
             {
@@ -109,6 +108,16 @@ public class HealthManager : MonoBehaviour
                 StopCoroutine(Regeneration());
             }
         }
+    }
+
+    private IEnumerator Dead()
+    {
+        yield return new WaitForSeconds(2f);
+
+        _dayNightManager.StartDay();
+        _enemyManager.Disable(gameObject);
+
+        StopCoroutine(Dead());
     }
 
     public void RefreshUI()
