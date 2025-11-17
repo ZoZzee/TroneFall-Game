@@ -54,11 +54,11 @@ MonoBehaviour:
   _playerMoveDistanceOnBuild: 2
   _playerMoveSpeed: 1
   isBuilt: 0
+  inBuild: 0
   _isMainBuilding: 0
   _nextLevel: {fileID: 3982020932274719565}
   costBuildings: 5
   goldManager: {fileID: 0}
-  _mainBuilding: {fileID: 0}
   _buildRol: {fileID: 3707075230347937975}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!33 &6808722647998613151
@@ -510,14 +510,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMoveDistanceOnBuild: 2
-  _playerMoveSpeed: 1
+  _playerMoveDistanceOnBuild: 5
+  _playerMoveSpeed: 0.1
   isBuilt: 0
+  inBuild: 0
   _isMainBuilding: 0
   _nextLevel: {fileID: 6057870097216335870}
   costBuildings: 9
   goldManager: {fileID: 0}
-  _mainBuilding: {fileID: 0}
   _buildRol: {fileID: 3707075230347937975}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!114 &2051487440239777824
@@ -1189,14 +1189,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMoveDistanceOnBuild: 2
-  _playerMoveSpeed: 1
+  _playerMoveDistanceOnBuild: 5
+  _playerMoveSpeed: 0.1
   isBuilt: 0
+  inBuild: 0
   _isMainBuilding: 0
   _nextLevel: {fileID: 1733694543698939483}
   costBuildings: 7
   goldManager: {fileID: 0}
-  _mainBuilding: {fileID: 0}
   _buildRol: {fileID: 3707075230347937975}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!114 &2282939174526549058
@@ -1907,14 +1907,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMoveDistanceOnBuild: 2
-  _playerMoveSpeed: 1
+  _playerMoveDistanceOnBuild: 5
+  _playerMoveSpeed: 0.1
   isBuilt: 0
+  inBuild: 0
   _isMainBuilding: 0
   _nextLevel: {fileID: 0}
   costBuildings: 0
   goldManager: {fileID: 0}
-  _mainBuilding: {fileID: 0}
   _buildRol: {fileID: 3707075230347937975}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!114 &368816912082481727
