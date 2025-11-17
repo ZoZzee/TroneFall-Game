@@ -10697,6 +10697,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4838722122410379584, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004105403878318121, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d3852ed25354269448d43db64ebc1a96, type: 3}
+    - target: {fileID: 5425755847635609386, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425755847635609386, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425755847635609386, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425755847635609386, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425755847635609386, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425755847635609386, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425755847635609386, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7974519249242434517, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -10704,6 +10740,10 @@ PrefabInstance:
     - target: {fileID: 7974519249242434517, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9223314075582111967, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

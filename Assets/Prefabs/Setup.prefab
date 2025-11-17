@@ -211,6 +211,7 @@ MonoBehaviour:
   speedWalking: 10
   speedRunning: 15
   p_gravity: -1
+  _culdown: 0
   _animatorController: {fileID: 5842871137699015419}
   _rayDot: {fileID: 5222286125796731312}
 --- !u!114 &8742031111349476285
@@ -1022,7 +1023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9251dc56c3e9d0943bf3ac1f3556800a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d3852ed25354269448d43db64ebc1a96, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
