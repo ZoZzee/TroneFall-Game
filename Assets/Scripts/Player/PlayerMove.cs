@@ -19,7 +19,7 @@ public class PlayerMove : MonoBehaviour
     private Vector3 _forvard;
     private Vector3 _right;
 
-    private bool _culdown = false;
+    [SerializeField]private bool _culdown = false;
 
     [Header("Components")]
     [SerializeField] private AnimatorController _animatorController;

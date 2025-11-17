@@ -15,6 +15,7 @@ public class BuildingPlan : MonoBehaviour
     private float _playerMoveSpeed;
 
     public bool isBuilt = false;
+    public bool inBuild = false;
     [SerializeField] private bool _isMainBuilding;
 
     [Header("References")]
@@ -63,12 +64,16 @@ public class BuildingPlan : MonoBehaviour
     {
         Vector3 targetPosition = (_playerMove.transform.position - transform.position).normalized;
         targetPosition *= _playerMoveDistanceOnBuild;
+        targetPosition.y = _playerMove.transform.position.y + 0.5f;
         targetPosition += transform.position;
         Vector3 startPosition = _playerMove.transform.position;
         while (_playerMove.transform != null && _playerMove.transform.position != targetPosition)
         {
-            _playerMove.transform.position = Vector3.MoveTowards(_playerMove.transform.position,new Vector3( targetPosition.x, startPosition.y + 0.5f, targetPosition.z), _playerMoveSpeed);
-            Debug.Log("STOP" + gameObject.name);
+            _playerMove.transform.position = Vector3.MoveTowards(_playerMove.transform.position, targetPosition , _playerMoveSpeed);
+            if (!inBuild)
+            {
+                StopAllCoroutines();
+            }
             yield return null;
         }
     }
@@ -76,8 +81,10 @@ public class BuildingPlan : MonoBehaviour
     {
         if(collision.collider.CompareTag("Player"))
         {
+            inBuild = true;
             _playerMove.StartCuldown();
             StartCoroutine(PlayerMoveOnBuild());
+            
         }
     }
     private void OnCollisionExit(Collision collision)
@@ -85,7 +92,7 @@ public class BuildingPlan : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             Debug.Log("Вийшов з колізії");
-            StopCoroutine(PlayerMoveOnBuild());
+            inBuild = false;
             _playerMove.StopCuldown();
         }
     }

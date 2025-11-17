@@ -44,7 +44,9 @@ public class PlayerController : MonoBehaviour
             {
                 Debug.Log("Натиснув спейс");
                 CheckDistanseToBilding();
+                //_roll.fillAmount
             }
+
             if (Input.GetKeyUp(KeyCode.Space))
             {
                 Debug.Log("Відпустив спейс");
@@ -54,18 +56,19 @@ public class PlayerController : MonoBehaviour
                 }
                 _obgectUI.SetActive(false);
             }
+
             if (Input.GetKey(KeyCode.Space))
             {
-                    if (_startBuildsng)
+                if (_startBuildsng)
+                {
+                    _buildingPlan._buildRol.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
+                    if (spaceHoldTime >= _constructionWaitingTime)
                     {
-                        _buildingPlan._buildRol.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
-                        if (spaceHoldTime >= _constructionWaitingTime)
-                        {
-                            Build();
-                            spaceHoldTime = 0;
-                            return;
-                        }
+                        Build();
+                        spaceHoldTime = 0;
+                        return;
                     }
+                }
                 else
                 {
                     _roll.fillAmount = (spaceHoldTime / (_timeToWaitForTheNight / 100)) / 100;
@@ -76,7 +79,7 @@ public class PlayerController : MonoBehaviour
                         _obgectUI.SetActive(false);
                     }
                 }
-                spaceHoldTime += Time.deltaTime* 60;
+                spaceHoldTime += Time.deltaTime * 60;
             }
             else
             {
@@ -105,7 +108,7 @@ public class PlayerController : MonoBehaviour
                 _buildingPlan = build.GetComponent<BuildingPlan>();
                 if (_closestBuild == null ||
                     Vector3.Distance(build.transform.position, transform.position) < Vector3.Distance(_closestBuild.transform.position, transform.position)
-                     || _buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
+                     && _buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
                 {
                     _closestBuild = build;
                 }

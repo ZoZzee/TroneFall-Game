@@ -512,9 +512,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMoveDistanceOnBuild: 4
+  _playerMoveDistanceOnBuild: 10
   _playerMoveSpeed: 0.1
   isBuilt: 0
+  inBuild: 0
   _isMainBuilding: 0
   _nextLevel: {fileID: 0}
   costBuildings: 1
@@ -1251,6 +1252,7 @@ MonoBehaviour:
   _playerMoveDistanceOnBuild: 0
   _playerMoveSpeed: 0
   isBuilt: 0
+  inBuild: 0
   _isMainBuilding: 0
   _nextLevel: {fileID: 4859391734799419784}
   costBuildings: 1
@@ -1445,9 +1447,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMoveDistanceOnBuild: 4
+  _playerMoveDistanceOnBuild: 10
   _playerMoveSpeed: 0.1
   isBuilt: 0
+  inBuild: 0
   _isMainBuilding: 0
   _nextLevel: {fileID: 5595583018289500658}
   costBuildings: 1
