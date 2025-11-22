@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -24,5 +25,9 @@ public class UIController : MonoBehaviour
     public void Exid()
     {
         Application.Quit();
+    }
+    public void Play(int index)
+    {
+        SceneManager.LoadScene(index);
     }
 }

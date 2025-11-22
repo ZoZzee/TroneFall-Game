@@ -10,6 +10,7 @@ public class SpawnPoint : MonoBehaviour
     [SerializeField] private GameObject _archer;
     [SerializeField] private GameObject _barbarian;
 
+    [HideInInspector] public bool wavefinich = false;
     private void Start()
     {
         enemyManager = EnemyManager.instance;
@@ -23,21 +24,29 @@ public class SpawnPoint : MonoBehaviour
     {
         for (int i = 0; i < spawnPointData.waves[currentWave].enemys.Length; i++)
         {
-
-            if(spawnPointData.waves[currentWave].enemys[i] == _archer)
+            for (int j = 0; j < spawnPointData.waves[currentWave].enemys[i].enemy.Length; j++)
             {
-                enemyManager.GetArchers(transform.position, Quaternion.identity);
-
-
+                if (spawnPointData.waves[currentWave].enemys[i].enemy[j] == _archer)
+                {
+                    enemyManager.GetArchers(RandomRange(), Quaternion.identity);
+                }
+                else if (spawnPointData.waves[currentWave].enemys[i].enemy[j] == _barbarian)
+                {
+                    enemyManager.GetBarbarian(RandomRange(), Quaternion.identity);
+                }
             }
-            else if(spawnPointData.waves[currentWave].enemys[i] == _barbarian)
-            {
-                enemyManager.GetBarbarian(transform.position, Quaternion.identity);
-            }
 
-                //Instantiate(spawnPointData.waves[currentWave].enemys[i], transform.position, Quaternion.identity, null);
+                
             yield return new WaitForSeconds(spawnPointData.waves[currentWave].cooldown);
         }
+        wavefinich = true;
+    }
+
+    private Vector3 RandomRange()
+    {
+        Vector3 vectorinia = transform.position;
+
+        return new Vector3(0, 0, 0);
     }
 }
 
@@ -50,6 +59,11 @@ public class SpawnPointData
 [Serializable]
 public class Wave
 {
-    public GameObject[] enemys;
+    public Pack[] enemys;
     public int cooldown;
+}
+[Serializable]
+public class Pack
+{
+    public GameObject[] enemy;
 }

@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] private int _currentWave;
-    [SerializeField] private SpawnPoint[] spawnPoints;
+    public int currentWave;
+    public SpawnPoint[] spawnPoints;
 
-    public EnemyFactory factory;
 
     public static SpawnManager instance;
 
@@ -16,7 +15,6 @@ public class SpawnManager : MonoBehaviour
 
     private void Start()
     {
-        //Enemy Archer = factory.CreateEnemy(EnemyType.EnemyTypes.Archer, new Vector3(10,0,3));
     }
 
     private void Update()
@@ -34,9 +32,9 @@ public class SpawnManager : MonoBehaviour
     {
         for (int i = 0; i < spawnPoints.Length; i++)
         {
-            spawnPoints[i].SpawnEnemys(_currentWave);
+            spawnPoints[i].SpawnEnemys(currentWave);
         }
 
-        _currentWave++;
+        currentWave++;
     }
 }

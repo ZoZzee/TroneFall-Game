@@ -14,7 +14,7 @@ public class DayNightManager : MonoBehaviour
     [SerializeField] private float _lightRotationSpeed;
 
     [Header("Referenses")]
-
+    [SerializeField] private GameObject _victoryUI;
     [SerializeField] private Transform _globalLight;
 
     private Vector3 _targetAngle;
@@ -23,14 +23,15 @@ public class DayNightManager : MonoBehaviour
     [Header("Aydio")]
     public AudioClip onDayStartSound;
     public AudioClip onNightStartSound;
-    [Header("Events")]
 
+    [Header("Events")]
     public UnityEvent onDayStart;
     public UnityEvent onNightStart;
 
     public static DayNightManager instance;
 
     private EnemyManager _enemyManager;
+    private SpawnManager _spawnManager;
     private void Awake()
     {
         instance = this;
@@ -39,43 +40,20 @@ public class DayNightManager : MonoBehaviour
     {
         dayStart = true;
         _enemyManager = EnemyManager.instance;
+        _spawnManager = SpawnManager.instance;
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if(Input.GetKeyDown(KeyCode.F5))
         {
             StartDay();
         }
     }
-
-    private void FixedUpdate()
-    {
-        //if (dayStart == true)
-        //{
-        //    if (Input.GetKey(KeyCode.Space))
-        //    {
-        //        spaceHoldTime++;
-
-        //        if (spaceHoldTime >= spaceHoldTimeMax)
-        //        {
-        //            StartNight();
-        //            spaceHoldTime = 0;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        if (spaceHoldTime > 0)
-        //        {
-        //            spaceHoldTime--;
-        //        }   
-        //    }
-        //}
-    }
-
+   
     public void StartDay()
     {
-        if (_enemyManager.activeEnemy.Count == 0)
+        if (_enemyManager.activeEnemy.Count == 0 && ChekWave())                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
         {
             Debug.Log("Day start");
             onDayStart.Invoke();
@@ -84,6 +62,11 @@ public class DayNightManager : MonoBehaviour
             dayStart = true;
             _targetAngle = _dayAngle;
             StartCoroutine(ChangeAngle());
+            if(_spawnManager.spawnPoints.Length == _spawnManager.currentWave)
+            {
+                Debug.Log("You won");
+                _victoryUI.SetActive(true);
+            }
         }
     }
 
@@ -111,5 +94,19 @@ public class DayNightManager : MonoBehaviour
             yield return null;
         }
     }
-
+    private bool ChekWave()
+    {
+        int amount = 0;
+        for (int i = 0; i < _spawnManager.spawnPoints.Length; i++)
+        {
+            if (_spawnManager.spawnPoints[i].wavefinich == true)
+            {
+                amount++;
+            }
+        }
+        if (amount == _spawnManager.spawnPoints.Length)
+            return true;
+        else
+            return false;
+    }
 }
