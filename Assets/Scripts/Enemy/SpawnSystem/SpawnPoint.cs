@@ -10,6 +10,8 @@ public class SpawnPoint : MonoBehaviour
     [SerializeField] private GameObject _archer;
     [SerializeField] private GameObject _barbarian;
 
+    [SerializeField] private Vector3 radius; 
+
     [HideInInspector] public bool wavefinich = false;
     private void Start()
     {
@@ -44,9 +46,9 @@ public class SpawnPoint : MonoBehaviour
 
     private Vector3 RandomRange()
     {
-        Vector3 vectorinia = transform.position;
+        Vector3 vectorinia = transform.position + radius;
 
-        return new Vector3(0, 0, 0);
+        return vectorinia;
     }
 }
 

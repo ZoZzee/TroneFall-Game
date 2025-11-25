@@ -24,7 +24,8 @@ public class BuildingPlan : MonoBehaviour
     
     public int costBuildings;
     [HideInInspector]public GoldManager goldManager;
-    public Image _buildRol;
+    public GameObject rollFilling;
+    public Image buildRol;
 
     [Header("Aydio")]
     public AudioClip itsBuild;
@@ -40,7 +41,8 @@ public class BuildingPlan : MonoBehaviour
         _buildingsManager = BuildingsManager.instance;
         goldManager = GoldManager.instance;
         _playerMove = PlayerMove.instance;
-        _buildRol.fillAmount = 0;
+        rollFilling.SetActive(false);
+        buildRol.fillAmount = 0;
         if(_isMainBuilding)
         {
             _buildingsManager.mainBuilding = this.gameObject;

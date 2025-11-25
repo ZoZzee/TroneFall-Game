@@ -211,6 +211,42 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 2
+--- !u!1 &1354672397809244000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3634287419772688960}
+  m_Layer: 7
+  m_Name: RollCrafting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3634287419772688960
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354672397809244000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5945594159574732971}
+  m_Father: {fileID: 5946695031027509094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 6}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2113638201240006754
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +392,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7474619695658768017}
-  - {fileID: 5945594159574732971}
+  - {fileID: 3634287419772688960}
   m_Father: {fileID: 6187135031253854782}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -746,16 +782,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7185590946718649675}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5946695031027509094}
+  m_Father: {fileID: 3634287419772688960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 6}
+  m_AnchoredPosition: {x: 0, y: 0.000020980835}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3839562483753486731
@@ -1316,7 +1352,8 @@ MonoBehaviour:
   _nextLevel: {fileID: 1424273309439624583}
   costBuildings: 7
   goldManager: {fileID: 0}
-  _buildRol: {fileID: 3764886347560422795}
+  rollFilling: {fileID: 1354672397809244000}
+  buildRol: {fileID: 3764886347560422795}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!114 &3722600707481430606
 MonoBehaviour:
@@ -1551,7 +1588,8 @@ MonoBehaviour:
   _nextLevel: {fileID: 0}
   costBuildings: 0
   goldManager: {fileID: 0}
-  _buildRol: {fileID: 3764886347560422795}
+  rollFilling: {fileID: 1354672397809244000}
+  buildRol: {fileID: 3764886347560422795}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!114 &1204535417060350013
 MonoBehaviour:
@@ -1770,7 +1808,8 @@ MonoBehaviour:
   _nextLevel: {fileID: 3243330781299955164}
   costBuildings: 3
   goldManager: {fileID: 0}
-  _buildRol: {fileID: 3764886347560422795}
+  rollFilling: {fileID: 1354672397809244000}
+  buildRol: {fileID: 3764886347560422795}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!54 &7193411768902485906
 Rigidbody:
@@ -1940,7 +1979,8 @@ MonoBehaviour:
   _nextLevel: {fileID: 1096725259674669952}
   costBuildings: 5
   goldManager: {fileID: 0}
-  _buildRol: {fileID: 3764886347560422795}
+  rollFilling: {fileID: 1354672397809244000}
+  buildRol: {fileID: 3764886347560422795}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!114 &8512937511497215849
 MonoBehaviour:

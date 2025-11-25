@@ -13,23 +13,20 @@ public class ChooseLevel : MonoBehaviour
 
     private bool inTrigger;
 
-    [SerializeField] private GameObject _levlPoint;
-
-    [SerializeField] private Level _levl;
     [SerializeField] private MeshRenderer _meshRenderer;
     [SerializeField] private Material _standart;
     [SerializeField] private Material _yellow;
 
     [SerializeField] private Level level;
-    public List<MeshRenderer> _levels;
+    public List<MeshRenderer> _levelStars;
 
     private void Start()
     {
         inTrigger = false;
-        _levl.numberOfLevl = indexLevel;
+        //_levl.numberOfLevl = indexLevel;
         for (int i = 0; i < level.completedTimes; i++)
         {
-            _levels[i].material = _yellow;
+            _levelStars[i].material = _yellow;
         }
     }
 
@@ -57,7 +54,6 @@ public class ChooseLevel : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inTrigger = true;
-            //_levlPoint.
             _meshRenderer.material = _yellow;
         }
     }

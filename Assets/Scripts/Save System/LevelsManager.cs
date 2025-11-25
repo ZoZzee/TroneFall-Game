@@ -2,19 +2,14 @@ using UnityEngine;
 
 public class LevelsManager : MonoBehaviour
 {
-    private Level[] levels;
+    [SerializeField] private Level[] level;
 
     private SaveSystem saveSystem;
 
     private void Start()
     {
-        levels = new Level[transform.childCount];
-        for (int i = 0; i < transform.childCount; i++)
-        {
-            levels[i] = transform.GetChild(i).GetComponent<Level>();
-        }
-
         saveSystem = SaveSystem.instance;
+
         saveSystem.OnSaveRequested += Save;
         saveSystem.OnLoadCompleted += Load;
     }
@@ -27,24 +22,25 @@ public class LevelsManager : MonoBehaviour
 
     public void Save()
     {
-        LevelsData newLevelsData = new LevelsData();
-        newLevelsData.numberLevel = new int[levels.Length];
-        newLevelsData.completed = new int[levels.Length];
-        for(int i = 0; i < levels.Length; i++ )
-        {
-            newLevelsData.numberLevel[i] = levels[i].numberOfLevl;
-            newLevelsData.completed[i] = levels[i].completedTimes;
-        }
+        LevelsData levels = new LevelsData();
 
-        saveSystem.levelsData = newLevelsData;
+        levels.levelsNumber = new int[level.Length];
+        levels.completedTimes = new int[level.Length];
+
+        for (int i = 0; i < level.Length; i++)
+        {
+            Debug.Log(level[i]);
+            levels.levelsNumber[i] = level[i].levelsNumber;
+            levels.completedTimes[i] = level[i].completedTimes;
+        }
+        saveSystem.levelsData = levels;
     }
     public void Load()
     {
-        LevelsData newLevelsData = saveSystem.levelsData;
-        for (int i = 0; i < levels.Length; i++)
+        for (int i = 0; i < level.Length ; i++)
         {
-            levels[i].numberOfLevl = newLevelsData.numberLevel[i] ;
-            levels[i].completedTimes = newLevelsData.completed[i] ;
+            level[i].completedTimes = saveSystem.levelsData.completedTimes[i];
+            level[i].levelsNumber = saveSystem.levelsData.levelsNumber[i];
         }
     }
 }

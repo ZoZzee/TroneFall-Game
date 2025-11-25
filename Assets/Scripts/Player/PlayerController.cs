@@ -42,17 +42,14 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("Натиснув спейс");
                 CheckDistanseToBilding();
-                //_roll.fillAmount
             }
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                Debug.Log("Відпустив спейс");
                 if(_closestBuild != null)
                 {
-                    _buildingPlan._buildRol.fillAmount = 0.001f;
+                    _buildingPlan.buildRol.fillAmount = 0.001f;
                 }
                 _obgectUI.SetActive(false);
             }
@@ -61,7 +58,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (_startBuildsng)
                 {
-                    _buildingPlan._buildRol.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
+                    _buildingPlan.buildRol.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
                     if (spaceHoldTime >= _constructionWaitingTime)
                     {
                         Build();
@@ -115,6 +112,7 @@ public class PlayerController : MonoBehaviour
             }
             _buildingPlan = _closestBuild.GetComponent<BuildingPlan>();
             _startBuildsng = true;
+            _buildingPlan.rollFilling.SetActive(true);
         }
     }
     private void Build()
@@ -125,7 +123,8 @@ public class PlayerController : MonoBehaviour
         }
         if (_buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
         {
-            _buildingPlan._buildRol.fillAmount = 0.001f;
+            _buildingPlan.buildRol.fillAmount = 0.001f;
+            _buildingPlan.rollFilling.SetActive(false);
             _buildingPlan.Build(true);   ////////
 
             _interactionTriger.buildings.Remove(_closestBuild);

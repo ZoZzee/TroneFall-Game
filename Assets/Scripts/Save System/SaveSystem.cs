@@ -8,7 +8,6 @@ public class SaveSystem : MonoBehaviour
 
 
     public event Action OnSaveRequested;
-
     public event Action OnLoadCompleted;
 
     public LevelsData levelsData;
@@ -18,32 +17,20 @@ public class SaveSystem : MonoBehaviour
         instance = this;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.F5))
-        {
-            SaveAll();
-            Debug.Log("Збережено");
-            Debug.Log(Application.persistentDataPath);
-        }
-        if (Input.GetKeyUp(KeyCode.F6))
-        {
-            LoadAll();
-
-            Debug.Log("Завантажено");
-        }
-    }
-
-    public void SaveAll()
+    public void SaveAll(string fileName)
     {
         OnSaveRequested?.Invoke();
 
-        Save("LevelsData", levelsData);
+        Save(fileName, levelsData);
+
+        Debug.Log("Збережено");
     }
-    public void LoadAll()
+    public void LoadAll(string fileName)
     {
-        levelsData = Load<LevelsData>("LevelsData");
+        levelsData = Load<LevelsData>(fileName);
         OnLoadCompleted?.Invoke();
+
+        Debug.Log("Завантажено");
     }
 
     public void Save<T>( string fileName, T data)
@@ -63,11 +50,25 @@ public class SaveSystem : MonoBehaviour
         }
         return default;
     }
+
+    public void LoadSerch(int numberOfLevel ,string fileName)
+    {
+        levelsData = Load<LevelsData>(fileName);
+        for(int i = 0; i< levelsData.levelsNumber.Length; i++)
+        {
+            if(numberOfLevel == levelsData.levelsNumber[i])
+            {
+                levelsData.completedTimes[i]++;
+                Debug.Log("Level = "+levelsData.levelsNumber[i] + "   CompletedTimes = " + levelsData.completedTimes[i]);
+                Save(fileName, levelsData);
+            }
+        }
+    }
 }
 
 [Serializable]
 public class LevelsData
 {
-    public int[] numberLevel;
-    public int[] completed;
+    public int [] levelsNumber;
+    public int [] completedTimes;
 }

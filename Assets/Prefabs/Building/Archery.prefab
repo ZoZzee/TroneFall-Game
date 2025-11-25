@@ -118,7 +118,8 @@ MonoBehaviour:
   _nextLevel: {fileID: 7346421671455717349}
   costBuildings: 5
   goldManager: {fileID: 0}
-  _buildRol: {fileID: 1975589885697054611}
+  rollFilling: {fileID: 4437087376035884403}
+  buildRol: {fileID: 1975589885697054611}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!33 &409155635211799392
 MeshFilter:
@@ -549,6 +550,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1373674249392795959}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4437087376035884403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4460038362279131776}
+  m_Layer: 7
+  m_Name: RollCrafting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4460038362279131776
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437087376035884403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1016981178787867786}
+  m_Father: {fileID: 4764560323578027418}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 6}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4932975390070768938
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +619,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3618773906907926801}
-  - {fileID: 1016981178787867786}
+  - {fileID: 4460038362279131776}
   m_Father: {fileID: 801736436450789979}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -833,16 +870,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6163055234020858637}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4764560323578027418}
+  m_Father: {fileID: 4460038362279131776}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 6}
+  m_AnchoredPosition: {x: 0, y: -0.0000104904175}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1843819120001682228
@@ -1054,7 +1091,8 @@ MonoBehaviour:
   _nextLevel: {fileID: 0}
   costBuildings: 0
   goldManager: {fileID: 0}
-  _buildRol: {fileID: 1975589885697054611}
+  rollFilling: {fileID: 4437087376035884403}
+  buildRol: {fileID: 1975589885697054611}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
 --- !u!114 &8315223171263719460
 MonoBehaviour:
