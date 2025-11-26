@@ -1598,15 +1598,15 @@ MonoBehaviour:
   _countLevel: 0
   _pointOnLevel: 030303
   _pointsActive:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7208053318073751023}
+  - {fileID: 7905551436944550545}
+  - {fileID: 264158296822494292}
+  - {fileID: 4764079885250942057}
+  - {fileID: 2693151898674439100}
+  - {fileID: 8470750803080564407}
+  - {fileID: 1315927036388078883}
+  - {fileID: 341630484435656132}
+  - {fileID: 1685105704688945376}
 --- !u!114 &3957565478240472668
 MonoBehaviour:
   m_ObjectHideFlags: 0
