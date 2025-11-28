@@ -62,7 +62,9 @@ public class DayNightManager : MonoBehaviour
    
     public void StartDay()
     {
-        if (_enemyManager.activeEnemy.Count == 0 && ChekWave())                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        if (_enemyManager.activeEnemy.Count == 0 
+            && ChekWave() 
+            && !dayStart)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
         {
             Debug.Log("Day start");
             onDayStart.Invoke();
@@ -71,7 +73,7 @@ public class DayNightManager : MonoBehaviour
             dayStart = true;
             _targetAngle = _dayAngle;
             StartCoroutine(ChangeAngle());
-            if(_spawnManager.spawnPoints.Length == _spawnManager.currentWave)
+            if (_spawnManager.spawnPoints[0].spawnPointData.waves.Length == _spawnManager.currentWave)
             {
                 Debug.Log("You won");
                 _victoryUI.SetActive(true);
@@ -82,9 +84,8 @@ public class DayNightManager : MonoBehaviour
 
     public void StartNight()
     {
-        if (_buildingsManager.mainBuilding != null)
+        if (_buildingsManager.mainBuilding != null && dayStart)
         {
-            onNightStart.Invoke();
 
             SoundsManager.instance.PlaySound(onNightStartSound, transform.position);
             dayStart = false;
@@ -92,6 +93,7 @@ public class DayNightManager : MonoBehaviour
             StartCoroutine(ChangeAngle());
 
             SpawnManager.instance.Spawn();
+            onNightStart.Invoke();
         }
     }
 

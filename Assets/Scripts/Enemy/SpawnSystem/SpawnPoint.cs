@@ -24,6 +24,7 @@ public class SpawnPoint : MonoBehaviour
 
     private IEnumerator SpawnTimer(int currentWave)
     {
+        wavefinich = false ;
         for (int i = 0; i < spawnPointData.waves[currentWave].enemys.Length; i++)
         {
             for (int j = 0; j < spawnPointData.waves[currentWave].enemys[i].enemy.Length; j++)
@@ -43,6 +44,8 @@ public class SpawnPoint : MonoBehaviour
         }
         wavefinich = true;
     }
+
+    
 
     private Vector3 RandomRange()
     {

@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMoveDistanceOnBuild: 10
+  _playerMoveDistanceOnBuild: 5
   _playerMoveSpeed: 0.1
   isBuilt: 0
   inBuild: 0
@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMoveDistanceOnBuild: 10
+  _playerMoveDistanceOnBuild: 50
   _playerMoveSpeed: 0.1
   isBuilt: 0
   inBuild: 0
@@ -1553,7 +1553,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0

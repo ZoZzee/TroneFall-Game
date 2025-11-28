@@ -26,7 +26,7 @@ public class SoundsManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void PlaySound(AudioClip clip, Vector3 position)

@@ -13,10 +13,6 @@ public class SpawnManager : MonoBehaviour
         instance = this;
     }
 
-    private void Start()
-    {
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
