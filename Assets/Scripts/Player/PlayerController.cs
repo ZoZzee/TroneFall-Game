@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
     private DayNightManager _dNManager;
     private GameObject _closestBuild;
     private BuildingPlan _buildingPlan;
+    private ChooseLevel _chooseLevel;
     [SerializeField] private InteractionTrigger _interactionTriger;
+    private bool _isBuilding = false;
 
     [Header("Roll_UI")]
     [SerializeField] private GameObject _obgectUI;
@@ -47,36 +49,59 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                if(_closestBuild != null)
+                if (_closestBuild != null)
                 {
                     _buildingPlan.buildRol.fillAmount = 0.001f;
                 }
+                else
+                {
+                    if(_chooseLevel)
+                    {
+                        _chooseLevel._obgectUI.SetActive(false);
+                    }
+                }
+                _isBuilding = false;
                 _obgectUI.SetActive(false);
             }
 
             if (Input.GetKey(KeyCode.Space))
             {
-                if (_startBuildsng)
+                if (_chooseLevel)
                 {
-                    _buildingPlan.buildRol.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
+                    _chooseLevel._roll.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
                     if (spaceHoldTime >= _constructionWaitingTime)
                     {
-                        Build();
+                        loadNewLevel();
                         spaceHoldTime = 0;
                         return;
                     }
                 }
                 else
                 {
-                    _roll.fillAmount = (spaceHoldTime / (_timeToWaitForTheNight / 100)) / 100;
-                    if (!_startBuildsng && spaceHoldTime >= _timeToWaitForTheNight)
+                    if (_startBuildsng && !_isBuilding)
                     {
-                        _dNManager.StartNight();
-                        spaceHoldTime = 0;
-                        _obgectUI.SetActive(false);
+                        _buildingPlan.buildRol.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
+                        if (spaceHoldTime >= _constructionWaitingTime)
+                        {
+                            _isBuilding = true;
+                            Build();
+                            spaceHoldTime = 0;
+                            return;
+                        }
+                    }
+                    else
+                    {
+                        _roll.fillAmount = (spaceHoldTime / (_timeToWaitForTheNight / 100)) / 100;
+                        if (!_startBuildsng && spaceHoldTime >= _timeToWaitForTheNight)
+                        {
+                            _dNManager.StartNight();
+                            spaceHoldTime = 0;
+                            _obgectUI.SetActive(false);
+                        }
                     }
                 }
                 spaceHoldTime += Time.deltaTime * 60;
+                
             }
             else
             {
@@ -99,20 +124,30 @@ public class PlayerController : MonoBehaviour
         {
             _closestBuild = null;
 
-            for (int i = 0; i < _interactionTriger.buildings.Count; i++)
+            if (_interactionTriger.buildings[0].GetComponent<ChooseLevel>())
             {
-                GameObject build = _interactionTriger.buildings[i];
-                _buildingPlan = build.GetComponent<BuildingPlan>();
-                if (_closestBuild == null ||
-                    Vector3.Distance(build.transform.position, transform.position) < Vector3.Distance(_closestBuild.transform.position, transform.position)
-                     && _buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
-                {
-                    _closestBuild = build;
-                }
+                _chooseLevel = _interactionTriger.buildings[0].GetComponent<ChooseLevel>();
+                _chooseLevel._obgectUI.SetActive(true);
             }
-            _buildingPlan = _closestBuild.GetComponent<BuildingPlan>();
-            _startBuildsng = true;
-            _buildingPlan.rollFilling.SetActive(true);
+            else
+            {
+                for (int i = 0; i < _interactionTriger.buildings.Count; i++)
+                {
+                    GameObject build = _interactionTriger.buildings[i];
+                    _buildingPlan = build.GetComponent<BuildingPlan>();
+                    if (_closestBuild == null ||
+                        Vector3.Distance(build.transform.position, transform.position) < Vector3.Distance(_closestBuild.transform.position, transform.position)
+                         && _buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
+                    {
+                        _closestBuild = build;
+                    }
+                }
+
+                _buildingPlan = _closestBuild.GetComponent<BuildingPlan>();
+                _startBuildsng = true;
+                _buildingPlan.rollFilling.SetActive(true);
+            }
+
         }
     }
     private void Build()
@@ -121,6 +156,7 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+        
         if (_buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
         {
             _buildingPlan.buildRol.fillAmount = 0.001f;
@@ -132,5 +168,15 @@ public class PlayerController : MonoBehaviour
             _closestBuild = null;
         }
 
+    }
+    private void loadNewLevel()
+    {
+        if (_chooseLevel != null)
+        {
+            Debug.Log("Vse dobre");
+            _chooseLevel.LoadScene(_chooseLevel.indexLevel);
+            _chooseLevel = null;
+
+        }
     }
 }

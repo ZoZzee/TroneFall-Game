@@ -3,6 +3,7 @@ using System.Collections;
 using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class DayNightManager : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class DayNightManager : MonoBehaviour
 
     private EnemyManager _enemyManager;
     private SpawnManager _spawnManager;
+    private BuildingsManager _buildingsManager;
+    private SaveSystem _saveSystem;
     private void Awake()
     {
         instance = this;
@@ -41,13 +44,19 @@ public class DayNightManager : MonoBehaviour
         dayStart = true;
         _enemyManager = EnemyManager.instance;
         _spawnManager = SpawnManager.instance;
+        _buildingsManager = BuildingsManager.instance;
+        _saveSystem = SaveSystem.instance;
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F5))
+        if(Input.GetKeyDown(KeyCode.F1))
         {
             StartDay();
+        }
+        if(Input.GetKeyDown(KeyCode.F2))
+        {
+            StartNight();
         }
     }
    
@@ -66,20 +75,24 @@ public class DayNightManager : MonoBehaviour
             {
                 Debug.Log("You won");
                 _victoryUI.SetActive(true);
+                _saveSystem.LevelComplete(SceneManager.GetActiveScene().buildIndex, "Levels");
             }
         }
     }
 
     public void StartNight()
     {
-        onNightStart.Invoke();
+        if (_buildingsManager.mainBuilding != null)
+        {
+            onNightStart.Invoke();
 
-        SoundsManager.instance.PlaySound(onNightStartSound, transform.position);
-        dayStart = false;
-        _targetAngle = _nightAngle;
-        StartCoroutine(ChangeAngle());
+            SoundsManager.instance.PlaySound(onNightStartSound, transform.position);
+            dayStart = false;
+            _targetAngle = _nightAngle;
+            StartCoroutine(ChangeAngle());
 
-        SpawnManager.instance.Spawn();
+            SpawnManager.instance.Spawn();
+        }
     }
 
     private IEnumerator ChangeAngle()

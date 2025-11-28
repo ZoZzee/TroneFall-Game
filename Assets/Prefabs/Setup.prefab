@@ -5388,6 +5388,7 @@ GameObject:
   - component: {fileID: 4513282002840949670}
   - component: {fileID: 333624993296938472}
   - component: {fileID: 6493188800340371466}
+  - component: {fileID: 799347789690375324}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5491,6 +5492,7 @@ MonoBehaviour:
   _dayAngle: {x: 70, y: -30, z: 0}
   _nightAngle: {x: -90, y: -30, z: 0}
   _lightRotationSpeed: 0.5
+  _victoryUI: {fileID: 2813234212490760364}
   _globalLight: {fileID: 7754383661891135882}
   dayStart: 0
   onDayStartSound: {fileID: 8300000, guid: 150314dbb8c511e4683f2e567d954ad6, type: 3}
@@ -5501,6 +5503,21 @@ MonoBehaviour:
   onNightStart:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &799347789690375324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2191354592117003157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a90d782ccad420489fcd4e36c0727ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelsData:
+    levelsNumber: 
+    completedTimes: 
 --- !u!1 &2254712592002445941
 GameObject:
   m_ObjectHideFlags: 0

@@ -50,8 +50,9 @@ public class SaveSystem : MonoBehaviour
         }
         return default;
     }
+    //________________________________________________________________________________
 
-    public void LoadSerch(int numberOfLevel ,string fileName)
+    public void LevelComplete(int numberOfLevel ,string fileName)
     {
         levelsData = Load<LevelsData>(fileName);
         for(int i = 0; i< levelsData.levelsNumber.Length; i++)
