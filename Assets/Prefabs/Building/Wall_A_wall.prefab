@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4145142668085687983}
   - component: {fileID: 7450848889858105886}
   - component: {fileID: 5051471906086965773}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label_HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 3469222798426334330}
   - component: {fileID: 8918230701831935673}
   - component: {fileID: 1598482795676009897}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 2172083587438665456}
   - component: {fileID: 656568628622027818}
   - component: {fileID: 6874395798557215948}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label_BossName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,9 +360,11 @@ GameObject:
   - component: {fileID: 3645978314173871773}
   - component: {fileID: 3742152428742783674}
   - component: {fileID: 5154341344085692164}
-  - component: {fileID: 6012823834263651127}
   - component: {fileID: 4261012893013348901}
-  m_Layer: 0
+  - component: {fileID: 3866287039572532245}
+  - component: {fileID: 2680547282346617637}
+  - component: {fileID: 8475466864328620319}
+  m_Layer: 10
   m_Name: Wall_A_wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -483,22 +485,6 @@ MonoBehaviour:
   _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}
---- !u!208 &6012823834263651127
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1981626981757904985}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 1.05, y: 3.05, z: 2.35}
-  m_MoveThreshold: 0.1
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: -0.036000002, y: 0.021000002, z: 2.331}
-  m_TimeToStationary: 0.5
 --- !u!95 &4261012893013348901
 Animator:
   serializedVersion: 7
@@ -521,6 +507,59 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3866287039572532245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981626981757904985}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifier
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 1
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 0
+  m_AffectedAgents: 00000000
+--- !u!208 &2680547282346617637
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981626981757904985}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.0040001, y: 3.0110002, z: 2.331}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.036000002, y: 0.021000002, z: 2.331}
+  m_TimeToStationary: 0.5
+--- !u!114 &8475466864328620319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981626981757904985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshModifierVolume
+  m_SerializedVersion: 0
+  m_Size: {x: 4, y: 3, z: 4}
+  m_Center: {x: 0, y: 1, z: 0}
+  m_Area: 1
+  m_AffectedAgents: 00000000
 --- !u!1 &3891161149097801980
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6144697780819063230}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4831850450005721447}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8929936109930091126}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SliderBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -831,7 +870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5804223909438187644}
   - component: {fileID: 6738529536615935765}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -923,7 +962,7 @@ GameObject:
   - component: {fileID: 812856658031254756}
   - component: {fileID: 3385558444788152179}
   - component: {fileID: 7412683732324462615}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -998,7 +1037,7 @@ GameObject:
   - component: {fileID: 2266125084781129982}
   - component: {fileID: 6710115515010753440}
   - component: {fileID: 5931531906383527587}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

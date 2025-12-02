@@ -12,10 +12,16 @@ public class Bot : MonoBehaviour
     public bool _itsEnemy;
     public bool _itsAllies;
 
-    [Header("Settings")]
-    public List<GameObject> target;
-    public List<HealthManager> targetHealth;
+    [Header("Targets")]
+    public List<GameObject> builds;
+    public List<GameObject> wals;
+    public List<HealthManager> buildsHealth;
+    public List<HealthManager> walsHealth;
 
+    public GameObject _targetPoint;
+
+
+    [Header("Settings")]
     public float _speed;                                //+
     public float attackCooldown;                        //+
     public int _damage;                                 //+
@@ -31,8 +37,8 @@ public class Bot : MonoBehaviour
 
 
     [Header("Enemy components")]
-    [HideInInspector] public BuildingsManager mainBuilding;
-    [HideInInspector] public GameObject mainBuildingTransform;
+     public BuildingsManager mainBuilding;
+     public GameObject mainBuildingTransform;
     public EnemyManager _enemyManager;
     public EnemyTrigger p_enemyTrigger;
 
@@ -43,7 +49,6 @@ public class Bot : MonoBehaviour
 
     [Header("Components")]
     public AnimatorController _animatorController;
-    public GameObject _targetPoint;
     public Rigidbody p_rigidbody;
 
 
@@ -91,8 +96,10 @@ public class Bot : MonoBehaviour
                 _alliesManager.activeAllies.Remove(this.gameObject);
             }
         }
-        target.Clear();
-        targetHealth.Clear();
+        builds.Clear();
+        wals.Clear();
+        buildsHealth.Clear();
+        walsHealth.Clear();
     }
 
     private void FixedUpdate()
@@ -110,21 +117,15 @@ public class Bot : MonoBehaviour
 
     public void AddTarget()
     {
-        if (target.Count == 0)
+
+        if (_itsEnemy)
         {
-            if (_itsEnemy)
-            {
-                mainBuildingTransform = mainBuilding.mainBuilding.gameObject;
-                    targetHealth.Add(mainBuilding.mainBuilding.GetComponent<HealthManager>());
-                    target.Add(mainBuildingTransform);
-            }
-            else if (_itsAllies)
-            {
-                target.Add(_targetPoint);
-            }
-            SwitchState(new PatrolState());
-            spawnPoint = transform.position;
+            mainBuildingTransform = mainBuilding.mainBuilding.gameObject;
+            buildsHealth.Add(mainBuilding.mainBuilding.GetComponent<HealthManager>());
+            builds.Add(mainBuildingTransform);
         }
+        SwitchState(new PatrolState());
+        spawnPoint = transform.position;
     }
 
     public void SetDestination(Transform target)

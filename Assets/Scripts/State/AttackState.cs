@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class AttackState : IEnemyState
 {
-    private float timer = 0f;
+
+    [Header("Timer ")]
+    private float _time = 0;
+    private float halfMeter = 0.5f;
+    private int deltaTime = 50;
 
     private Bot _bot;
     public void Enter(Bot bot)
@@ -11,13 +14,11 @@ public class AttackState : IEnemyState
         Debug.Log("Стан атаки");
 
         _bot = bot;
-
-        timer = _bot.attackCooldown / 2f;
-
         _bot._agent.isStopped = true;
         _bot._animatorController.run = false;
         _bot._agent.ResetPath();
         _bot._agent.SetDestination(_bot.transform.position);
+
     }
 
     public void FixedUpdate()
@@ -26,60 +27,86 @@ public class AttackState : IEnemyState
         {
             _bot.SwitchState(new DeadState());
         }
-
-        if (_bot.target.Count >= 1 && _bot.target[0] != _bot._targetPoint)
+        if(_bot.builds.Count == 0
+            ||((_bot.wals.Count <= 0 && _bot.builds.Count > 0 && Vector3.Distance(_bot.transform.position, _bot.builds[0].transform.position) > _bot.distanseToAttack + halfMeter)
+            ||(_bot.wals.Count > 0 && Vector3.Distance(_bot.transform.position, _bot.wals[0].transform.position) > _bot.distanseToAttack + halfMeter)))
         {
-            _bot.transform.LookAt(_bot.target[0].transform);
+            NewPatrolState();
+        }
+        if(_bot.wals.Count > 0 && Vector3.Distance(_bot.transform.position, _bot.wals[0].transform.position) > _bot.distanseToAttack + halfMeter)
+        {
 
-            if (_bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) <= _bot.distanseToAttack)
+        }
+        if(_bot.attackCooldown <= _time)
+        {
+            _bot.transform.LookAt(_bot.builds[0].transform);
+            
+            if (_bot._itsAllies)
             {
-                if (timer >= _bot.attackCooldown)
+                if (_bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.builds[0].transform.position) <= _bot.distanseToAttack + halfMeter)
                 {
-                    SoundsManager.instance.audioDistance = _bot.audioDistance;
-                    SoundsManager.instance.PlaySound(_bot.attack, _bot.transform.position);
-                    _bot._animatorController.attack = true;
-                    _bot.targetHealth[0].MinusHp(_bot._damage);
-                    timer = 0f;
-                    if (_bot.targetHealth[0]._health <= 0)
-                    {
-                        if (_bot._itsEnemy)
-                        {
-                            _bot._enemyManager.ClineDeadTarget(_bot.target[0], _bot.targetHealth[0]);
-                            chekDist();
-                        }
-                        else if (_bot._itsAllies)
-                        {
-                            _bot._alliesManager.ClineDeadTarget(_bot.target[0], _bot.targetHealth[0]);
-                            chekDist();
-                        }
-                    }
-                }
-                else
-                {
-                    _bot._animatorController.attack = false;
-                    timer++;
+                    NewAttack(_bot.builds[0], _bot.buildsHealth[0]);
                 }
             }
-            else
+            else if (_bot._itsEnemy)
             {
-                _bot.SwitchState(new PatrolState());
+                if (_bot.wals.Count > 0 && Vector3.Distance(_bot.transform.position, _bot.wals[0].transform.position) <= _bot.distanseToAttack + halfMeter)
+                {
+                    Debug.Log("2");
+                    NewAttack(_bot.wals[0], _bot.walsHealth[0]);
+                }
+                else if (_bot.builds.Count > 0 || Vector3.Distance(_bot.transform.position, _bot.builds[0].transform.position) <= _bot.distanseToAttack + halfMeter)
+                {
+                    Debug.Log("Build triger");
+                    NewAttack(_bot.builds[0], _bot.buildsHealth[0]);
+                }
             }
         }
         else
         {
-            _bot.SwitchState(new PatrolState());
+            _bot._animatorController.attack = false;
+            _time+= Time.deltaTime * deltaTime;
         }
+        
     }
+
     public void Exit()
     {
-        Debug.Log("Exid()");
+        Debug.Log("Вийшов з атаки");
         _bot.canAttack = false;
         _bot._agent.isStopped = false;
     }
 
+    private void NewPatrolState()
+    {
+        _bot.SwitchState(new PatrolState());
+    }
+
+    private void NewAttack(GameObject target, HealthManager targetHealth)
+    {
+        SoundsManager.instance.audioDistance = _bot.audioDistance;
+        SoundsManager.instance.PlaySound(_bot.attack, _bot.transform.position);
+        _bot._animatorController.attack = true;
+        _time = 0;
+        targetHealth.MinusHp(_bot._damage);
+        if (targetHealth._health <= 0)
+        {
+            if (_bot._itsEnemy)
+            {
+                _bot._enemyManager.ClineDeadTarget(target, targetHealth);
+                chekDist();
+            }
+            else if (_bot._itsAllies)
+            {
+                _bot._alliesManager.ClineDeadTarget(target, targetHealth);
+                chekDist();
+            }
+        }
+    }
+   
     private void chekDist()
     {
-        if(Vector3.Distance(_bot.transform.position, _bot.target[0].transform.position) > _bot.distanseToAttack)
+        if (Vector3.Distance(_bot.transform.position, _bot.builds[0].transform.position) > _bot.distanseToAttack)
         {
             _bot.canAttack = false;
         }

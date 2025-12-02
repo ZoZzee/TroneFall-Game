@@ -34,22 +34,20 @@ public class EnemyTrigger : MonoBehaviour
             {
                 case TriggerPriority.priority0:
                     _bot.canAttack = true;
+                    if (other.CompareTag("Wall"))
+                    {
+                        _bot.wals.Add(other.gameObject);
+                        _bot.walsHealth.Add(other.GetComponent<HealthManager>());
+                    }
                     break;
                 case TriggerPriority.priority1:
                     if (other.CompareTag("Player") ||
-                        other.CompareTag("PlayerAllies"))
+                        other.CompareTag("PlayerAllies") ||
+                        other.CompareTag("Buldings"))
                     {
-                        _bot.target.Insert(_priority, other.gameObject);
-                        _bot.targetHealth.Insert(_priority, other.GetComponent<HealthManager>());
+                        _bot.builds.Insert(_priority, other.gameObject);
+                        _bot.buildsHealth.Insert(_priority, other.GetComponent<HealthManager>());
                         _priority++;
-                        _notPriority++;
-                    }
-                    if (other.CompareTag("Buldings") ||
-                        other.CompareTag("Wall"))
-                    {
-                        _bot.target.Insert(_notPriority, other.gameObject);
-                        _bot.targetHealth.Insert(_notPriority, other.GetComponent<HealthManager>());
-                        _notPriority++;
                     }
                     break;
             }
@@ -59,40 +57,41 @@ public class EnemyTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("MainBild"))
-        {
-            switch (currentTriggerPriority)
-            {
-                case TriggerPriority.priority0:
-                    _bot.canAttack = false;
-                    break;
-            }
-        }
         if (other.CompareTag("Player") ||
             other.CompareTag("PlayerAllies") ||
             other.CompareTag("Buldings") ||
-            other.CompareTag("Wall"))
+            other.CompareTag("Wall") ||
+            other.CompareTag("MainBild"))
         {
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
                     _bot.canAttack = false;
+                    if (other.CompareTag("Wall"))
+                    {
+                        _bot.wals.Remove(other.gameObject);
+                        _bot.walsHealth.Remove(other.GetComponent<HealthManager>());
+                    }
                     break;
                 case TriggerPriority.priority1:
-                    _bot.target.Remove(other.gameObject);
-                    _bot.targetHealth.Remove(other.GetComponent<HealthManager>());
-                    _notPriority--;
-                    Debug.Log("видалдив Target з Enemy");
+                    if (other.CompareTag("Player") ||
+                        other.CompareTag("PlayerAllies") ||
+                        other.CompareTag("Buldings"))
+                    {
+                        switch (currentTriggerPriority)
+                        {
+                            case TriggerPriority.priority0:
+                                _bot.canAttack = false;
+                                break;
+                            case TriggerPriority.priority1:
+                                _bot.builds.Remove(other.gameObject);
+                                _bot.buildsHealth.Remove(other.GetComponent<HealthManager>());
+                                _priority--;
+                                break;
+                        }
+                    }
                     break;
             }
         }
-        if (other.CompareTag("Player") ||
-            other.CompareTag("PlayerAllies"))
-        {
-            _priority--;
-        }
-
-
     }
-
 }

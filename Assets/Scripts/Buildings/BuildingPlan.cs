@@ -34,6 +34,7 @@ public class BuildingPlan : MonoBehaviour
     [Header("Components")]
      private PlayerMove _playerMove;
     private BuildingsManager _buildingsManager;
+    //[SerializeField] private NavMeshSurface _navMeshSurface;
 
     private void Start()
     {
@@ -58,6 +59,7 @@ public class BuildingPlan : MonoBehaviour
             _nextLevel.SetActive(true);
             SoundsManager.instance.PlayMusic(itsBuild, this.transform.position);
             
+
             this.gameObject.SetActive(false);
         }
     }

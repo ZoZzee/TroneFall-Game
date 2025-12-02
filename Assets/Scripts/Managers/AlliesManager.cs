@@ -129,8 +129,8 @@ public class AlliesManager : MonoBehaviour
         for (int i = 0;i < activeAllies.Count; i ++)
         {
             Bot allies = activeAllies[i].GetComponent<Bot>();
-                allies.target.Remove(_target);
-                allies.targetHealth.Remove(_hpTarget);
+                allies.builds.Remove(_target);
+                allies.buildsHealth.Remove(_hpTarget);
             allies.p_alliesTrigger._positionOnList--;
         }
         for (int i = 0; i < bildingAllies.Count; i++)

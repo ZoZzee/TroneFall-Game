@@ -24,9 +24,8 @@ public class AlliesTrigger : MonoBehaviour
                     break;
                 case TriggerPriority.priority1:
 
-                    _bot.targetHealth.Add(other.GetComponent<HealthManager>());
-                    _bot.target.Insert(_positionOnList,other.gameObject);
-                    _positionOnList++;
+                    _bot.buildsHealth.Add(other.GetComponent<HealthManager>());
+                    _bot.builds.Add(other.gameObject);
                     break;
             }
         }
@@ -41,9 +40,8 @@ public class AlliesTrigger : MonoBehaviour
                    _bot.canAttack = false;
                     break;
                 case TriggerPriority.priority1:
-                    _bot.targetHealth.Remove(other.GetComponent<HealthManager>());
-                    _bot.target.Remove(other.gameObject);
-                    _positionOnList--;
+                    _bot.buildsHealth.Remove(other.GetComponent<HealthManager>());
+                    _bot.builds.Remove(other.gameObject);
                     break;
             }
             

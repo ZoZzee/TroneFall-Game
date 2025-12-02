@@ -19,7 +19,7 @@ public class InteractionTrigger : MonoBehaviour
 
             
         }
-        if(other.CompareTag("Level"))
+        if (other.CompareTag("Level"))
         {
             buildings.Add(other.gameObject);
         }
@@ -27,8 +27,8 @@ public class InteractionTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Building")||
-            other.CompareTag("Construction")||
-            other.CompareTag("Level"))
+            other.CompareTag("Construction")
+            ||other.CompareTag("Level"))
         {
             buildings.Remove(other.gameObject);
         }
