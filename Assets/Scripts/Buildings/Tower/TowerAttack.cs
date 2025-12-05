@@ -42,20 +42,11 @@ public class TowerAttack : MonoBehaviour
 
     private void Attack()
     {
-        if (_buildingPlan != null)
-        { }
-        //targetHealth[0].MinusHp(_damage[_buildingPlan._levelEnhancement]);
-        else
+        targetHealth[0].MinusHp(_damage[0]);
+        Debug.Log("HP = " + targetHealth[0]._health);
+        if (targetHealth[0]._health <= 0)
         {
-
-            targetHealth[0].MinusHp(_damage[0]);
-            Debug.Log("HP = " + targetHealth[0]._health);
-            if (targetHealth[0]._health <= 0)
-            {
-                _alliesManager.ClineDeadTarget(target[0], targetHealth[0]);
-            }
+            _alliesManager.ClineDeadTarget(target[0], targetHealth[0]);
         }
-        
-        
     }
 }

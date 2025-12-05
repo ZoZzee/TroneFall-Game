@@ -1,6 +1,3 @@
-using TMPro;
-using Unity.AI.Navigation.Samples;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -135,7 +132,7 @@ public class PlayerController : MonoBehaviour
                 {
                     GameObject build = _interactionTriger.buildings[i];
                     _buildingPlan = build.GetComponent<BuildingPlan>();
-                    if (_closestBuild == null ||
+                    if (_closestBuild == null && _buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings) ||
                         Vector3.Distance(build.transform.position, transform.position) < Vector3.Distance(_closestBuild.transform.position, transform.position)
                          && _buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
                     {

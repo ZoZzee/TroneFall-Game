@@ -6,7 +6,14 @@ public class UIController : MonoBehaviour
     [Header("Referenses")]
     [SerializeField]private GameObject _pauseUI;
     [SerializeField]private GameObject _gameUI;
+    [SerializeField]private GameObject _gameOverUI;
     private bool _paused = false;
+
+    public static UIController instance;
+    private void Awake()
+    {
+        instance = this;
+    }
 
     void Update()
     {
@@ -30,4 +37,11 @@ public class UIController : MonoBehaviour
     {
         SceneManager.LoadScene(index);
     }
+
+    public void gameOver()
+    {
+
+        _gameOverUI.SetActive(!_gameOverUI);
+    }
+
 }

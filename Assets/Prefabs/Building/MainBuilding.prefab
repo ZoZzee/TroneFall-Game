@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2018537e991b9419627a3104a5dfd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerMoveDistanceOnBuild: 10
+  _playerMoveDistanceOnBuild: 20
   _playerMoveSpeed: 0.1
   isBuilt: 0
   inBuild: 0
@@ -1364,7 +1364,8 @@ MonoBehaviour:
   _healthBarSlider: {fileID: 2665569542685086945}
   _healthBarUI: {fileID: 7217541604535471347}
   _isEnemy: 0
-  _isBuildings: 1
+  _isBuildings: 0
+  _isMainBuilding: 1
   _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}

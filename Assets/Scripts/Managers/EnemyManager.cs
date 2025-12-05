@@ -89,23 +89,22 @@ public class EnemyManager : MonoBehaviour
 
     public void ClineDeadTarget(GameObject _target, HealthManager _hpTarget)
     {
-        for (int i = 0; i <= activeEnemy.Count; i++)
+        for (int i = 0; i < activeEnemy.Count; i++)
         {
             Bot enemy = activeEnemy[i].GetComponent<Bot>();
-            enemy.wals.Remove(_target);
-            enemy.walsHealth.Remove(_hpTarget);
-            enemy.builds.Remove(_target);
-            enemy.buildsHealth.Remove(_hpTarget);
-            enemy.canAttack = false;
-            if (enemy.CompareTag("Player") ||
-                enemy.CompareTag("PlayerAllies")||
-                enemy.CompareTag("Buldings"))
+            if (enemy.mainBuildingTransform == _target)
             {
-
-                enemy.p_enemyTrigger._priority--;
+                enemy.SwitchState(new VictoryState());
             }
-            ;
-            
+            else
+            {
+                enemy.wals.Remove(_target);
+                enemy.walsHealth.Remove(_hpTarget);
+                enemy.builds.Remove(_target);
+                enemy.buildsHealth.Remove(_hpTarget);
+            }
+            enemy.canAttack = false;
+
         }
     }
 

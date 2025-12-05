@@ -10,9 +10,6 @@ public class EnemyTrigger : MonoBehaviour
 
     [SerializeField] private Bot _bot;
 
-    public byte _priority = 0;
-    public byte _notPriority = 0;
-
     public TriggerPriority currentTriggerPriority;
 
 
@@ -45,9 +42,8 @@ public class EnemyTrigger : MonoBehaviour
                         other.CompareTag("PlayerAllies") ||
                         other.CompareTag("Buldings"))
                     {
-                        _bot.builds.Insert(_priority, other.gameObject);
-                        _bot.buildsHealth.Insert(_priority, other.GetComponent<HealthManager>());
-                        _priority++;
+                        _bot.builds.Add(other.gameObject);
+                        _bot.buildsHealth.Add(other.GetComponent<HealthManager>());
                     }
                     break;
             }
@@ -78,17 +74,8 @@ public class EnemyTrigger : MonoBehaviour
                         other.CompareTag("PlayerAllies") ||
                         other.CompareTag("Buldings"))
                     {
-                        switch (currentTriggerPriority)
-                        {
-                            case TriggerPriority.priority0:
-                                _bot.canAttack = false;
-                                break;
-                            case TriggerPriority.priority1:
-                                _bot.builds.Remove(other.gameObject);
-                                _bot.buildsHealth.Remove(other.GetComponent<HealthManager>());
-                                _priority--;
-                                break;
-                        }
+                        _bot.builds.Remove(other.gameObject);
+                        _bot.buildsHealth.Remove(other.GetComponent<HealthManager>());
                     }
                     break;
             }

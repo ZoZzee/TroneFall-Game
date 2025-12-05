@@ -1,24 +1,31 @@
-using System;
 using System.Collections;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
 {
     [Header("Parameters")]
+
     [SerializeField] private float _maxHealth;
-    //[HideInInspector]
     public float _health;
+
     [Header("UI")]
     [SerializeField] private Slider _healthBarSlider;
     [SerializeField] private GameObject _healthBarUI;
+
     [Header("Its Bool")]
+
     [SerializeField] private bool _isEnemy;
     [SerializeField] private bool _isBuildings;
+    [SerializeField] private bool _isMainBuilding;
     [SerializeField] private bool _itsPlayer;
     [SerializeField] private bool _itsAllies;
     private bool _isRegeneration = false;
+
     [Header("Referenses")]
+
+    private UIController _uIController;
     private AlliesManager _alliesManager;
     private EnemyManager _enemyManager;
     [SerializeField]private Bot _bot;
@@ -28,19 +35,21 @@ public class HealthManager : MonoBehaviour
         _health = _maxHealth;
         _healthBarSlider.value = _health;
         _healthBarUI.SetActive(false);
-         
+        
         _dayNightManager = DayNightManager.instance;
+        _dayNightManager.onDayStart.AddListener(DayStart);
+        if (_isMainBuilding)
+        {
+            _uIController = UIController.instance;
+        }
         if (_isEnemy)
         {
             _enemyManager = EnemyManager.instance;
         }
-            _dayNightManager.onDayStart.AddListener(DayStart);
-        
-        if(_itsPlayer)
+        else if(_itsPlayer)
         {
             StartCoroutine(Regeneration());
-        }
-        if (_itsAllies)
+        } else  if (_itsAllies)
         {
             _alliesManager = AlliesManager.instance;
         }
@@ -54,7 +63,15 @@ public class HealthManager : MonoBehaviour
 
     public void MinusHp(int count)
     {
-        _health = _health - count;
+        if ((_health - count) < 0)
+        {
+            _health = 0;
+        }
+        else
+        {
+            _health = _health - count;
+        }
+        
         if(_itsPlayer && !_isRegeneration)
         {
             StartCoroutine(Regeneration());
@@ -62,7 +79,15 @@ public class HealthManager : MonoBehaviour
         }
         if (_health < 1)
         {
-            if (_isEnemy)
+            if(_itsPlayer)
+            {
+
+            }
+            if(_isMainBuilding)
+            {
+                _uIController.gameOver();
+            }
+            else if (_isEnemy)
             {
                 _bot.SwitchState(new DeadState());
                 _enemyManager.activeEnemy.Remove(this.gameObject);
@@ -74,7 +99,7 @@ public class HealthManager : MonoBehaviour
                 _alliesManager.activeAllies.Remove(this.gameObject);
                 _alliesManager.Disable(gameObject);
             }
-            else if(_isBuildings)
+            else if (_isBuildings)
             {
                 this.gameObject.SetActive(false);
             }

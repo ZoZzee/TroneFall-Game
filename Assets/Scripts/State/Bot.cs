@@ -37,8 +37,9 @@ public class Bot : MonoBehaviour
 
 
     [Header("Enemy components")]
-     public BuildingsManager mainBuilding;
-     public GameObject mainBuildingTransform;
+    public BuildingsManager mainBuilding;
+    public GameObject mainBuildingTransform;
+    public HealthManager mainBuildingHealth;
     public EnemyManager _enemyManager;
     public EnemyTrigger p_enemyTrigger;
 
@@ -117,12 +118,10 @@ public class Bot : MonoBehaviour
 
     public void AddTarget()
     {
-
         if (_itsEnemy)
         {
             mainBuildingTransform = mainBuilding.mainBuilding.gameObject;
-            buildsHealth.Add(mainBuilding.mainBuilding.GetComponent<HealthManager>());
-            builds.Add(mainBuildingTransform);
+            mainBuildingHealth = mainBuilding.mainBuilding.GetComponent<HealthManager>();
         }
         SwitchState(new PatrolState());
         spawnPoint = transform.position;

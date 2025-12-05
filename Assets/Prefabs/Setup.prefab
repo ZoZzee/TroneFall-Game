@@ -250,6 +250,7 @@ MonoBehaviour:
   _healthBarUI: {fileID: 5949306258273443803}
   _isEnemy: 0
   _isBuildings: 0
+  _isMainBuilding: 0
   _itsPlayer: 1
   _itsAllies: 0
   _bot: {fileID: 0}
@@ -5419,6 +5420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIController
   _pauseUI: {fileID: 8274561572435407233}
   _gameUI: {fileID: 7122721509332685424}
+  _gameOverUI: {fileID: 7209798963124870075}
 --- !u!1 &2254712592002445941
 GameObject:
   m_ObjectHideFlags: 0
