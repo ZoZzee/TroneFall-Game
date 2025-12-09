@@ -41,7 +41,7 @@ public class UIController : MonoBehaviour
     public void gameOver()
     {
 
-        _gameOverUI.SetActive(!_gameOverUI);
+        _gameOverUI.SetActive(!_gameOverUI.active);
     }
 
 }

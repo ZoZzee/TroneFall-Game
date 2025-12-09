@@ -1,4 +1,6 @@
-﻿using Unity.AI.Navigation.Samples;
+﻿using NUnit.Framework;
+using System.Collections.Generic;
+using Unity.AI.Navigation.Samples;
 using UnityEngine;
 
 public class AttackState : IEnemyState
@@ -37,9 +39,10 @@ public class AttackState : IEnemyState
         {
             if (_bot._itsAllies)
             {
-                if (_bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.builds[0].transform.position) <= _bot.distanseToAttack + halfMeter)
+                Target(_bot.builds, _bot.buildsHealth);
+                if (_bot.canAttack || Vector3.Distance(_bot.transform.position, target.transform.position) <= _bot.distanseToAttack + halfMeter)
                 {
-                    NewAttack(_bot.builds[0], _bot.buildsHealth[0]);
+                    NewAttack(target, targetHelth);
                 }
                 else
                 {
@@ -70,30 +73,20 @@ public class AttackState : IEnemyState
     {
         if (_bot.wals.Count > 0)
         {
-            if (_bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.wals[0].transform.position) <= _bot.distanseToAttack + halfMeter)
+            Target(_bot.wals, _bot.walsHealth);
+            if (_bot.canAttack || Vector3.Distance(_bot.transform.position, target.transform.position) <= _bot.distanseToAttack + halfMeter)
             {
-                NewAttack(_bot.wals[0], _bot.walsHealth[0]);
+                NewAttack(target, targetHelth);
             }
             else
             {
                 NewPatrolState();
             }
         }
-        else if (_bot.builds.Count > 0)
+        else if (_bot.wals.Count <= 0 && _bot.builds.Count > 0)
         {
-            GameObject priorityTarger;
-            target = _bot.builds[0];
-            targetHelth = _bot.buildsHealth[0];
-            for (int i = 0; i < _bot.builds.Count; i++)
-            {
-                priorityTarger = _bot.builds[i];
-                if (_bot.canAttack || Vector3.Distance(priorityTarger.transform.position, _bot.transform.position) < Vector3.Distance(target.transform.position, _bot.transform.position))
-                {
-                    target = _bot.builds[i];
-                    targetHelth = _bot.buildsHealth[i];
-                }
-            }
-            if (_bot.canAttack || Vector3.Distance(_bot.transform.position, _bot.builds[0].transform.position) <= _bot.distanseToAttack + halfMeter)
+            Target(_bot.builds,_bot.buildsHealth);
+            if (_bot.canAttack || Vector3.Distance(_bot.transform.position, target.transform.position) <= _bot.distanseToAttack + halfMeter)
             {
                 NewAttack(target, targetHelth);
             }
@@ -110,6 +103,22 @@ public class AttackState : IEnemyState
         else
         {
             NewPatrolState();
+        }
+    }
+
+    private void Target(List<GameObject> list, List<HealthManager> healthList)
+    {
+        GameObject nextTarger;
+        target = list[0];
+        targetHelth = healthList[0];
+        for (int i = 0; i < list.Count; i++)
+        {
+            nextTarger = list[i];
+            if (_bot.canAttack || Vector3.Distance(nextTarger.transform.position, _bot.transform.position) < Vector3.Distance(target.transform.position, _bot.transform.position))
+            {
+                target = _bot.builds[i];
+                targetHelth = _bot.buildsHealth[i];
+            }
         }
     }
 

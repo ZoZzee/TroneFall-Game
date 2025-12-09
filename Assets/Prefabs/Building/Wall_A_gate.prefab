@@ -602,7 +602,6 @@ GameObject:
   - component: {fileID: 3910215044317623885}
   - component: {fileID: 4682679689774470818}
   - component: {fileID: 1951965866882341427}
-  - component: {fileID: 4513679255370268870}
   m_Layer: 10
   m_Name: Wall_A_gate
   m_TagString: Wall
@@ -691,6 +690,7 @@ MonoBehaviour:
   _healthBarUI: {fileID: 8921897917268836943}
   _isEnemy: 0
   _isBuildings: 1
+  _isMainBuilding: 0
   _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}
@@ -707,22 +707,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _boxController: {fileID: 0}
---- !u!208 &4513679255370268870
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5030979384895310271}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.62, y: 1.43, z: 3.155}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.48, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &6016397305588144936
 GameObject:
   m_ObjectHideFlags: 0

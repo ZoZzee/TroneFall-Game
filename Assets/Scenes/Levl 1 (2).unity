@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 0.79886085, g: 0.9056604, b: 0.8914205, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
   m_LinearFogStart: 0
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 1123430953}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a92a0faf027033047829625317304a56, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -21840,6 +21840,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 981304222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1123430953 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 8893731840755202509, guid: 835f7a8d5752240419a125f5d7a7a2cc, type: 3}
+  m_PrefabInstance: {fileID: 242390525}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1123964773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37425,7 +37430,7 @@ Transform:
   m_GameObject: {fileID: 2120330418}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -214.4, y: -5, z: -287.1}
+  m_LocalPosition: {x: -214.4, y: -5, z: -137.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38181,12 +38186,12 @@ SceneRoots:
   - {fileID: 485142601}
   - {fileID: 728540246}
   - {fileID: 1906558308}
-  - {fileID: 881847311}
   - {fileID: 1497522696}
   - {fileID: 289049456}
   - {fileID: 1615408973}
   - {fileID: 986759132}
   - {fileID: 779482703}
+  - {fileID: 881847311}
   - {fileID: 359880505}
   - {fileID: 1018501235}
   - {fileID: 2120330421}

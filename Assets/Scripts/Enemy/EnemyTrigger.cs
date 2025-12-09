@@ -30,12 +30,14 @@ public class EnemyTrigger : MonoBehaviour
             switch (currentTriggerPriority)
             {
                 case TriggerPriority.priority0:
-                    _bot.canAttack = true;
                     if (other.CompareTag("Wall"))
                     {
                         _bot.wals.Add(other.gameObject);
                         _bot.walsHealth.Add(other.GetComponent<HealthManager>());
+                        Debug.Log("Wall");
                     }
+                    _bot.canAttack = true;
+                    
                     break;
                 case TriggerPriority.priority1:
                     if (other.CompareTag("Player") ||
@@ -50,6 +52,28 @@ public class EnemyTrigger : MonoBehaviour
 
         }
     }
+
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (other.CompareTag("Player") ||
+    //        other.CompareTag("PlayerAllies") ||
+    //        other.CompareTag("Buldings") ||
+    //        other.CompareTag("Wall") ||
+    //        other.CompareTag("MainBild"))
+    //    {
+    //        switch (currentTriggerPriority)
+    //        {
+    //            case TriggerPriority.priority0:
+    //                if (other.CompareTag("Wall"))
+    //                {
+    //                    _bot.wals.Add(other.gameObject);
+    //                    _bot.walsHealth.Add(other.GetComponent<HealthManager>());
+    //                    Debug.Log("Wall");
+    //                }
+    //                break;
+    //        }
+    //    }
+    //}
 
     private void OnTriggerExit(Collider other)
     {
