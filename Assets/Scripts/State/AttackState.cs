@@ -39,15 +39,7 @@ public class AttackState : IEnemyState
         {
             if (_bot._itsAllies)
             {
-                Target(_bot.builds, _bot.buildsHealth);
-                if (_bot.canAttack || Vector3.Distance(_bot.transform.position, target.transform.position) <= _bot.distanseToAttack + halfMeter)
-                {
-                    NewAttack(target, targetHelth);
-                }
-                else
-                {
-                    NewPatrolState();
-                }
+                AlliesAttack();
             }
             else if (_bot._itsEnemy)
             {
@@ -69,6 +61,23 @@ public class AttackState : IEnemyState
         
     }
 
+    private void AlliesAttack()
+    {
+        if(_bot.builds.Count == 0)
+        {
+            NewPatrolState();
+            return;
+        }
+        Target(_bot.builds, _bot.buildsHealth);
+        if (_bot.canAttack || Vector3.Distance(_bot.transform.position, target.transform.position) <= _bot.distanseToAttack + halfMeter)
+        {
+            NewAttack(target, targetHelth);
+        }
+        else
+        {
+            NewPatrolState();
+        }
+    }
     private void EnemyAttack()
     {
         if (_bot.wals.Count > 0)
@@ -114,17 +123,18 @@ public class AttackState : IEnemyState
         for (int i = 0; i < list.Count; i++)
         {
             nextTarger = list[i];
-            if (_bot.canAttack || Vector3.Distance(nextTarger.transform.position, _bot.transform.position) < Vector3.Distance(target.transform.position, _bot.transform.position))
+            
+            if (Vector3.Distance( _bot.transform.position,nextTarger.transform.position) < Vector3.Distance(_bot.transform.position,target.transform.position))
             {
-                target = _bot.builds[i];
-                targetHelth = _bot.buildsHealth[i];
+                
+                target = list[i];
+                targetHelth = healthList[i];
             }
         }
     }
 
     public void Exit()
     {
-        Debug.Log("Вийшов з атаки");
         _bot.canAttack = false;
         _bot._agent.isStopped = false;
     }

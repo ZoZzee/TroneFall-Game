@@ -24,7 +24,7 @@ public class HealthManager : MonoBehaviour
     private bool _isRegeneration = false;
 
     [Header("Referenses")]
-
+    private BuildingsManager _buildingsManager;
     private UIController _uIController;
     private AlliesManager _alliesManager;
     private EnemyManager _enemyManager;
@@ -40,16 +40,24 @@ public class HealthManager : MonoBehaviour
         _dayNightManager.onDayStart.AddListener(DayStart);
         if (_isMainBuilding)
         {
+            
             _uIController = UIController.instance;
         }
+        else
+        if(_isBuildings)
+        {
+            _buildingsManager = BuildingsManager.instance;
+        }
+        else
         if (_isEnemy)
         {
             _enemyManager = EnemyManager.instance;
         }
-        else if(_itsPlayer)
+        else if (_itsPlayer)
         {
             StartCoroutine(Regeneration());
-        } else  if (_itsAllies)
+        }
+        else if (_itsAllies)
         {
             _alliesManager = AlliesManager.instance;
         }
@@ -101,6 +109,8 @@ public class HealthManager : MonoBehaviour
             }
             else if (_isBuildings)
             {
+                Debug.Log(this.gameObject);
+                _buildingsManager.wallDestroyed.Add(this.gameObject);
                 this.gameObject.SetActive(false);
             }
         }

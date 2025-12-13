@@ -1108,21 +1108,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBarbarian: 0
   myAllies: []
-  _quantityAllies: 3
-  _pointsPosition:
-  - {fileID: 6969634792364083278}
-  - {fileID: 4743822858273084237}
-  - {fileID: 6580377931753240129}
-  - {fileID: 5288115921171258451}
-  - {fileID: 3558791442059341069}
-  - {fileID: 165660527429256158}
-  - {fileID: 6279954166571800394}
-  - {fileID: 2408137730852567713}
-  - {fileID: 1690530743020299068}
+  _sizeAllies: 0
   _spawnPoint: {fileID: 96418396168437827}
-  _dedAlliesSpawnPoint:
-  - {fileID: 0}
+  _dedAlliesSpawnPoint: []
   _spawnTimerMax: 50
+  _spawnTimer: 0
   _alliesInBuilding: {fileID: 5428260546608216262}
   num: 0
 --- !u!114 &5428260546608216262
@@ -1139,6 +1129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AlliesInBuilding
   _countLevel: 0
   _pointOnLevel: 030303
+  _points: 0
   _pointsActive:
   - {fileID: 6059666521039646916}
   - {fileID: 3101311045569574723}
@@ -1167,6 +1158,7 @@ MonoBehaviour:
   _healthBarUI: {fileID: 7685997685364353330}
   _isEnemy: 0
   _isBuildings: 1
+  _isMainBuilding: 0
   _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}

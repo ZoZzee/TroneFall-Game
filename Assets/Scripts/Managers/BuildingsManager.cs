@@ -7,6 +7,7 @@ public class BuildingsManager : MonoBehaviour
 
     public List<Building> finishedBuildings;
     public List<Building> destroyedBuildings;
+    public List<GameObject> wallDestroyed;
 
 
     private DayNightManager _dayNightManager;
@@ -35,7 +36,11 @@ public class BuildingsManager : MonoBehaviour
         {
             destroyedBuildings[i].buildingPlan.Build(false);
         }
-
+        for(int i = 0; i < wallDestroyed.Count; i++)
+        {
+            wallDestroyed[i].SetActive(true);
+        }
+        wallDestroyed.Clear();
         destroyedBuildings.Clear();
     }
 }

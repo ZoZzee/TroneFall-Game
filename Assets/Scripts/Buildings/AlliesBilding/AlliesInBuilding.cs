@@ -6,7 +6,7 @@ public class AlliesInBuilding : MonoBehaviour
     [Header("Allies")]
     [SerializeField] private byte _countLevel = 0;
     [SerializeField] private List<byte> _pointOnLevel;
-    private byte _points;
+    public byte _points;
 
     [Header("References")]
     [SerializeField] public List<GameObject> _pointsActive;
