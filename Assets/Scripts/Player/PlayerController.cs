@@ -1,3 +1,4 @@
+using Unity.AI.Navigation.Samples;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -75,7 +76,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    if (_startBuildsng && !_isBuilding)
+                    if (_startBuildsng || !_isBuilding)
                     {
                         _buildingPlan.buildRol.fillAmount = (spaceHoldTime / (_constructionWaitingTime / 100)) / 100;
                         if (spaceHoldTime >= _constructionWaitingTime)
@@ -130,19 +131,29 @@ public class PlayerController : MonoBehaviour
             {
                 for (int i = 0; i < _interactionTriger.buildings.Count; i++)
                 {
-                    GameObject build = _interactionTriger.buildings[i];
+                    GameObject build = null;
+                    build = _interactionTriger.buildings[i];
                     _buildingPlan = build.GetComponent<BuildingPlan>();
-                    if (_closestBuild == null && _buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings) ||
+                    if (build != null || _closestBuild == null && _buildingPlan.goldManager.EnoughGold(_buildingPlan.costBuildings) ||
                         Vector3.Distance(build.transform.position, transform.position) < Vector3.Distance(_closestBuild.transform.position, transform.position)
-                         && _buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
+                         && _buildingPlan.goldManager.EnoughGold( _buildingPlan.costBuildings))
                     {
                         _closestBuild = build;
                     }
                 }
+                if(_buildingPlan.goldManager.EnoughGold(_buildingPlan.costBuildings))
+                {
+                    _buildingPlan = _closestBuild.GetComponent<BuildingPlan>();
+                    _startBuildsng = true;
+                    _buildingPlan.rollFilling.SetActive(true);
+                }
+                else
+                {
+                    _closestBuild = null;
+                    _startBuildsng = false;
+                }
 
-                _buildingPlan = _closestBuild.GetComponent<BuildingPlan>();
-                _startBuildsng = true;
-                _buildingPlan.rollFilling.SetActive(true);
+                
             }
 
         }
@@ -154,13 +165,12 @@ public class PlayerController : MonoBehaviour
             return;
         }
         
-        if (_buildingPlan.goldManager.EnoughGold(_buildingPlan.goldManager.gold - _buildingPlan.costBuildings))
+        if (_buildingPlan.goldManager.EnoughGold(_buildingPlan.costBuildings))
         {
+            _interactionTriger.buildings.Remove(_closestBuild);
             _buildingPlan.buildRol.fillAmount = 0.001f;
             _buildingPlan.rollFilling.SetActive(false);
             _buildingPlan.Build(true);   ////////
-
-            _interactionTriger.buildings.Remove(_closestBuild);
 
             _closestBuild = null;
         }

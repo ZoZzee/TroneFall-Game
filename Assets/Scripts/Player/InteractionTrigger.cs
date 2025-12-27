@@ -12,12 +12,10 @@ public class InteractionTrigger : MonoBehaviour
         if (other.CompareTag("Building")||
             other.CompareTag("Construction"))
         {
-            if (other.GetComponent<BuildingPlan>()._nextLevel != null)
+            if (other.GetComponent<BuildingPlan>()._nextLevel != null || !buildings.Contains(other.gameObject))
             {
                 buildings.Add(other.gameObject);
             }
-
-            
         }
         if (other.CompareTag("Level"))
         {

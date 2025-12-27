@@ -67,6 +67,7 @@ public class Bot : MonoBehaviour
             mainBuilding = BuildingsManager.instance;
             _enemyManager = EnemyManager.instance;
             _enemyManager.activeEnemy.Add(this.gameObject);
+            _animatorController.dead = false;
             AddTarget();
 
         }
