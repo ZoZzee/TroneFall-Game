@@ -559,6 +559,7 @@ MonoBehaviour:
   rollFilling: {fileID: 1784238859382060073}
   buildRol: {fileID: 5031770934033259495}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
+  haveNewBuild: 0
 --- !u!114 &3702918610681456592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,6 +593,7 @@ MonoBehaviour:
   _healthBarUI: {fileID: 7440636226494712953}
   _isEnemy: 0
   _isBuildings: 1
+  _isMainBuilding: 0
   _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}
@@ -1294,6 +1296,7 @@ MonoBehaviour:
   rollFilling: {fileID: 1784238859382060073}
   buildRol: {fileID: 5031770934033259495}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
+  haveNewBuild: 1
 --- !u!114 &2255661346982203448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,6 +1475,7 @@ MonoBehaviour:
   rollFilling: {fileID: 1784238859382060073}
   buildRol: {fileID: 5031770934033259495}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
+  haveNewBuild: 1
 --- !u!114 &4287223459338417472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1505,6 +1509,7 @@ MonoBehaviour:
   _healthBarUI: {fileID: 7440636226494712953}
   _isEnemy: 0
   _isBuildings: 1
+  _isMainBuilding: 0
   _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}

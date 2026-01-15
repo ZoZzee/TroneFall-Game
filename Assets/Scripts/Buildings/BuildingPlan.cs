@@ -36,6 +36,9 @@ public class BuildingPlan : MonoBehaviour
     private BuildingsManager _buildingsManager;
     //[SerializeField] private NavMeshSurface _navMeshSurface;
 
+    [Header("Bool")]
+    public bool haveNewBuild;
+
     private void Start()
     {
         

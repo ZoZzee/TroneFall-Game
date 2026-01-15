@@ -156,6 +156,7 @@ MonoBehaviour:
   rollFilling: {fileID: 2738583949165595864}
   buildRol: {fileID: 8115483952189519879}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
+  haveNewBuild: 1
 --- !u!33 &7272540050155623690
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1583,6 +1584,7 @@ MonoBehaviour:
   rollFilling: {fileID: 2738583949165595864}
   buildRol: {fileID: 8115483952189519879}
   itsBuild: {fileID: 8300000, guid: c6ae0ed77fbe84da690395932ac7968b, type: 3}
+  haveNewBuild: 0
 --- !u!114 &7536663900467803183
 MonoBehaviour:
   m_ObjectHideFlags: 0
