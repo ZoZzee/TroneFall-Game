@@ -156,10 +156,11 @@ MonoBehaviour:
   _health: 0
   _healthBarSlider: {fileID: 3823086193999672528}
   _healthBarUI: {fileID: 6495929759070274298}
+  _itsPlayer: 0
+  _playerController: {fileID: 0}
   _isEnemy: 0
   _isBuildings: 1
   _isMainBuilding: 0
-  _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}
 --- !u!208 &2759859736254123791
@@ -537,16 +538,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5385c36dd12b749b0b71d898de053b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerController: {fileID: 0}
   _towerTrigger: {fileID: 4102682774422374390}
-  _damage: 000000000a0000000f00000019000000
+  _damage: 36
   cooldown: 0
-  cooldownMax: 50
+  cooldownMax: 2
   _buildingPlan: {fileID: 0}
   target: []
   targetHealth: []
   _alliesManager: {fileID: 0}
   attack: {fileID: 8300000, guid: 5959c1975f4c95945a0a94642229f636, type: 3}
-  audioDistance: 0
+  audioDistance: 25
 --- !u!114 &1165268335109556463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,14 +561,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 300
   _health: 0
   _healthBarSlider: {fileID: 3823086193999672528}
   _healthBarUI: {fileID: 6495929759070274298}
+  _itsPlayer: 0
+  _playerController: {fileID: 0}
   _isEnemy: 0
   _isBuildings: 1
   _isMainBuilding: 0
-  _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}
 --- !u!33 &2330058846011371486
@@ -1219,16 +1222,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5385c36dd12b749b0b71d898de053b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerController: {fileID: 0}
   _towerTrigger: {fileID: 3606632369139742036}
-  _damage: 000000000a0000000f00000019000000
+  _damage: 19
   cooldown: 0
-  cooldownMax: 50
+  cooldownMax: 2
   _buildingPlan: {fileID: 0}
   target: []
   targetHealth: []
   _alliesManager: {fileID: 0}
   attack: {fileID: 8300000, guid: 5959c1975f4c95945a0a94642229f636, type: 3}
-  audioDistance: 0
+  audioDistance: 25
 --- !u!114 &1170905650640397390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1241,14 +1245,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 200
   _health: 0
   _healthBarSlider: {fileID: 3823086193999672528}
   _healthBarUI: {fileID: 6495929759070274298}
+  _itsPlayer: 0
+  _playerController: {fileID: 0}
   _isEnemy: 0
   _isBuildings: 1
   _isMainBuilding: 0
-  _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}
 --- !u!33 &2425050063265948213
@@ -1976,16 +1981,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed5385c36dd12b749b0b71d898de053b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerController: {fileID: 0}
   _towerTrigger: {fileID: 837066899100453266}
-  _damage: 000000000a0000000f00000019000000
+  _damage: 36
   cooldown: 0
-  cooldownMax: 50
+  cooldownMax: 1.2
   _buildingPlan: {fileID: 0}
   target: []
   targetHealth: []
   _alliesManager: {fileID: 0}
   attack: {fileID: 8300000, guid: 5959c1975f4c95945a0a94642229f636, type: 3}
-  audioDistance: 0
+  audioDistance: 25
 --- !u!114 &4130693008026482273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1998,14 +2004,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 350
   _health: 0
   _healthBarSlider: {fileID: 3823086193999672528}
   _healthBarUI: {fileID: 6495929759070274298}
+  _itsPlayer: 0
+  _playerController: {fileID: 0}
   _isEnemy: 0
   _isBuildings: 1
   _isMainBuilding: 0
-  _itsPlayer: 0
   _itsAllies: 0
   _bot: {fileID: 0}
 --- !u!33 &4330963522452202774

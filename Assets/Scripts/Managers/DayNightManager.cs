@@ -47,17 +47,17 @@ public class DayNightManager : MonoBehaviour
         _saveSystem = SaveSystem.instance;
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.F1))
-        {
-            StartDay();
-        }
-        if(Input.GetKeyDown(KeyCode.F2))
-        {
-            StartNight();
-        }
-    }
+    //private void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.F1))
+    //    {
+    //        StartDay();
+    //    }
+    //    if(Input.GetKeyDown(KeyCode.F2))
+    //    {
+    //        StartNight();
+    //    }
+    //}
    
     public void StartDay()
     {

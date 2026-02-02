@@ -6,7 +6,7 @@ public class LevelsManager : MonoBehaviour
 
     private SaveSystem saveSystem;
 
-    private void Start()
+    private void OnEnable()
     {
         saveSystem = SaveSystem.instance;
 
@@ -42,5 +42,7 @@ public class LevelsManager : MonoBehaviour
             level[i].completedTimes = saveSystem.levelsData.completedTimes[i];
             level[i].levelsNumber = saveSystem.levelsData.levelsNumber[i];
         }
+
+        Debug.Log(saveSystem.levelsData.completedTimes[0]);
     }
 }

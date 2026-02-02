@@ -1,12 +1,13 @@
+using System.Collections.Generic;
 using System.IO;
-using Unity.AI.Navigation.Samples;
 using UnityEngine;
 
 public class LoadingFromSaved : MonoBehaviour
 {
     private SaveSystem _saveSystem;
+    [SerializeField] private List<ChooseLevel> _chooseLevel;
 
-    private string _fileName = "Levels";
+    private string _fileName = "LevelData";
     private void Start()
     {
         _saveSystem = SaveSystem.instance;
@@ -15,6 +16,8 @@ public class LoadingFromSaved : MonoBehaviour
         if (File.Exists(fullPath))
         {
             _saveSystem.LoadAll(_fileName);
+            for(int i = 0; i < _chooseLevel.Count; i++)
+                _chooseLevel[i].RefreshStars();
         }
         else
         {

@@ -1,25 +1,32 @@
 
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("HZ")]
+    [Header("Build Time")]
     private bool _startBuildsng = false;
 
     [Header("Referenses")]
-
     private bool _isBuilding = false;
     private GameObject _closestBuild;
     private ChooseLevel _chooseLevel;
     private BuildingPlan _buildingPlan;
     [SerializeField] private InteractionTrigger _interactionTriger;
     private DayNightManager _dNManager;
+    [SerializeField] private ColorChange _colorChange;
+    public bool playerIsDead;
+    [SerializeField] private HealthManager _healthManager;
 
     [Header("Roll_UI")]
     [SerializeField] private GameObject _obgectUI;
     [SerializeField] private Image _roll;
 
+    [Header("Text zone")]
+    [SerializeField] private GameObject _textObgectUI;
+    [SerializeField] private TMP_Text _textMeshPro;
 
     [Header("Timer")]
     private float spaceHoldTime;
@@ -30,13 +37,52 @@ public class PlayerController : MonoBehaviour
     {
         _dNManager = DayNightManager.instance;
 
+        _textObgectUI.SetActive(false);
         _obgectUI.SetActive(false);
+        playerIsDead = false;
 
     }
     private void Update()
     {
         CheckSpaseButton();
+        if (Input.GetKeyDown(KeyCode.F5))
+        {
+            Debug.Log("Start");
+            PlayerDead();
+        }
     }
+
+    public void PlayerDead(float _seconds = 15)
+    {
+        playerIsDead = true;
+        gameObject.tag = "DeadPlayer";
+        StartCoroutine(DeadTime(_seconds));
+    }
+    private IEnumerator DeadTime(float deadTime)
+    {
+
+        _textObgectUI.SetActive(true);
+        _colorChange.GameObjectColorChange("White");
+        while (deadTime >= 0)
+        {
+            int timer = (int)deadTime;
+            deadTime -= Time.deltaTime;
+            if (deadTime <= 0.7)
+            {
+                _healthManager.MaxHp();
+                playerIsDead = false;
+                gameObject.tag = "Player";
+                _textObgectUI.SetActive(false);
+                _colorChange.GameObjectColorChange("Blue");
+                StopAllCoroutines();
+            }
+            _textMeshPro.text = $"{timer}";
+                //ToString(deadTime);
+            yield return null;
+        }
+        
+    }
+
     private void CheckSpaseButton()
     {
         if (_dNManager.dayStart == true)

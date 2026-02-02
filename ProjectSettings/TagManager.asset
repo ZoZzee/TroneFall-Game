@@ -12,6 +12,8 @@ TagManager:
   - Building
   - Buldings
   - Construction
+  - Level
+  - DeadPlayer
   layers:
   - Default
   - TransparentFX

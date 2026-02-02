@@ -5914,7 +5914,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3911504738263617539
 Transform:
   m_ObjectHideFlags: 0
@@ -7279,6 +7279,7 @@ MonoBehaviour:
   distanseToAttack: 17
   mainBuilding: {fileID: 0}
   mainBuildingTransform: {fileID: 0}
+  mainBuildingHealth: {fileID: 0}
   _enemyManager: {fileID: 0}
   p_enemyTrigger: {fileID: 0}
   spawnScript: {fileID: 0}
@@ -7304,9 +7305,11 @@ MonoBehaviour:
   _health: 0
   _healthBarSlider: {fileID: 415998554338656590}
   _healthBarUI: {fileID: 2104207907615706493}
+  _itsPlayer: 0
+  _playerController: {fileID: 0}
   _isEnemy: 0
   _isBuildings: 0
-  _itsPlayer: 0
+  _isMainBuilding: 0
   _itsAllies: 1
   _bot: {fileID: 2369046391608563927}
 --- !u!195 &-3620059840831419299
@@ -13273,7 +13276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &224156671158001314
 Transform:
   m_ObjectHideFlags: 0

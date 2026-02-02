@@ -26,10 +26,6 @@ public class ChooseLevel : MonoBehaviour
     private void Start()
     {
         inTrigger = false;
-        for (int i = 0; i < level.completedTimes; i++)
-        {
-            _levelStars[i].material = _yellow;
-        }
         _obgectUI.SetActive(false);
     }
 
@@ -53,6 +49,15 @@ public class ChooseLevel : MonoBehaviour
             inTrigger = false;
 
             _meshRenderer.material = _standart;
+        }
+    }
+
+    public void RefreshStars()
+    {
+        inTrigger = false;
+        for (int i = 0; i < level.completedTimes; i++)
+        {
+            _levelStars[i].material = _yellow;
         }
     }
 }

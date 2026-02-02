@@ -14,12 +14,15 @@ public class HealthManager : MonoBehaviour
     [SerializeField] private Slider _healthBarSlider;
     [SerializeField] private GameObject _healthBarUI;
 
+    [Header("Player")]
+    [SerializeField] private bool _itsPlayer;
+    [SerializeField] private PlayerController _playerController;
+
     [Header("Its Bool")]
 
     [SerializeField] private bool _isEnemy;
     [SerializeField] private bool _isBuildings;
     [SerializeField] private bool _isMainBuilding;
-    [SerializeField] private bool _itsPlayer;
     [SerializeField] private bool _itsAllies;
     private bool _isRegeneration = false;
 
@@ -89,13 +92,15 @@ public class HealthManager : MonoBehaviour
         {
             if(_itsPlayer)
             {
+                _playerController.PlayerDead(25);
 
+                StopCoroutine(Regeneration());
             }
             if(_isMainBuilding)
             {
                 _uIController.gameOver();
             }
-            else if (_isEnemy)
+            else if (_isEnemy && gameObject.activeInHierarchy)
             {
                 _bot.SwitchState(new DeadState());
                 _enemyManager.activeEnemy.Remove(this.gameObject);
@@ -160,7 +165,11 @@ public class HealthManager : MonoBehaviour
         _healthBarUI.SetActive(true);
         _healthBarSlider.value = (float)_health / (float)_maxHealth;
     }
-
+    public void MaxHp()
+    {
+        _health = _maxHealth;
+        RefreshUI();
+    }
     private void DayStart()
     {
         _health = _maxHealth;

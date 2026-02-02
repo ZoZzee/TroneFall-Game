@@ -12,25 +12,46 @@ public class SaveSystem : MonoBehaviour
 
     public LevelsData levelsData;
 
+
+    private string savelevelsData = "LevelData";
+
     private void Awake()
     {
         instance = this;
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F8))
+        {
 
+            Debug.Log("F8");
+            SaveAll(savelevelsData);
+        }
+        if (Input.GetKeyDown(KeyCode.F9))
+        {
+            LoadAll(savelevelsData);
+        }
+        if (Input.GetKeyUp(KeyCode.F8))
+        {
+            Debug.Log("F8");
+            LevelComplete(2, savelevelsData);
+        }
+    }
     public void SaveAll(string fileName)
     {
         OnSaveRequested?.Invoke();
 
         Save(fileName, levelsData);
 
-        Debug.Log("Збережено");
+        Debug.Log("Save");
     }
     public void LoadAll(string fileName)
     {
         levelsData = Load<LevelsData>(fileName);
         OnLoadCompleted?.Invoke();
 
-        Debug.Log("Завантажено");
+        Debug.Log(levelsData.completedTimes[0]);
+        Debug.Log("Load");
     }
 
     public void Save<T>( string fileName, T data)
@@ -57,7 +78,8 @@ public class SaveSystem : MonoBehaviour
         levelsData = Load<LevelsData>(fileName);
         for(int i = 0; i< levelsData.levelsNumber.Length; i++)
         {
-            if(numberOfLevel == levelsData.levelsNumber[i])
+            Debug.Log("i =  " + i);
+            if (numberOfLevel == levelsData.levelsNumber[i])
             {
                 levelsData.completedTimes[i]++;
                 Debug.Log("Level = "+levelsData.levelsNumber[i] + "   CompletedTimes = " + levelsData.completedTimes[i]);
