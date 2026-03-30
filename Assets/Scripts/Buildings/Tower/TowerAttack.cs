@@ -15,7 +15,7 @@ public class TowerAttack : MonoBehaviour
 
     public AlliesManager _alliesManager;
 
-    private bool playerControllerCheck;
+    private bool playerControllerCheck = false;
 
     [Header("Aydio")]
     public AudioClip attack;
@@ -35,7 +35,8 @@ public class TowerAttack : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (targetHealth.Count > 0 && (playerControllerCheck && !_playerController.playerIsDead))
+        if (targetHealth.Count > 0 && !playerControllerCheck ||
+            targetHealth.Count > 0 && !_playerController.playerIsDead)
         {
             cooldown += Time.deltaTime;
             if (cooldown >= cooldownMax)

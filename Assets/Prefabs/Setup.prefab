@@ -286,10 +286,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 8742031111349476285}
-  _towerTrigger: {fileID: 49959019929210115}
-  _damage: 28000000
+  _damage: 8
   cooldown: 0
-  cooldownMax: 50
+  cooldownMax: 1
   _buildingPlan: {fileID: 0}
   target: []
   targetHealth: []

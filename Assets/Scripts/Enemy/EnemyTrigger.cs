@@ -42,7 +42,8 @@ public class EnemyTrigger : MonoBehaviour
                 case TriggerPriority.priority1:
                     if (other.CompareTag("Player") ||
                         other.CompareTag("PlayerAllies") ||
-                        other.CompareTag("Buldings"))
+                        other.CompareTag("Buldings")||
+                        other.CompareTag("Bulding"))
                     {
                         _bot.builds.Add(other.gameObject);
                         _bot.buildsHealth.Add(other.GetComponent<HealthManager>());
@@ -53,35 +54,14 @@ public class EnemyTrigger : MonoBehaviour
         }
     }
 
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    if (other.CompareTag("Player") ||
-    //        other.CompareTag("PlayerAllies") ||
-    //        other.CompareTag("Buldings") ||
-    //        other.CompareTag("Wall") ||
-    //        other.CompareTag("MainBild"))
-    //    {
-    //        switch (currentTriggerPriority)
-    //        {
-    //            case TriggerPriority.priority0:
-    //                if (other.CompareTag("Wall"))
-    //                {
-    //                    _bot.wals.Add(other.gameObject);
-    //                    _bot.walsHealth.Add(other.GetComponent<HealthManager>());
-    //                    Debug.Log("Wall");
-    //                }
-    //                break;
-    //        }
-    //    }
-    //}
-
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player") ||
             other.CompareTag("PlayerAllies") ||
             other.CompareTag("Buldings") ||
             other.CompareTag("Wall") ||
-            other.CompareTag("MainBild"))
+            other.CompareTag("MainBild") ||
+            other.CompareTag("Bulding"))
         {
             switch (currentTriggerPriority)
             {
@@ -96,7 +76,8 @@ public class EnemyTrigger : MonoBehaviour
                 case TriggerPriority.priority1:
                     if (other.CompareTag("Player") ||
                         other.CompareTag("PlayerAllies") ||
-                        other.CompareTag("Buldings"))
+                        other.CompareTag("Buldings") ||
+                        other.CompareTag("Bulding"))
                     {
                         _bot.builds.Remove(other.gameObject);
                         _bot.buildsHealth.Remove(other.GetComponent<HealthManager>());

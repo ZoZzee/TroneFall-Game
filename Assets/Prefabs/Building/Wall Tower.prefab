@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 5872573050789693872}
   m_Layer: 7
   m_Name: Tower_2
-  m_TagString: Building
+  m_TagString: Buldings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -539,7 +539,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 0}
-  _towerTrigger: {fileID: 4102682774422374390}
   _damage: 36
   cooldown: 0
   cooldownMax: 2
@@ -1165,7 +1164,7 @@ GameObject:
   - component: {fileID: 5742711850946076447}
   m_Layer: 7
   m_Name: Tower_1
-  m_TagString: Building
+  m_TagString: Buldings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1223,7 +1222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 0}
-  _towerTrigger: {fileID: 3606632369139742036}
   _damage: 19
   cooldown: 0
   cooldownMax: 2
@@ -1924,7 +1922,7 @@ GameObject:
   - component: {fileID: 4792567578084402245}
   m_Layer: 7
   m_Name: Tower_3
-  m_TagString: Building
+  m_TagString: Buldings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1982,7 +1980,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 0}
-  _towerTrigger: {fileID: 837066899100453266}
   _damage: 36
   cooldown: 0
   cooldownMax: 1.2

@@ -1369,7 +1369,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 0}
-  _towerTrigger: {fileID: 555626103703781914}
   _damage: 36
   cooldown: 0
   cooldownMax: 2
@@ -1391,7 +1390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 300
   _health: 0
   _healthBarSlider: {fileID: 5665911560878237090}
   _healthBarUI: {fileID: 5966909160270549520}
@@ -1609,7 +1608,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 0}
-  _towerTrigger: {fileID: 3661088238950646030}
   _damage: 36
   cooldown: 0
   cooldownMax: 1.2
@@ -1631,7 +1629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 350
   _health: 0
   _healthBarSlider: {fileID: 5665911560878237090}
   _healthBarUI: {fileID: 5966909160270549520}
@@ -2005,7 +2003,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerController: {fileID: 0}
-  _towerTrigger: {fileID: 6632839062406136041}
   _damage: 19
   cooldown: 0
   cooldownMax: 2
@@ -2027,7 +2024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe0ff90ba0ca44c0921ad55aff114cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 200
   _health: 0
   _healthBarSlider: {fileID: 5665911560878237090}
   _healthBarUI: {fileID: 5966909160270549520}
